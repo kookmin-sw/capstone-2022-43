@@ -7,4 +7,9 @@ router.get('/', (req: Request, res: Response, next: NextFunction) => {
     res.status(200).send('Hello world!');
 });
 
+
+router.get('/test', (req: Request, res: Response, next: NextFunction) => {
+    res.status(400).json({name:"test"});
+});
+
 export = router;
