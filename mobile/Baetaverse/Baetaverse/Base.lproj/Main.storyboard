@@ -56,6 +56,9 @@
                                         <rect key="frame" x="0.0" y="191.5" width="374" height="47"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="로그인" buttonSize="large"/>
+                                        <connections>
+                                            <segue destination="j8D-8e-fEI" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="eaW-fA-B9A"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t53-Wv-FgR">
                                         <rect key="frame" x="0.0" y="263.5" width="374" height="31"/>
@@ -133,7 +136,7 @@
                     <navigationItem key="navigationItem" title="본인인증" id="VH6-pU-oPO">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="qE3-cf-3aq">
                             <connections>
-                                <segue destination="Suz-9j-eEk" kind="unwind" unwindAction="unwindToLoginScene:" id="4vr-Tj-64A"/>
+                                <segue destination="Suz-9j-eEk" kind="unwind" unwindAction="unwindToLoginBULoginView:" id="FhF-IT-HST"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -492,7 +495,7 @@
                     <navigationItem key="navigationItem" title="본인인증" id="4fU-P3-hX9">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="RcT-0n-Nd6">
                             <connections>
-                                <segue destination="2uq-eY-uRT" kind="unwind" unwindAction="unwindToLoginScene:" id="Ls3-7w-ZlL"/>
+                                <segue destination="2uq-eY-uRT" kind="unwind" unwindAction="unwindToLoginBULoginView:" id="2e0-Fh-9Om"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -773,9 +776,371 @@
             </objects>
             <point key="canvasLocation" x="5946" y="1075"/>
         </scene>
+        <!--BAETAVERSE MAIN-->
+        <scene sceneID="Yko-r7-LyW">
+            <objects>
+                <viewController title="BAETAVERSE MAIN" id="acu-CX-eJX" customClass="ViewController" customModule="TemporaryProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VV8-eu-inl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MainViewImage" translatesAutoresizingMaskIntoConstraints="NO" id="OSh-ob-XoQ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="276"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="276" id="7CV-Gh-Ygl"/>
+                                    <constraint firstAttribute="width" constant="414" id="vzN-GN-zEc"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ferry.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="BIh-zs-ylm">
+                                <rect key="frame" x="20" y="383" width="374" height="102.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="TIn-gf-cWU"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pv6-tb-wNa">
+                                <rect key="frame" x="30" y="504" width="354" height="47"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="물류비 견적 요청" buttonSize="large"/>
+                                <connections>
+                                    <segue destination="D5v-IR-N6D" kind="presentation" modalPresentationStyle="fullScreen" id="hdh-DO-u6g"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Zgl-EF-Cyp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BIh-zs-ylm" firstAttribute="top" secondItem="OSh-ob-XoQ" secondAttribute="bottom" constant="20" id="0NU-lC-C6L"/>
+                            <constraint firstItem="BIh-zs-ylm" firstAttribute="leading" secondItem="Zgl-EF-Cyp" secondAttribute="leading" constant="20" id="0nZ-jE-7AF"/>
+                            <constraint firstItem="Pv6-tb-wNa" firstAttribute="leading" secondItem="Zgl-EF-Cyp" secondAttribute="leading" constant="30" id="7hi-lf-x44"/>
+                            <constraint firstItem="Pv6-tb-wNa" firstAttribute="top" secondItem="BIh-zs-ylm" secondAttribute="bottom" constant="20" id="Eff-tl-eIc"/>
+                            <constraint firstItem="OSh-ob-XoQ" firstAttribute="trailing" secondItem="Zgl-EF-Cyp" secondAttribute="trailing" id="Oxh-xH-M1u"/>
+                            <constraint firstItem="OSh-ob-XoQ" firstAttribute="top" secondItem="Zgl-EF-Cyp" secondAttribute="top" id="VHR-Vp-yhI"/>
+                            <constraint firstItem="OSh-ob-XoQ" firstAttribute="leading" secondItem="Zgl-EF-Cyp" secondAttribute="leading" id="bHd-HT-W9l"/>
+                            <constraint firstItem="Zgl-EF-Cyp" firstAttribute="trailing" secondItem="BIh-zs-ylm" secondAttribute="trailing" constant="20" id="cmV-LG-1AG"/>
+                            <constraint firstItem="Zgl-EF-Cyp" firstAttribute="trailing" secondItem="Pv6-tb-wNa" secondAttribute="trailing" constant="30" id="d94-f3-o8G"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="wrU-KL-OhV"/>
+                    <navigationItem key="navigationItem" id="EXz-Es-SCi">
+                        <barButtonItem key="leftBarButtonItem" systemItem="organize" id="rpv-76-OKl"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9yv-aJ-z4u" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6480" y="-1564"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="C6e-t3-X9f">
+            <objects>
+                <tableViewController id="h3C-Mt-Cif" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="LFD-cJ-Wb3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="fHe-5a-OCl">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="zRL-3Q-KYc" style="IBUITableViewCellStyleDefault" id="g4M-L0-hRc">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g4M-L0-hRc" id="gop-uY-h6Q">
+                                            <rect key="frame" x="0.0" y="0.0" width="385.5" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="서비스 소개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zRL-3Q-KYc">
+                                                    <rect key="frame" x="20" y="0.0" width="357.5" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="zMO-0r-5Rd" style="IBUITableViewCellStyleDefault" id="4R9-Oc-ah0">
+                                        <rect key="frame" x="0.0" y="88" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4R9-Oc-ah0" id="3vt-BV-5BG">
+                                            <rect key="frame" x="0.0" y="0.0" width="385.5" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="물류비 견적 요청" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zMO-0r-5Rd">
+                                                    <rect key="frame" x="20" y="0.0" width="357.5" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="lhI-q0-68u" style="IBUITableViewCellStyleDefault" id="rAm-dH-4CU">
+                                        <rect key="frame" x="0.0" y="131.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rAm-dH-4CU" id="dWB-qB-LcJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="385.5" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="제휴 포워더" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lhI-q0-68u">
+                                                    <rect key="frame" x="20" y="0.0" width="357.5" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Bpe-7h-mvd" style="IBUITableViewCellStyleDefault" id="J32-gZ-lgE">
+                                        <rect key="frame" x="0.0" y="175" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J32-gZ-lgE" id="kqe-cp-LUO">
+                                            <rect key="frame" x="0.0" y="0.0" width="385.5" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="고객센터" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Bpe-7h-mvd">
+                                                    <rect key="frame" x="20" y="0.0" width="357.5" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="ZAv-Bb-jmb" style="IBUITableViewCellStyleDefault" id="7Ui-DZ-6xK">
+                                        <rect key="frame" x="0.0" y="218.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7Ui-DZ-6xK" id="QEW-pG-PoT">
+                                            <rect key="frame" x="0.0" y="0.0" width="385.5" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="로그아웃" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZAv-Bb-jmb">
+                                                    <rect key="frame" x="20" y="0.0" width="357.5" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="h3C-Mt-Cif" id="1hJ-Jr-2kE"/>
+                            <outlet property="delegate" destination="h3C-Mt-Cif" id="o9A-aO-BoY"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="err-1i-ng3"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hqC-zE-zNT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6481" y="-2355"/>
+        </scene>
+        <!--물류견적요청 1단계-->
+        <scene sceneID="UR0-GW-9GE">
+            <objects>
+                <viewController id="J6g-4b-jZ2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0cc-bC-QYE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLg-MH-n6j">
+                                <rect key="frame" x="20" y="795" width="374" height="47"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="다음" buttonSize="large"/>
+                                <connections>
+                                    <segue destination="czk-jy-rRF" kind="show" id="ZjC-8b-TOA"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bfF-pA-3cE">
+                                <rect key="frame" x="20" y="108" width="374" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">* 물류비 견적 요청(1단계)
+* 본 견적은 LC화물 대상으로 이뤄집니다 * 출고 예정일 달력 아이콘 * Door to Door / Port to Port 선택 * 출발지 * 국가 * 항만 / 내륙 운송 주소지 * 도착지 * 국가 * 항만 / 내륙 운송지 * 인도조건 (인코텀즈) -&gt; 문서참조 * 취소 / 1단계  완료</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gEm-GU-4NG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bfF-pA-3cE" firstAttribute="leading" secondItem="gEm-GU-4NG" secondAttribute="leading" constant="20" id="8E5-us-6sC"/>
+                            <constraint firstItem="wLg-MH-n6j" firstAttribute="leading" secondItem="gEm-GU-4NG" secondAttribute="leading" constant="20" id="Bgv-CV-0Hr"/>
+                            <constraint firstItem="gEm-GU-4NG" firstAttribute="trailing" secondItem="wLg-MH-n6j" secondAttribute="trailing" constant="20" id="HHu-nL-dJX"/>
+                            <constraint firstItem="bfF-pA-3cE" firstAttribute="top" secondItem="gEm-GU-4NG" secondAttribute="top" constant="20" id="QHW-pT-ljM"/>
+                            <constraint firstItem="gEm-GU-4NG" firstAttribute="trailing" secondItem="bfF-pA-3cE" secondAttribute="trailing" constant="20" id="e13-rT-SuP"/>
+                            <constraint firstItem="gEm-GU-4NG" firstAttribute="bottom" secondItem="wLg-MH-n6j" secondAttribute="bottom" constant="20" id="sqH-Vf-HWJ"/>
+                            <constraint firstItem="wLg-MH-n6j" firstAttribute="top" secondItem="bfF-pA-3cE" secondAttribute="bottom" constant="20" id="tbw-c3-Kbs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="물류견적요청 1단계" id="wMd-O2-cZ5">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="oQG-aS-EQD">
+                            <connections>
+                                <segue destination="Iar-lh-Sdx" kind="unwind" unwindAction="unwindToMainView:" id="NNI-xG-xye"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aCc-5F-V2U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Iar-lh-Sdx" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="8318.8405797101459" y="-1564.2857142857142"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="FGe-9h-Ire">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="j8D-8e-fEI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="h8G-1l-QU7"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="7nm-1q-pT6"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jfu-7W-HnS">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="SZr-FK-bd9" kind="relationship" relationship="rootViewController" id="CV5-kU-u04"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QJa-YM-9SV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4579.7101449275369" y="-1564.2857142857142"/>
+        </scene>
+        <!--물류견적요청 2단계-->
+        <scene sceneID="mpV-yg-XEh">
+            <objects>
+                <viewController id="czk-jy-rRF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GSu-Z4-Ity">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H88-kh-4D8">
+                                <rect key="frame" x="20" y="795" width="374" height="47"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="다음" buttonSize="large"/>
+                                <connections>
+                                    <segue destination="O1f-Y2-4bb" kind="show" id="cFq-TP-Dx4"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Xcy-uF-g2i">
+                                <rect key="frame" x="20" y="108" width="374" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">* 물류비 견적 요청 2단계 * 물품 정보 * HSCode * 물품 총 가액 * 총 중량(단위 선택) * 화물 포장 정보 * 포장 타입 * 가로 세로 높이 * 개수 * 제품 사진 첨부 * 수출 / 수입 통관 서비스 필요 여부 * 견적 요청 마감일 * 취소 작성 완료</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="q8X-Y4-tza"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="H88-kh-4D8" firstAttribute="leading" secondItem="q8X-Y4-tza" secondAttribute="leading" constant="20" id="0ig-a5-Rk7"/>
+                            <constraint firstItem="Xcy-uF-g2i" firstAttribute="top" secondItem="q8X-Y4-tza" secondAttribute="top" constant="20" id="IRf-sB-tDS"/>
+                            <constraint firstItem="q8X-Y4-tza" firstAttribute="trailing" secondItem="H88-kh-4D8" secondAttribute="trailing" constant="20" id="K1R-lg-Zh5"/>
+                            <constraint firstItem="q8X-Y4-tza" firstAttribute="bottom" secondItem="H88-kh-4D8" secondAttribute="bottom" constant="20" id="M5G-b8-X1L"/>
+                            <constraint firstItem="Xcy-uF-g2i" firstAttribute="leading" secondItem="q8X-Y4-tza" secondAttribute="leading" constant="20" id="Z5m-BE-iD8"/>
+                            <constraint firstItem="q8X-Y4-tza" firstAttribute="trailing" secondItem="Xcy-uF-g2i" secondAttribute="trailing" constant="20" id="f2z-2K-DOW"/>
+                            <constraint firstItem="H88-kh-4D8" firstAttribute="top" secondItem="Xcy-uF-g2i" secondAttribute="bottom" constant="20" id="yhF-CN-eMR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="물류견적요청 2단계" id="wxl-zD-t1B"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jFb-R0-5Ba" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9376.8115942028999" y="-1564.2857142857142"/>
+        </scene>
+        <!--물류견적요청 3단계-->
+        <scene sceneID="eFd-aU-2eZ">
+            <objects>
+                <viewController id="O1f-Y2-4bb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wGa-9h-Fn0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="* 로딩 아이콘 * 포워더에게 물류비 견적 요청" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AZB-F2-qsI">
+                                <rect key="frame" x="20" y="108" width="374" height="734"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GmH-mq-57v">
+                                <rect key="frame" x="20" y="795" width="374" height="47"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="다음" buttonSize="large"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="izL-PG-f2B"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="izL-PG-f2B" firstAttribute="trailing" secondItem="GmH-mq-57v" secondAttribute="trailing" constant="20" id="2pa-Bi-Baj"/>
+                            <constraint firstItem="izL-PG-f2B" firstAttribute="bottom" secondItem="AZB-F2-qsI" secondAttribute="bottom" constant="20" id="BVK-ou-Wk9"/>
+                            <constraint firstItem="AZB-F2-qsI" firstAttribute="top" secondItem="izL-PG-f2B" secondAttribute="top" constant="20" id="ITd-y1-7oR"/>
+                            <constraint firstItem="izL-PG-f2B" firstAttribute="bottom" secondItem="GmH-mq-57v" secondAttribute="bottom" constant="20" id="Vid-BC-VlU"/>
+                            <constraint firstItem="izL-PG-f2B" firstAttribute="trailing" secondItem="AZB-F2-qsI" secondAttribute="trailing" constant="20" id="WLk-j6-I6c"/>
+                            <constraint firstItem="AZB-F2-qsI" firstAttribute="leading" secondItem="izL-PG-f2B" secondAttribute="leading" constant="20" id="rz4-x5-6bv"/>
+                            <constraint firstItem="GmH-mq-57v" firstAttribute="leading" secondItem="izL-PG-f2B" secondAttribute="leading" constant="20" id="sWH-Sk-iNE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="물류견적요청 3단계" id="KfJ-9m-jQ2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Wz-Tr-2Or" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="10389.855072463768" y="-1564.2857142857142"/>
+        </scene>
+        <!--BAETAVERSE-->
+        <scene sceneID="MOz-GL-RxH">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="SZr-FK-bd9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="BAETAVERSE" prompt="LCL 화물 대상 물류비 견적 플랫폼" id="Ujy-CM-Mg7">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="sidebar.left" catalog="system" id="uEm-BI-FLN">
+                            <connections>
+                                <segue destination="h3C-Mt-Cif" kind="show" id="IM0-l1-JVI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Eis-ye-xEX">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="acu-CX-eJX" kind="relationship" relationship="viewControllers" id="qFT-xW-j89"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="geD-qb-41L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5571.0144927536239" y="-1564.2857142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dAN-bB-prW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="D5v-IR-N6D" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XWj-Bz-fbF">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="J6g-4b-jZ2" kind="relationship" relationship="rootViewController" id="Rt2-2Y-UXG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AdM-qH-Ngp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7408.6956521739139" y="-1564.2857142857142"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="MainViewImage" width="1000" height="668"/>
+        <image name="ferry.fill" catalog="system" width="128" height="128"/>
+        <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
+        <image name="sidebar.left" catalog="system" width="128" height="93"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
