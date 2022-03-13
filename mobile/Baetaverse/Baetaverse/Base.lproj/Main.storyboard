@@ -826,16 +826,21 @@
                                 <segue destination="h3C-Mt-Cif" kind="show" id="xAH-ek-Ehk"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="bell" catalog="system" id="BI0-Vx-q2g">
+                            <connections>
+                                <segue destination="9Mb-YN-So5" kind="show" id="Xc5-Ha-5OS"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9yv-aJ-z4u" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7389.8550724637689" y="-1564.2857142857142"/>
+            <point key="canvasLocation" x="7390" y="-2117"/>
         </scene>
-        <!--Table View Controller-->
+        <!--메뉴-->
         <scene sceneID="C6e-t3-X9f">
             <objects>
-                <tableViewController id="h3C-Mt-Cif" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="h3C-Mt-Cif" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="LFD-cJ-Wb3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -939,12 +944,88 @@
                             <outlet property="delegate" destination="h3C-Mt-Cif" id="o9A-aO-BoY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="err-1i-ng3"/>
+                    <navigationItem key="navigationItem" title="메뉴" id="err-1i-ng3"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hqC-zE-zNT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="yM0-Vz-NyB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="8319" y="-2340"/>
+            <point key="canvasLocation" x="8319" y="-3015"/>
+        </scene>
+        <!--알림-->
+        <scene sceneID="9ob-MB-ybW">
+            <objects>
+                <tableViewController hidesBottomBarWhenPushed="YES" id="9Mb-YN-So5" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="bDn-F9-l2I">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="DX0-gQ-FAR">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="Gcw-Ee-yly" style="IBUITableViewCellStyleDefault" id="5eB-2L-tgE">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5eB-2L-tgE" id="JXL-tA-PGt">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="알림 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Gcw-Ee-yly">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="asI-Qe-xcf" style="IBUITableViewCellStyleDefault" id="dlq-sf-D4U">
+                                        <rect key="frame" x="0.0" y="88" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dlq-sf-D4U" id="u61-R4-YAh">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="알림 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="asI-Qe-xcf">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="JmM-gy-Tgy" style="IBUITableViewCellStyleDefault" id="M8U-mI-puB">
+                                        <rect key="frame" x="0.0" y="131.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="M8U-mI-puB" id="ceZ-v0-fRs">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="알림 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JmM-gy-Tgy">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="9Mb-YN-So5" id="zeW-F0-8fN"/>
+                            <outlet property="delegate" destination="9Mb-YN-So5" id="DzH-iQ-miP"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="알림" id="FIl-RH-eUZ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r1k-s7-Bnc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8319" y="-2277"/>
         </scene>
         <!--물류견적요청 1단계-->
         <scene sceneID="UR0-GW-9GE">
@@ -987,7 +1068,7 @@
                     <navigationItem key="navigationItem" title="물류견적요청 1단계" id="wMd-O2-cZ5">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="oQG-aS-EQD">
                             <connections>
-                                <segue destination="Iar-lh-Sdx" kind="unwind" unwindAction="unwindToMainView:" id="NNI-xG-xye"/>
+                                <segue destination="Iar-lh-Sdx" kind="unwind" unwindAction="unwindToBUMainView:" id="3dd-d2-SbU"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1109,6 +1190,7 @@
                     <connections>
                         <segue destination="SjP-8L-WAK" kind="relationship" relationship="viewControllers" id="cdc-bW-V06"/>
                         <segue destination="XIT-y9-OI6" kind="relationship" relationship="viewControllers" id="bAy-RN-fKH"/>
+                        <segue destination="4Dw-Rl-hnQ" kind="relationship" relationship="viewControllers" id="dHn-Ex-mdk"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sqi-CT-iaW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1132,12 +1214,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MS0-uR-1Ps" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6479.7101449275369" y="-1564.2857142857142"/>
+            <point key="canvasLocation" x="6480" y="-2117"/>
         </scene>
         <!--견적서-->
         <scene sceneID="FB6-Dm-atx">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XIT-y9-OI6" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="XIT-y9-OI6" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="견적서" image="doc.text" catalog="system" id="yA3-PT-XQg"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="LcB-YO-KBX">
@@ -1153,6 +1235,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qYt-1M-LQC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6479.7101449275369" y="-810.26785714285711"/>
+        </scene>
+        <!--상담-->
+        <scene sceneID="Ygg-e0-rKn">
+            <objects>
+                <viewController id="4Dw-Rl-hnQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h24-dT-I7T">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="HBq-ec-Mk8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="상담" image="text.bubble.rtl" catalog="system" id="QpO-ci-jeP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QDH-rH-W3W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6480" y="9"/>
         </scene>
         <!--견적서-->
         <scene sceneID="cbg-B1-eg7">
@@ -1243,7 +1341,7 @@
         <scene sceneID="mOU-GW-eVC">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gy9-PU-nAC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="0m0-fm-Udd" customClass="BUEstimateListViewController" customModule="Baetaverse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="0m0-fm-Udd" customClass="BUEstimateListViewController" customModule="Baetaverse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5y0-ij-L9U">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1302,7 +1400,7 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5U7-BX-dEq">
-                                <rect key="frame" x="0.0" y="235" width="414" height="578"/>
+                                <rect key="frame" x="0.0" y="235" width="414" height="627"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="estimatesummarycell" rowHeight="107" id="M5i-Vw-agB">
@@ -1422,10 +1520,27 @@
                     <navigationItem key="navigationItem" title="업체 견적 리스트" largeTitleDisplayMode="never" id="J0L-GR-reE"/>
                     <connections>
                         <outlet property="tableView" destination="5U7-BX-dEq" id="M4U-A6-X20"/>
+                        <segue destination="Roq-L8-A13" kind="show" identifier="showEstimateDetail" id="lAv-Dz-xdC"/>
                     </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="8318.8405797101459" y="-810.26785714285711"/>
+        </scene>
+        <!--업체 견적 세부정보-->
+        <scene sceneID="Rl4-mk-sGI">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="Roq-L8-A13" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l6g-cZ-qXT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="YCc-em-UGy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="업체 견적 세부정보" id="ygA-7F-pyj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aya-5c-bpp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9343" y="-810"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
@@ -1433,11 +1548,13 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="MainViewImage" width="1000" height="668"/>
+        <image name="bell" catalog="system" width="128" height="124"/>
         <image name="doc.text" catalog="system" width="115" height="128"/>
         <image name="ferry.fill" catalog="system" width="128" height="128"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="sidebar.left" catalog="system" width="128" height="93"/>
+        <image name="text.bubble.rtl" catalog="system" width="128" height="110"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

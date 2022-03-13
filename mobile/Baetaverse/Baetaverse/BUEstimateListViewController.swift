@@ -14,6 +14,7 @@ class BUEstimateListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.delegate = self
     }
 
 }
@@ -21,12 +22,21 @@ class BUEstimateListViewController: UIViewController {
 extension BUEstimateListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "estimatesummarycell")!
         return cell
+    }
+    
+}
+
+extension BUEstimateListViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Hello World")
+        performSegue(withIdentifier: "showEstimateDetail", sender: nil)
     }
     
 }
