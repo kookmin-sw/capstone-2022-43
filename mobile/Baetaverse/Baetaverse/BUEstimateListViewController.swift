@@ -8,7 +8,9 @@
 import UIKit
 
 class BUEstimateListViewController: UIViewController {
-
+    
+    static var estimateRecordCount = 10
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -16,13 +18,19 @@ class BUEstimateListViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
+    @IBAction func unwindToBUEstimateListView(_ segue: UIStoryboardSegue) { }
 
 }
 
 extension BUEstimateListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return Self.estimateRecordCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
