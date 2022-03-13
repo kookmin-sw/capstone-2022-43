@@ -20,7 +20,21 @@ class BUEstimateDetailViewController: UIViewController {
         BUEstimateListViewController.estimateRecordCount -= 1
     }
     
-
+    @IBAction func acceptButtonClicked(_ sender: UIButton) {
+        let alertVC = UIAlertController(
+            title: "견적 신청이 완료되었습니다.",
+            message: "2시간 내로 포워더에게 상담 및 상담 안내가 없을 경우, 포워더의 상담 매칭률이 저하될 수 있습니다.",
+            preferredStyle: .alert
+        )
+        alertVC.addAction(UIAlertAction(title: "확인", style: .default) { _ in
+            
+            self.navigationController?.popViewController(animated: true)
+            
+        })
+        
+        present(alertVC, animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 
