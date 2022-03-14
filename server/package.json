@@ -1,5 +1,5 @@
 {
-  "name": "betaverse",
+  "name": "baetaverse",
   "version": "1.0.0",
   "description": "",
   "main": "dist/app.js",
@@ -7,24 +7,29 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node dist/app.js",
     "build": "tsc",
-    "dev": "npx nodemon"
+    "dev": "set NODE_ENV=develop && npx nodemon"
   },
   "nodemonConfig": {
     "start": "src/app.ts",
-    "watch": ["src/"],
+    "watch": [
+      "src/"
+    ],
     "ext": "ts",
     "exec": "ts-node ./src/app.ts",
-    "ignore": ["dist/"]
+    "ignore": [
+      "dist/"
+    ]
   },
   "keywords": [],
-  "author": "Team betaverse",
+  "author": "Team baetaverse",
   "license": "ISC",
   "dependencies": {
+    "@supabase/supabase-js": "^1.31.1",
     "@types/express": "^4.17.13",
     "@types/node": "^17.0.21",
-    "ts-node": "^10.7.0",
+    "dotenv": "^16.0.0",
     "express": "^4.17.3",
-    "dotenv": "^16.0.0"
+    "ts-node": "^10.7.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
