@@ -3,12 +3,16 @@ import HttpException from "./middlewares/HttpException";
 import 'dotenv/config';
 
 import indexRouter from './routes/index';
+import apiRouter from './routes/api';
 
 const app = express();
 
 app.set('port', process.env.PORT || 8080);
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.use('/', indexRouter);
+app.use('/api', apiRouter);
 
 app.use((req: Request, res: Response, next: NextFunction) => {
     const error =  new HttpException(404, `Not exist ${ req.method } ${ req.url } router`);
@@ -23,5 +27,5 @@ app.use((err: HttpException, req: Request, res: Response, next: NextFunction) =>
 });
 
 app.listen(app.get('port'), () => {
-    console.log('Running server...');
+    console.log(`Listening http://localhost:${ app.get('port') }`);
 });
