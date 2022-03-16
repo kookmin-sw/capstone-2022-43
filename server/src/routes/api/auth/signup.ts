@@ -1,5 +1,7 @@
 import express, { Request, Response, NextFunction } from "express";
-import { supabase } from '../../../utils/supabase'
+import { supabase } from '../../../utils/supabase';
+import bcrypt from "bcrypt";
+
 
 const router = express.Router();
 
@@ -7,16 +9,29 @@ router.post('/', async (req: Request, res: Response, next: NextFunction) => {
     try {
         const { email, password, name } = req.body;
 
-        const { data, error } = await supabase
+        const { data: existUser, error: UserNotFoundError } = await supabase
         .from('User')
-        .insert({ email, password, name });
+        .select('email, password')
+        .eq('email', email)
+        .limit(1)
+        .single();
 
-        // temporary error handler
-        if (error) {
-            return next(error);
+        if (existUser) {
+            return res.status(200).json({ message: 'Already exist user' });
         }
 
-        return res.status(200).json({ ...data });
+        const hash = await bcrypt.hash(password, 14);
+
+        const { data: newUser, error: FailToInsert } = await supabase
+        .from('User')
+        .insert({ email, password: hash, name });
+
+        // temporary error handler
+        if (FailToInsert) {
+            return next(FailToInsert);
+        }
+
+        return res.status(200).json({ message: 'Success to sign up' });
     } catch (error) {
         console.log(error);
         return next(error);
