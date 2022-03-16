@@ -1,11 +1,22 @@
 import express, { Request, Response, NextFunction } from "express";
+import { supabase } from '../../../utils/supabase'
 
 const router = express.Router();
 
-router.post('/', (req: Request, res: Response, next: NextFunction) => {
+router.post('/', async (req: Request, res: Response, next: NextFunction) => {
     try {
-        const { id, password, name } = req.body;
-        res.status(200).json({ id, password, name });
+        const { email, password, name } = req.body;
+
+        const { data, error } = await supabase
+        .from('User')
+        .insert({ email, password, name });
+
+        // temporary error handler
+        if (error) {
+            return next(error);
+        }
+
+        return res.status(200).json({ ...data });
     } catch (error) {
         console.log(error);
         return next(error);
