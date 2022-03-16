@@ -1,9 +1,11 @@
 import express, { Request, Response, NextFunction } from 'express';
 import HttpException from "./middlewares/HttpException";
 import 'dotenv/config';
+import './utils/passport/config';
 
 import indexRouter from './routes/index';
 import apiRouter from './routes/api';
+
 
 const app = express();
 
