@@ -1,6 +1,7 @@
 import express, { Request, Response, NextFunction } from "express";
-import { supabase } from '../../../utils/supabase';
+import { supabase } from "../../../utils/supabase";
 import bcrypt from "bcrypt";
+import HttpException from "../../../@types/HttpException";
 
 
 const router = express.Router();
@@ -17,7 +18,7 @@ router.post('/', async (req: Request, res: Response, next: NextFunction) => {
         .single();
 
         if (existUser) {
-            return res.status(200).json({ message: 'Already exist user' });
+            return next(new HttpException(400, 'Already exist user'));
         }
 
         const hash = await bcrypt.hash(password, 14);
@@ -32,6 +33,7 @@ router.post('/', async (req: Request, res: Response, next: NextFunction) => {
         }
 
         return res.status(200).json({ message: 'Success to sign up' });
+
     } catch (error) {
         console.log(error);
         return next(error);
