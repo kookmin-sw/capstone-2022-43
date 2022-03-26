@@ -1,5 +1,5 @@
 import express, { Request, Response, NextFunction } from 'express';
-import HttpException from "./middlewares/HttpException";
+import HttpException from './@types/HttpException';
 import logger from './middlewares/logger';
 import 'dotenv/config';
 import './utils/passport/config';
@@ -9,7 +9,7 @@ import useragent = require('useragent');
 import indexRouter from './routes/index';
 import apiRouter from './routes/api';
 
-const app = express();
+const app: express.Application = express();
 const requestIp = require('request-ip');
 
 
