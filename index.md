@@ -92,7 +92,9 @@
 
 ### 3. 소개 영상 (Youtube, 스크린샷 모음, 시연 영상, 추가링크 포함)
 
-프로젝트 소개하는 영상을 추가하세요
+* **모바일 서비스 예시 동작 영상**
+
+  ![Simulator Screen Recording - iPhone 12 Pro - 2022-03-13 at 17 15 16](https://user-images.githubusercontent.com/25794814/160404104-7dd52a30-5876-4461-80f1-787bfd52f358.gif)
 
 
 
