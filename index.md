@@ -1,37 +1,43 @@
-## Welcome to GitHub Pages
+## 🛳 BAETAVERSE 프로젝트에 오신 것을 환영합니다!
 
-You can use the [editor on GitHub](https://github.com/kookmin-sw/cap-template/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+### 1. 프로젝트 소개 (국문)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+프로젝트
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+### 2. Abstract (영문)
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
+### 3. 소개 영상 (Youtube, 스크린샷 모음, 시연 영상, 추가링크 포함)
 
-**Bold** and _Italic_ and `Code` text
+프로젝트 소개하는 영상을 추가하세요
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
+### 4. 팀 소개
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/kookmin-sw/cap-template/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+팀을 소개하세요.
 
-### Support or Contact
+팀원정보 및 담당이나 사진 및 SNS를 이용하여 소개하세요.
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+팀원 이름, 대표 사진, 역할
+
+학번 뒤 4자리 XXXX0000
+
+
+
+### 5. 사용법
+
+소스코드제출시 설치법이나 사용법을 작성하세요.
+
+소프트웨어 설치, 실행법, 사용법 추가 링크
+
+
+
+### 6. 기타
+
+추가적인 내용은 자유롭게 작성하세요.
+
+(1~5) 외에 전하고 싶은 내용, 사사
