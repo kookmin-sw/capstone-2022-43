@@ -56,7 +56,11 @@
 
 #### 적용 기술 (Technical Implementation)
 
+* **개요도**
 
+  ![Picture1](https://user-images.githubusercontent.com/25794814/160412622-17cab6b6-0c74-46e5-9767-9bad7839a15d.png)
+
+  
 
 #### 기대 효과
 
