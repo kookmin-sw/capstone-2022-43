@@ -98,13 +98,15 @@
 
 ### 4. 팀 소개
 
-팀을 소개하세요.
+* 팀 배타버스 (BAETAVERSE)
 
-팀원정보 및 담당이나 사진 및 SNS를 이용하여 소개하세요.
-
-팀원 이름, 대표 사진, 역할
-
-학번 뒤 4자리 XXXX0000
+| Profile Image                                                | Name   | Student # | Role                              | Contacts                                                     |
+| ------------------------------------------------------------ | ------ | --------- | --------------------------------- | ------------------------------------------------------------ |
+| ![image](https://user-images.githubusercontent.com/25794814/160363730-44990537-7c06-46ef-8430-2143c4f077f8.png) | 한정택 | XXXX1718  | 팀장 / Mobile Front-End Developer | E-mail : [smart8612@gmail.com](mailto:smart8612@gmail.com)   |
+| ![image](https://user-images.githubusercontent.com/25794814/160363730-44990537-7c06-46ef-8430-2143c4f077f8.png) | 서보성 | XXXX1629  | 개발자 / NLP Developer            | E-mail : [sboseong124@gmail.com](mailto:sboseong124@gmail.com) |
+| ![image](https://user-images.githubusercontent.com/25794814/160363730-44990537-7c06-46ef-8430-2143c4f077f8.png) | 김현우 | XXXX1603  | 개발자 / Back-End Developer       | E-mail : [khw56184@kookmin.ac.kr](mailto:khw56184@kookmin.ac.kr) |
+| ![image](https://user-images.githubusercontent.com/25794814/160363730-44990537-7c06-46ef-8430-2143c4f077f8.png) | 신준호 | XXXX1616  | 개발자 / Back-End Developer       | Email : [joonno94@kookmin.ac.kr](mailto:joonno94@kookmin.ac.kr) |
+| ![image](https://user-images.githubusercontent.com/25794814/160363730-44990537-7c06-46ef-8430-2143c4f077f8.png) | 안규빈 | XXXXXXXX  | 기획자 / Service Planner          | Email : [kbahn99@cau.ac.kr](mailto:kbahn99@cau.ac.kr)        |
 
 
 
