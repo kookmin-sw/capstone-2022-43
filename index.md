@@ -1,4 +1,4 @@
-## 🛳 BAETAVERSE 프로젝트에 오신 것을 환영합니다!
+## 🛳 Welcome to BAETAVERSE
 
 
 
@@ -149,15 +149,15 @@
 
 1. **Small-scale cargo owner perspective (consumer)**
 
-   - You can enter information to request a delivery quote for small shipments
+   - You can enter cargo information to request a delivery cost estimates
 
-   - It is possible to request interlocking of land, sea, and air logistics services
+   - It is possible to request syncronize logistics services of land, sea, and air 
 
-   - You can easily specify the detailed conditions for delivery of cargo based on Incoterms
+   - You can easily specify the detailed conditions for delivery of cargo based on Incoterms condition
 
-   - Information asymmetry can be resolved by comparing and selecting quotes proposed by shipping brokers on one platform
+   - Information asymmetry can be resolved by comparing and selecting cost estimates proposed by the provider on one platform
 
-   - In the case of a preferred quotation, consultation in the form of a direct message with the shipping agent is possible.
+   - In the case of a preferred cost estimates, consultation in the form of a direct message with the shipping agent is possible.
 
    - Can conduct assessments of service providers
 
@@ -165,11 +165,11 @@
 
 2. **Forwarding service provider perspective (provider)**
 
-   - Lower sales and administrative costs by managing consumer acquisition through one platform
+   - Lower sales costs by managing consumer acquisition through one platform
 
-   - You can check the list of detailed request quotes you want to receive
+   - You can check the details of the cost estimates requests and offer a reasonable cost estimates.
 
-   - Able to propose detailed opinions to respond to the quotation information requested by the consumer
+   - Able to propose detailed opinions to respond to the cost estimates requested by the consumer
 
    - Able to respond to a consultation request in the form of a direct message requested by the consumer
 
@@ -192,13 +192,13 @@
 1. **expected effect**
    - From a consumer's point of view, it is possible to reduce logistics costs and reduce logistics work time by providing integrated management of supplier quotations on one platform.
    - From a supplier perspective, it is possible to flexibly acquire small cargo consumers, thereby improving inefficiencies in operating and operating costs.
-   - Users can ease access to the maritime logistics industry through a platform that can consume logistics knowledge content in an integrated way.
-   - It is possible to secure competitiveness in Korea's international maritime logistics industry by expanding import and export logistics and improving inefficiencies.
+   - Users can ease access to the shipping logistics industry through a platform that can consume logistics knowledge content in an integrated way.
+   - It is possible to obtain competitiveness in Korea's international logistics industry by expanding import and export and improving inefficiencies.
    - From a consumer's point of view, you can check the reliability of the supplier and choose
 2. **Applications**
    - Reducing barriers to entry and lowering costs for small and medium-sized enterprises (SMEs) in the small-scale logistics processing sector
    - Reduction of small logistical handling costs for individual shippers
-   - Reduced shipping costs for new customers
+   - Reduced company's operating expenses for new customers
    - Mitigation of information asymmetry between shippers and forwarders
 
 
