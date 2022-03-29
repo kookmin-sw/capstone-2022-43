@@ -23,6 +23,7 @@
 		C1E5CBF827F2C0150087882E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1E5CBF727F2C0150087882E /* Assets.xcassets */; };
 		C1E5CC0127F2C0AF0087882E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1E5CBFF27F2C0AF0087882E /* Main.storyboard */; };
 		C1E5CC0727F307C80087882E /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC0627F307C70087882E /* HTTPMethod.swift */; };
+		C1E5CC0927F30A590087882E /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC0827F30A580087882E /* APIRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		C1E5CBF727F2C0150087882E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1E5CC0027F2C0AF0087882E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C1E5CC0627F307C70087882E /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		C1E5CC0827F30A580087882E /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				C1E5CC0627F307C70087882E /* HTTPMethod.swift */,
+				C1E5CC0827F30A580087882E /* APIRequest.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				C1E5CBF327F2BFBD0087882E /* BUEstimateListViewController.swift in Sources */,
 				C1E5CBBA27F2BF330087882E /* AppDelegate.swift in Sources */,
 				C1E5CBF427F2BFBD0087882E /* BUEstimateDetailViewController.swift in Sources */,
+				C1E5CC0927F30A590087882E /* APIRequest.swift in Sources */,
 				C1E5CBF527F2BFBD0087882E /* BUEstimateDueDateViewController.swift in Sources */,
 				C1E5CC0727F307C80087882E /* HTTPMethod.swift in Sources */,
 				C1E5CBBC27F2BF330087882E /* SceneDelegate.swift in Sources */,

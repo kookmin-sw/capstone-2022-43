@@ -15,3 +15,11 @@ enum HTTPMethod: String {
     case delete = "DELETE"
     
 }
+
+extension HTTPMethod {
+    
+    var stringValue: String {
+        self.rawValue
+    }
+    
+}
