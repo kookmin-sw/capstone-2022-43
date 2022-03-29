@@ -23,11 +23,7 @@ extension APIRequestModel {
                 "password": password,
                 "name": name
             ]
-            
-            let encoder = JSONEncoder()
-            encoder.outputFormatting = .prettyPrinted
-            
-            self.body = try? encoder.encode(parameters)
+            self.body = try? JSONEncoder.shared.encode(parameters)
         }
         
     }

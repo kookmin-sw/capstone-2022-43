@@ -29,6 +29,7 @@
 		C1E5CC1027F32BF80087882E /* BaetaverseAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC0F27F32BF80087882E /* BaetaverseAPIRequest.swift */; };
 		C1E5CC1227F32DC10087882E /* APIRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1127F32DC10087882E /* APIRequestModel.swift */; };
 		C1E5CC1527F32F040087882E /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1427F32F040087882E /* SignUpRequest.swift */; };
+		C1E5CC1827F333FD0087882E /* Extensions+JSONEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1727F333FD0087882E /* Extensions+JSONEncoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		C1E5CC0F27F32BF80087882E /* BaetaverseAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseAPIRequest.swift; sourceTree = "<group>"; };
 		C1E5CC1127F32DC10087882E /* APIRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestModel.swift; sourceTree = "<group>"; };
 		C1E5CC1427F32F040087882E /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
+		C1E5CC1727F333FD0087882E /* Extensions+JSONEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+JSONEncoder.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 		C1E5CBB827F2BF330087882E /* Baetaverse */ = {
 			isa = PBXGroup;
 			children = (
+				C1E5CC1627F333DD0087882E /* Extensions */,
 				C1E5CC0227F2C3530087882E /* SupportingFiles */,
 				C1E5CC0527F3073D0087882E /* Network */,
 				C1E5CC0327F2C36B0087882E /* ViewController */,
@@ -212,6 +215,14 @@
 				C1E5CC1427F32F040087882E /* SignUpRequest.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		C1E5CC1627F333DD0087882E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C1E5CC1727F333FD0087882E /* Extensions+JSONEncoder.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,6 +359,7 @@
 				C1E5CBBE27F2BF330087882E /* ViewController.swift in Sources */,
 				C1E5CBF227F2BFBD0087882E /* BUMainViewController.swift in Sources */,
 				C1E5CBF127F2BFBD0087882E /* BULoginViewController.swift in Sources */,
+				C1E5CC1827F333FD0087882E /* Extensions+JSONEncoder.swift in Sources */,
 				C1E5CBF627F2BFBD0087882E /* BUDepartureViewController.swift in Sources */,
 				C1E5CC1227F32DC10087882E /* APIRequestModel.swift in Sources */,
 				C1E5CBF327F2BFBD0087882E /* BUEstimateListViewController.swift in Sources */,
