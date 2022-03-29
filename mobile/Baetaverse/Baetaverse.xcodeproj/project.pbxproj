@@ -111,18 +111,9 @@
 		C1E5CBB827F2BF330087882E /* Baetaverse */ = {
 			isa = PBXGroup;
 			children = (
-				C1E5CBF727F2C0150087882E /* Assets.xcassets */,
-				C1E5CBF027F2BFBD0087882E /* BUDepartureViewController.swift */,
-				C1E5CBEE27F2BFBD0087882E /* BUEstimateDetailViewController.swift */,
-				C1E5CBEF27F2BFBD0087882E /* BUEstimateDueDateViewController.swift */,
-				C1E5CBED27F2BFBC0087882E /* BUEstimateListViewController.swift */,
-				C1E5CBEB27F2BFBC0087882E /* BULoginViewController.swift */,
-				C1E5CBEC27F2BFBC0087882E /* BUMainViewController.swift */,
-				C1E5CBB927F2BF330087882E /* AppDelegate.swift */,
-				C1E5CBBB27F2BF330087882E /* SceneDelegate.swift */,
-				C1E5CBBD27F2BF330087882E /* ViewController.swift */,
-				C1E5CBC427F2BF350087882E /* LaunchScreen.storyboard */,
-				C1E5CBFF27F2C0AF0087882E /* Main.storyboard */,
+				C1E5CC0227F2C3530087882E /* SupportingFiles */,
+				C1E5CC0327F2C36B0087882E /* ViewController */,
+				C1E5CC0427F2C37D0087882E /* View */,
 				C1E5CBC727F2BF350087882E /* Info.plist */,
 			);
 			path = Baetaverse;
@@ -143,6 +134,39 @@
 				C1E5CBDC27F2BF360087882E /* BaetaverseUITestsLaunchTests.swift */,
 			);
 			path = BaetaverseUITests;
+			sourceTree = "<group>";
+		};
+		C1E5CC0227F2C3530087882E /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				C1E5CBF727F2C0150087882E /* Assets.xcassets */,
+				C1E5CBB927F2BF330087882E /* AppDelegate.swift */,
+				C1E5CBBB27F2BF330087882E /* SceneDelegate.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		C1E5CC0327F2C36B0087882E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C1E5CBF027F2BFBD0087882E /* BUDepartureViewController.swift */,
+				C1E5CBEE27F2BFBD0087882E /* BUEstimateDetailViewController.swift */,
+				C1E5CBEF27F2BFBD0087882E /* BUEstimateDueDateViewController.swift */,
+				C1E5CBED27F2BFBC0087882E /* BUEstimateListViewController.swift */,
+				C1E5CBEB27F2BFBC0087882E /* BULoginViewController.swift */,
+				C1E5CBEC27F2BFBC0087882E /* BUMainViewController.swift */,
+				C1E5CBBD27F2BF330087882E /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C1E5CC0427F2C37D0087882E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C1E5CBC427F2BF350087882E /* LaunchScreen.storyboard */,
+				C1E5CBFF27F2C0AF0087882E /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
