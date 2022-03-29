@@ -2,17 +2,17 @@
 
 
 
-### 1. 프로젝트 소개 (국문)
+### 1. 프로젝트 소개
 
 
 
-#### 개요 (Overview)
+#### 개요
 
 * 화물의 주인과 운송 주선업자 사이의 정보 비대칭성을 줄여서 화물의 주인에게 합리적인 소규모 화물 물류비 견적을 제공해주는 플랫폼
 
   
 
-#### 제안 배경 (Problem)
+#### 제안 배경
 
 * 물류 서비스를 이용하고자 하는 **소비자**로 **화물의 주인 (화주)**, 물류 서비스를 제공해주는 **공급자**로 포워딩 서비스를 제공하는 **운송 주선업자**가 있음
 
@@ -30,7 +30,7 @@
 
   
 
-#### 주요 서비스 (Solution)
+#### 주요 서비스
 
 1. **소규모 수출 화주 관점 (소비자)**
 
@@ -54,7 +54,7 @@
 
 
 
-#### 적용 기술 (Technical Implementation)
+#### 적용 기술
 
 1. **기술 개요**
 
@@ -73,6 +73,8 @@
 2. **기술 배치 도식화**
 
    ![Picture1](https://user-images.githubusercontent.com/25794814/160412622-17cab6b6-0c74-46e5-9767-9bad7839a15d.png)
+
+   
 
 3. **주요 기능**
 
@@ -113,7 +115,91 @@
 
      
 
-### 3. Abstract (영문)
+### 2. Abstract (영문)
+
+
+
+#### Overview
+
+- A software platform that provides LCL (less than container load) logistics estimate comparison service to reduce information asymmetry between consumer and the provider
+
+  
+
+#### Problem
+
+- **Consumers** want to use the logistics service about small-scale cargo at low price
+
+- **Forwarding service provider** want to operate containers at low cost by utilizing all of the space
+
+- Because of the logistics disruption caused by the COVID-19 pandemic, the demand for the LCL logistics is increasing.
+
+- Currently, information asymmetry exists when consumers access LCL logistics estimates.
+
+- Therefore, customers using LCL logistics services have inefficiencies in terms of time and cost.
+
+- Suppliers also have inefficiencies in terms of physically moving for field sales.
+
+- To improve the problem caused by information asymmetry, We want to provide a service that allows you to manage logistics estimates through one platform.
+
+- Therefore, a platform to compare logistics estimates between consumer and the provider was proposed.
+
+  
+
+#### Solution
+
+1. **Small-scale cargo owner perspective (consumer)**
+
+   - You can enter information to request a delivery quote for small shipments
+
+   - It is possible to request interlocking of land, sea, and air logistics services
+
+   - You can easily specify the detailed conditions for delivery of cargo based on Incoterms
+
+   - Information asymmetry can be resolved by comparing and selecting quotes proposed by shipping brokers on one platform
+
+   - In the case of a preferred quotation, consultation in the form of a direct message with the shipping agent is possible.
+
+   - Can conduct assessments of service providers
+
+     
+
+2. **Forwarding service provider perspective (provider)**
+
+   - Lower sales and administrative costs by managing consumer acquisition through one platform
+
+   - You can check the list of detailed request quotes you want to receive
+
+   - Able to propose detailed opinions to respond to the quotation information requested by the consumer
+
+   - Able to respond to a consultation request in the form of a direct message requested by the consumer
+
+   - You can actually proceed with the request for a quote accepted by the user
+
+   - Can prove the supplier's credit based on the ratings left by the consumer
+
+     
+
+#### Technical Implementation
+
+- **Service distribution schema**
+
+  ![Picture1](https://user-images.githubusercontent.com/25794814/160412622-17cab6b6-0c74-46e5-9767-9bad7839a15d.png)
+
+  
+
+#### Benefit
+
+1. **expected effect**
+   - From a consumer's point of view, it is possible to reduce logistics costs and reduce logistics work time by providing integrated management of supplier quotations on one platform.
+   - From a supplier perspective, it is possible to flexibly acquire small cargo consumers, thereby improving inefficiencies in operating and operating costs.
+   - Users can ease access to the maritime logistics industry through a platform that can consume logistics knowledge content in an integrated way.
+   - It is possible to secure competitiveness in Korea's international maritime logistics industry by expanding import and export logistics and improving inefficiencies.
+   - From a consumer's point of view, you can check the reliability of the supplier and choose
+2. **Applications**
+   - Reducing barriers to entry and lowering costs for small and medium-sized enterprises (SMEs) in the small-scale logistics processing sector
+   - Reduction of small logistical handling costs for individual shippers
+   - Reduced shipping costs for new customers
+   - Mitigation of information asymmetry between shippers and forwarders
 
 
 
@@ -127,7 +213,7 @@
 
 ### 4. 팀 소개
 
-* 팀 배타버스 (BAETAVERSE)
+* **팀 배타버스 (BAETAVERSE)**
 
 | Profile Image                                                | Name   | Student # | Role                              | Contacts                                                     |
 | ------------------------------------------------------------ | ------ | --------- | --------------------------------- | ------------------------------------------------------------ |
@@ -145,11 +231,3 @@
 
 * [Mobile 구동 가이드](#)
 * [NLP 구동 가이드](#)
-
-
-
-### 6. 기타
-
-추가적인 내용은 자유롭게 작성하세요.
-
-(1~5) 외에 전하고 싶은 내용, 사사
