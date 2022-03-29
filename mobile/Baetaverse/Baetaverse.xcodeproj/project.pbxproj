@@ -30,6 +30,7 @@
 		C1E5CC1227F32DC10087882E /* APIRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1127F32DC10087882E /* APIRequestModel.swift */; };
 		C1E5CC1527F32F040087882E /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1427F32F040087882E /* SignUpRequest.swift */; };
 		C1E5CC1827F333FD0087882E /* Extensions+JSONEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1727F333FD0087882E /* Extensions+JSONEncoder.swift */; };
+		C1E5CC1A27F334E10087882E /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1927F334E10087882E /* LoginRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		C1E5CC1127F32DC10087882E /* APIRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestModel.swift; sourceTree = "<group>"; };
 		C1E5CC1427F32F040087882E /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
 		C1E5CC1727F333FD0087882E /* Extensions+JSONEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+JSONEncoder.swift"; sourceTree = "<group>"; };
+		C1E5CC1927F334E10087882E /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +215,7 @@
 			children = (
 				C1E5CC1127F32DC10087882E /* APIRequestModel.swift */,
 				C1E5CC1427F32F040087882E /* SignUpRequest.swift */,
+				C1E5CC1927F334E10087882E /* LoginRequest.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				C1E5CBF327F2BFBD0087882E /* BUEstimateListViewController.swift in Sources */,
 				C1E5CBBA27F2BF330087882E /* AppDelegate.swift in Sources */,
 				C1E5CBF427F2BFBD0087882E /* BUEstimateDetailViewController.swift in Sources */,
+				C1E5CC1A27F334E10087882E /* LoginRequest.swift in Sources */,
 				C1E5CC0927F30A590087882E /* APIRequest.swift in Sources */,
 				C1E5CBF527F2BFBD0087882E /* BUEstimateDueDateViewController.swift in Sources */,
 				C1E5CC0727F307C80087882E /* HTTPMethod.swift in Sources */,
