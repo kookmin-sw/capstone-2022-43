@@ -127,57 +127,40 @@
 
 #### Problem
 
-- **Consumers** want to use the logistics service about small-scale cargo at low price
-
-- **Forwarding service provider** want to operate containers at low cost by utilizing all of the space
-
-- Because of the logistics disruption caused by the COVID-19 pandemic, the demand for the LCL logistics is increasing.
-
+- **Consumers** want to use the logistics service for small-scale cargo at a low price
+- **Forwarding service providers** want to operate containers at low cost by utilizing all of the space
+- Because of the logistics disruption caused by the COVID-19 pandemic, the demand for LCL logistics is increasing.
 - Currently, information asymmetry exists when consumers access LCL logistics estimates.
-
 - Therefore, customers using LCL logistics services have inefficiencies in terms of time and cost.
-
 - Suppliers also have inefficiencies in terms of physically moving for field sales.
-
 - To improve the problem caused by information asymmetry, We want to provide a service that allows you to manage logistics estimates through one platform.
+- Therefore, a platform to compare logistics estimates between the consumer and the provider was proposed.
 
-- Therefore, a platform to compare logistics estimates between consumer and the provider was proposed.
 
-  
 
 #### Solution
 
 1. **Small-scale cargo owner perspective (consumer)**
 
-   - You can enter cargo information to request a delivery cost estimates
+- - You can enter cargo information to request delivery cost estimates
+  - It is possible to request synchronized logistics services of land, sea, and air 
+  - You can easily specify the detailed conditions for delivery of cargo based on Incoterms condition
+  - Information asymmetry can be resolved by comparing and selecting cost estimates proposed by the provider on one platform
+  - In the case of preferred cost estimates, consultation in the form of a direct message with the shipping agent is possible.
+  - Can conduct assessments of service providers
 
-   - It is possible to request syncronize logistics services of land, sea, and air 
-
-   - You can easily specify the detailed conditions for delivery of cargo based on Incoterms condition
-
-   - Information asymmetry can be resolved by comparing and selecting cost estimates proposed by the provider on one platform
-
-   - In the case of a preferred cost estimates, consultation in the form of a direct message with the shipping agent is possible.
-
-   - Can conduct assessments of service providers
-
-     
+- 
 
 2. **Forwarding service provider perspective (provider)**
 
-   - Lower sales costs by managing consumer acquisition through one platform
+- - Lower sales costs by managing consumer acquisition through one platform
+  - You can check the details of the cost estimates requests and offer reasonable cost estimates.
+  - Able to propose detailed opinions to respond to the cost estimates requested by the consumer
+  - Able to respond to a consultation request in the form of a direct message requested by the consumer
+  - You can proceed with the request for a quote accepted by the user
+  - Can prove the supplier's credit based on the ratings left by the consumer
 
-   - You can check the details of the cost estimates requests and offer a reasonable cost estimates.
 
-   - Able to propose detailed opinions to respond to the cost estimates requested by the consumer
-
-   - Able to respond to a consultation request in the form of a direct message requested by the consumer
-
-   - You can actually proceed with the request for a quote accepted by the user
-
-   - Can prove the supplier's credit based on the ratings left by the consumer
-
-     
 
 #### Technical Implementation
 
@@ -193,7 +176,7 @@
    - From a consumer's point of view, it is possible to reduce logistics costs and reduce logistics work time by providing integrated management of supplier quotations on one platform.
    - From a supplier perspective, it is possible to flexibly acquire small cargo consumers, thereby improving inefficiencies in operating and operating costs.
    - Users can ease access to the shipping logistics industry through a platform that can consume logistics knowledge content in an integrated way.
-   - It is possible to obtain competitiveness in Korea's international logistics industry by expanding import and export and improving inefficiencies.
+   - It is possible to obtain competitiveness in Korea's international logistics industry by expanding imports and export and improving inefficiencies.
    - From a consumer's point of view, you can check the reliability of the supplier and choose
 2. **Applications**
    - Reducing barriers to entry and lowering costs for small and medium-sized enterprises (SMEs) in the small-scale logistics processing sector
@@ -215,13 +198,13 @@
 
 * **팀 배타버스 (BAETAVERSE)**
 
-| Profile Image                                                | Name   | Student # | Role                              | Contacts                                                     |
-| ------------------------------------------------------------ | ------ | --------- | --------------------------------- | ------------------------------------------------------------ |
-| ![image](https://user-images.githubusercontent.com/25794814/160363730-44990537-7c06-46ef-8430-2143c4f077f8.png) | 한정택 | XXXX1718  | 팀장 / Mobile Front-End Developer | E-mail : [smart8612@gmail.com](mailto:smart8612@gmail.com)   |
-| ![image](https://user-images.githubusercontent.com/25794814/160363730-44990537-7c06-46ef-8430-2143c4f077f8.png) | 서보성 | XXXX1629  | 개발자 / NLP Developer            | E-mail : [sboseong124@gmail.com](mailto:sboseong124@gmail.com) |
-| ![image](https://user-images.githubusercontent.com/25794814/160363730-44990537-7c06-46ef-8430-2143c4f077f8.png) | 김현우 | XXXX1603  | 개발자 / Back-End Developer       | E-mail : [khw56184@kookmin.ac.kr](mailto:khw56184@kookmin.ac.kr) |
-| ![image](https://user-images.githubusercontent.com/25794814/160363730-44990537-7c06-46ef-8430-2143c4f077f8.png) | 신준호 | XXXX1616  | 개발자 / Back-End Developer       | Email : [joonno94@kookmin.ac.kr](mailto:joonno94@kookmin.ac.kr) |
-| ![image](https://user-images.githubusercontent.com/25794814/160363730-44990537-7c06-46ef-8430-2143c4f077f8.png) | 안규빈 | XXXXXXXX  | 기획자 / Service Planner          | Email : [kbahn99@cau.ac.kr](mailto:kbahn99@cau.ac.kr)        |
+|                        Profile Image                         |  Name  | Student # |               Role                |                           Contacts                           |
+| :----------------------------------------------------------: | :----: | :-------: | :-------------------------------: | :----------------------------------------------------------: |
+| ![profileImage](https://user-images.githubusercontent.com/25794814/160516929-b941a406-cd25-404d-bae5-c827159bc611.png) | 한정택 | XXXX1718  | 팀장 / Mobile Front-End Developer |  E-mail : [smart8612@gmail.com](mailto:smart8612@gmail.com)  |
+| ![profileImage](https://user-images.githubusercontent.com/25794814/160516929-b941a406-cd25-404d-bae5-c827159bc611.png) | 서보성 | XXXX1629  |      개발자 / NLP Developer       | E-mail : [sboseong124@gmail.com](mailto:sboseong124@gmail.com) |
+| ![profileImage](https://user-images.githubusercontent.com/25794814/160516929-b941a406-cd25-404d-bae5-c827159bc611.png) | 김현우 | XXXX1603  |    개발자 / Back-End Developer    | E-mail : [khw56184@kookmin.ac.kr](mailto:khw56184@kookmin.ac.kr) |
+| ![profileImage](https://user-images.githubusercontent.com/25794814/160516929-b941a406-cd25-404d-bae5-c827159bc611.png) | 신준호 | XXXX1616  |    개발자 / Back-End Developer    | Email : [joonno94@kookmin.ac.kr](mailto:joonno94@kookmin.ac.kr) |
+| ![profileImage](https://user-images.githubusercontent.com/25794814/160516929-b941a406-cd25-404d-bae5-c827159bc611.png) | 안규빈 | XXXXXXXX  |     기획자 / Service Planner      |    Email : [kbahn99@cau.ac.kr](mailto:kbahn99@cau.ac.kr)     |
 
 
 
