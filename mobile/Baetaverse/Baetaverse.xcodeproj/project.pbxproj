@@ -150,8 +150,8 @@
 		C1E5CBB827F2BF330087882E /* Baetaverse */ = {
 			isa = PBXGroup;
 			children = (
-				C1E5CC1627F333DD0087882E /* Extensions */,
 				C1E5CC0227F2C3530087882E /* SupportingFiles */,
+				C1E5CC1627F333DD0087882E /* Extensions */,
 				C1E5CC0527F3073D0087882E /* Network */,
 				C1E5CC0327F2C36B0087882E /* ViewController */,
 				C1E5CC0427F2C37D0087882E /* View */,
@@ -215,9 +215,9 @@
 			children = (
 				C1E5CC0C27F32B1C0087882E /* API Foundation Module */,
 				C1E5CC1327F32EB40087882E /* API */,
+				C197AEB227F42D6D000E4975 /* NetworkServiceProvider.swift */,
 				C1E5CC0F27F32BF80087882E /* BaetaverseAPIRequest.swift */,
 				C1E5CC0D27F32B4C0087882E /* BaetaverseAPIRequestHostInfo.swift */,
-				C197AEB227F42D6D000E4975 /* NetworkServiceProvider.swift */,
 				C197AEBF27F43BEF000E4975 /* BaetaverseAPIService.swift */,
 			);
 			path = Network;
