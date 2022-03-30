@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C197AEB327F42D6D000E4975 /* NetworkServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197AEB227F42D6D000E4975 /* NetworkServiceProvider.swift */; };
 		C1E5CBBA27F2BF330087882E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CBB927F2BF330087882E /* AppDelegate.swift */; };
 		C1E5CBBC27F2BF330087882E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CBBB27F2BF330087882E /* SceneDelegate.swift */; };
 		C1E5CBBE27F2BF330087882E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CBBD27F2BF330087882E /* ViewController.swift */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C197AEB227F42D6D000E4975 /* NetworkServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProvider.swift; sourceTree = "<group>"; };
 		C1E5CBB627F2BF330087882E /* Baetaverse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Baetaverse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1E5CBB927F2BF330087882E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1E5CBBB27F2BF330087882E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -195,9 +197,10 @@
 			isa = PBXGroup;
 			children = (
 				C1E5CC0C27F32B1C0087882E /* API Foundation Module */,
-				C1E5CC0D27F32B4C0087882E /* BaetaverseAPIRequestHostInfo.swift */,
-				C1E5CC0F27F32BF80087882E /* BaetaverseAPIRequest.swift */,
 				C1E5CC1327F32EB40087882E /* API */,
+				C1E5CC0F27F32BF80087882E /* BaetaverseAPIRequest.swift */,
+				C1E5CC0D27F32B4C0087882E /* BaetaverseAPIRequestHostInfo.swift */,
+				C197AEB227F42D6D000E4975 /* NetworkServiceProvider.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				C1E5CBF127F2BFBD0087882E /* BULoginViewController.swift in Sources */,
 				C1E5CC1827F333FD0087882E /* Extensions+JSONEncoder.swift in Sources */,
 				C1E5CBF627F2BFBD0087882E /* BUDepartureViewController.swift in Sources */,
+				C197AEB327F42D6D000E4975 /* NetworkServiceProvider.swift in Sources */,
 				C1E5CC1227F32DC10087882E /* APIRequestModel.swift in Sources */,
 				C1E5CBF327F2BFBD0087882E /* BUEstimateListViewController.swift in Sources */,
 				C1E5CBBA27F2BF330087882E /* AppDelegate.swift in Sources */,
