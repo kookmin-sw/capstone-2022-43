@@ -10,6 +10,7 @@ import Foundation
 protocol NetworkService {
     
     func fetchData(for request: URLRequest) async throws -> Data
+    func fetchData(for service: APIService) async throws -> Data
     
 }
 
@@ -36,11 +37,20 @@ struct NetworkServiceProvider: NetworkService {
         }
     }
     
+    func fetchData(for service: APIService) async throws -> Data {
+        guard let request = service.urlRequest else {
+            throw NetworkServiceError.invalidURLRequest
+        }
+        let data = try await fetchData(for: request)
+        return data
+    }
+    
     enum NetworkServiceError: Error {
         
         case requestError
         case serverError
         case invalidHTTPResponse
+        case invalidURLRequest
         
     }
     
