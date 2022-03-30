@@ -12,7 +12,7 @@ protocol BaetaverseAPIRequestHostInfo: APIRequestHostInfo { }
 extension BaetaverseAPIRequestHostInfo {
     
     var baseURL: String {
-        "127.0.0.1:8080"
+        "http://127.0.0.1:8080"
     }
     
 }

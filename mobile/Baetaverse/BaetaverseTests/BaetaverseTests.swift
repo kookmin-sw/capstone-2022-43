@@ -19,15 +19,21 @@ final class BaetaverseTests: XCTestCase {
         sutNetworkModel = nil
     }
 
-    func testExample() async throws {
+    func test_회원가입요청() async throws {
         // given
-        let url = URL(string: "127.0.0.1:8080")!
-        let urlRequest = URLRequest(url: url)
+        let service: BaetaverseAPIService = .signUp(
+            email: "\(Int.random(in: 0...999))@test.com", password: "1234", name: "hello"
+        )
         
         // when
-        let result = try? await sutNetworkModel.fetchData(for: urlRequest)
+        do {
+            let result = try await sutNetworkModel.fetchData(for: service)
+            print(String(data: result, encoding: .utf8))
+            XCTAssert(true)
+        } catch {
+            XCTFail("Network Error \(error)")
+        }
         
-        XCTAssertNotNil(result)
     }
 
 }
