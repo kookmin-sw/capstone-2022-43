@@ -23,13 +23,22 @@ class BaetaverseAppModuleTests: XCTestCase {
         self.sutBaetaverse = nil
     }
 
-    func testExample() async throws {
+    func test_알맞은_계정이_입력되면_정상적으로_로그인되어야한다() async throws {
         try await sutBaetaverse.login(
             email: "test@test.com",
             password: "12341234"
         )
         
         XCTAssert(sutBaetaverse.isLogin)
+    }
+    
+    func test_회원가입_정상적으로_동작해야한다() async throws {
+        try await sutBaetaverse.signUp(
+            email: "\(Int.random(in: 0...999))@test.com",
+            password: "12341234",
+            name: "testSignUp"
+        )
+        XCTAssert(true)
     }
 
 }

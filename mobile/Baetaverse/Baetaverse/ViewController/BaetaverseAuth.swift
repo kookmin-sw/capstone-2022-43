@@ -109,6 +109,8 @@ class BaetaverseAuth: Auth {
             name: name
         )
         let result = try await networkService.fetchData(for: apiService)
+        let object = try result.decodeJSONData(to: APIResponseModel.SignUpResponse.self)
+        print(object)
     }
     
 }
