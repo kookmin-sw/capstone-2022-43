@@ -22,7 +22,7 @@ final class BaetaverseTests: XCTestCase {
     func test_회원가입요청() async throws {
         // given
         let service: BaetaverseAPIService = .signUp(
-            email: "\(Int.random(in: 0...999))@test.com", password: "1234", name: "hello"
+            email: "test@test.com", password: "12341234", name: "tes"
         )
         
         // when
