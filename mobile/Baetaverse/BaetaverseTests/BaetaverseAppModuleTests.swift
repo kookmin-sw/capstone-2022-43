@@ -24,8 +24,12 @@ class BaetaverseAppModuleTests: XCTestCase {
     }
 
     func testExample() async throws {
-        let data = try? await sutBaetaverse.login(email: "test@test.com", password: "12341234")
-        XCTAssertNotNil(data)
+        try await sutBaetaverse.login(
+            email: "test@test.com",
+            password: "12341234"
+        )
+        
+        XCTAssert(sutBaetaverse.isLogin)
     }
 
 }

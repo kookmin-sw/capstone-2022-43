@@ -92,6 +92,8 @@ class BaetaverseAuth: Auth {
             password: password
         )
         let result = try await networkService.fetchData(for: apiService)
+        let object = try result.decodeJSONData(to: APIResponseModel.LoginResponse.self)
+        self.userToken = object.token
     }
     
     func logout() {
