@@ -58,7 +58,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="로그인" buttonSize="large"/>
                                         <connections>
-                                            <segue destination="Z1v-yN-Ac4" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="2EJ-ej-9bn"/>
+                                            <action selector="loginButtonClicked:" destination="qYI-HY-SPf" eventType="touchUpInside" id="tgx-Fq-8c9"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t53-Wv-FgR">
@@ -84,6 +84,9 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="JyZ-hd-Yyh">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="joo-AO-1Ys"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -91,14 +94,18 @@
                             <constraint firstItem="YYm-oD-5YA" firstAttribute="leading" secondItem="joo-AO-1Ys" secondAttribute="leading" constant="20" id="2yd-BF-iIw"/>
                             <constraint firstItem="joo-AO-1Ys" firstAttribute="trailing" secondItem="YYm-oD-5YA" secondAttribute="trailing" constant="20" id="IYJ-mr-oUo"/>
                             <constraint firstItem="YYm-oD-5YA" firstAttribute="centerY" secondItem="eZJ-72-8HU" secondAttribute="centerY" id="KJ7-Y3-U8L"/>
+                            <constraint firstItem="JyZ-hd-Yyh" firstAttribute="centerY" secondItem="eZJ-72-8HU" secondAttribute="centerY" id="Tfu-Tc-51t"/>
                             <constraint firstItem="YYm-oD-5YA" firstAttribute="centerX" secondItem="eZJ-72-8HU" secondAttribute="centerX" id="iDs-g3-PI8"/>
+                            <constraint firstItem="JyZ-hd-Yyh" firstAttribute="centerX" secondItem="eZJ-72-8HU" secondAttribute="centerX" id="pju-Kt-8ry"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Login" image="person.circle" catalog="system" selectedImage="person.circle" id="Qig-a8-TaY"/>
                     <navigationItem key="navigationItem" id="q70-6f-sdZ"/>
                     <connections>
                         <outlet property="idTextField" destination="ARd-2F-Dk3" id="Wjb-tL-6u2"/>
+                        <outlet property="loadActivityIndicatorView" destination="JyZ-hd-Yyh" id="TLK-jU-Fjl"/>
                         <outlet property="passwordTextField" destination="Cly-rg-zip" id="qtR-tE-Omf"/>
+                        <segue destination="Z1v-yN-Ac4" kind="presentation" identifier="presentLoginMainSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="E6Y-3l-cYD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jyj-OD-Tfb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
