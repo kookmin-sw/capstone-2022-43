@@ -30,14 +30,6 @@ class hscode_node:
     def set_next(self, node):
         self.next = node
 
-    def connect_node(self, node, cond):
-        if cond == '0': # connect sub
-            self.set_sub(node)
-        elif cond == '1': # connect prev
-            self.set_prev(node)
-        else: # connect next
-            self.set_next(node)
-
 class hscode_linkedlist:
     def __init__(self):
         with open("HScode02.txt", 'r', encoding='utf-8') as f02:
@@ -60,11 +52,11 @@ class hscode_linkedlist:
         # hscode 0 ~ 2 connect to root
         for node_idx in range(len(hscode02_node)):
             if node_idx == 0:
-                self.root.connect_node(hscode02_node[node_idx], '0')
+                self.root.set_sub(hscode02_node[node_idx])
                 continue
 
-            hscode02_node[node_idx-1].connect_node(hscode02_node[node_idx], '2')
-            hscode02_node[node_idx].connect_node(hscode02_node[node_idx-1], '1')
+            hscode02_node[node_idx-1].set_next(hscode02_node[node_idx])
+            hscode02_node[node_idx].set_prev(hscode02_node[node_idx-1])
 
         # hscode 0 ~ 4 connect to hscode 0 ~ 2 connect
         start_node = hscode02_node[0]
@@ -79,15 +71,15 @@ class hscode_linkedlist:
 
             if start_node.get_code() == cond:
                 if first_cond == 0:
-                    start_node.connect_node(node, '0')
+                    start_node.set_sub(node)
                     first_cond = 1 
                 else:
-                    prev_node.connect_node(node, '2')
-                    node.connect_node(prev_node, '1')
+                    prev_node.set_next(node)
+                    node.set_prev(prev_node)
             
             prev_node = node
 
-    def find(self, hscode):
+    def code_to_data(self, hscode):
         hscode_length = len(hscode)
         start_node = self.root.get_sub()
         output = []
