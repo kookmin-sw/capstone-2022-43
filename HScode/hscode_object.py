@@ -38,7 +38,7 @@ class hscode_node:
         else: # connect next
             self.set_next(node)
 
-class hscode_tree:
+class hscode_linkedlist:
     def __init__(self):
         with open("HScode02.txt", 'r', encoding='utf-8') as f02:
             file02 = f02.readlines()
