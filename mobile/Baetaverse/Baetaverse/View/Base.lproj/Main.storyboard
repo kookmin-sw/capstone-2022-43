@@ -96,6 +96,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Login" image="person.circle" catalog="system" selectedImage="person.circle" id="Qig-a8-TaY"/>
                     <navigationItem key="navigationItem" id="q70-6f-sdZ"/>
+                    <connections>
+                        <outlet property="idTextField" destination="ARd-2F-Dk3" id="Wjb-tL-6u2"/>
+                        <outlet property="passwordTextField" destination="Cly-rg-zip" id="qtR-tE-Omf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jyj-OD-Tfb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

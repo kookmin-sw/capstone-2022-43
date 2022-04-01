@@ -48,6 +48,13 @@ class BaetaverseAppService: AppService {
         auth.token
     }
     
+    static func configure() -> BaetaverseAppService {
+        let networkService = NetworkServiceProvider()
+        let auth = BaetaverseAuth(networkService: networkService)
+        let businessService = BaetaverseBusinessService(networkService: networkService)
+        return BaetaverseAppService(auth: auth, businessService: businessService)
+    }
+    
     func login(email: String, password: String) async throws {
         try await auth.login(email: email, password: password)
     }
