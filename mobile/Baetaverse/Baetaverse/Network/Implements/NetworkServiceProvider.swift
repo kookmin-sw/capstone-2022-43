@@ -7,13 +7,6 @@
 
 import Foundation
 
-protocol NetworkService {
-    
-    func fetchData(for request: URLRequest) async throws -> Data
-    func fetchData(for service: APIService) async throws -> Data
-    
-}
-
 struct NetworkServiceProvider: NetworkService {
     
     private var session: URLSession {
