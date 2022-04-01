@@ -21,7 +21,7 @@ extension APIRequestModel {
             self.headers = ["Authorization": "Bearer \(token)"]
             let parameter = [
                 "id": id,
-                "HSCode": HSCode,
+                "HSCODE": HSCode,
                 "country": country
             ]
             self.body = try? JSONEncoder.shared.encode(parameter)

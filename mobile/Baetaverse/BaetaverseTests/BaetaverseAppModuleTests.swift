@@ -40,5 +40,20 @@ class BaetaverseAppModuleTests: XCTestCase {
         )
         XCTAssert(true)
     }
+    
+    func test_새로운_견적_등록하기가_정상적으로_동작해야한다() async throws {
+        try await sutBaetaverse.login(
+            email: "test@test.com",
+            password: "12341234"
+        )
+        
+        try await sutBaetaverse.registerEvaluate(
+            id: UUID().uuidString,
+            HSCode: "1234",
+            country: "USA"
+        )
+        
+        XCTAssert(true)
+    }
 
 }

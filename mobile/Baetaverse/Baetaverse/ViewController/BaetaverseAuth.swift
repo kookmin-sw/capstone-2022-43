@@ -7,7 +7,11 @@
 
 import Foundation
 
-protocol AppService: Auth, BusinessService { }
+protocol AppService: Auth {
+    
+    func registerEvaluate(id: String, HSCode: String, country: String) async throws
+    
+}
 
 protocol Auth {
     
@@ -22,7 +26,7 @@ protocol Auth {
 
 protocol BusinessService {
     
-    func registerEvaluate(token: String?, id: String, HSCode: String, country: String) async throws
+    func registerEvaluate(token: String, id: String, HSCode: String, country: String) async throws
     
 }
 
@@ -56,9 +60,9 @@ class BaetaverseAppService: AppService {
         try await auth.signUp(email: email, password: password, name: name)
     }
     
-    func registerEvaluate(token: String? = nil, id: String, HSCode: String, country: String) async throws {
+    func registerEvaluate(id: String, HSCode: String, country: String) async throws {
         try await businessService.registerEvaluate(
-            token: token ?? self.token,
+            token: token,
             id: id,
             HSCode: HSCode,
             country: country
@@ -109,8 +113,7 @@ class BaetaverseAuth: Auth {
             name: name
         )
         let result = try await networkService.fetchData(for: apiService)
-        let object = try result.decodeJSONData(to: APIResponseModel.SignUpResponse.self)
-        print(object)
+        let _ = try result.decodeJSONData(to: APIResponseModel.SignUpResponse.self)
     }
     
 }
@@ -123,9 +126,9 @@ class BaetaverseBusinessService: BusinessService {
         self.networkService = networkService
     }
     
-    func registerEvaluate(token: String?, id: String, HSCode: String, country: String) async throws {
+    func registerEvaluate(token: String, id: String, HSCode: String, country: String) async throws {
         let apiService = BaetaverseAPIService.quoteRequest(
-            token: token ?? "",
+            token: token,
             id: id,
             HSCode: HSCode,
             country: country
