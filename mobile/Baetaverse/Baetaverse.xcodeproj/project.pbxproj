@@ -35,6 +35,7 @@
 		C197AEC427F43EF9000E4975 /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1427F32F040087882E /* SignUpRequest.swift */; };
 		C197AEC527F43EFC000E4975 /* APIRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1127F32DC10087882E /* APIRequestModel.swift */; };
 		C197AEC627F43FBA000E4975 /* Extensions+JSONEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1727F333FD0087882E /* Extensions+JSONEncoder.swift */; };
+		C1CF673A27F724600057A6C3 /* BUMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF673927F724600057A6C3 /* BUMenuTableViewController.swift */; };
 		C1E5CBBA27F2BF330087882E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CBB927F2BF330087882E /* AppDelegate.swift */; };
 		C1E5CBBC27F2BF330087882E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CBBB27F2BF330087882E /* SceneDelegate.swift */; };
 		C1E5CBBE27F2BF330087882E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CBBD27F2BF330087882E /* ViewController.swift */; };
@@ -90,6 +91,7 @@
 		C197AEB227F42D6D000E4975 /* NetworkServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProvider.swift; sourceTree = "<group>"; };
 		C197AEBC27F43AEC000E4975 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		C197AEBF27F43BEF000E4975 /* BaetaverseAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseAPIService.swift; sourceTree = "<group>"; };
+		C1CF673927F724600057A6C3 /* BUMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BUMenuTableViewController.swift; path = Baetaverse/ViewController/BUMenuTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		C1E5CBB627F2BF330087882E /* Baetaverse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Baetaverse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1E5CBB927F2BF330087882E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1E5CBBB27F2BF330087882E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 				C1E5CBEC27F2BFBC0087882E /* BUMainViewController.swift */,
 				C13778C027F497CF00DAF494 /* BUSignUpFormViewController.swift */,
 				C13778C227F498EE00DAF494 /* BaetaverseAuth.swift */,
+				C1CF673927F724600057A6C3 /* BUMenuTableViewController.swift */,
 				C1E5CBBD27F2BF330087882E /* ViewController.swift */,
 			);
 			path = ViewController;
@@ -440,6 +443,7 @@
 				C197AEB327F42D6D000E4975 /* NetworkServiceProvider.swift in Sources */,
 				C1E5CC1227F32DC10087882E /* APIRequestModel.swift in Sources */,
 				C1E5CBF327F2BFBD0087882E /* BUEstimateListViewController.swift in Sources */,
+				C1CF673A27F724600057A6C3 /* BUMenuTableViewController.swift in Sources */,
 				C1E5CBBA27F2BF330087882E /* AppDelegate.swift in Sources */,
 				C1E5CBF427F2BFBD0087882E /* BUEstimateDetailViewController.swift in Sources */,
 				C149737627F5A39800679118 /* SignUpResponse.swift in Sources */,
