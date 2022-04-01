@@ -50,4 +50,9 @@ class BULoginViewController: UIViewController {
     
     @IBAction func unwindToLoginBULoginView(_ segue: UIStoryboardSegue) { }
     
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
 }

@@ -181,6 +181,9 @@
                                 <rect key="frame" x="20" y="795" width="374" height="47"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="다음" buttonSize="large"/>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="kbR-bL-3pV" eventType="touchUpInside" id="23K-Rx-Sqj"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8nj-lg-9Jc">
                                 <rect key="frame" x="46.5" y="209" width="321" height="478"/>
@@ -348,20 +351,33 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="i6y-Ny-1ek">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ImC-rg-asa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="i6y-Ny-1ek" firstAttribute="centerX" secondItem="4rx-Pd-rpS" secondAttribute="centerX" id="1HE-Dj-ncP"/>
                             <constraint firstItem="je2-U4-2af" firstAttribute="leading" secondItem="4rx-Pd-rpS" secondAttribute="leading" constant="20" id="LDI-bm-9P8"/>
                             <constraint firstItem="8nj-lg-9Jc" firstAttribute="centerY" secondItem="4rx-Pd-rpS" secondAttribute="centerY" id="Sdf-4s-I3J"/>
                             <constraint firstItem="ImC-rg-asa" firstAttribute="trailing" secondItem="je2-U4-2af" secondAttribute="trailing" constant="20" id="Sld-Gc-8N0"/>
                             <constraint firstItem="8nj-lg-9Jc" firstAttribute="centerX" secondItem="4rx-Pd-rpS" secondAttribute="centerX" id="eCb-yu-tmr"/>
+                            <constraint firstItem="i6y-Ny-1ek" firstAttribute="centerY" secondItem="4rx-Pd-rpS" secondAttribute="centerY" id="gHW-Kg-F6c"/>
                             <constraint firstItem="ImC-rg-asa" firstAttribute="bottom" secondItem="je2-U4-2af" secondAttribute="bottom" constant="20" id="qL8-qU-gwH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="회원가입" id="qLp-Sb-u1r"/>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="i6y-Ny-1ek" id="W3x-14-H9F"/>
+                        <outlet property="idTextField" destination="wOk-Wi-8xj" id="Kqa-hl-U4C"/>
+                        <outlet property="nameTextField" destination="moX-PY-4iv" id="laZ-fx-oUD"/>
+                        <outlet property="passwordTextField" destination="F7J-ur-CBL" id="rtH-3i-2fP"/>
+                        <segue destination="xR3-vh-btr" kind="unwind" identifier="closeSignUpViewSegue" unwindAction="unwindToLoginBULoginView:" id="tps-fC-xL4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UUI-sy-ue7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="xR3-vh-btr" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1470" y="1075"/>
         </scene>
