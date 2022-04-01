@@ -46,9 +46,11 @@ class BUSignUpFormViewController: UIViewController {
                     UIAlertAction(
                         title: "확인",
                         style: .default
-                    )
+                    ) { _ in
+                        self.performSegue(withIdentifier: "closeSignUpViewSegue", sender: nil)
+                    }
                 )
-                performSegue(withIdentifier: "closeSignUpViewSegue", sender: nil)
+                present(alert, animated: true)
             } catch {
                 activityIndicatorView.stopAnimating()
                 let alert = UIAlertController(
