@@ -142,25 +142,21 @@
 
 1. **Small-scale cargo owner perspective (consumer)**
 
-- - You can enter cargo information to request delivery cost estimates
+  - You can enter cargo information to request delivery cost estimates
   - It is possible to request synchronized logistics services of land, sea, and air 
   - You can easily specify the detailed conditions for delivery of cargo based on Incoterms condition
   - Information asymmetry can be resolved by comparing and selecting cost estimates proposed by the provider on one platform
   - In the case of preferred cost estimates, consultation in the form of a direct message with the shipping agent is possible.
   - Can conduct assessments of service providers
 
-- 
-
 2. **Forwarding service provider perspective (provider)**
 
-- - Lower sales costs by managing consumer acquisition through one platform
+  - Lower sales costs by managing consumer acquisition through one platform
   - You can check the details of the cost estimates requests and offer reasonable cost estimates.
   - Able to propose detailed opinions to respond to the cost estimates requested by the consumer
   - Able to respond to a consultation request in the form of a direct message requested by the consumer
   - You can proceed with the request for a quote accepted by the user
   - Can prove the supplier's credit based on the ratings left by the consumer
-
-
 
 #### Technical Implementation
 
@@ -207,10 +203,8 @@
 | ![profileImage](https://user-images.githubusercontent.com/25794814/160516929-b941a406-cd25-404d-bae5-c827159bc611.png) | 안규빈 | XXXXXXXX  |     기획자 / Service Planner      |    Email : [kbahn99@cau.ac.kr](mailto:kbahn99@cau.ac.kr)     |
 
 
-
 ### 5. 사용법
 
-- [Server 구동 가이드](#)
-
+* [Server 구동 가이드](#)
 * [Mobile 구동 가이드](#)
 * [NLP 구동 가이드](#)
