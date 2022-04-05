@@ -22,9 +22,9 @@
 
 ### 2. 소개 영상
 
-| 배타버스 UI/UX 동작 예시                                     | 사용자 인증 네트워킹 동작 예시                               |
+| 배타버스 UI/UX 동작 예시                                          | 사용자 인증 네트워킹 동작 예시                                      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| https://user-images.githubusercontent.com/25794814/161701338-1539ca10-e1b5-432e-8b22-23d39620da5e.mp4 | ![회원가입_로그인_로그아웃_동작예시](https://user-images.githubusercontent.com/25794814/161276774-8dffc4c8-fbcd-4425-b076-1a7171859c2b.gif) |
+| ![160071234-0ce30b41-eedd-479d-8b85-2bbf85cc5113](https://user-images.githubusercontent.com/25794814/161703147-b15b6ef7-637d-40c0-a993-138e521f3814.gif) | ![ezgif com-gif-maker](https://user-images.githubusercontent.com/25794814/161704085-d5cab66d-6b47-4f0c-b99b-830d4adbde92.gif) |
 
 
 
