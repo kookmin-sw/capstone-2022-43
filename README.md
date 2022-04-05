@@ -6,14 +6,25 @@
 
 ### 1. 배타버스 소개
 
-- 프로젝트 설치방법 및 데모, 사용방법, 프리뷰등을 readme.md에 작성.
-- Api나 사용방법등 내용이 많을경우 wiki에 꾸미고 링크 추가.
+
+
+#### 개요
+
+* 화물의 주인과 운송 주선업자 사이의 정보 비대칭성을 줄여서 화물의 주인에게 합리적인 소규모 화물 물류비 견적을 제공해주는 플랫폼
+
+
+
+#### 서비스 배치도
+
+![unknown](https://user-images.githubusercontent.com/25794814/161700460-ace593af-6d35-4ffa-881d-07a0e7948467.png)
 
 
 
 ### 2. 소개 영상
 
-프로젝트 소개하는 영상을 추가하세요
+| 배타버스 UI/UX 동작 예시                                     | 사용자 인증 네트워킹 동작 예시                               |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| https://user-images.githubusercontent.com/25794814/161700150-1ecf855b-27a8-47df-a6f2-a70cc5c55d16.mp4 | ![회원가입_로그인_로그아웃_동작예시](https://user-images.githubusercontent.com/25794814/161276774-8dffc4c8-fbcd-4425-b076-1a7171859c2b.gif) |
 
 
 
@@ -22,7 +33,7 @@
 |                        Profile Image                         |  Name  | Student # |               Role                |                           Contacts                           |
 | :----------------------------------------------------------: | :----: | :-------: | :-------------------------------: | :----------------------------------------------------------: |
 | ![JeongTaekHan_Gihub_Profile_Image](https://user-images.githubusercontent.com/25794814/161695184-9c6973ec-e952-4aba-b634-168e3aff06b4.jpg) | 한정택 | XXXX1718  | 팀장 / Mobile Front-End Developer | E-mail : [smart8612@gmail.com](mailto:smart8612@gmail.com)<br />Github : [@smart8612](https://github.com/smart8612) |
-| ![profileImage](https://user-images.githubusercontent.com/25794814/160516929-b941a406-cd25-404d-bae5-c827159bc611.png) | 서보성 | XXXX1629  |      개발자 / NLP Developer       | E-mail : [sboseong124@gmail.com](mailto:sboseong124@gmail.com)<br />Github : [sboseong](https://github.com/sboseong) |
+| ![profileImage](https://user-images.githubusercontent.com/25794814/160516929-b941a406-cd25-404d-bae5-c827159bc611.png) | 서보성 | XXXX1629  |      개발자 / NLP Developer       | E-mail : [sboseong124@gmail.com](mailto:sboseong124@gmail.com)<br />Github : [@sboseong](https://github.com/sboseong) |
 | ![profileImage](https://user-images.githubusercontent.com/25794814/160516929-b941a406-cd25-404d-bae5-c827159bc611.png) | 김현우 | XXXX1603  |    개발자 / Back-End Developer    | E-mail : [khw56184@kookmin.ac.kr](mailto:khw56184@kookmin.ac.kr)<br />Github : [@ASak1104](https://github.com/ASak1104) |
 | ![profileImage](https://user-images.githubusercontent.com/25794814/160516929-b941a406-cd25-404d-bae5-c827159bc611.png) | 신준호 | XXXX1616  |    개발자 / Back-End Developer    | Email : [joonno94@kookmin.ac.kr](mailto:joonno94@kookmin.ac.kr)<br />Github : [@uyimjunho](https://github.com/uyimjunho) |
 | ![profileImage](https://user-images.githubusercontent.com/25794814/160516929-b941a406-cd25-404d-bae5-c827159bc611.png) | 안규빈 | XXXXXXXX  |     기획자 / Service Planner      |    Email : [kbahn99@cau.ac.kr](mailto:kbahn99@cau.ac.kr)     |
@@ -50,5 +61,5 @@
 
 #### Reference
 
-* [BAETAVERSE Notion]()
-* [BAETAVERSE Github Page]()
+* [BAETAVERSE Notion](https://singularis7.notion.site/e2e5f0586d014691bcb111bd27ea6278)
+* [BAETAVERSE Github Page](https://kookmin-sw.github.io/capstone-2022-43/)
