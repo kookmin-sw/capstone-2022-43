@@ -24,7 +24,7 @@
 
 | 배타버스 UI/UX 동작 예시                                     | 사용자 인증 네트워킹 동작 예시                               |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| https://user-images.githubusercontent.com/25794814/161700150-1ecf855b-27a8-47df-a6f2-a70cc5c55d16.mp4 | ![회원가입_로그인_로그아웃_동작예시](https://user-images.githubusercontent.com/25794814/161276774-8dffc4c8-fbcd-4425-b076-1a7171859c2b.gif) |
+| https://user-images.githubusercontent.com/25794814/161701338-1539ca10-e1b5-432e-8b22-23d39620da5e.mp4 | ![회원가입_로그인_로그아웃_동작예시](https://user-images.githubusercontent.com/25794814/161276774-8dffc4c8-fbcd-4425-b076-1a7171859c2b.gif) |
 
 
 
