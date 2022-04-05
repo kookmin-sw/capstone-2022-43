@@ -72,6 +72,12 @@
 
 2. **기술 배치 도식화**
 
+   
+
+   ![unknown](https://user-images.githubusercontent.com/25794814/161689373-10a78bef-3d16-46b1-babf-9bfb2e43f803.png)
+
+   
+
    ![Picture1](https://user-images.githubusercontent.com/25794814/160412622-17cab6b6-0c74-46e5-9767-9bad7839a15d.png)
 
    
@@ -162,8 +168,14 @@
 
 - **Service distribution schema**
 
-  ![Picture1](https://user-images.githubusercontent.com/25794814/160412622-17cab6b6-0c74-46e5-9767-9bad7839a15d.png)
+  
 
+  ![unknown](https://user-images.githubusercontent.com/25794814/161689373-10a78bef-3d16-46b1-babf-9bfb2e43f803.png)
+  
+  
+  
+  ![Picture1](https://user-images.githubusercontent.com/25794814/160412622-17cab6b6-0c74-46e5-9767-9bad7839a15d.png)
+  
   
 
 #### Benefit
@@ -205,6 +217,6 @@
 
 ### 5. 사용법
 
-* [Server 구동 가이드](#)
-* [Mobile 구동 가이드](#)
-* [NLP 구동 가이드](#)
+* [Server 구동 가이드](https://github.com/kookmin-sw/capstone-2022-43/wiki/%5BServer%5D-Install-and-Running-Guide)
+* [Mobile 구동 가이드](https://github.com/kookmin-sw/capstone-2022-43/wiki/%5BMobile%5D-iOS-Project-Build-Guide)
+* [NLP 구동 가이드](https://github.com/kookmin-sw/capstone-2022-43/wiki/%5BNLP%5D-HScode-Guide)
