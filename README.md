@@ -31,14 +31,11 @@
 
 #### 그라운드 룰
 
-* Notion을 통해 프로젝트 진척 현황 문서화
-* 월, 금요일 주 2회 저녁 7시에 정기적인 회의 진행
-* 팀원 모두 적극적으로 프로젝트에 참여
-* 프로젝트 진행 중 개인 및 특이 사항 발생 시 빠르게 소통
-* 코로나-19 상황 개선 전까지 주 2회 화상 회의 서비스를 활용한 온라인 미팅 진행
-* 필요시 방역 지침을 준수하여 오프라인 미팅의 소프트웨어 개발 및 멘토링 진행
-* Notion, Slack, 카카오톡 협업 도구를 활용한 커뮤니케이션 및 프로젝트 진행 상황 문서화
+* Notion Discord 협업 도구를 통한 커뮤니케이션 및 프로젝트 진행 상황 문서화
 * 소프트웨어 형상 관리 시스템을 활용하여 소스 코드 관리 및 협업 진행
+* 매주 월, 금요일 저녁 7시에 정기 회의 진행하며 팀원 모두 적극적으로 프로젝트에 참여
+* 프로젝트 진행 중 특이 사항 발생시 Discord 통해 빠르게 소통 진행
+* 코로나-19 상황 개선 전까지 주 2회 화상 회의 서비스를 활용한 온라인 미팅 진행
 
 
 
@@ -83,16 +80,28 @@
 | ![JeongTaekHan_Gihub_Profile_Image](https://user-images.githubusercontent.com/25794814/161695184-9c6973ec-e952-4aba-b634-168e3aff06b4.jpg) | 한정택 | XXXX1718  | 팀장 / Mobile Front-End Developer | E-mail : [smart8612@gmail.com](mailto:smart8612@gmail.com)<br />Github : [@smart8612](https://github.com/smart8612) |
 | ![서보성_깃허브_프로필](https://user-images.githubusercontent.com/25794814/161761646-da19395d-2725-48eb-88ee-21748665c142.JPG) | 서보성 | XXXX1629  |      개발자 / NLP Developer       | E-mail : [sboseong124@gmail.com](mailto:sboseong124@gmail.com)<br />Github : [@sboseong](https://github.com/sboseong) |
 | ![김현우_깃허브_프로필](https://user-images.githubusercontent.com/25794814/161712837-ae168dea-9004-4580-ab47-eee870f3ad9a.jpg) | 김현우 | XXXX1603  |    개발자 / Back-End Developer    | E-mail : [khw56184@kookmin.ac.kr](mailto:khw56184@kookmin.ac.kr)<br />Github : [@ASak1104](https://github.com/ASak1104) |
-| ![신준호_깃허브_프로필](https://user-images.githubusercontent.com/25794814/161716670-356b117a-e090-44a8-9f41-7c2e650b15e9.jpg) | 신준호 | XXXX1616  |    개발자 / Back-End Developer    | Email : [joonno94@kookmin.ac.kr](mailto:joonno94@kookmin.ac.kr)<br />Github : [@uyimjunho](https://github.com/uyimjunho) |
+| ![신준호_깃허브_프로필](https://user-images.githubusercontent.com/25794814/161790545-c3c9a73d-f1bb-48f0-adaa-c5e221e14fb8.jpg) | 신준호 | XXXX1616  |    개발자 / Back-End Developer    | Email : [joonno94@kookmin.ac.kr](mailto:joonno94@kookmin.ac.kr)<br />Github : [@uyimjunho](https://github.com/uyimjunho) |
 | ![profileImage](https://user-images.githubusercontent.com/25794814/160516929-b941a406-cd25-404d-bae5-c827159bc611.png) | 안규빈 | XXXXXXXX  |     기획자 / Service Planner      |    Email : [kbahn99@cau.ac.kr](mailto:kbahn99@cau.ac.kr)     |
 
 
 
 ### 4. 사용법
 
+
+
+#### Server
+
 * [Server 구동 가이드 - Github Wiki](https://github.com/kookmin-sw/capstone-2022-43/wiki/%5BServer%5D-Install-and-Running-Guide)
-* [Mobile 구동 가이드 - Github Wiki](https://github.com/kookmin-sw/capstone-2022-43/wiki/%5BMobile%5D-iOS-Project-Build-Guide)
+
+* [Server API Documentation - Github Wiki](https://github.com/kookmin-sw/capstone-2022-43/wiki/%5BServer%5D-REST-API-Documents)
+
+#### NLP
+
 * [NLP 구동 가이드 - Github Wiki](https://github.com/kookmin-sw/capstone-2022-43/wiki/%5BNLP%5D-HScode-Guide)
+
+#### Mobile
+
+* [Mobile 구동 가이드 - Github Wiki](https://github.com/kookmin-sw/capstone-2022-43/wiki/%5BMobile%5D-iOS-Project-Build-Guide)
 
 
 
