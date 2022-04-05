@@ -121,7 +121,7 @@
 
      
 
-### 2. Abstract (영문)
+### 2. Abstract
 
 
 
@@ -194,11 +194,15 @@
 
 
 
-### 3. 소개 영상 (Youtube, 스크린샷 모음, 시연 영상, 추가링크 포함)
+### 3. 소개 영상
 
 * **모바일 서비스 예시 동작 영상**
 
-  ![Simulator Screen Recording - iPhone 12 Pro - 2022-03-13 at 17 15 16](https://user-images.githubusercontent.com/25794814/160404104-7dd52a30-5876-4461-80f1-787bfd52f358.gif)
+  | 배타버스 UI/UX 동작 예시                                     | 사용자 인증 네트워킹 동작 예시                               |
+  | ------------------------------------------------------------ | ------------------------------------------------------------ |
+  | ![160071234-0ce30b41-eedd-479d-8b85-2bbf85cc5113](https://user-images.githubusercontent.com/25794814/161703147-b15b6ef7-637d-40c0-a993-138e521f3814.gif) | ![ezgif com-gif-maker](https://user-images.githubusercontent.com/25794814/161704085-d5cab66d-6b47-4f0c-b99b-830d4adbde92.gif) |
+  
+  
 
 
 
@@ -221,3 +225,21 @@
 * [Server 구동 가이드](https://github.com/kookmin-sw/capstone-2022-43/wiki/%5BServer%5D-Install-and-Running-Guide)
 * [Mobile 구동 가이드](https://github.com/kookmin-sw/capstone-2022-43/wiki/%5BMobile%5D-iOS-Project-Build-Guide)
 * [NLP 구동 가이드](https://github.com/kookmin-sw/capstone-2022-43/wiki/%5BNLP%5D-HScode-Guide)
+
+
+
+### 6. 기타
+
+
+
+#### 중간발표자료
+
+* [팀43-중간발표자료.pdf](docs/팀43-중간발표자료.pdf)
+* [팀43-중간보고서.pdf](docs/팀43-중간보고서.pdf)
+
+
+
+#### Reference
+
+* [BAETAVERSE Notion](https://singularis7.notion.site/e2e5f0586d014691bcb111bd27ea6278)
+* [BAETAVERSE Github Page](https://kookmin-sw.github.io/capstone-2022-43/)
