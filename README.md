@@ -16,12 +16,12 @@
 
 #### 기술 스택
 
-| Technology            | OS                                        | Language   | Technology                  |
-| --------------------- | ----------------------------------------- | ---------- | --------------------------- |
-| Front-End Application | build : macOS 12 monteray & Xcode 13      | Swift 5.6  | Network, UIKit, Concurrency |
-| Back-End Server       | Up to Ubunutu 16.04, macOS 12, Windows 10 | TypeScript | Express.js                  |
-| BackEnd NLP           | Up to Ubunutu 16.04, macOS 12, Windows 10 | Python 3   | NLP 자연어 처리             |
-| Cloud Deployment      | Up to Ubunutu 16.04, macOS 12, Windows 10 | Shell      | AWS, Vercel, Supabase       |
+| Technology            | OS                                        | Language   | Technology                  | Directory        |
+| --------------------- | ----------------------------------------- | ---------- | --------------------------- | ---------------- |
+| Front-End Application | build : macOS 12 monteray & Xcode 13      | Swift 5.6  | Network, UIKit, Concurrency | [mobile](mobile) |
+| Back-End Server       | Up to Ubunutu 16.04, macOS 12, Windows 10 | TypeScript | Express.js                  | [server](server) |
+| BackEnd NLP           | Up to Ubunutu 16.04, macOS 12, Windows 10 | Python 3   | NLP 자연어 처리             | [NLP](HScode)    |
+| Cloud Deployment      | Up to Ubunutu 16.04, macOS 12, Windows 10 | Shell      | AWS, Vercel, Supabase       |                  |
 
 
 
@@ -83,7 +83,7 @@
 | ![JeongTaekHan_Gihub_Profile_Image](https://user-images.githubusercontent.com/25794814/161695184-9c6973ec-e952-4aba-b634-168e3aff06b4.jpg) | 한정택 | XXXX1718  | 팀장 / Mobile Front-End Developer | E-mail : [smart8612@gmail.com](mailto:smart8612@gmail.com)<br />Github : [@smart8612](https://github.com/smart8612) |
 | ![profileImage](https://user-images.githubusercontent.com/25794814/160516929-b941a406-cd25-404d-bae5-c827159bc611.png) | 서보성 | XXXX1629  |      개발자 / NLP Developer       | E-mail : [sboseong124@gmail.com](mailto:sboseong124@gmail.com)<br />Github : [@sboseong](https://github.com/sboseong) |
 | ![김현우_깃허브_프로필](https://user-images.githubusercontent.com/25794814/161712837-ae168dea-9004-4580-ab47-eee870f3ad9a.jpg) | 김현우 | XXXX1603  |    개발자 / Back-End Developer    | E-mail : [khw56184@kookmin.ac.kr](mailto:khw56184@kookmin.ac.kr)<br />Github : [@ASak1104](https://github.com/ASak1104) |
-| ![신준호_깃허브_프로필](https://user-images.githubusercontent.com/25794814/161713995-50064e64-acff-4b70-9937-72f95a004d90.jpg) | 신준호 | XXXX1616  |    개발자 / Back-End Developer    | Email : [joonno94@kookmin.ac.kr](mailto:joonno94@kookmin.ac.kr)<br />Github : [@uyimjunho](https://github.com/uyimjunho) |
+| ![신준호_깃허브_프로필](https://user-images.githubusercontent.com/25794814/161716670-356b117a-e090-44a8-9f41-7c2e650b15e9.jpg) | 신준호 | XXXX1616  |    개발자 / Back-End Developer    | Email : [joonno94@kookmin.ac.kr](mailto:joonno94@kookmin.ac.kr)<br />Github : [@uyimjunho](https://github.com/uyimjunho) |
 | ![profileImage](https://user-images.githubusercontent.com/25794814/160516929-b941a406-cd25-404d-bae5-c827159bc611.png) | 안규빈 | XXXXXXXX  |     기획자 / Service Planner      |    Email : [kbahn99@cau.ac.kr](mailto:kbahn99@cau.ac.kr)     |
 
 
