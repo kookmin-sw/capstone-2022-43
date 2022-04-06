@@ -1,6 +1,6 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/macos,swiftpackagemanager
-# Edit at https://www.toptal.com/developers/gitignore?templates=macos,swiftpackagemanager
+# Created by https://www.toptal.com/developers/gitignore/api/macos
+# Edit at https://www.toptal.com/developers/gitignore?templates=macos
 
 ### macOS ###
 # General
@@ -31,12 +31,4 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-### SwiftPackageManager ###
-Packages
-.build/
-xcuserdata
-DerivedData/
-*.xcodeproj
-
-
-# End of https://www.toptal.com/developers/gitignore/api/macos,swiftpackagemanager
+# End of https://www.toptal.com/developers/gitignore/api/macos

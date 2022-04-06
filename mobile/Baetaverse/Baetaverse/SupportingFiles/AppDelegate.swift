@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Baetaverse
 //
-//  Created by JeongTaek Han on 2022/03/13.
+//  Created by JeongTaek Han on 2022/03/29.
 //
 
 import UIKit
@@ -10,10 +10,11 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    private(set) var appService: AppService?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        self.appService = BaetaverseAppService.configure()
         return true
     }
 
