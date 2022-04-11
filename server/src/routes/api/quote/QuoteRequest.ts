@@ -15,7 +15,6 @@ router.post('/', async (req: Request, res: Response, next: NextFunction) =>{
             .from('Quotation')
             .insert({ id, HSCODE, COUNTRY });
 
-        // temporary error handler
         if (FailToInsert) {
             return next(FailToInsert);
         }
