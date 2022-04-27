@@ -1,12 +1,12 @@
 import express, { Request, Response, NextFunction } from "express";
 import passport from "passport";
 import jwt from "jsonwebtoken";
-import HttpException from "../../../@types/HttpException";
+import HttpException from "../../../exceptions/HttpException";
 
 
 const router = express.Router();
 
-router.post('/', (req: Request, res: Response, next: NextFunction) => {
+router.post('/login', (req: Request, res: Response, next: NextFunction) => {
     passport.authenticate('local', (authError, user, info) => {
         if (authError) {
             return next(authError);

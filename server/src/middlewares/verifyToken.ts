@@ -1,6 +1,6 @@
 import express, { Request, Response, NextFunction } from "express";
 import jwt, { JwtPayload } from "jsonwebtoken";
-import HttpException from "../@types/HttpException";
+import HttpException from "../exceptions/HttpException";
 
 
 const verifyToken = (req: Request, res: Response, next: NextFunction) => {
