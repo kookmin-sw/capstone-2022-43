@@ -32,7 +32,7 @@
 		C197AEC527F43EFC000E4975 /* APIRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1127F32DC10087882E /* APIRequestModel.swift */; };
 		C1C9EC5B2818F7A40041F974 /* Extensions+Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C9EC5A2818F7A40041F974 /* Extensions+Encodable.swift */; };
 		C1C9EC632818FA1E0041F974 /* BaetaverseBusinessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C9EC622818FA1E0041F974 /* BaetaverseBusinessApp.swift */; };
-		C1C9EC652818FA1E0041F974 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C9EC642818FA1E0041F974 /* ContentView.swift */; };
+		C1C9EC652818FA1E0041F974 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C9EC642818FA1E0041F974 /* LoginView.swift */; };
 		C1C9EC672818FA200041F974 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1C9EC662818FA200041F974 /* Assets.xcassets */; };
 		C1C9EC6A2818FA200041F974 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1C9EC692818FA200041F974 /* Preview Assets.xcassets */; };
 		C1C9EC742818FA210041F974 /* BaetaverseBusinessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C9EC732818FA210041F974 /* BaetaverseBusinessTests.swift */; };
@@ -131,7 +131,7 @@
 		C1C9EC5A2818F7A40041F974 /* Extensions+Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+Encodable.swift"; sourceTree = "<group>"; };
 		C1C9EC602818FA1E0041F974 /* BaetaverseBusiness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaetaverseBusiness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1C9EC622818FA1E0041F974 /* BaetaverseBusinessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseBusinessApp.swift; sourceTree = "<group>"; };
-		C1C9EC642818FA1E0041F974 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C1C9EC642818FA1E0041F974 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C1C9EC662818FA200041F974 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1C9EC692818FA200041F974 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C1C9EC6F2818FA210041F974 /* BaetaverseBusinessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaetaverseBusinessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -242,13 +242,56 @@
 			path = ResponseModel;
 			sourceTree = "<group>";
 		};
-		C1C9EC612818FA1E0041F974 /* BaetaverseBusiness */ = {
+		C182FDF7281900E800F66567 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C182FDF82819011E00F66567 /* BusinessApp */,
+				C182FDF92819014700F66567 /* CustomerApp */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		C182FDF82819011E00F66567 /* BusinessApp */ = {
+			isa = PBXGroup;
+			children = (
+				C1C9EC722818FA210041F974 /* BaetaverseBusinessTests */,
+				C1C9EC7C2818FA210041F974 /* BaetaverseBusinessUITests */,
+			);
+			path = BusinessApp;
+			sourceTree = "<group>";
+		};
+		C182FDF92819014700F66567 /* CustomerApp */ = {
+			isa = PBXGroup;
+			children = (
+				C1E5CBD927F2BF360087882E /* BaetaverseUITests */,
+				C1E5CBCF27F2BF360087882E /* BaetaverseTests */,
+			);
+			path = CustomerApp;
+			sourceTree = "<group>";
+		};
+		C182FDFA281901D000F66567 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C1C9EC642818FA1E0041F974 /* LoginView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C182FDFB281901F600F66567 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
 				C1C9EC622818FA1E0041F974 /* BaetaverseBusinessApp.swift */,
-				C1C9EC642818FA1E0041F974 /* ContentView.swift */,
 				C1C9EC662818FA200041F974 /* Assets.xcassets */,
 				C1C9EC682818FA200041F974 /* Preview Content */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		C1C9EC612818FA1E0041F974 /* BaetaverseBusiness */ = {
+			isa = PBXGroup;
+			children = (
+				C182FDFB281901F600F66567 /* SupportingFiles */,
+				C182FDFA281901D000F66567 /* View */,
 			);
 			path = BaetaverseBusiness;
 			sourceTree = "<group>";
@@ -409,10 +452,7 @@
 				C1E5CBB827F2BF330087882E /* Baetaverse */,
 				C1C9EC612818FA1E0041F974 /* BaetaverseBusiness */,
 				C1C9EC8A2818FAE90041F974 /* CommonModule */,
-				C1E5CBCF27F2BF360087882E /* BaetaverseTests */,
-				C1C9EC722818FA210041F974 /* BaetaverseBusinessTests */,
-				C1E5CBD927F2BF360087882E /* BaetaverseUITests */,
-				C1C9EC7C2818FA210041F974 /* BaetaverseBusinessUITests */,
+				C182FDF7281900E800F66567 /* Tests */,
 				C1E5CBB727F2BF330087882E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -751,7 +791,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1C9EC652818FA1E0041F974 /* ContentView.swift in Sources */,
+				C1C9EC652818FA1E0041F974 /* LoginView.swift in Sources */,
 				C1C9EC8E2818FB080041F974 /* Extensions+Encodable.swift in Sources */,
 				C1C9EC632818FA1E0041F974 /* BaetaverseBusinessApp.swift in Sources */,
 				C1C9EC8B2818FAFF0041F974 /* Extensions+Data.swift in Sources */,
