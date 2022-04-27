@@ -31,6 +31,13 @@
 		C197AEC427F43EF9000E4975 /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1427F32F040087882E /* SignUpRequest.swift */; };
 		C197AEC527F43EFC000E4975 /* APIRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1127F32DC10087882E /* APIRequestModel.swift */; };
 		C1C9EC5B2818F7A40041F974 /* Extensions+Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C9EC5A2818F7A40041F974 /* Extensions+Encodable.swift */; };
+		C1C9EC632818FA1E0041F974 /* BaetaverseBusinessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C9EC622818FA1E0041F974 /* BaetaverseBusinessApp.swift */; };
+		C1C9EC652818FA1E0041F974 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C9EC642818FA1E0041F974 /* ContentView.swift */; };
+		C1C9EC672818FA200041F974 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1C9EC662818FA200041F974 /* Assets.xcassets */; };
+		C1C9EC6A2818FA200041F974 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1C9EC692818FA200041F974 /* Preview Assets.xcassets */; };
+		C1C9EC742818FA210041F974 /* BaetaverseBusinessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C9EC732818FA210041F974 /* BaetaverseBusinessTests.swift */; };
+		C1C9EC7E2818FA210041F974 /* BaetaverseBusinessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C9EC7D2818FA210041F974 /* BaetaverseBusinessUITests.swift */; };
+		C1C9EC802818FA210041F974 /* BaetaverseBusinessUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C9EC7F2818FA210041F974 /* BaetaverseBusinessUITestsLaunchTests.swift */; };
 		C1CF673A27F724600057A6C3 /* BUMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF673927F724600057A6C3 /* BUMenuTableViewController.swift */; };
 		C1CF673E27F732720057A6C3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF673D27F732720057A6C3 /* NetworkService.swift */; };
 		C1CF674027F733780057A6C3 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF673F27F733780057A6C3 /* APIRequest.swift */; };
@@ -75,6 +82,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C1C9EC702818FA210041F974 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1E5CBAE27F2BF330087882E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1C9EC5F2818FA1E0041F974;
+			remoteInfo = BaetaverseBusiness;
+		};
+		C1C9EC7A2818FA210041F974 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1E5CBAE27F2BF330087882E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1C9EC5F2818FA1E0041F974;
+			remoteInfo = BaetaverseBusiness;
+		};
 		C1E5CBCD27F2BF360087882E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C1E5CBAE27F2BF330087882E /* Project object */;
@@ -103,6 +124,16 @@
 		C197AEBC27F43AEC000E4975 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		C197AEBF27F43BEF000E4975 /* BaetaverseAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseAPIService.swift; sourceTree = "<group>"; };
 		C1C9EC5A2818F7A40041F974 /* Extensions+Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+Encodable.swift"; sourceTree = "<group>"; };
+		C1C9EC602818FA1E0041F974 /* BaetaverseBusiness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaetaverseBusiness.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1C9EC622818FA1E0041F974 /* BaetaverseBusinessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseBusinessApp.swift; sourceTree = "<group>"; };
+		C1C9EC642818FA1E0041F974 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C1C9EC662818FA200041F974 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C1C9EC692818FA200041F974 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C1C9EC6F2818FA210041F974 /* BaetaverseBusinessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaetaverseBusinessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1C9EC732818FA210041F974 /* BaetaverseBusinessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseBusinessTests.swift; sourceTree = "<group>"; };
+		C1C9EC792818FA210041F974 /* BaetaverseBusinessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaetaverseBusinessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1C9EC7D2818FA210041F974 /* BaetaverseBusinessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseBusinessUITests.swift; sourceTree = "<group>"; };
+		C1C9EC7F2818FA210041F974 /* BaetaverseBusinessUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseBusinessUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C1CF673927F724600057A6C3 /* BUMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BUMenuTableViewController.swift; path = Baetaverse/ViewController/BUMenuTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		C1CF673D27F732720057A6C3 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		C1CF673F27F733780057A6C3 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
@@ -140,6 +171,27 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C1C9EC5D2818FA1E0041F974 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1C9EC6C2818FA210041F974 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1C9EC762818FA210041F974 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C1E5CBB327F2BF330087882E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -183,6 +235,42 @@
 				C149737527F5A39800679118 /* SignUpResponse.swift */,
 			);
 			path = ResponseModel;
+			sourceTree = "<group>";
+		};
+		C1C9EC612818FA1E0041F974 /* BaetaverseBusiness */ = {
+			isa = PBXGroup;
+			children = (
+				C1C9EC622818FA1E0041F974 /* BaetaverseBusinessApp.swift */,
+				C1C9EC642818FA1E0041F974 /* ContentView.swift */,
+				C1C9EC662818FA200041F974 /* Assets.xcassets */,
+				C1C9EC682818FA200041F974 /* Preview Content */,
+			);
+			path = BaetaverseBusiness;
+			sourceTree = "<group>";
+		};
+		C1C9EC682818FA200041F974 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C1C9EC692818FA200041F974 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C1C9EC722818FA210041F974 /* BaetaverseBusinessTests */ = {
+			isa = PBXGroup;
+			children = (
+				C1C9EC732818FA210041F974 /* BaetaverseBusinessTests.swift */,
+			);
+			path = BaetaverseBusinessTests;
+			sourceTree = "<group>";
+		};
+		C1C9EC7C2818FA210041F974 /* BaetaverseBusinessUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C1C9EC7D2818FA210041F974 /* BaetaverseBusinessUITests.swift */,
+				C1C9EC7F2818FA210041F974 /* BaetaverseBusinessUITestsLaunchTests.swift */,
+			);
+			path = BaetaverseBusinessUITests;
 			sourceTree = "<group>";
 		};
 		C1CF673B27F731F60057A6C3 /* Service */ = {
@@ -298,6 +386,9 @@
 				C1E5CBB827F2BF330087882E /* Baetaverse */,
 				C1E5CBCF27F2BF360087882E /* BaetaverseTests */,
 				C1E5CBD927F2BF360087882E /* BaetaverseUITests */,
+				C1C9EC612818FA1E0041F974 /* BaetaverseBusiness */,
+				C1C9EC722818FA210041F974 /* BaetaverseBusinessTests */,
+				C1C9EC7C2818FA210041F974 /* BaetaverseBusinessUITests */,
 				C1E5CBB727F2BF330087882E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -308,6 +399,9 @@
 				C1E5CBB627F2BF330087882E /* Baetaverse.app */,
 				C1E5CBCC27F2BF360087882E /* BaetaverseTests.xctest */,
 				C1E5CBD627F2BF360087882E /* BaetaverseUITests.xctest */,
+				C1C9EC602818FA1E0041F974 /* BaetaverseBusiness.app */,
+				C1C9EC6F2818FA210041F974 /* BaetaverseBusinessTests.xctest */,
+				C1C9EC792818FA210041F974 /* BaetaverseBusinessUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -418,6 +512,59 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C1C9EC5F2818FA1E0041F974 /* BaetaverseBusiness */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1C9EC812818FA210041F974 /* Build configuration list for PBXNativeTarget "BaetaverseBusiness" */;
+			buildPhases = (
+				C1C9EC5C2818FA1E0041F974 /* Sources */,
+				C1C9EC5D2818FA1E0041F974 /* Frameworks */,
+				C1C9EC5E2818FA1E0041F974 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BaetaverseBusiness;
+			productName = BaetaverseBusiness;
+			productReference = C1C9EC602818FA1E0041F974 /* BaetaverseBusiness.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C1C9EC6E2818FA210041F974 /* BaetaverseBusinessTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1C9EC842818FA210041F974 /* Build configuration list for PBXNativeTarget "BaetaverseBusinessTests" */;
+			buildPhases = (
+				C1C9EC6B2818FA210041F974 /* Sources */,
+				C1C9EC6C2818FA210041F974 /* Frameworks */,
+				C1C9EC6D2818FA210041F974 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C1C9EC712818FA210041F974 /* PBXTargetDependency */,
+			);
+			name = BaetaverseBusinessTests;
+			productName = BaetaverseBusinessTests;
+			productReference = C1C9EC6F2818FA210041F974 /* BaetaverseBusinessTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C1C9EC782818FA210041F974 /* BaetaverseBusinessUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1C9EC872818FA210041F974 /* Build configuration list for PBXNativeTarget "BaetaverseBusinessUITests" */;
+			buildPhases = (
+				C1C9EC752818FA210041F974 /* Sources */,
+				C1C9EC762818FA210041F974 /* Frameworks */,
+				C1C9EC772818FA210041F974 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C1C9EC7B2818FA210041F974 /* PBXTargetDependency */,
+			);
+			name = BaetaverseBusinessUITests;
+			productName = BaetaverseBusinessUITests;
+			productReference = C1C9EC792818FA210041F974 /* BaetaverseBusinessUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		C1E5CBB527F2BF330087882E /* Baetaverse */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C1E5CBE027F2BF360087882E /* Build configuration list for PBXNativeTarget "Baetaverse" */;
@@ -481,6 +628,17 @@
 				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
+					C1C9EC5F2818FA1E0041F974 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					C1C9EC6E2818FA210041F974 = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = C1C9EC5F2818FA1E0041F974;
+					};
+					C1C9EC782818FA210041F974 = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = C1C9EC5F2818FA1E0041F974;
+					};
 					C1E5CBB527F2BF330087882E = {
 						CreatedOnToolsVersion = 13.3;
 					};
@@ -510,11 +668,37 @@
 				C1E5CBB527F2BF330087882E /* Baetaverse */,
 				C1E5CBCB27F2BF360087882E /* BaetaverseTests */,
 				C1E5CBD527F2BF360087882E /* BaetaverseUITests */,
+				C1C9EC5F2818FA1E0041F974 /* BaetaverseBusiness */,
+				C1C9EC6E2818FA210041F974 /* BaetaverseBusinessTests */,
+				C1C9EC782818FA210041F974 /* BaetaverseBusinessUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C1C9EC5E2818FA1E0041F974 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1C9EC6A2818FA200041F974 /* Preview Assets.xcassets in Resources */,
+				C1C9EC672818FA200041F974 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1C9EC6D2818FA210041F974 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1C9EC772818FA210041F974 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C1E5CBB427F2BF330087882E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -542,6 +726,32 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C1C9EC5C2818FA1E0041F974 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1C9EC652818FA1E0041F974 /* ContentView.swift in Sources */,
+				C1C9EC632818FA1E0041F974 /* BaetaverseBusinessApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1C9EC6B2818FA210041F974 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1C9EC742818FA210041F974 /* BaetaverseBusinessTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1C9EC752818FA210041F974 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1C9EC802818FA210041F974 /* BaetaverseBusinessUITestsLaunchTests.swift in Sources */,
+				C1C9EC7E2818FA210041F974 /* BaetaverseBusinessUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C1E5CBB227F2BF330087882E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -628,6 +838,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C1C9EC712818FA210041F974 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C1C9EC5F2818FA1E0041F974 /* BaetaverseBusiness */;
+			targetProxy = C1C9EC702818FA210041F974 /* PBXContainerItemProxy */;
+		};
+		C1C9EC7B2818FA210041F974 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C1C9EC5F2818FA1E0041F974 /* BaetaverseBusiness */;
+			targetProxy = C1C9EC7A2818FA210041F974 /* PBXContainerItemProxy */;
+		};
 		C1E5CBCE27F2BF360087882E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C1E5CBB527F2BF330087882E /* Baetaverse */;
@@ -660,6 +880,144 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C1C9EC822818FA210041F974 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BaetaverseBusiness/Preview Content\"";
+				DEVELOPMENT_TEAM = MLY2NY4CXP;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.capstone-2022-43.BaetaverseBusiness";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C1C9EC832818FA210041F974 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BaetaverseBusiness/Preview Content\"";
+				DEVELOPMENT_TEAM = MLY2NY4CXP;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.capstone-2022-43.BaetaverseBusiness";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C1C9EC852818FA210041F974 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MLY2NY4CXP;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.capstone-2022-43.BaetaverseBusinessTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BaetaverseBusiness.app/BaetaverseBusiness";
+			};
+			name = Debug;
+		};
+		C1C9EC862818FA210041F974 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MLY2NY4CXP;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.capstone-2022-43.BaetaverseBusinessTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BaetaverseBusiness.app/BaetaverseBusiness";
+			};
+			name = Release;
+		};
+		C1C9EC882818FA210041F974 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MLY2NY4CXP;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.capstone-2022-43.BaetaverseBusinessUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BaetaverseBusiness;
+			};
+			name = Debug;
+		};
+		C1C9EC892818FA210041F974 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MLY2NY4CXP;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.capstone-2022-43.BaetaverseBusinessUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BaetaverseBusiness;
+			};
+			name = Release;
+		};
 		C1E5CBDE27F2BF360087882E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -911,6 +1269,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C1C9EC812818FA210041F974 /* Build configuration list for PBXNativeTarget "BaetaverseBusiness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1C9EC822818FA210041F974 /* Debug */,
+				C1C9EC832818FA210041F974 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1C9EC842818FA210041F974 /* Build configuration list for PBXNativeTarget "BaetaverseBusinessTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1C9EC852818FA210041F974 /* Debug */,
+				C1C9EC862818FA210041F974 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1C9EC872818FA210041F974 /* Build configuration list for PBXNativeTarget "BaetaverseBusinessUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1C9EC882818FA210041F974 /* Debug */,
+				C1C9EC892818FA210041F974 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C1E5CBB127F2BF330087882E /* Build configuration list for PBXProject "Baetaverse" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
