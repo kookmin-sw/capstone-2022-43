@@ -1,4 +1,4 @@
-import express, { Request, Response, NextFunction } from "express";
+import express, { Request, Response, NextFunction } from 'express';
 import { supabase } from '../../../utils/supabase';
 
 
@@ -12,7 +12,6 @@ router.post('/request', async (req: Request, res: Response, next: NextFunction) 
             .from('Quotation')
             .insert({ id, HSCODE, COUNTRY });
 
-        // temporary error handler
         if (FailToInsert) {
             return next(FailToInsert);
         }
