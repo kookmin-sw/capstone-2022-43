@@ -13,7 +13,8 @@ struct SignUpChooseMembershipView: View {
     
     var body: some View {
         NavigationView {
-            Text("Hello World")
+            SignUpChooseMembershipButton()
+                .padding()
                 .navigationTitle("회원가입")
                 .toolbar {
                     ToolbarItemGroup(placement: .navigationBarTrailing) {
@@ -25,6 +26,27 @@ struct SignUpChooseMembershipView: View {
                     }
                 }
         }
+    }
+    
+}
+
+struct SignUpChooseMembershipButton: View {
+    
+    var body: some View {
+        VStack(spacing: 25) {
+            Button(action: { }) {
+                Spacer()
+                Text("그룹(업체) 가입")
+                Spacer()
+            }
+            Button(action: { }) {
+                Spacer()
+                Text("개인 가입")
+                Spacer()
+            }
+        }
+        .buttonStyle(.borderedProminent)
+        .controlSize(.large)
     }
     
 }
