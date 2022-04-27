@@ -223,6 +223,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C13C00EC28192BC200352096 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C1C9EC642818FA1E0041F974 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		C13C00ED28192BCD00352096 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				C13C00EA28191A3600352096 /* SignUpChooseMembershipView.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
 		C149736E27F5A00B00679118 /* RequestModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,8 +290,8 @@
 		C182FDFA281901D000F66567 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C1C9EC642818FA1E0041F974 /* LoginView.swift */,
-				C13C00EA28191A3600352096 /* SignUpChooseMembershipView.swift */,
+				C13C00EC28192BC200352096 /* Login */,
+				C13C00ED28192BCD00352096 /* SignUp */,
 			);
 			path = View;
 			sourceTree = "<group>";

@@ -34,12 +34,12 @@ struct SignUpChooseMembershipButton: View {
     
     var body: some View {
         VStack(spacing: 25) {
-            Button(action: { }) {
+            NavigationLink(destination: Text("Hello World 1")) {
                 Spacer()
                 Text("그룹(업체) 가입")
                 Spacer()
             }
-            Button(action: { }) {
+            NavigationLink(destination: Text("Hello World 2")) {
                 Spacer()
                 Text("개인 가입")
                 Spacer()
