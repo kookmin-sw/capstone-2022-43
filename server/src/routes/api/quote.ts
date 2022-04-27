@@ -1,8 +1,14 @@
-import express from 'express';
-import QuoteRequestRouter from "./quote/QuoteRequest";
+import express, { Router } from 'express';
+import request from "./quote/request";
+
 
 const router = express.Router();
+const lowRouters = [
+    request
+];
 
-router.use('/QuoteRequest', QuoteRequestRouter);
+lowRouters.forEach((lowRouter: Router) => {
+    router.use('/quote', lowRouter);
+});
 
 export default router;
