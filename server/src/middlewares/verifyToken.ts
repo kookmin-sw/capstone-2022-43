@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-import express, { Request, Response, NextFunction } from "express";
-import jwt, { JwtPayload } from "jsonwebtoken";
-import HttpException from "../exceptions/HttpException";
-=======
 import express, { Request, Response, NextFunction } from 'express';
 import jwt, { JwtPayload } from 'jsonwebtoken';
-import HttpException from '../@types/HttpException';
->>>>>>> origin/server-candidate
+import HttpException from '../exceptions/HttpException';
+
 
 
 const verifyToken = (req: Request, res: Response, next: NextFunction) => {

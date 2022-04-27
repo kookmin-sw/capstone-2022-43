@@ -4,6 +4,7 @@ import express, { Router } from 'express';
 import logger from './utils/logger';
 import pageNotFoundRouter from './routes/pageNotFoundRouter';
 import errorMiddleware from './middlewares/errorMiddleware';
+import loggerMiddleware from "./middlewares/loggerMiddleware";
 
 
 class App {
@@ -15,7 +16,7 @@ class App {
         this.port = port;
 
         this.initializeApp();
-        this.initializeUtils();
+        this.initializeMiddlewares();
         this.initializeRouters(routers);
     };
 
@@ -24,8 +25,8 @@ class App {
         this.app.use(express.urlencoded({ extended: false }));
     };
 
-    private initializeUtils(): void {
-
+    private initializeMiddlewares(): void {
+        this.app.use(loggerMiddleware);
     };
 
     private initializeDB(): void {
@@ -41,7 +42,7 @@ class App {
     };
 
     public listen(): void {
-        this.app.listen(this.port, () => {
+        this.app.listen(this.port, '0.0.0.0', () => {
             logger.info(`Listening http://localhost:${ this.port }`);
         });
     };
