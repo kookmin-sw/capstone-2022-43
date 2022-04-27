@@ -1,8 +1,8 @@
-import express, { Request, Response, NextFunction } from "express";
+import express, { Request, Response, NextFunction } from 'express';
 import { supabase } from '../../../utils/supabase';
-import requestIp from "request-ip";
-import useragent from "useragent";
-import logger from "../../../middlewares/logger";
+import requestIp from 'request-ip';
+import useragent from 'useragent';
+import logger from '../../../middlewares/logger';
 
 
 const router = express.Router();
@@ -15,7 +15,6 @@ router.post('/', async (req: Request, res: Response, next: NextFunction) =>{
             .from('Quotation')
             .insert({ id, HSCODE, COUNTRY });
 
-        // temporary error handler
         if (FailToInsert) {
             return next(FailToInsert);
         }

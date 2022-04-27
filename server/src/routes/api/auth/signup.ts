@@ -1,7 +1,7 @@
-import express, { Request, Response, NextFunction } from "express";
-import { supabase } from "../../../utils/supabase";
-import bcrypt from "bcrypt";
-import HttpException from "../../../@types/HttpException";
+import express, { Request, Response, NextFunction } from 'express';
+import { supabase } from '../../../utils/supabase';
+import bcrypt from 'bcrypt';
+import HttpException from '../../../@types/HttpException';
 
 
 const router = express.Router();
