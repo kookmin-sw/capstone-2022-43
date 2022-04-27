@@ -85,17 +85,22 @@ struct LoginUserInfoButton: View {
     private let signUpLabel = "회원가입"
     private let findUserInfoLabel = "아이디 / 비밀번호 찾기"
     
+    @State private var isPresentingSignUpView = false
+    
     var body: some View {
         HStack {
             Spacer()
-            Button(action: { }) {
-                Text(signUpLabel)
+            Button(signUpLabel) {
+                isPresentingSignUpView.toggle()
             }
             Spacer()
             Button(action: { }) {
                 Text(findUserInfoLabel)
             }
             Spacer()
+        }
+        .fullScreenCover(isPresented: $isPresentingSignUpView) {
+            SignUpChooseMembershipView()
         }
     }
     

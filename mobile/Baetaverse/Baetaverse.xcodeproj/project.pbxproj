@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C13778C127F497CF00DAF494 /* BUSignUpFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13778C027F497CF00DAF494 /* BUSignUpFormViewController.swift */; };
 		C13778C327F498EE00DAF494 /* BaetaverseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13778C227F498EE00DAF494 /* BaetaverseAuth.swift */; };
+		C13C00EB28191A3600352096 /* SignUpChooseMembershipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13C00EA28191A3600352096 /* SignUpChooseMembershipView.swift */; };
 		C149736827F597E200679118 /* BaetaverseAppModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149736727F597E200679118 /* BaetaverseAppModuleTests.swift */; };
 		C149736B27F59B7500679118 /* Extensions+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149736A27F59B7500679118 /* Extensions+Data.swift */; };
 		C149736D27F59D4500679118 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149736C27F59D4500679118 /* LoginResponse.swift */; };
@@ -120,6 +121,7 @@
 /* Begin PBXFileReference section */
 		C13778C027F497CF00DAF494 /* BUSignUpFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BUSignUpFormViewController.swift; path = Baetaverse/ViewController/BUSignUpFormViewController.swift; sourceTree = SOURCE_ROOT; };
 		C13778C227F498EE00DAF494 /* BaetaverseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseAuth.swift; sourceTree = "<group>"; };
+		C13C00EA28191A3600352096 /* SignUpChooseMembershipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpChooseMembershipView.swift; sourceTree = "<group>"; };
 		C149736727F597E200679118 /* BaetaverseAppModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseAppModuleTests.swift; sourceTree = "<group>"; };
 		C149736A27F59B7500679118 /* Extensions+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+Data.swift"; sourceTree = "<group>"; };
 		C149736C27F59D4500679118 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				C1C9EC642818FA1E0041F974 /* LoginView.swift */,
+				C13C00EA28191A3600352096 /* SignUpChooseMembershipView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -793,6 +796,7 @@
 			files = (
 				C1C9EC652818FA1E0041F974 /* LoginView.swift in Sources */,
 				C1C9EC8E2818FB080041F974 /* Extensions+Encodable.swift in Sources */,
+				C13C00EB28191A3600352096 /* SignUpChooseMembershipView.swift in Sources */,
 				C1C9EC632818FA1E0041F974 /* BaetaverseBusinessApp.swift in Sources */,
 				C1C9EC8B2818FAFF0041F974 /* Extensions+Data.swift in Sources */,
 			);
