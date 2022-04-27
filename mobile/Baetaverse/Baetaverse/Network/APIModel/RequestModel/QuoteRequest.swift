@@ -24,7 +24,7 @@ extension APIRequestModel {
                 "HSCODE": HSCode,
                 "country": country
             ]
-            self.body = try? JSONEncoder.shared.encode(parameter)
+            self.body = try? parameter.encodeToJSONData()
         }
         
     }

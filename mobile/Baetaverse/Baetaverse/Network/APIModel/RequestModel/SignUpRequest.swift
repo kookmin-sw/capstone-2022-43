@@ -23,7 +23,7 @@ extension APIRequestModel {
                 "password": password,
                 "name": name
             ]
-            self.body = try? JSONEncoder.shared.encode(parameters)
+            self.body = try? parameters.encodeToJSONData()
         }
         
     }
