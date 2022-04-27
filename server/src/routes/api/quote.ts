@@ -1,10 +1,12 @@
 import express, { Router } from 'express';
-import request from "./quote/request";
+import requestRouter from "./quote/request";
+import listRouter from './quote/list';
 
 
 const router = express.Router();
 const lowRouters = [
-    request
+    requestRouter,
+    listRouter
 ];
 
 lowRouters.forEach((lowRouter: Router) => {

@@ -22,7 +22,9 @@ const logger = winston.createLogger({
     format: combine(
         timestamp({
             format: 'YYYY-MM-DD HH:mm:ss',
+
         }),
+        colorize(),
         format.label({ label: 'baetaverse' }),
         logFormat,
     ),
