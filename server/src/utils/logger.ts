@@ -5,6 +5,7 @@ const { combine, timestamp, label, printf, colorize } = winston.format;
 const logFormat = printf(({ timestamp, message, level, label }): string => {
     return `${ timestamp } - ${ level }: [${ label }] ${ message }`;
 });
+
 const options = {
     console: {
         level: 'info',
@@ -30,7 +31,6 @@ const logger = winston.createLogger({
     transports: [
         new winston.transports.Console({
             format: logFormat,
-
         })
         // new winstonDaily({ //error, warn, info 모두 남김
         //     level:'info',

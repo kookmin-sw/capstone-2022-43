@@ -1,10 +1,10 @@
 import express, {Request, Response, NextFunction,} from 'express';
-import {supabase} from '../../../utils/supabase';
+import { supabase } from '../../../utils/supabase';
 
 
 const router = express.Router();
 
-router.get('/', async (req : Request, res : Response, next : NextFunction) => {
+router.get('/list', async (req : Request, res : Response, next : NextFunction) => {
     try{
         const { data: existQuotation, error: QuotationNotFoundError } = await supabase
             .from('Quotation')

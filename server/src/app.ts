@@ -1,43 +1,50 @@
-import express, { Request, Response, NextFunction } from 'express';
-import useragent from 'useragent';
-import requestIp from 'request-ip';
-import HttpException from './@types/HttpException';
-import logger from './middlewares/logger';
 import 'dotenv/config';
 import './utils/passport/config';
-import indexRouter from './routes/index';
-import apiRouter from './routes/api';
-import UserAgent from './@types/UserAgent';
+import express, { Router } from 'express';
+import logger from './utils/logger';
+import pageNotFoundRouter from './routes/pageNotFoundRouter';
+import errorMiddleware from './middlewares/errorMiddleware';
 
 
-const app: express.Application = express();
+class App {
+    public app: express.Application;
+    public port: number;
 
-app.set('port', process.env.PORT || 8080);
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+    constructor(routers: Router[], port: number) {
+        this.app = express();
+        this.port = port;
 
-app.use('/', indexRouter);
-app.use('/api', apiRouter);
+        this.initializeApp();
+        this.initializeUtils();
+        this.initializeRouters(routers);
+    };
 
+    private initializeApp(): void {
+        this.app.use(express.json());
+        this.app.use(express.urlencoded({ extended: false }));
+    };
 
-app.use((req: Request, res: Response, next: NextFunction) => {
-    logger.info(`${req.method} ${req.url}`);
+    private initializeUtils(): void {
 
-    const error =  new HttpException(404, `Not exist ${ req.method } ${ req.url } router`);
-    next(error);
-});
+    };
 
-app.use((err: HttpException, req: Request, res: Response, next: NextFunction) => {
-    const userInfo = new UserAgent(req);
-    logger.error(err.status + ' ' + err.message + userInfo);
-    res.status(err.status || 500).send();
-});
+    private initializeDB(): void {
 
-if (process.env.NODE_ENV !== 'test') {
-    app.listen(app.get('port'), '0.0.0.0', () => {
-        logger.info(`Listening http://localhost:${ app.get('port') }`);
-    });
+    };
+
+    private initializeRouters(routers: Router[]): void {
+        routers.forEach((router: Router) => {
+            this.app.use('/', router);
+        });
+        this.app.use(pageNotFoundRouter);
+        this.app.use(errorMiddleware);
+    };
+
+    public listen(): void {
+        this.app.listen(this.port, () => {
+            logger.info(`Listening http://localhost:${ this.port }`);
+        });
+    };
 }
 
-
-module.exports = app;
+export default App;
