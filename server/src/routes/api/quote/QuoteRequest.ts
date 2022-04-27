@@ -1,8 +1,8 @@
-import express, { Request, Response, NextFunction } from "express";
+import express, { Request, Response, NextFunction } from 'express';
 import { supabase } from '../../../utils/supabase';
-import requestIp from "request-ip";
-import useragent from "useragent";
-import logger from "../../../middlewares/logger";
+import requestIp from 'request-ip';
+import useragent from 'useragent';
+import logger from '../../../middlewares/logger';
 
 
 const router = express.Router();

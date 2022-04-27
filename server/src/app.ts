@@ -1,13 +1,13 @@
 import express, { Request, Response, NextFunction } from 'express';
-import useragent from "useragent";
-import requestIp from "request-ip";
+import useragent from 'useragent';
+import requestIp from 'request-ip';
 import HttpException from './@types/HttpException';
 import logger from './middlewares/logger';
 import 'dotenv/config';
 import './utils/passport/config';
 import indexRouter from './routes/index';
 import apiRouter from './routes/api';
-import UserInfo from "./middlewares/UserInfo";
+import UserAgent from './@types/UserAgent';
 
 
 const app: express.Application = express();
@@ -28,8 +28,8 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 });
 
 app.use((err: HttpException, req: Request, res: Response, next: NextFunction) => {
-    const userInfo = new UserInfo(req);
-    logger.error(err.status + " " + err.message + userInfo);
+    const userInfo = new UserAgent(req);
+    logger.error(err.status + ' ' + err.message + userInfo);
     res.status(err.status || 500).send();
 });
 

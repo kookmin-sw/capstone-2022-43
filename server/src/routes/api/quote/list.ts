@@ -1,5 +1,5 @@
 import express, {Request, Response, NextFunction,} from 'express';
-import {supabase} from "../../../utils/supabase";
+import {supabase} from '../../../utils/supabase';
 
 
 const router = express.Router();
@@ -13,8 +13,8 @@ router.get('/', async (req : Request, res : Response, next : NextFunction) => {
         if (QuotationNotFoundError) {
             return next(QuotationNotFoundError);
         }
-        
-        return res.json(existQuotation);
+
+        return res.status(200).json(existQuotation);
     }
     catch (error){
         return next(error);

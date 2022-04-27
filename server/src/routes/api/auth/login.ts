@@ -1,7 +1,7 @@
-import express, { Request, Response, NextFunction } from "express";
-import passport from "passport";
-import jwt from "jsonwebtoken";
-import HttpException from "../../../@types/HttpException";
+import express, { Request, Response, NextFunction } from 'express';
+import passport from 'passport';
+import jwt from 'jsonwebtoken';
+import HttpException from '../../../@types/HttpException';
 
 
 const router = express.Router();
