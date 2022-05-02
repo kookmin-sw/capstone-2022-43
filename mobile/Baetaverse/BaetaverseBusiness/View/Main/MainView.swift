@@ -38,7 +38,7 @@ struct RecievedReviewCollectionView: View {
         VStack {
             Text("받은리뷰: 몇건")
             Text("평점: 몇점")
-            
+            Divider()
             ScrollView {
                 HStack {
                     ReviewCardView()
