@@ -101,6 +101,7 @@ struct LoginUserInfoButton: View {
         }
         .fullScreenCover(isPresented: $isPresentingSignUpView) {
             SignUpChooseMembershipView()
+            
         }
     }
     
