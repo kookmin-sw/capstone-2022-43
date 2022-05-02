@@ -9,22 +9,18 @@ import SwiftUI
 
 struct SignUpFormView: View {
     
-    @State private var groupName = ""
-    @State private var groupContactNumber = ""
-    @State private var managerContactNumber = ""
-    @State private var openingDate = Date()
-    @State private var representativeName = ""
-    @State private var companyRegistrationNumber = ""
-    @State private var address = ""
-    @State private var email = ""
+    @State private var signUpForm = SignUpInformationForm()
     
     var body: some View {
-        SignUpInformationFormView()
+        SignUpInformationFormView(signUpForm: $signUpForm)
+            .navigationTitle("그룹(업체) 가입")
     }
     
 }
 
 struct SignUpInformationFormView: View {
+    
+    @Binding var signUpForm: SignUpInformationForm
     
     private let groupNameLabel = "업체명"
     private let groupContactNumberLabel = "대표번호"
@@ -41,36 +37,36 @@ struct SignUpInformationFormView: View {
             VStack {
                 TextField(
                     groupNameLabel,
-                    text: $groupName
+                    text: $signUpForm.groupName
                 )
                 TextField(
                     groupContactNumberLabel,
-                    text: $groupContactNumber
+                    text: $signUpForm.groupContactNumber
                 )
                 TextField(
                     managerContactNumberLabel,
-                    text: $managerContactNumber
+                    text: $signUpForm.managerContactNumber
                 )
                 DatePicker(
                         openingDateLabel,
-                        selection: $openingDate,
+                        selection: $signUpForm.openingDate,
                         displayedComponents: [.date]
                 )
                 TextField(
                     representativeNameLabel,
-                    text: $representativeName
+                    text: $signUpForm.representativeName
                 )
                 TextField(
                     companyRegistrationNumberLabel,
-                    text: $companyRegistrationNumber
+                    text: $signUpForm.companyRegistrationNumber
                 )
                 TextField(
                     addressLabel,
-                    text: $address
+                    text: $signUpForm.address
                 )
                 TextField(
                     emailAddressLabel,
-                    text: $email
+                    text: $signUpForm.email
                 )
                 Image(systemName: "person")
             }
@@ -78,6 +74,19 @@ struct SignUpInformationFormView: View {
             .padding()
         }
     }
+    
+}
+
+struct SignUpInformationForm {
+    
+    var groupName = ""
+    var groupContactNumber = ""
+    var managerContactNumber = ""
+    var openingDate = Date()
+    var representativeName = ""
+    var companyRegistrationNumber = ""
+    var address = ""
+    var email = ""
     
 }
 
