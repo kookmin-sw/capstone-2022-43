@@ -39,25 +39,13 @@ struct RecievedReviewCollectionView: View {
             Text("받은리뷰: 몇건")
             Text("평점: 몇점")
             Divider()
-            ScrollView {
-                HStack {
-                    ReviewCardView()
-                }
-            }
+//            ScrollView {
+//                HStack {
+//                    ReviewCardView()
+//                }
+//            }
             
             
-        }
-    }
-    
-}
-
-
-
-struct ReviewCardView: View {
-    
-    var body: some View {
-        VStack {
-            Text("리뷰가 블라블라")
         }
     }
     

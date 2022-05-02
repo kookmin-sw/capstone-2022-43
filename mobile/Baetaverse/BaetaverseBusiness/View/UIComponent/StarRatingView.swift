@@ -21,7 +21,7 @@ struct StarRatingView: View {
     let onColor = Color.yellow
     
     var body: some View {
-        HStack {
+        HStack(spacing: 0) {
             if let label = label {
                 Text(label)
             }
