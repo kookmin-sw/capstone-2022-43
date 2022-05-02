@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C1300DB6281F707100E9C0CC /* SignUpFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1300DB5281F707100E9C0CC /* SignUpFormView.swift */; };
+		C1300DBB281FA3B900E9C0CC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1300DBA281FA3B900E9C0CC /* MainView.swift */; };
+		C1300DBE281FBE4E00E9C0CC /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1300DBD281FBE4E00E9C0CC /* StarRatingView.swift */; };
 		C13778C127F497CF00DAF494 /* BUSignUpFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13778C027F497CF00DAF494 /* BUSignUpFormViewController.swift */; };
 		C13778C327F498EE00DAF494 /* BaetaverseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13778C227F498EE00DAF494 /* BaetaverseAuth.swift */; };
 		C13C00EB28191A3600352096 /* SignUpChooseMembershipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13C00EA28191A3600352096 /* SignUpChooseMembershipView.swift */; };
@@ -121,6 +123,8 @@
 
 /* Begin PBXFileReference section */
 		C1300DB5281F707100E9C0CC /* SignUpFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFormView.swift; sourceTree = "<group>"; };
+		C1300DBA281FA3B900E9C0CC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		C1300DBD281FBE4E00E9C0CC /* StarRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingView.swift; sourceTree = "<group>"; };
 		C13778C027F497CF00DAF494 /* BUSignUpFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BUSignUpFormViewController.swift; path = Baetaverse/ViewController/BUSignUpFormViewController.swift; sourceTree = SOURCE_ROOT; };
 		C13778C227F498EE00DAF494 /* BaetaverseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseAuth.swift; sourceTree = "<group>"; };
 		C13C00EA28191A3600352096 /* SignUpChooseMembershipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpChooseMembershipView.swift; sourceTree = "<group>"; };
@@ -225,6 +229,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C1300DB9281FA3AA00E9C0CC /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C1300DBA281FA3B900E9C0CC /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		C1300DBC281FBE2A00E9C0CC /* UIComponent */ = {
+			isa = PBXGroup;
+			children = (
+				C1300DBD281FBE4E00E9C0CC /* StarRatingView.swift */,
+			);
+			path = UIComponent;
+			sourceTree = "<group>";
+		};
 		C13C00EC28192BC200352096 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -293,6 +313,8 @@
 		C182FDFA281901D000F66567 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C1300DBC281FBE2A00E9C0CC /* UIComponent */,
+				C1300DB9281FA3AA00E9C0CC /* Main */,
 				C13C00EC28192BC200352096 /* Login */,
 				C13C00ED28192BCD00352096 /* SignUp */,
 			);
@@ -814,6 +836,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1300DB6281F707100E9C0CC /* SignUpFormView.swift in Sources */,
+				C1300DBE281FBE4E00E9C0CC /* StarRatingView.swift in Sources */,
+				C1300DBB281FA3B900E9C0CC /* MainView.swift in Sources */,
 				C1C9EC652818FA1E0041F974 /* LoginView.swift in Sources */,
 				C1C9EC8E2818FB080041F974 /* Extensions+Encodable.swift in Sources */,
 				C13C00EB28191A3600352096 /* SignUpChooseMembershipView.swift in Sources */,
