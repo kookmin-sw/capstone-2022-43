@@ -134,7 +134,7 @@ fileprivate struct SignUpButton: View {
     
 }
 
-fileprivate struct SignUpFormView_Previews: PreviewProvider {
+struct SignUpFormView_Previews: PreviewProvider {
     
     static var previews: some View {
         SignUpFormView()

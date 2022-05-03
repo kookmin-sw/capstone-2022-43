@@ -19,7 +19,7 @@ struct MainTabView: View {
     
 }
 
-fileprivate struct MainView_Previews: PreviewProvider {
+struct MainTabView_Previews: PreviewProvider {
     
     static var previews: some View {
         MainTabView()

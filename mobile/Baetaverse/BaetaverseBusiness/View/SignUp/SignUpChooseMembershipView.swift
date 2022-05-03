@@ -51,7 +51,7 @@ fileprivate struct SignUpChooseMembershipButton: View {
     
 }
 
-fileprivate struct SignUpChooseMembershipView_Previews: PreviewProvider {
+struct SignUpChooseMembershipView_Previews: PreviewProvider {
     
     static var previews: some View {
         SignUpChooseMembershipView()

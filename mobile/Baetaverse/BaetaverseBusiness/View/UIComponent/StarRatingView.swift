@@ -42,7 +42,7 @@ struct StarRatingView: View {
     
 }
 
-fileprivate struct StarRatingView_Previews: PreviewProvider {
+struct StarRatingView_Previews: PreviewProvider {
     
     static var previews: some View {
         StarRatingView(rating: .constant(5))

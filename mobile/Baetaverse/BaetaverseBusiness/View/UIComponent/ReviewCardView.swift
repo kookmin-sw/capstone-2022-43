@@ -64,7 +64,7 @@ fileprivate struct ReviewCardContentView: View {
     
 }
 
-fileprivate struct ReviewCardView_Previews: PreviewProvider {
+struct ReviewCardView_Previews: PreviewProvider {
     
     static var previews: some View {
         let review = Review(
