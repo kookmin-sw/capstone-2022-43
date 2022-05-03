@@ -20,7 +20,8 @@ struct CardView<Content: View>: View {
             content()
         }
         .padding()
-        .background(RoundedRectangle(cornerRadius: 8).foregroundColor(.secondary))
+        .background(RoundedRectangle(cornerRadius: 8).foregroundColor(Color(UIColor.systemGray6)))
+
     }
     
 }

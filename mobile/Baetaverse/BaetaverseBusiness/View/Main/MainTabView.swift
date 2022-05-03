@@ -11,9 +11,15 @@ struct MainTabView: View {
     
     var body: some View {
         TabView {
-            MainView().tabItem { Text("메인") }
-            Text("Tab Content 2").tabItem { Text("보낸견적서") }
-            Text("Tab Content 2").tabItem { Text("상담내역") }
+            MainView().tabItem {
+                Label("메인", systemImage: "house")
+            }
+            Text("Tab Content 2").tabItem {
+                Label("보낸견적서", systemImage: "doc.text")
+            }
+            Text("Tab Content 2").tabItem {
+                Label("상담내역", systemImage: "bell")
+            }
         }
     }
     

@@ -11,39 +11,95 @@ struct MainView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                ShortcutButtonsView()
-                RecievedReviewCollectionView()
+            ScrollView {
+                MainContentView()
             }
             .navigationTitle("BAETAVERSE")
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItemGroup(placement: .navigationBarLeading) {
+                    NavigationLink(destination: Text("Hello World")) {
+                        Image(systemName: "line.3.horizontal")
+                    }
+                }
+            }
         }
     }
     
 }
 
-fileprivate struct RecievedReviewCollectionView: View {
+fileprivate struct MainContentView: View {
     
     var body: some View {
-        VStack {
-            Text("받은리뷰: 몇건")
-            Text("평점: 몇점")
+        VStack(alignment: .leading) {
+            MainShortcutButtonsView()
             Divider()
+            MainRecievedReviewBoardView()
+            Divider()
+            MainEstimateBoardView()
         }
     }
     
 }
 
-fileprivate struct ShortcutButtonsView: View {
+fileprivate struct MainShortcutButtonsView: View {
     
     var body: some View {
         HStack {
             Spacer()
             RecievedQuotationButton()
+            Spacer()
             Divider()
+            Spacer()
             ConsultationRequestButton()
             Spacer()
         }
+        .font(.title)
+        .buttonStyle(.bordered)
+    }
+    
+}
+
+fileprivate struct MainRecievedReviewBoardView: View {
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            VStack(alignment: .leading) {
+                MainReviewCountingView()
+                MainReviewStarRatingView()
+            }
+            .font(.title)
+            VStack {
+                MainReviewCarouselView()
+            }
+        }
+        .padding()
+    }
+    
+}
+
+fileprivate struct MainEstimateBoardView: View {
+    
+    private let review = Review(
+        title: "견적서 1번",
+        created: Date(),
+        rating: 2,
+        editor: "한정택",
+        reviewText: "견적 내용 작성\n견적 내용 작성\n견적 내용 작성\n견적 내용 작성\n"
+    )
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text("마감임박견적요청서")
+                .font(.title)
+            Carousel {
+                ReviewCardView(review: .constant(review))
+                ReviewCardView(review: .constant(review))
+                ReviewCardView(review: .constant(review))
+            }
+            .frame(height: 150)
+        }
+        .padding()
     }
     
 }
@@ -57,8 +113,6 @@ fileprivate struct RecievedQuotationButton: View {
                 Image(systemName: "doc.text")
             }
         }
-        .font(.largeTitle)
-        .buttonStyle(.bordered)
     }
     
 }
@@ -72,8 +126,46 @@ fileprivate struct ConsultationRequestButton: View {
                 Image(systemName: "exclamationmark.bubble")
             }
         }
-        .font(.largeTitle)
-        .buttonStyle(.bordered)
+    }
+    
+}
+
+fileprivate struct MainReviewCountingView: View {
+    
+    var body: some View {
+        Text("받은리뷰: 7건")
+    }
+    
+}
+
+fileprivate struct MainReviewStarRatingView: View {
+    
+    var body: some View {
+        HStack {
+            Text("평점")
+            StarRatingView(rating: .constant(4))
+        }
+    }
+    
+}
+
+fileprivate struct MainReviewCarouselView: View {
+    
+    private let review = Review(
+        title: "Hello World",
+        created: Date(),
+        rating: 2,
+        editor: "한정택",
+        reviewText: "그냥 리뷰 남김\n그냥 리뷰 남김\n그냥 리뷰 남김\n그냥 리뷰 남김\n"
+    )
+    
+    var body: some View {
+        Carousel {
+            ReviewCardView(review: .constant(review))
+            ReviewCardView(review: .constant(review))
+            ReviewCardView(review: .constant(review))
+        }
+        .frame(height: 150)
     }
     
 }

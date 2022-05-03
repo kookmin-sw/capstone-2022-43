@@ -11,7 +11,8 @@ import SwiftUI
 struct BaetaverseBusinessApp: App {
     var body: some Scene {
         WindowGroup {
-            LoginView()
+//            LoginView()
+            MainTabView()
         }
     }
 }
