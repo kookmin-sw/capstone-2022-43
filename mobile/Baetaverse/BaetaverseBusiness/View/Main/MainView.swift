@@ -107,7 +107,7 @@ fileprivate struct MainEstimateBoardView: View {
 fileprivate struct RecievedQuotationButton: View {
     
     var body: some View {
-        NavigationLink(destination: Text("Hello World")) {
+        NavigationLink(destination: RecievedEstimatesView()) {
             VStack {
                 Text("견적 요청 내역")
                 Image(systemName: "doc.text")

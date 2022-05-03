@@ -72,6 +72,7 @@
 		C1CF675D27F737710057A6C3 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197AEBC27F43AEC000E4975 /* APIService.swift */; };
 		C1CF675E27F737740057A6C3 /* APIRequestHostInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC0A27F3296A0087882E /* APIRequestHostInfo.swift */; };
 		C1CF675F27F737760057A6C3 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF673F27F733780057A6C3 /* APIRequest.swift */; };
+		C1E257B02820DD1A003F35DF /* RecievedEstimatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E257AF2820DD1A003F35DF /* RecievedEstimatesView.swift */; };
 		C1E5CBBA27F2BF330087882E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CBB927F2BF330087882E /* AppDelegate.swift */; };
 		C1E5CBBC27F2BF330087882E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CBBB27F2BF330087882E /* SceneDelegate.swift */; };
 		C1E5CBC627F2BF350087882E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1E5CBC427F2BF350087882E /* LaunchScreen.storyboard */; };
@@ -167,6 +168,7 @@
 		C1CF674827F735820057A6C3 /* AppService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppService.swift; sourceTree = "<group>"; };
 		C1CF674C27F735E10057A6C3 /* BaetaverseAppService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseAppService.swift; sourceTree = "<group>"; };
 		C1CF675027F736330057A6C3 /* BaetaverseBusinessService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseBusinessService.swift; sourceTree = "<group>"; };
+		C1E257AF2820DD1A003F35DF /* RecievedEstimatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecievedEstimatesView.swift; sourceTree = "<group>"; };
 		C1E5CBB627F2BF330087882E /* Baetaverse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Baetaverse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1E5CBB927F2BF330087882E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1E5CBBB27F2BF330087882E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 			children = (
 				C1300DBA281FA3B900E9C0CC /* MainTabView.swift */,
 				C1BAFE222820BAC800CC4549 /* MainView.swift */,
+				C1E257AF2820DD1A003F35DF /* RecievedEstimatesView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -870,6 +873,7 @@
 				C1C9EC8E2818FB080041F974 /* Extensions+Encodable.swift in Sources */,
 				C196576528201CFA00821825 /* Review.swift in Sources */,
 				C13C00EB28191A3600352096 /* SignUpChooseMembershipView.swift in Sources */,
+				C1E257B02820DD1A003F35DF /* RecievedEstimatesView.swift in Sources */,
 				C196576128200A6B00821825 /* Carousel.swift in Sources */,
 				C1C9EC632818FA1E0041F974 /* BaetaverseBusinessApp.swift in Sources */,
 				C196576828201ECA00821825 /* CardView.swift in Sources */,
