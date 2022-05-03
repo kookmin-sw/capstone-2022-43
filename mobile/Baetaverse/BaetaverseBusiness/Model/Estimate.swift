@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct Estimate {
+struct Estimate: Identifiable {
     
-    var cellIndex: Int
+    var id: Int
     var productName: String
     var departure: String
     var destination: String

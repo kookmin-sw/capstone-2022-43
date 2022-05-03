@@ -9,21 +9,39 @@ import SwiftUI
 
 struct RecievedEstimatesView: View {
     
+    @StateObject var viewModel = RecievedEstimatesViewModel()
+    
     var body: some View {
-        Text("Hello World")
+        EstimatesListView(estimates: viewModel.estimates)
             .navigationTitle("받은견적요청서")
             .navigationBarTitleDisplayMode(.inline)
     }
     
 }
 
+fileprivate struct EstimatesListView: View {
+    
+    var estimates: [Estimate]
+    
+    var body: some View {
+        List {
+            ForEach(estimates) { estimate in
+                NavigationLink(destination: Text("Hello World")) {
+                    EstimateCellView(estimate: estimate)
+                }
+            }
+        }
+    }
+    
+}
+
 fileprivate struct EstimateCellView: View {
     
-    @Binding var estimate: Estimate
+    var estimate: Estimate
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("No. \(estimate.cellIndex)")
+            Text("No. \(estimate.id)")
             Text("물품명 \(estimate.productName)")
             HStack {
                 Text("출발지 \(estimate.departure)")
@@ -39,18 +57,7 @@ fileprivate struct EstimateCellView: View {
 struct RecievedEstimatesView_Previews: PreviewProvider {
     
     static var previews: some View {
-        
-        let estimate = Estimate(
-            cellIndex: 1,
-            productName: "맥북 프로 14인치",
-            departure: "대한민국",
-            destination: "중국",
-            incoterms: "ABC"
-        )
-        
         RecievedEstimatesView()
-        EstimateCellView(estimate: .constant(estimate))
-        
     }
     
 }

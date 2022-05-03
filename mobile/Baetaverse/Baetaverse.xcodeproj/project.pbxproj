@@ -74,6 +74,7 @@
 		C1CF675F27F737760057A6C3 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF673F27F733780057A6C3 /* APIRequest.swift */; };
 		C1E257B02820DD1A003F35DF /* RecievedEstimatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E257AF2820DD1A003F35DF /* RecievedEstimatesView.swift */; };
 		C1E257B62820E25D003F35DF /* Estimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E257B52820E25D003F35DF /* Estimate.swift */; };
+		C1E257B82820E5A4003F35DF /* RecievedEstimatesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E257B72820E5A4003F35DF /* RecievedEstimatesViewModel.swift */; };
 		C1E5CBBA27F2BF330087882E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CBB927F2BF330087882E /* AppDelegate.swift */; };
 		C1E5CBBC27F2BF330087882E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CBBB27F2BF330087882E /* SceneDelegate.swift */; };
 		C1E5CBC627F2BF350087882E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1E5CBC427F2BF350087882E /* LaunchScreen.storyboard */; };
@@ -171,6 +172,7 @@
 		C1CF675027F736330057A6C3 /* BaetaverseBusinessService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseBusinessService.swift; sourceTree = "<group>"; };
 		C1E257AF2820DD1A003F35DF /* RecievedEstimatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecievedEstimatesView.swift; sourceTree = "<group>"; };
 		C1E257B52820E25D003F35DF /* Estimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Estimate.swift; sourceTree = "<group>"; };
+		C1E257B72820E5A4003F35DF /* RecievedEstimatesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecievedEstimatesViewModel.swift; sourceTree = "<group>"; };
 		C1E5CBB627F2BF330087882E /* Baetaverse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Baetaverse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1E5CBB927F2BF330087882E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1E5CBBB27F2BF330087882E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -367,6 +369,7 @@
 			children = (
 				C182FDFB281901F600F66567 /* SupportingFiles */,
 				C182FDFA281901D000F66567 /* View */,
+				C1E257B92820E5AC003F35DF /* ViewModel */,
 				C196576628201D0300821825 /* Model */,
 			);
 			path = BaetaverseBusiness;
@@ -520,6 +523,14 @@
 				C1E5CC0D27F32B4C0087882E /* BaetaverseAPIRequestHostInfo.swift */,
 			);
 			path = APIServiceConfig;
+			sourceTree = "<group>";
+		};
+		C1E257B92820E5AC003F35DF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C1E257B72820E5A4003F35DF /* RecievedEstimatesViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		C1E5CBAD27F2BF330087882E = {
@@ -881,6 +892,7 @@
 				C196576128200A6B00821825 /* Carousel.swift in Sources */,
 				C1C9EC632818FA1E0041F974 /* BaetaverseBusinessApp.swift in Sources */,
 				C196576828201ECA00821825 /* CardView.swift in Sources */,
+				C1E257B82820E5A4003F35DF /* RecievedEstimatesViewModel.swift in Sources */,
 				C1C9EC8B2818FAFF0041F974 /* Extensions+Data.swift in Sources */,
 				C1BAFE252820BB9E00CC4549 /* SignUpGroupForm.swift in Sources */,
 			);
