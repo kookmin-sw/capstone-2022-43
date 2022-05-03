@@ -27,7 +27,7 @@ struct LoginView: View {
     
 }
 
-struct LogoView: View {
+fileprivate struct LogoView: View {
     
     private let title = "BAETAVERSE"
     private let subtitle = "LCL 화물 대상 물류비 견적 플랫폼"
@@ -43,7 +43,7 @@ struct LogoView: View {
     
 }
 
-struct LoginFormView: View {
+fileprivate struct LoginFormView: View {
     
     @Binding var username: String
     @Binding var password: String
@@ -62,7 +62,7 @@ struct LoginFormView: View {
     
 }
 
-struct LoginSubmitButton: View {
+fileprivate struct LoginSubmitButton: View {
     
     private let loginLabel = "로그인"
     
@@ -80,7 +80,7 @@ struct LoginSubmitButton: View {
     
 }
 
-struct LoginUserInfoButton: View {
+fileprivate struct LoginUserInfoButton: View {
     
     private let signUpLabel = "회원가입"
     private let findUserInfoLabel = "아이디 / 비밀번호 찾기"
@@ -107,8 +107,10 @@ struct LoginUserInfoButton: View {
     
 }
 
-struct ContentView_Previews: PreviewProvider {
+fileprivate struct ContentView_Previews: PreviewProvider {
+    
     static var previews: some View {
         LoginView()
     }
+    
 }

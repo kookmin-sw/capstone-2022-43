@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C1300DB6281F707100E9C0CC /* SignUpFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1300DB5281F707100E9C0CC /* SignUpFormView.swift */; };
-		C1300DBB281FA3B900E9C0CC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1300DBA281FA3B900E9C0CC /* MainView.swift */; };
+		C1300DBB281FA3B900E9C0CC /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1300DBA281FA3B900E9C0CC /* MainTabView.swift */; };
 		C1300DBE281FBE4E00E9C0CC /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1300DBD281FBE4E00E9C0CC /* StarRatingView.swift */; };
 		C13778C127F497CF00DAF494 /* BUSignUpFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13778C027F497CF00DAF494 /* BUSignUpFormViewController.swift */; };
 		C13778C327F498EE00DAF494 /* BaetaverseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13778C227F498EE00DAF494 /* BaetaverseAuth.swift */; };
@@ -38,6 +38,8 @@
 		C197AEC327F43EF6000E4975 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1927F334E10087882E /* LoginRequest.swift */; };
 		C197AEC427F43EF9000E4975 /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1427F32F040087882E /* SignUpRequest.swift */; };
 		C197AEC527F43EFC000E4975 /* APIRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1127F32DC10087882E /* APIRequestModel.swift */; };
+		C1BAFE232820BAC800CC4549 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFE222820BAC800CC4549 /* MainView.swift */; };
+		C1BAFE252820BB9E00CC4549 /* SignUpGroupForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFE242820BB9E00CC4549 /* SignUpGroupForm.swift */; };
 		C1C9EC5B2818F7A40041F974 /* Extensions+Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C9EC5A2818F7A40041F974 /* Extensions+Encodable.swift */; };
 		C1C9EC632818FA1E0041F974 /* BaetaverseBusinessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C9EC622818FA1E0041F974 /* BaetaverseBusinessApp.swift */; };
 		C1C9EC652818FA1E0041F974 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C9EC642818FA1E0041F974 /* LoginView.swift */; };
@@ -127,7 +129,7 @@
 
 /* Begin PBXFileReference section */
 		C1300DB5281F707100E9C0CC /* SignUpFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFormView.swift; sourceTree = "<group>"; };
-		C1300DBA281FA3B900E9C0CC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		C1300DBA281FA3B900E9C0CC /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		C1300DBD281FBE4E00E9C0CC /* StarRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingView.swift; sourceTree = "<group>"; };
 		C13778C027F497CF00DAF494 /* BUSignUpFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BUSignUpFormViewController.swift; path = Baetaverse/ViewController/BUSignUpFormViewController.swift; sourceTree = SOURCE_ROOT; };
 		C13778C227F498EE00DAF494 /* BaetaverseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseAuth.swift; sourceTree = "<group>"; };
@@ -144,6 +146,8 @@
 		C197AEB227F42D6D000E4975 /* NetworkServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProvider.swift; sourceTree = "<group>"; };
 		C197AEBC27F43AEC000E4975 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		C197AEBF27F43BEF000E4975 /* BaetaverseAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseAPIService.swift; sourceTree = "<group>"; };
+		C1BAFE222820BAC800CC4549 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		C1BAFE242820BB9E00CC4549 /* SignUpGroupForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpGroupForm.swift; sourceTree = "<group>"; };
 		C1C9EC5A2818F7A40041F974 /* Extensions+Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+Encodable.swift"; sourceTree = "<group>"; };
 		C1C9EC602818FA1E0041F974 /* BaetaverseBusiness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaetaverseBusiness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1C9EC622818FA1E0041F974 /* BaetaverseBusinessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseBusinessApp.swift; sourceTree = "<group>"; };
@@ -240,7 +244,8 @@
 		C1300DB9281FA3AA00E9C0CC /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				C1300DBA281FA3B900E9C0CC /* MainView.swift */,
+				C1300DBA281FA3B900E9C0CC /* MainTabView.swift */,
+				C1BAFE222820BAC800CC4549 /* MainView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -346,6 +351,7 @@
 			isa = PBXGroup;
 			children = (
 				C196576428201CFA00821825 /* Review.swift */,
+				C1BAFE242820BB9E00CC4549 /* SignUpGroupForm.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -856,9 +862,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1300DB6281F707100E9C0CC /* SignUpFormView.swift in Sources */,
+				C1BAFE232820BAC800CC4549 /* MainView.swift in Sources */,
 				C1300DBE281FBE4E00E9C0CC /* StarRatingView.swift in Sources */,
 				C1965763282013EC00821825 /* ReviewCardView.swift in Sources */,
-				C1300DBB281FA3B900E9C0CC /* MainView.swift in Sources */,
+				C1300DBB281FA3B900E9C0CC /* MainTabView.swift in Sources */,
 				C1C9EC652818FA1E0041F974 /* LoginView.swift in Sources */,
 				C1C9EC8E2818FB080041F974 /* Extensions+Encodable.swift in Sources */,
 				C196576528201CFA00821825 /* Review.swift in Sources */,
@@ -867,6 +874,7 @@
 				C1C9EC632818FA1E0041F974 /* BaetaverseBusinessApp.swift in Sources */,
 				C196576828201ECA00821825 /* CardView.swift in Sources */,
 				C1C9EC8B2818FAFF0041F974 /* Extensions+Data.swift in Sources */,
+				C1BAFE252820BB9E00CC4549 /* SignUpGroupForm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

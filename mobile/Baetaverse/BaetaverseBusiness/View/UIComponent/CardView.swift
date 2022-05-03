@@ -26,9 +26,11 @@ struct CardView<Content: View>: View {
 }
 
 fileprivate struct CardView_Previews: PreviewProvider {
+    
     static var previews: some View {
         CardView {
             Text("Hello World")
         }
     }
+    
 }

@@ -2,24 +2,12 @@
 //  MainView.swift
 //  BaetaverseBusiness
 //
-//  Created by JeongTaek Han on 2022/05/02.
+//  Created by JeongTaek Han on 2022/05/03.
 //
 
 import SwiftUI
 
 struct MainView: View {
-    
-    var body: some View {
-        TabView {
-            MainOverView().tabItem { Text("메인") }
-            Text("Tab Content 2").tabItem { Text("보낸견적서") }
-            Text("Tab Content 2").tabItem { Text("상담내역") }
-        }
-    }
-    
-}
-
-struct MainOverView: View {
     
     var body: some View {
         NavigationView {
@@ -34,7 +22,7 @@ struct MainOverView: View {
     
 }
 
-struct RecievedReviewCollectionView: View {
+fileprivate struct RecievedReviewCollectionView: View {
     
     var body: some View {
         VStack {
@@ -46,7 +34,7 @@ struct RecievedReviewCollectionView: View {
     
 }
 
-struct ShortcutButtonsView: View {
+fileprivate struct ShortcutButtonsView: View {
     
     var body: some View {
         HStack {
@@ -60,7 +48,7 @@ struct ShortcutButtonsView: View {
     
 }
 
-struct RecievedQuotationButton: View {
+fileprivate struct RecievedQuotationButton: View {
     
     var body: some View {
         NavigationLink(destination: Text("Hello World")) {
@@ -75,7 +63,7 @@ struct RecievedQuotationButton: View {
     
 }
 
-struct ConsultationRequestButton: View {
+fileprivate struct ConsultationRequestButton: View {
     
     var body: some View {
         NavigationLink(destination: Text("Hello World")) {
@@ -90,9 +78,10 @@ struct ConsultationRequestButton: View {
     
 }
 
-struct MainView_Previews: PreviewProvider {
+fileprivate struct MainView_Previews: PreviewProvider {
+    
     static var previews: some View {
         MainView()
-            .previewInterfaceOrientation(.portrait)
     }
+    
 }

@@ -30,7 +30,7 @@ struct SignUpChooseMembershipView: View {
     
 }
 
-struct SignUpChooseMembershipButton: View {
+fileprivate struct SignUpChooseMembershipButton: View {
     
     var body: some View {
         VStack(spacing: 25) {
@@ -51,8 +51,10 @@ struct SignUpChooseMembershipButton: View {
     
 }
 
-struct SignUpChooseMembershipView_Previews: PreviewProvider {
+fileprivate struct SignUpChooseMembershipView_Previews: PreviewProvider {
+    
     static var previews: some View {
         SignUpChooseMembershipView()
     }
+    
 }

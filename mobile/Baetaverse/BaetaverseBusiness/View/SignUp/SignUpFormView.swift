@@ -18,7 +18,7 @@ struct SignUpFormView: View {
     
 }
 
-struct SignUpInformationFormView: View {
+fileprivate struct SignUpInformationFormView: View {
     
     @Binding var signUpForm: SignUpGroupForm
     
@@ -37,7 +37,7 @@ struct SignUpInformationFormView: View {
     
 }
 
-struct IdPasswordFormView: View {
+fileprivate struct IdPasswordFormView: View {
     
     @Binding var signUpForm: SignUpGroupForm
     
@@ -55,7 +55,7 @@ struct IdPasswordFormView: View {
     
 }
 
-struct ProfileFormView: View {
+fileprivate struct ProfileFormView: View {
     
     @Binding var signUpForm: SignUpGroupForm
     
@@ -75,7 +75,7 @@ struct ProfileFormView: View {
     
 }
 
-struct ProfileDetailFormView: View {
+fileprivate struct ProfileDetailFormView: View {
     
     @Binding var signUpForm: SignUpGroupForm
     
@@ -108,7 +108,7 @@ struct ProfileDetailFormView: View {
     
 }
 
-struct SignUpButton: View {
+fileprivate struct SignUpButton: View {
     
     @Environment(\.dismiss) var dismiss
     
@@ -134,26 +134,10 @@ struct SignUpButton: View {
     
 }
 
-struct SignUpGroupForm {
+fileprivate struct SignUpFormView_Previews: PreviewProvider {
     
-    var id = ""
-    var password = ""
-    var verifyPassword = ""
-    
-    var name = ""
-    var contactNumber = ""
-    var email = ""
-    var address = ""
-    var managerContactNumber = ""
-    
-    var openingDate = Date()
-    var representativeName = ""
-    var companyRegistrationNumber = ""
-    
-}
-
-struct SignUpFormView_Previews: PreviewProvider {
     static var previews: some View {
         SignUpFormView()
     }
+    
 }
