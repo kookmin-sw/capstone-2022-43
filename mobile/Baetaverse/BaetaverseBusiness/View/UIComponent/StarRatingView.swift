@@ -36,13 +36,13 @@ struct StarRatingView: View {
         }
     }
     
-    func image(for number: Int) -> Image {
+    private func image(for number: Int) -> Image {
         return number > rating ? offImage : onImage
     }
     
 }
 
-struct StarRatingView_Previews: PreviewProvider {
+fileprivate struct StarRatingView_Previews: PreviewProvider {
     
     static var previews: some View {
         StarRatingView(rating: .constant(5))

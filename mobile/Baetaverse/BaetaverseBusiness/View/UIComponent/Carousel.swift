@@ -24,7 +24,7 @@ struct Carousel<Content: View>: View {
     
 }
 
-struct Carousel_Previews: PreviewProvider {
+fileprivate struct Carousel_Previews: PreviewProvider {
     
     static var previews: some View {
         Carousel {

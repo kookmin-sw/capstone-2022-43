@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
+    
     var body: some View {
         TabView {
             MainOverView().tabItem { Text("메인") }
@@ -15,6 +16,7 @@ struct MainView: View {
             Text("Tab Content 2").tabItem { Text("상담내역") }
         }
     }
+    
 }
 
 struct MainOverView: View {
@@ -39,13 +41,6 @@ struct RecievedReviewCollectionView: View {
             Text("받은리뷰: 몇건")
             Text("평점: 몇점")
             Divider()
-//            ScrollView {
-//                HStack {
-//                    ReviewCardView()
-//                }
-//            }
-            
-            
         }
     }
     
@@ -54,9 +49,12 @@ struct RecievedReviewCollectionView: View {
 struct ShortcutButtonsView: View {
     
     var body: some View {
-        HStack(alignment: .center, spacing: 20) {
+        HStack {
+            Spacer()
             RecievedQuotationButton()
+            Divider()
             ConsultationRequestButton()
+            Spacer()
         }
     }
     

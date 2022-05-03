@@ -23,7 +23,7 @@ struct ReviewCardView: View {
     
 }
 
-struct ReviewCardTitleView: View {
+fileprivate struct ReviewCardTitleView: View {
     
     @Binding var title: String
     @Binding var created: Date
@@ -38,7 +38,7 @@ struct ReviewCardTitleView: View {
     
 }
 
-struct ReviewCardHeaderView: View {
+fileprivate struct ReviewCardHeaderView: View {
     
     @Binding var rating: Int
     @Binding var editor: String
@@ -53,7 +53,7 @@ struct ReviewCardHeaderView: View {
     
 }
 
-struct ReviewCardContentView: View {
+fileprivate struct ReviewCardContentView: View {
     
     @Binding var reviewText: String
     
@@ -64,7 +64,7 @@ struct ReviewCardContentView: View {
     
 }
 
-struct ReviewCardView_Previews: PreviewProvider {
+fileprivate struct ReviewCardView_Previews: PreviewProvider {
     
     static var previews: some View {
         let review = Review(
@@ -76,4 +76,5 @@ struct ReviewCardView_Previews: PreviewProvider {
         )
         ReviewCardView(review: .constant(review))
     }
+    
 }
