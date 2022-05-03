@@ -19,22 +19,18 @@ struct RecievedEstimatesView: View {
 
 fileprivate struct EstimateCellView: View {
     
-    @Binding var cellIndex: Int
-    @Binding var productName: String
-    @Binding var departure: String
-    @Binding var destination: String
-    @Binding var incoterms: String
+    @Binding var estimate: Estimate
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("No. \(String(cellIndex))")
-            Text("물품명 \(productName)")
+            Text("No. \(estimate.cellIndex)")
+            Text("물품명 \(estimate.productName)")
             HStack {
-                Text("출발지 \(departure)")
+                Text("출발지 \(estimate.departure)")
                 Image(systemName: "arrowtriangle.right.fill")
-                Text("도착지 \(destination)")
+                Text("도착지 \(estimate.destination)")
             }
-            Text("인코텀즈 \(incoterms)")
+            Text("인코텀즈 \(estimate.incoterms)")
         }
     }
     
@@ -43,14 +39,18 @@ fileprivate struct EstimateCellView: View {
 struct RecievedEstimatesView_Previews: PreviewProvider {
     
     static var previews: some View {
-        RecievedEstimatesView()
-        EstimateCellView(
-            cellIndex: .constant(1),
-            productName: .constant("새로운 맥북 프로 14인치"),
-            departure: .constant("대한민국"),
-            destination: .constant("중국"),
-            incoterms: .constant("ABC")
+        
+        let estimate = Estimate(
+            cellIndex: 1,
+            productName: "맥북 프로 14인치",
+            departure: "대한민국",
+            destination: "중국",
+            incoterms: "ABC"
         )
+        
+        RecievedEstimatesView()
+        EstimateCellView(estimate: .constant(estimate))
+        
     }
     
 }
