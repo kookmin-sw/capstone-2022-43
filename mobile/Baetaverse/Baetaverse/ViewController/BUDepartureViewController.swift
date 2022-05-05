@@ -20,7 +20,6 @@ class BUDepartureViewController: UIViewController {
         
     }
     
-
     /*
     // MARK: - Navigation
 

@@ -18,7 +18,7 @@ struct SignUpFormView: View {
     
 }
 
-fileprivate struct SignUpInformationFormView: View {
+private struct SignUpInformationFormView: View {
     
     @Binding var signUpForm: SignUpGroupForm
     
@@ -37,7 +37,7 @@ fileprivate struct SignUpInformationFormView: View {
     
 }
 
-fileprivate struct IdPasswordFormView: View {
+private struct IdPasswordFormView: View {
     
     @Binding var signUpForm: SignUpGroupForm
     
@@ -55,7 +55,7 @@ fileprivate struct IdPasswordFormView: View {
     
 }
 
-fileprivate struct ProfileFormView: View {
+private struct ProfileFormView: View {
     
     @Binding var signUpForm: SignUpGroupForm
     
@@ -75,7 +75,7 @@ fileprivate struct ProfileFormView: View {
     
 }
 
-fileprivate struct ProfileDetailFormView: View {
+private struct ProfileDetailFormView: View {
     
     @Binding var signUpForm: SignUpGroupForm
     
@@ -108,15 +108,13 @@ fileprivate struct ProfileDetailFormView: View {
     
 }
 
-fileprivate struct SignUpButton: View {
+private struct SignUpButton: View {
     
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
         HStack {
-            Button(action: {
-                
-            }) {
+            Button(action: { }) {
                 Spacer()
                 Text("취소")
                 Spacer()

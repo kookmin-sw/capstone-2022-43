@@ -30,7 +30,7 @@ struct SignUpChooseMembershipView: View {
     
 }
 
-fileprivate struct SignUpChooseMembershipButton: View {
+private struct SignUpChooseMembershipButton: View {
     
     var body: some View {
         VStack(spacing: 25) {

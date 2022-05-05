@@ -19,7 +19,7 @@ struct RecievedEstimatesView: View {
     
 }
 
-fileprivate struct EstimatesListView: View {
+private struct EstimatesListView: View {
     
     var estimates: [Estimate]
     
@@ -35,7 +35,7 @@ fileprivate struct EstimatesListView: View {
     
 }
 
-fileprivate struct EstimateCellView: View {
+private struct EstimateCellView: View {
     
     var estimate: Estimate
     

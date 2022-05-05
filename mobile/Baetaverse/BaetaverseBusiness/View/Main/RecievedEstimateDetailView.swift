@@ -19,7 +19,7 @@ struct RecievedEstimateDetailView: View {
     
 }
 
-fileprivate struct EstimateContentView: View {
+private struct EstimateContentView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -34,7 +34,7 @@ fileprivate struct EstimateContentView: View {
     
 }
 
-fileprivate struct ShippingInformationView: View {
+private struct ShippingInformationView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
@@ -54,7 +54,7 @@ fileprivate struct ShippingInformationView: View {
     
 }
 
-fileprivate struct ItemInformationView: View {
+private struct ItemInformationView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
@@ -109,7 +109,7 @@ fileprivate struct ItemInformationView: View {
     
 }
 
-fileprivate struct MoreDetailsInformationView: View {
+private struct MoreDetailsInformationView: View {
     
     var body: some View {
         VStack(alignment: .leading) {

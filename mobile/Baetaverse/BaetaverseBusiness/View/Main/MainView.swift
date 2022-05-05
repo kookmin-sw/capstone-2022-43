@@ -28,7 +28,7 @@ struct MainView: View {
     
 }
 
-fileprivate struct MainContentView: View {
+private struct MainContentView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -42,7 +42,7 @@ fileprivate struct MainContentView: View {
     
 }
 
-fileprivate struct MainShortcutButtonsView: View {
+private struct MainShortcutButtonsView: View {
     
     var body: some View {
         HStack {
@@ -60,7 +60,7 @@ fileprivate struct MainShortcutButtonsView: View {
     
 }
 
-fileprivate struct MainRecievedReviewBoardView: View {
+private struct MainRecievedReviewBoardView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -78,7 +78,7 @@ fileprivate struct MainRecievedReviewBoardView: View {
     
 }
 
-fileprivate struct MainEstimateBoardView: View {
+private struct MainEstimateBoardView: View {
     
     private let review = Review(
         title: "견적서 1번",
@@ -104,7 +104,7 @@ fileprivate struct MainEstimateBoardView: View {
     
 }
 
-fileprivate struct RecievedQuotationButton: View {
+private struct RecievedQuotationButton: View {
     
     var body: some View {
         NavigationLink(destination: RecievedEstimatesView()) {
@@ -117,7 +117,7 @@ fileprivate struct RecievedQuotationButton: View {
     
 }
 
-fileprivate struct ConsultationRequestButton: View {
+private struct ConsultationRequestButton: View {
     
     var body: some View {
         NavigationLink(destination: Text("Hello World")) {
@@ -130,7 +130,7 @@ fileprivate struct ConsultationRequestButton: View {
     
 }
 
-fileprivate struct MainReviewCountingView: View {
+private struct MainReviewCountingView: View {
     
     var body: some View {
         Text("받은리뷰: 7건")
@@ -138,7 +138,7 @@ fileprivate struct MainReviewCountingView: View {
     
 }
 
-fileprivate struct MainReviewStarRatingView: View {
+private struct MainReviewStarRatingView: View {
     
     var body: some View {
         HStack {
@@ -149,7 +149,7 @@ fileprivate struct MainReviewStarRatingView: View {
     
 }
 
-fileprivate struct MainReviewCarouselView: View {
+private struct MainReviewCarouselView: View {
     
     private let review = Review(
         title: "Hello World",

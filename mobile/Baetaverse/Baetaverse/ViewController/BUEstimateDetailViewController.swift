@@ -15,7 +15,6 @@ class BUEstimateDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
     @IBAction func declinedButtonClicked(_ sender: UIButton) {
         BUEstimateListViewController.estimateRecordCount -= 1
     }

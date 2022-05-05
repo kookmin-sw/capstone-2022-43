@@ -23,7 +23,7 @@ struct ReviewCardView: View {
     
 }
 
-fileprivate struct ReviewCardTitleView: View {
+private struct ReviewCardTitleView: View {
     
     @Binding var title: String
     @Binding var created: Date
@@ -38,7 +38,7 @@ fileprivate struct ReviewCardTitleView: View {
     
 }
 
-fileprivate struct ReviewCardHeaderView: View {
+private struct ReviewCardHeaderView: View {
     
     @Binding var rating: Int
     @Binding var editor: String
@@ -53,7 +53,7 @@ fileprivate struct ReviewCardHeaderView: View {
     
 }
 
-fileprivate struct ReviewCardContentView: View {
+private struct ReviewCardContentView: View {
     
     @Binding var reviewText: String
     
