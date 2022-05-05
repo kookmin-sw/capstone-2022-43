@@ -10,7 +10,7 @@ import Foundation
 struct Estimate: Identifiable {
     
     var id: Int
-    var productName: String
+    var itemName: String
     var departure: String
     var destination: String
     var incoterms: String

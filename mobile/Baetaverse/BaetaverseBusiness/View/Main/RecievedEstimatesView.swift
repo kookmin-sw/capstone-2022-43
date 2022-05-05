@@ -26,7 +26,7 @@ fileprivate struct EstimatesListView: View {
     var body: some View {
         List {
             ForEach(estimates) { estimate in
-                NavigationLink(destination: Text("Hello World")) {
+                NavigationLink(destination: RecievedEstimateDetailView()) {
                     EstimateCellView(estimate: estimate)
                 }
             }
@@ -42,7 +42,7 @@ fileprivate struct EstimateCellView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text("No. \(estimate.id)")
-            Text("물품명 \(estimate.productName)")
+            Text("물품명 \(estimate.itemName)")
             HStack {
                 Text("출발지 \(estimate.departure)")
                 Image(systemName: "arrowtriangle.right.fill")

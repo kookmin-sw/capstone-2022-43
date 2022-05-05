@@ -22,6 +22,7 @@
 		C149737427F5A12800679118 /* Extensions+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149736A27F59B7500679118 /* Extensions+Data.swift */; };
 		C149737627F5A39800679118 /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149737527F5A39800679118 /* SignUpResponse.swift */; };
 		C149737727F5A39800679118 /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149737527F5A39800679118 /* SignUpResponse.swift */; };
+		C19140E52823AC0000372CB3 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = C19140E42823AC0000372CB3 /* .swiftlint.yml */; };
 		C196576128200A6B00821825 /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C196576028200A6B00821825 /* Carousel.swift */; };
 		C1965763282013EC00821825 /* ReviewCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1965762282013EC00821825 /* ReviewCardView.swift */; };
 		C196576528201CFA00821825 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = C196576428201CFA00821825 /* Review.swift */; };
@@ -40,6 +41,7 @@
 		C197AEC527F43EFC000E4975 /* APIRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1127F32DC10087882E /* APIRequestModel.swift */; };
 		C1BAFE232820BAC800CC4549 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFE222820BAC800CC4549 /* MainView.swift */; };
 		C1BAFE252820BB9E00CC4549 /* SignUpGroupForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFE242820BB9E00CC4549 /* SignUpGroupForm.swift */; };
+		C1C65CFC28210E5300951A25 /* RecievedEstimateDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C65CFB28210E5200951A25 /* RecievedEstimateDetailView.swift */; };
 		C1C9EC5B2818F7A40041F974 /* Extensions+Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C9EC5A2818F7A40041F974 /* Extensions+Encodable.swift */; };
 		C1C9EC632818FA1E0041F974 /* BaetaverseBusinessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C9EC622818FA1E0041F974 /* BaetaverseBusinessApp.swift */; };
 		C1C9EC652818FA1E0041F974 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C9EC642818FA1E0041F974 /* LoginView.swift */; };
@@ -142,6 +144,7 @@
 		C149736C27F59D4500679118 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		C149737027F5A06D00679118 /* APIResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseModel.swift; sourceTree = "<group>"; };
 		C149737527F5A39800679118 /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
+		C19140E42823AC0000372CB3 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		C196576028200A6B00821825 /* Carousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
 		C1965762282013EC00821825 /* ReviewCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCardView.swift; sourceTree = "<group>"; };
 		C196576428201CFA00821825 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
@@ -151,6 +154,7 @@
 		C197AEBF27F43BEF000E4975 /* BaetaverseAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseAPIService.swift; sourceTree = "<group>"; };
 		C1BAFE222820BAC800CC4549 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C1BAFE242820BB9E00CC4549 /* SignUpGroupForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpGroupForm.swift; sourceTree = "<group>"; };
+		C1C65CFB28210E5200951A25 /* RecievedEstimateDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecievedEstimateDetailView.swift; sourceTree = "<group>"; };
 		C1C9EC5A2818F7A40041F974 /* Extensions+Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+Encodable.swift"; sourceTree = "<group>"; };
 		C1C9EC602818FA1E0041F974 /* BaetaverseBusiness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaetaverseBusiness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1C9EC622818FA1E0041F974 /* BaetaverseBusinessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseBusinessApp.swift; sourceTree = "<group>"; };
@@ -253,6 +257,7 @@
 				C1300DBA281FA3B900E9C0CC /* MainTabView.swift */,
 				C1BAFE222820BAC800CC4549 /* MainView.swift */,
 				C1E257AF2820DD1A003F35DF /* RecievedEstimatesView.swift */,
+				C1C65CFB28210E5200951A25 /* RecievedEstimateDetailView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -536,6 +541,7 @@
 		C1E5CBAD27F2BF330087882E = {
 			isa = PBXGroup;
 			children = (
+				C19140E42823AC0000372CB3 /* .swiftlint.yml */,
 				C1E5CBB827F2BF330087882E /* Baetaverse */,
 				C1C9EC612818FA1E0041F974 /* BaetaverseBusiness */,
 				C1C9EC8A2818FAE90041F974 /* CommonModule */,
@@ -667,6 +673,7 @@
 				C1C9EC5C2818FA1E0041F974 /* Sources */,
 				C1C9EC5D2818FA1E0041F974 /* Frameworks */,
 				C1C9EC5E2818FA1E0041F974 /* Resources */,
+				C19140E32823AB3A00372CB3 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -720,6 +727,7 @@
 				C1E5CBB227F2BF330087882E /* Sources */,
 				C1E5CBB327F2BF330087882E /* Frameworks */,
 				C1E5CBB427F2BF330087882E /* Resources */,
+				C19140E22823AB2200372CB3 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -828,6 +836,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C19140E52823AC0000372CB3 /* .swiftlint.yml in Resources */,
 				C1C9EC6A2818FA200041F974 /* Preview Assets.xcassets in Resources */,
 				C1C9EC672818FA200041F974 /* Assets.xcassets in Resources */,
 			);
@@ -873,11 +882,49 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C19140E22823AB2200372CB3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		C19140E32823AB3A00372CB3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C1C9EC5C2818FA1E0041F974 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1C65CFC28210E5300951A25 /* RecievedEstimateDetailView.swift in Sources */,
 				C1300DB6281F707100E9C0CC /* SignUpFormView.swift in Sources */,
 				C1BAFE232820BAC800CC4549 /* MainView.swift in Sources */,
 				C1300DBE281FBE4E00E9C0CC /* StarRatingView.swift in Sources */,
