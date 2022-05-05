@@ -18,7 +18,7 @@ struct MainView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarLeading) {
-                    NavigationLink(destination: Text("Hello World")) {
+                    NavigationLink(destination: MenuView()) {
                         Image(systemName: "line.3.horizontal")
                     }
                 }
