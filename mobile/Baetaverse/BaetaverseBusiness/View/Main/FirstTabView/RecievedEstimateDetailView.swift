@@ -141,7 +141,7 @@ private struct CreateEvaluateButtons: View {
                 Text("취소")
                 Spacer()
             }
-            NavigationLink(destination: Text("Hello World")) {
+            NavigationLink(destination: WriteEstimateView()) {
                 Spacer()
                 Text("견적서보내기")
                 Spacer()
