@@ -120,7 +120,7 @@ private struct RecievedQuotationButton: View {
 private struct ConsultationRequestButton: View {
     
     var body: some View {
-        NavigationLink(destination: Text("Hello World")) {
+        NavigationLink(destination: ConsultationView()) {
             VStack {
                 Text("상담 요청 내역")
                 Image(systemName: "exclamationmark.bubble")

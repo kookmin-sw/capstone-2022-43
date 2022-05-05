@@ -26,6 +26,9 @@
 		C19140EA2823B6EF00372CB3 /* WriteEstimateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19140E92823B6EF00372CB3 /* WriteEstimateView.swift */; };
 		C19140ED2823BAE800372CB3 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19140EC2823BAE800372CB3 /* MenuView.swift */; };
 		C19140F02823BCC800372CB3 /* ConsultationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19140EF2823BCC800372CB3 /* ConsultationView.swift */; };
+		C19140F42823C21000372CB3 /* ConsultationRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19140F32823C21000372CB3 /* ConsultationRequestView.swift */; };
+		C19140F62823C55900372CB3 /* ConsultationCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19140F52823C55900372CB3 /* ConsultationCellView.swift */; };
+		C19140F82823C5BD00372CB3 /* ConsultationProceedingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19140F72823C5BD00372CB3 /* ConsultationProceedingView.swift */; };
 		C196576128200A6B00821825 /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C196576028200A6B00821825 /* Carousel.swift */; };
 		C1965763282013EC00821825 /* ReviewCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1965762282013EC00821825 /* ReviewCardView.swift */; };
 		C196576528201CFA00821825 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = C196576428201CFA00821825 /* Review.swift */; };
@@ -151,6 +154,9 @@
 		C19140E92823B6EF00372CB3 /* WriteEstimateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteEstimateView.swift; sourceTree = "<group>"; };
 		C19140EC2823BAE800372CB3 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		C19140EF2823BCC800372CB3 /* ConsultationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationView.swift; sourceTree = "<group>"; };
+		C19140F32823C21000372CB3 /* ConsultationRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationRequestView.swift; sourceTree = "<group>"; };
+		C19140F52823C55900372CB3 /* ConsultationCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationCellView.swift; sourceTree = "<group>"; };
+		C19140F72823C5BD00372CB3 /* ConsultationProceedingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationProceedingView.swift; sourceTree = "<group>"; };
 		C196576028200A6B00821825 /* Carousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
 		C1965762282013EC00821825 /* ReviewCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCardView.swift; sourceTree = "<group>"; };
 		C196576428201CFA00821825 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
@@ -388,6 +394,9 @@
 			isa = PBXGroup;
 			children = (
 				C19140EF2823BCC800372CB3 /* ConsultationView.swift */,
+				C19140F52823C55900372CB3 /* ConsultationCellView.swift */,
+				C19140F32823C21000372CB3 /* ConsultationRequestView.swift */,
+				C19140F72823C5BD00372CB3 /* ConsultationProceedingView.swift */,
 			);
 			path = ThirdTabView;
 			sourceTree = "<group>";
@@ -959,11 +968,13 @@
 			files = (
 				C1C65CFC28210E5300951A25 /* RecievedEstimateDetailView.swift in Sources */,
 				C1300DB6281F707100E9C0CC /* SignUpFormView.swift in Sources */,
+				C19140F62823C55900372CB3 /* ConsultationCellView.swift in Sources */,
 				C1BAFE232820BAC800CC4549 /* MainView.swift in Sources */,
 				C1300DBE281FBE4E00E9C0CC /* StarRatingView.swift in Sources */,
 				C1965763282013EC00821825 /* ReviewCardView.swift in Sources */,
 				C19140ED2823BAE800372CB3 /* MenuView.swift in Sources */,
 				C19140EA2823B6EF00372CB3 /* WriteEstimateView.swift in Sources */,
+				C19140F42823C21000372CB3 /* ConsultationRequestView.swift in Sources */,
 				C1300DBB281FA3B900E9C0CC /* MainTabView.swift in Sources */,
 				C1E257B62820E25D003F35DF /* Estimate.swift in Sources */,
 				C1C9EC652818FA1E0041F974 /* LoginView.swift in Sources */,
@@ -973,6 +984,7 @@
 				C13C00EB28191A3600352096 /* SignUpChooseMembershipView.swift in Sources */,
 				C1E257B02820DD1A003F35DF /* RecievedEstimatesView.swift in Sources */,
 				C196576128200A6B00821825 /* Carousel.swift in Sources */,
+				C19140F82823C5BD00372CB3 /* ConsultationProceedingView.swift in Sources */,
 				C1C9EC632818FA1E0041F974 /* BaetaverseBusinessApp.swift in Sources */,
 				C196576828201ECA00821825 /* CardView.swift in Sources */,
 				C1E257B82820E5A4003F35DF /* RecievedEstimatesViewModel.swift in Sources */,
