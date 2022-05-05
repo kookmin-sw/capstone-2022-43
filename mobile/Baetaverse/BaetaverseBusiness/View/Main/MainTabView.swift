@@ -17,7 +17,7 @@ struct MainTabView: View {
             Text("Tab Content 2").tabItem {
                 Label("보낸견적서", systemImage: "doc.text")
             }
-            Text("Tab Content 2").tabItem {
+            ConsultationView().tabItem {
                 Label("상담내역", systemImage: "bell")
             }
         }

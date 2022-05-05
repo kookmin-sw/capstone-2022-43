@@ -25,6 +25,7 @@
 		C19140E52823AC0000372CB3 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = C19140E42823AC0000372CB3 /* .swiftlint.yml */; };
 		C19140EA2823B6EF00372CB3 /* WriteEstimateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19140E92823B6EF00372CB3 /* WriteEstimateView.swift */; };
 		C19140ED2823BAE800372CB3 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19140EC2823BAE800372CB3 /* MenuView.swift */; };
+		C19140F02823BCC800372CB3 /* ConsultationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19140EF2823BCC800372CB3 /* ConsultationView.swift */; };
 		C196576128200A6B00821825 /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C196576028200A6B00821825 /* Carousel.swift */; };
 		C1965763282013EC00821825 /* ReviewCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1965762282013EC00821825 /* ReviewCardView.swift */; };
 		C196576528201CFA00821825 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = C196576428201CFA00821825 /* Review.swift */; };
@@ -149,6 +150,7 @@
 		C19140E42823AC0000372CB3 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		C19140E92823B6EF00372CB3 /* WriteEstimateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteEstimateView.swift; sourceTree = "<group>"; };
 		C19140EC2823BAE800372CB3 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		C19140EF2823BCC800372CB3 /* ConsultationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationView.swift; sourceTree = "<group>"; };
 		C196576028200A6B00821825 /* Carousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
 		C1965762282013EC00821825 /* ReviewCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCardView.swift; sourceTree = "<group>"; };
 		C196576428201CFA00821825 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 				C1300DBA281FA3B900E9C0CC /* MainTabView.swift */,
 				C19140EB2823BAD000372CB3 /* Menu */,
 				C19140E62823B5DC00372CB3 /* FirstTabView */,
+				C19140EE2823BC9500372CB3 /* ThirdTabView */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -379,6 +382,14 @@
 				C19140EC2823BAE800372CB3 /* MenuView.swift */,
 			);
 			path = Menu;
+			sourceTree = "<group>";
+		};
+		C19140EE2823BC9500372CB3 /* ThirdTabView */ = {
+			isa = PBXGroup;
+			children = (
+				C19140EF2823BCC800372CB3 /* ConsultationView.swift */,
+			);
+			path = ThirdTabView;
 			sourceTree = "<group>";
 		};
 		C196576628201D0300821825 /* Model */ = {
@@ -957,6 +968,7 @@
 				C1E257B62820E25D003F35DF /* Estimate.swift in Sources */,
 				C1C9EC652818FA1E0041F974 /* LoginView.swift in Sources */,
 				C1C9EC8E2818FB080041F974 /* Extensions+Encodable.swift in Sources */,
+				C19140F02823BCC800372CB3 /* ConsultationView.swift in Sources */,
 				C196576528201CFA00821825 /* Review.swift in Sources */,
 				C13C00EB28191A3600352096 /* SignUpChooseMembershipView.swift in Sources */,
 				C1E257B02820DD1A003F35DF /* RecievedEstimatesView.swift in Sources */,
