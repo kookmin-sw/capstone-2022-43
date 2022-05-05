@@ -112,7 +112,19 @@ fileprivate struct ItemInformationView: View {
 fileprivate struct MoreDetailsInformationView: View {
     
     var body: some View {
-        Text("Hello Wolrd2")
+        VStack(alignment: .leading) {
+            Text("추가사항")
+                .font(.title)
+            Toggle("수출통관", isOn: .constant(false))
+            Toggle("수입통관", isOn: .constant(true))
+            Toggle("위험물", isOn: .constant(true))
+            Text("제품사진")
+                .font(.title)
+            Image(systemName: "cart")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+        }
+        .toggleStyle(.switch)
     }
     
 }
