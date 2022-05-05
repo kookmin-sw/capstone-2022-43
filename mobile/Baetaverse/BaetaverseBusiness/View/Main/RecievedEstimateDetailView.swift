@@ -28,6 +28,7 @@ private struct EstimateContentView: View {
             ItemInformationView()
             Divider()
             MoreDetailsInformationView()
+            CreateEvaluateButtons()
         }
         .padding()
     }
@@ -125,6 +126,29 @@ private struct MoreDetailsInformationView: View {
                 .aspectRatio(contentMode: .fit)
         }
         .toggleStyle(.switch)
+    }
+    
+}
+
+private struct CreateEvaluateButtons: View {
+    
+    @Environment(\.dismiss) private var dismiss
+    
+    var body: some View {
+        HStack {
+            Button(role: .destructive, action: { dismiss() }) {
+                Spacer()
+                Text("취소")
+                Spacer()
+            }
+            NavigationLink(destination: Text("Hello World")) {
+                Spacer()
+                Text("견적서보내기")
+                Spacer()
+            }
+        }
+        .buttonStyle(.borderedProminent)
+        .font(.title2)
     }
     
 }
