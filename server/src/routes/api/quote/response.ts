@@ -16,7 +16,7 @@ router.post('/response', async (req: Request, res: Response, next: NextFunction)
             return next(FailToInsert);
         }
 
-        return res.status(200).json({ message: 'Success to quote' });
+        return res.status(200).json({ message: 'Success to quote response' });
     }
     catch (error){
         return next(error);
