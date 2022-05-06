@@ -13,7 +13,7 @@ const quotation = async (req: Request, res: Response, next: NextFunction) => {
         if (QuotationNotFoundError) {
             return next(QuotationNotFoundError);
         }
-        return existQuotation;
+        return res.status(200).json(existQuotation);
     }
     catch (error){
         return next(error);
