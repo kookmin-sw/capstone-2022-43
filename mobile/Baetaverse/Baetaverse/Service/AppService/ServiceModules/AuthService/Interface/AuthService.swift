@@ -1,5 +1,5 @@
 //
-//  Auth.swift
+//  AuthService.swift
 //  Baetaverse
 //
 //  Created by JeongTaek Han on 2022/04/01.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol Auth {
+protocol AuthService {
     
     var isLogin: Bool { get }
     var token: String { get }

@@ -9,10 +9,10 @@ import Foundation
 
 class BaetaverseAppService: AppService {
     
-    private let auth: Auth
+    private let auth: AuthService
     private let businessService: BusinessService
     
-    init(auth: Auth, businessService: BusinessService) {
+    init(auth: AuthService, businessService: BusinessService) {
         self.auth = auth
         self.businessService = businessService
     }

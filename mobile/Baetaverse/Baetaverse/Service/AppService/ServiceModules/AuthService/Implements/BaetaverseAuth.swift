@@ -7,7 +7,7 @@
 
 import Foundation
 
-class BaetaverseAuth: Auth {
+class BaetaverseAuth: AuthService {
     
     private let networkService: NetworkService
     

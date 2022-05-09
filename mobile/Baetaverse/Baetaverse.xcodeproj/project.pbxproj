@@ -62,7 +62,7 @@
 		C1CF673A27F724600057A6C3 /* BUMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF673927F724600057A6C3 /* BUMenuTableViewController.swift */; };
 		C1CF673E27F732720057A6C3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF673D27F732720057A6C3 /* NetworkService.swift */; };
 		C1CF674027F733780057A6C3 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF673F27F733780057A6C3 /* APIRequest.swift */; };
-		C1CF674327F735180057A6C3 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF674227F735180057A6C3 /* Auth.swift */; };
+		C1CF674327F735180057A6C3 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF674227F735180057A6C3 /* AuthService.swift */; };
 		C1CF674627F735620057A6C3 /* BusinessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF674527F735620057A6C3 /* BusinessService.swift */; };
 		C1CF674927F735820057A6C3 /* AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF674827F735820057A6C3 /* AppService.swift */; };
 		C1CF674D27F735E10057A6C3 /* BaetaverseAppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF674C27F735E10057A6C3 /* BaetaverseAppService.swift */; };
@@ -73,7 +73,7 @@
 		C1CF675827F737550057A6C3 /* BaetaverseAppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF674C27F735E10057A6C3 /* BaetaverseAppService.swift */; };
 		C1CF675927F7375A0057A6C3 /* BusinessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF674527F735620057A6C3 /* BusinessService.swift */; };
 		C1CF675A27F7375E0057A6C3 /* BaetaverseBusinessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF675027F736330057A6C3 /* BaetaverseBusinessService.swift */; };
-		C1CF675B27F737620057A6C3 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF674227F735180057A6C3 /* Auth.swift */; };
+		C1CF675B27F737620057A6C3 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF674227F735180057A6C3 /* AuthService.swift */; };
 		C1CF675C27F737660057A6C3 /* BaetaverseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13778C227F498EE00DAF494 /* BaetaverseAuth.swift */; };
 		C1CF675D27F737710057A6C3 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197AEBC27F43AEC000E4975 /* APIService.swift */; };
 		C1CF675E27F737740057A6C3 /* APIRequestHostInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC0A27F3296A0087882E /* APIRequestHostInfo.swift */; };
@@ -170,7 +170,7 @@
 		C1CF673927F724600057A6C3 /* BUMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BUMenuTableViewController.swift; path = Baetaverse/ViewController/BUMenuTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		C1CF673D27F732720057A6C3 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		C1CF673F27F733780057A6C3 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
-		C1CF674227F735180057A6C3 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		C1CF674227F735180057A6C3 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		C1CF674527F735620057A6C3 /* BusinessService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessService.swift; sourceTree = "<group>"; };
 		C1CF674827F735820057A6C3 /* AppService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppService.swift; sourceTree = "<group>"; };
 		C1CF674C27F735E10057A6C3 /* BaetaverseAppService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseAppService.swift; sourceTree = "<group>"; };
@@ -242,6 +242,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C101E46628293A8E005490D3 /* ServiceModules */ = {
+			isa = PBXGroup;
+			children = (
+				C1CF674127F735030057A6C3 /* AuthService */,
+				C1CF674427F7354F0057A6C3 /* BusinessService */,
+			);
+			path = ServiceModules;
+			sourceTree = "<group>";
+		};
 		C1300DB9281FA3AA00E9C0CC /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -439,8 +448,6 @@
 			isa = PBXGroup;
 			children = (
 				C1CF674727F735740057A6C3 /* AppService */,
-				C1CF674427F7354F0057A6C3 /* BusinessService */,
-				C1CF674127F735030057A6C3 /* Auth */,
 				C1CF675427F736A80057A6C3 /* APIServiceConfig */,
 			);
 			path = Service;
@@ -457,13 +464,13 @@
 			path = Interface;
 			sourceTree = "<group>";
 		};
-		C1CF674127F735030057A6C3 /* Auth */ = {
+		C1CF674127F735030057A6C3 /* AuthService */ = {
 			isa = PBXGroup;
 			children = (
 				C1CF675227F7364E0057A6C3 /* Interface */,
 				C1CF675327F736570057A6C3 /* Implements */,
 			);
-			path = Auth;
+			path = AuthService;
 			sourceTree = "<group>";
 		};
 		C1CF674427F7354F0057A6C3 /* BusinessService */ = {
@@ -480,6 +487,7 @@
 			children = (
 				C1CF674A27F735A90057A6C3 /* Interface */,
 				C1CF674B27F735BA0057A6C3 /* Implements */,
+				C101E46628293A8E005490D3 /* ServiceModules */,
 			);
 			path = AppService;
 			sourceTree = "<group>";
@@ -519,7 +527,7 @@
 		C1CF675227F7364E0057A6C3 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
-				C1CF674227F735180057A6C3 /* Auth.swift */,
+				C1CF674227F735180057A6C3 /* AuthService.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -957,7 +965,7 @@
 				C1E5CC1527F32F040087882E /* SignUpRequest.swift in Sources */,
 				C1CF673E27F732720057A6C3 /* NetworkService.swift in Sources */,
 				C1E5CC1027F32BF80087882E /* BaetaverseAPIRequest.swift in Sources */,
-				C1CF674327F735180057A6C3 /* Auth.swift in Sources */,
+				C1CF674327F735180057A6C3 /* AuthService.swift in Sources */,
 				C1CF674027F733780057A6C3 /* APIRequest.swift in Sources */,
 				C1E5CBBC27F2BF330087882E /* SceneDelegate.swift in Sources */,
 			);
@@ -989,7 +997,7 @@
 				C1CF675827F737550057A6C3 /* BaetaverseAppService.swift in Sources */,
 				C197AEBA27F43869000E4975 /* APIRequestImplement.swift in Sources */,
 				C1D83A912828F71A0086D0E7 /* BaetaverseBusinessServiceTests.swift in Sources */,
-				C1CF675B27F737620057A6C3 /* Auth.swift in Sources */,
+				C1CF675B27F737620057A6C3 /* AuthService.swift in Sources */,
 				C197AEC227F43EF3000E4975 /* QuoteRequest.swift in Sources */,
 				C1CF675627F737120057A6C3 /* BaetaverseAPIRequest.swift in Sources */,
 				C149737427F5A12800679118 /* Extensions+Data.swift in Sources */,
