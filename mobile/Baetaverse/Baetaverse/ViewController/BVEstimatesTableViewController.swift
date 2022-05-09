@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class BVEstimatesTableViewController: UITableViewController {
     
     private var appService: AppService? {

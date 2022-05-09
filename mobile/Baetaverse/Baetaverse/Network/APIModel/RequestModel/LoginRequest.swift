@@ -12,9 +12,9 @@ extension APIRequestModel {
     struct LoginRequest: BaetaverseAPIRequestPOST {
         
         var path: String = "/api/auth/login"
-        var headers: [String : String] = [:]
+        var headers: [String: String] = [:]
         var contentType: String = "application/json"
-        var query: [String : String] = [:]
+        var query: [String: String] = [:]
         var body: Data?
         
         init(email: String, password: String) {

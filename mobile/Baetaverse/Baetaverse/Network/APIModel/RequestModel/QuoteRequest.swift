@@ -12,9 +12,9 @@ extension APIRequestModel {
     struct QuoteRequest: BaetaverseAPIRequestPOST {
         
         var path: String = "/api/quote/QuoteRequest"
-        var headers: [String : String]
+        var headers: [String: String]
         var contentType: String = "application/json"
-        var query: [String : String] = [:]
+        var query: [String: String] = [:]
         var body: Data?
         
         init(token: String, id: String, HSCode: String, country: String) {
