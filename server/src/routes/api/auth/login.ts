@@ -2,10 +2,12 @@ import express, { Request, Response, NextFunction } from "express";
 import passport from "passport";
 import jwt from "jsonwebtoken";
 import HttpException from "../../../exceptions/HttpException";
+import ShipperController from "../../../controller/ShipperController";
 
 
 const router = express.Router();
-
+const shipperController: ShipperController = new ShipperController();
+console.log(shipperController);
 router.post('/login', (req: Request, res: Response, next: NextFunction) => {
     passport.authenticate('local', (authError, user, info) => {
         if (authError) {
