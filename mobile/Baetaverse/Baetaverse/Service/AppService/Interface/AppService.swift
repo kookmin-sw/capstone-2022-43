@@ -10,5 +10,6 @@ import Foundation
 protocol AppService: Auth {
     
     func registerEvaluate(id: String, HSCode: String, country: String) async throws
+    func fetchEvaluates() async throws -> [Estimate]
     
 }

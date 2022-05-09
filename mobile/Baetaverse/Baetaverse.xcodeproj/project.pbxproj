@@ -54,8 +54,6 @@
 		C1C9EC672818FA200041F974 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1C9EC662818FA200041F974 /* Assets.xcassets */; };
 		C1C9EC6A2818FA200041F974 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1C9EC692818FA200041F974 /* Preview Assets.xcassets */; };
 		C1C9EC742818FA210041F974 /* BaetaverseBusinessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C9EC732818FA210041F974 /* BaetaverseBusinessTests.swift */; };
-		C1C9EC7E2818FA210041F974 /* BaetaverseBusinessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C9EC7D2818FA210041F974 /* BaetaverseBusinessUITests.swift */; };
-		C1C9EC802818FA210041F974 /* BaetaverseBusinessUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C9EC7F2818FA210041F974 /* BaetaverseBusinessUITestsLaunchTests.swift */; };
 		C1C9EC8B2818FAFF0041F974 /* Extensions+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149736A27F59B7500679118 /* Extensions+Data.swift */; };
 		C1C9EC8C2818FB000041F974 /* Extensions+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149736A27F59B7500679118 /* Extensions+Data.swift */; };
 		C1C9EC8D2818FB060041F974 /* Extensions+Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C9EC5A2818F7A40041F974 /* Extensions+Encodable.swift */; };
@@ -82,14 +80,19 @@
 		C1CF675F27F737760057A6C3 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF673F27F733780057A6C3 /* APIRequest.swift */; };
 		C1D83A812828EB260086D0E7 /* EstimatesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D83A802828EB260086D0E7 /* EstimatesRequest.swift */; };
 		C1D83A832828ECF50086D0E7 /* EstimatesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D83A822828ECF50086D0E7 /* EstimatesResponse.swift */; };
+		C1D83A842828F1DC0086D0E7 /* EstimatesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D83A822828ECF50086D0E7 /* EstimatesResponse.swift */; };
+		C1D83A892828F3140086D0E7 /* Estimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D83A882828F3140086D0E7 /* Estimate.swift */; };
+		C1D83A8A2828F5A60086D0E7 /* Estimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D83A882828F3140086D0E7 /* Estimate.swift */; };
+		C1D83A8B2828F5A70086D0E7 /* Estimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D83A882828F3140086D0E7 /* Estimate.swift */; };
+		C1D83A8C2828F5A70086D0E7 /* Estimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D83A882828F3140086D0E7 /* Estimate.swift */; };
+		C1D83A8F2828F5E10086D0E7 /* EstimatesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D83A802828EB260086D0E7 /* EstimatesRequest.swift */; };
+		C1D83A912828F71A0086D0E7 /* BaetaverseBusinessServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D83A902828F71A0086D0E7 /* BaetaverseBusinessServiceTests.swift */; };
 		C1E257B02820DD1A003F35DF /* RecievedEstimatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E257AF2820DD1A003F35DF /* RecievedEstimatesView.swift */; };
 		C1E257B62820E25D003F35DF /* Estimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E257B52820E25D003F35DF /* Estimate.swift */; };
 		C1E257B82820E5A4003F35DF /* RecievedEstimatesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E257B72820E5A4003F35DF /* RecievedEstimatesViewModel.swift */; };
 		C1E5CBBA27F2BF330087882E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CBB927F2BF330087882E /* AppDelegate.swift */; };
 		C1E5CBBC27F2BF330087882E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CBBB27F2BF330087882E /* SceneDelegate.swift */; };
 		C1E5CBC627F2BF350087882E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1E5CBC427F2BF350087882E /* LaunchScreen.storyboard */; };
-		C1E5CBDB27F2BF360087882E /* BaetaverseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CBDA27F2BF360087882E /* BaetaverseUITests.swift */; };
-		C1E5CBDD27F2BF360087882E /* BaetaverseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CBDC27F2BF360087882E /* BaetaverseUITestsLaunchTests.swift */; };
 		C1E5CBF127F2BFBD0087882E /* BULoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CBEB27F2BFBC0087882E /* BULoginViewController.swift */; };
 		C1E5CBF227F2BFBD0087882E /* BUMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CBEC27F2BFBC0087882E /* BUMainViewController.swift */; };
 		C1E5CBF327F2BFBD0087882E /* BUEstimateListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CBED27F2BFBC0087882E /* BUEstimateListViewController.swift */; };
@@ -117,21 +120,7 @@
 			remoteGlobalIDString = C1C9EC5F2818FA1E0041F974;
 			remoteInfo = BaetaverseBusiness;
 		};
-		C1C9EC7A2818FA210041F974 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C1E5CBAE27F2BF330087882E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C1C9EC5F2818FA1E0041F974;
-			remoteInfo = BaetaverseBusiness;
-		};
 		C1E5CBCD27F2BF360087882E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C1E5CBAE27F2BF330087882E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C1E5CBB527F2BF330087882E;
-			remoteInfo = Baetaverse;
-		};
-		C1E5CBD727F2BF360087882E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C1E5CBAE27F2BF330087882E /* Project object */;
 			proxyType = 1;
@@ -177,9 +166,6 @@
 		C1C9EC692818FA200041F974 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C1C9EC6F2818FA210041F974 /* BaetaverseBusinessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaetaverseBusinessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1C9EC732818FA210041F974 /* BaetaverseBusinessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseBusinessTests.swift; sourceTree = "<group>"; };
-		C1C9EC792818FA210041F974 /* BaetaverseBusinessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaetaverseBusinessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1C9EC7D2818FA210041F974 /* BaetaverseBusinessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseBusinessUITests.swift; sourceTree = "<group>"; };
-		C1C9EC7F2818FA210041F974 /* BaetaverseBusinessUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseBusinessUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C1CF673927F724600057A6C3 /* BUMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BUMenuTableViewController.swift; path = Baetaverse/ViewController/BUMenuTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		C1CF673D27F732720057A6C3 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		C1CF673F27F733780057A6C3 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
@@ -190,6 +176,8 @@
 		C1CF675027F736330057A6C3 /* BaetaverseBusinessService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseBusinessService.swift; sourceTree = "<group>"; };
 		C1D83A802828EB260086D0E7 /* EstimatesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimatesRequest.swift; sourceTree = "<group>"; };
 		C1D83A822828ECF50086D0E7 /* EstimatesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimatesResponse.swift; sourceTree = "<group>"; };
+		C1D83A882828F3140086D0E7 /* Estimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Estimate.swift; sourceTree = "<group>"; };
+		C1D83A902828F71A0086D0E7 /* BaetaverseBusinessServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseBusinessServiceTests.swift; sourceTree = "<group>"; };
 		C1E257AF2820DD1A003F35DF /* RecievedEstimatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecievedEstimatesView.swift; sourceTree = "<group>"; };
 		C1E257B52820E25D003F35DF /* Estimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Estimate.swift; sourceTree = "<group>"; };
 		C1E257B72820E5A4003F35DF /* RecievedEstimatesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecievedEstimatesViewModel.swift; sourceTree = "<group>"; };
@@ -199,9 +187,6 @@
 		C1E5CBC527F2BF350087882E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C1E5CBC727F2BF350087882E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1E5CBCC27F2BF360087882E /* BaetaverseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaetaverseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1E5CBD627F2BF360087882E /* BaetaverseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaetaverseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1E5CBDA27F2BF360087882E /* BaetaverseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseUITests.swift; sourceTree = "<group>"; };
-		C1E5CBDC27F2BF360087882E /* BaetaverseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C1E5CBEB27F2BFBC0087882E /* BULoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BULoginViewController.swift; sourceTree = "<group>"; };
 		C1E5CBEC27F2BFBC0087882E /* BUMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BUMainViewController.swift; sourceTree = "<group>"; };
 		C1E5CBED27F2BFBC0087882E /* BUEstimateListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BUEstimateListViewController.swift; sourceTree = "<group>"; };
@@ -236,13 +221,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C1C9EC762818FA210041F974 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C1E5CBB327F2BF330087882E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -251,13 +229,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C1E5CBC927F2BF360087882E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C1E5CBD327F2BF360087882E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -342,7 +313,6 @@
 			isa = PBXGroup;
 			children = (
 				C1C9EC722818FA210041F974 /* BaetaverseBusinessTests */,
-				C1C9EC7C2818FA210041F974 /* BaetaverseBusinessUITests */,
 			);
 			path = BusinessApp;
 			sourceTree = "<group>";
@@ -350,7 +320,6 @@
 		C182FDF92819014700F66567 /* CustomerApp */ = {
 			isa = PBXGroup;
 			children = (
-				C1E5CBD927F2BF360087882E /* BaetaverseUITests */,
 				C1E5CBCF27F2BF360087882E /* BaetaverseTests */,
 			);
 			path = CustomerApp;
@@ -442,15 +411,6 @@
 				C1C9EC732818FA210041F974 /* BaetaverseBusinessTests.swift */,
 			);
 			path = BaetaverseBusinessTests;
-			sourceTree = "<group>";
-		};
-		C1C9EC7C2818FA210041F974 /* BaetaverseBusinessUITests */ = {
-			isa = PBXGroup;
-			children = (
-				C1C9EC7D2818FA210041F974 /* BaetaverseBusinessUITests.swift */,
-				C1C9EC7F2818FA210041F974 /* BaetaverseBusinessUITestsLaunchTests.swift */,
-			);
-			path = BaetaverseBusinessUITests;
 			sourceTree = "<group>";
 		};
 		C1C9EC8A2818FAE90041F974 /* CommonModule */ = {
@@ -578,6 +538,14 @@
 			path = APIServiceConfig;
 			sourceTree = "<group>";
 		};
+		C1D83A872828F2F00086D0E7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C1D83A882828F3140086D0E7 /* Estimate.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C1E257B92820E5AC003F35DF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -603,10 +571,8 @@
 			children = (
 				C1E5CBB627F2BF330087882E /* Baetaverse.app */,
 				C1E5CBCC27F2BF360087882E /* BaetaverseTests.xctest */,
-				C1E5CBD627F2BF360087882E /* BaetaverseUITests.xctest */,
 				C1C9EC602818FA1E0041F974 /* BaetaverseBusiness.app */,
 				C1C9EC6F2818FA210041F974 /* BaetaverseBusinessTests.xctest */,
-				C1C9EC792818FA210041F974 /* BaetaverseBusinessUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -617,6 +583,7 @@
 				C1E5CC0227F2C3530087882E /* SupportingFiles */,
 				C1CF673B27F731F60057A6C3 /* Service */,
 				C1E5CC0527F3073D0087882E /* Network */,
+				C1D83A872828F2F00086D0E7 /* Model */,
 				C1E5CC0327F2C36B0087882E /* ViewController */,
 				C1E5CC0427F2C37D0087882E /* View */,
 				C1E5CBC727F2BF350087882E /* Info.plist */,
@@ -628,17 +595,9 @@
 			isa = PBXGroup;
 			children = (
 				C149736727F597E200679118 /* BaetaverseAppModuleTests.swift */,
+				C1D83A902828F71A0086D0E7 /* BaetaverseBusinessServiceTests.swift */,
 			);
 			path = BaetaverseTests;
-			sourceTree = "<group>";
-		};
-		C1E5CBD927F2BF360087882E /* BaetaverseUITests */ = {
-			isa = PBXGroup;
-			children = (
-				C1E5CBDA27F2BF360087882E /* BaetaverseUITests.swift */,
-				C1E5CBDC27F2BF360087882E /* BaetaverseUITestsLaunchTests.swift */,
-			);
-			path = BaetaverseUITests;
 			sourceTree = "<group>";
 		};
 		C1E5CC0227F2C3530087882E /* SupportingFiles */ = {
@@ -750,24 +709,6 @@
 			productReference = C1C9EC6F2818FA210041F974 /* BaetaverseBusinessTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		C1C9EC782818FA210041F974 /* BaetaverseBusinessUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C1C9EC872818FA210041F974 /* Build configuration list for PBXNativeTarget "BaetaverseBusinessUITests" */;
-			buildPhases = (
-				C1C9EC752818FA210041F974 /* Sources */,
-				C1C9EC762818FA210041F974 /* Frameworks */,
-				C1C9EC772818FA210041F974 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C1C9EC7B2818FA210041F974 /* PBXTargetDependency */,
-			);
-			name = BaetaverseBusinessUITests;
-			productName = BaetaverseBusinessUITests;
-			productReference = C1C9EC792818FA210041F974 /* BaetaverseBusinessUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		C1E5CBB527F2BF330087882E /* Baetaverse */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C1E5CBE027F2BF360087882E /* Build configuration list for PBXNativeTarget "Baetaverse" */;
@@ -804,24 +745,6 @@
 			productReference = C1E5CBCC27F2BF360087882E /* BaetaverseTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		C1E5CBD527F2BF360087882E /* BaetaverseUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C1E5CBE627F2BF360087882E /* Build configuration list for PBXNativeTarget "BaetaverseUITests" */;
-			buildPhases = (
-				C1E5CBD227F2BF360087882E /* Sources */,
-				C1E5CBD327F2BF360087882E /* Frameworks */,
-				C1E5CBD427F2BF360087882E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C1E5CBD827F2BF360087882E /* PBXTargetDependency */,
-			);
-			name = BaetaverseUITests;
-			productName = BaetaverseUITests;
-			productReference = C1E5CBD627F2BF360087882E /* BaetaverseUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -839,18 +762,10 @@
 						CreatedOnToolsVersion = 13.3.1;
 						TestTargetID = C1C9EC5F2818FA1E0041F974;
 					};
-					C1C9EC782818FA210041F974 = {
-						CreatedOnToolsVersion = 13.3.1;
-						TestTargetID = C1C9EC5F2818FA1E0041F974;
-					};
 					C1E5CBB527F2BF330087882E = {
 						CreatedOnToolsVersion = 13.3;
 					};
 					C1E5CBCB27F2BF360087882E = {
-						CreatedOnToolsVersion = 13.3;
-						TestTargetID = C1E5CBB527F2BF330087882E;
-					};
-					C1E5CBD527F2BF360087882E = {
 						CreatedOnToolsVersion = 13.3;
 						TestTargetID = C1E5CBB527F2BF330087882E;
 					};
@@ -871,10 +786,8 @@
 			targets = (
 				C1E5CBB527F2BF330087882E /* Baetaverse */,
 				C1E5CBCB27F2BF360087882E /* BaetaverseTests */,
-				C1E5CBD527F2BF360087882E /* BaetaverseUITests */,
 				C1C9EC5F2818FA1E0041F974 /* BaetaverseBusiness */,
 				C1C9EC6E2818FA210041F974 /* BaetaverseBusinessTests */,
-				C1C9EC782818FA210041F974 /* BaetaverseBusinessUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -897,13 +810,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C1C9EC772818FA210041F974 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C1E5CBB427F2BF330087882E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -915,13 +821,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C1E5CBCA27F2BF360087882E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C1E5CBD427F2BF360087882E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -991,6 +890,7 @@
 				C1E257B02820DD1A003F35DF /* RecievedEstimatesView.swift in Sources */,
 				C196576128200A6B00821825 /* Carousel.swift in Sources */,
 				C19140F82823C5BD00372CB3 /* ConsultationProceedingView.swift in Sources */,
+				C1D83A8B2828F5A70086D0E7 /* Estimate.swift in Sources */,
 				C1C9EC632818FA1E0041F974 /* BaetaverseBusinessApp.swift in Sources */,
 				C196576828201ECA00821825 /* CardView.swift in Sources */,
 				C1E257B82820E5A4003F35DF /* RecievedEstimatesViewModel.swift in Sources */,
@@ -1004,17 +904,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1C9EC742818FA210041F974 /* BaetaverseBusinessTests.swift in Sources */,
+				C1D83A8C2828F5A70086D0E7 /* Estimate.swift in Sources */,
 				C1C9EC8F2818FB090041F974 /* Extensions+Encodable.swift in Sources */,
 				C1C9EC8C2818FB000041F974 /* Extensions+Data.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C1C9EC752818FA210041F974 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C1C9EC802818FA210041F974 /* BaetaverseBusinessUITestsLaunchTests.swift in Sources */,
-				C1C9EC7E2818FA210041F974 /* BaetaverseBusinessUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1031,6 +923,7 @@
 				C1CF674D27F735E10057A6C3 /* BaetaverseAppService.swift in Sources */,
 				C149736D27F59D4500679118 /* LoginResponse.swift in Sources */,
 				C197AEC027F43BEF000E4975 /* BaetaverseAPIService.swift in Sources */,
+				C1D83A892828F3140086D0E7 /* Estimate.swift in Sources */,
 				C1CF674927F735820057A6C3 /* AppService.swift in Sources */,
 				C1E5CBF627F2BFBD0087882E /* BUDepartureViewController.swift in Sources */,
 				C149737127F5A06D00679118 /* APIResponseModel.swift in Sources */,
@@ -1073,34 +966,29 @@
 				C149737327F5A11C00679118 /* LoginResponse.swift in Sources */,
 				C197AEB827F43862000E4975 /* NetworkServiceProvider.swift in Sources */,
 				C197AEB727F4385E000E4975 /* BaetaverseAPIRequestHostInfo.swift in Sources */,
+				C1D83A842828F1DC0086D0E7 /* EstimatesResponse.swift in Sources */,
 				C1CF675C27F737660057A6C3 /* BaetaverseAuth.swift in Sources */,
 				C197AEC527F43EFC000E4975 /* APIRequestModel.swift in Sources */,
 				C197AEB927F43866000E4975 /* HTTPMethod.swift in Sources */,
 				C149737727F5A39800679118 /* SignUpResponse.swift in Sources */,
 				C1CF675E27F737740057A6C3 /* APIRequestHostInfo.swift in Sources */,
 				C1CF675927F7375A0057A6C3 /* BusinessService.swift in Sources */,
+				C1D83A8F2828F5E10086D0E7 /* EstimatesRequest.swift in Sources */,
 				C149737227F5A11A00679118 /* APIResponseModel.swift in Sources */,
 				C149736827F597E200679118 /* BaetaverseAppModuleTests.swift in Sources */,
 				C1CF675527F736E50057A6C3 /* NetworkService.swift in Sources */,
 				C197AEC427F43EF9000E4975 /* SignUpRequest.swift in Sources */,
 				C1CF675827F737550057A6C3 /* BaetaverseAppService.swift in Sources */,
 				C197AEBA27F43869000E4975 /* APIRequestImplement.swift in Sources */,
+				C1D83A912828F71A0086D0E7 /* BaetaverseBusinessServiceTests.swift in Sources */,
 				C1CF675B27F737620057A6C3 /* Auth.swift in Sources */,
 				C197AEC227F43EF3000E4975 /* QuoteRequest.swift in Sources */,
 				C1CF675627F737120057A6C3 /* BaetaverseAPIRequest.swift in Sources */,
 				C149737427F5A12800679118 /* Extensions+Data.swift in Sources */,
 				C1C9EC8D2818FB060041F974 /* Extensions+Encodable.swift in Sources */,
+				C1D83A8A2828F5A60086D0E7 /* Estimate.swift in Sources */,
 				C1CF675D27F737710057A6C3 /* APIService.swift in Sources */,
 				C197AEC327F43EF6000E4975 /* LoginRequest.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C1E5CBD227F2BF360087882E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C1E5CBDD27F2BF360087882E /* BaetaverseUITestsLaunchTests.swift in Sources */,
-				C1E5CBDB27F2BF360087882E /* BaetaverseUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1112,20 +1000,10 @@
 			target = C1C9EC5F2818FA1E0041F974 /* BaetaverseBusiness */;
 			targetProxy = C1C9EC702818FA210041F974 /* PBXContainerItemProxy */;
 		};
-		C1C9EC7B2818FA210041F974 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C1C9EC5F2818FA1E0041F974 /* BaetaverseBusiness */;
-			targetProxy = C1C9EC7A2818FA210041F974 /* PBXContainerItemProxy */;
-		};
 		C1E5CBCE27F2BF360087882E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C1E5CBB527F2BF330087882E /* Baetaverse */;
 			targetProxy = C1E5CBCD27F2BF360087882E /* PBXContainerItemProxy */;
-		};
-		C1E5CBD827F2BF360087882E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C1E5CBB527F2BF330087882E /* Baetaverse */;
-			targetProxy = C1E5CBD727F2BF360087882E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1246,44 +1124,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BaetaverseBusiness.app/BaetaverseBusiness";
-			};
-			name = Release;
-		};
-		C1C9EC882818FA210041F974 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MLY2NY4CXP;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "io.github.capstone-2022-43.BaetaverseBusinessUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = BaetaverseBusiness;
-			};
-			name = Debug;
-		};
-		C1C9EC892818FA210041F974 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MLY2NY4CXP;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "io.github.capstone-2022-43.BaetaverseBusinessUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = BaetaverseBusiness;
 			};
 			name = Release;
 		};
@@ -1499,42 +1339,6 @@
 			};
 			name = Release;
 		};
-		C1E5CBE727F2BF360087882E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MLY2NY4CXP;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "io.github.capstone-2022-43.BaetaverseUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Baetaverse;
-			};
-			name = Debug;
-		};
-		C1E5CBE827F2BF360087882E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MLY2NY4CXP;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "io.github.capstone-2022-43.BaetaverseUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Baetaverse;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1552,15 +1356,6 @@
 			buildConfigurations = (
 				C1C9EC852818FA210041F974 /* Debug */,
 				C1C9EC862818FA210041F974 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C1C9EC872818FA210041F974 /* Build configuration list for PBXNativeTarget "BaetaverseBusinessUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C1C9EC882818FA210041F974 /* Debug */,
-				C1C9EC892818FA210041F974 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1588,15 +1383,6 @@
 			buildConfigurations = (
 				C1E5CBE427F2BF360087882E /* Debug */,
 				C1E5CBE527F2BF360087882E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C1E5CBE627F2BF360087882E /* Build configuration list for PBXNativeTarget "BaetaverseUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C1E5CBE727F2BF360087882E /* Debug */,
-				C1E5CBE827F2BF360087882E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

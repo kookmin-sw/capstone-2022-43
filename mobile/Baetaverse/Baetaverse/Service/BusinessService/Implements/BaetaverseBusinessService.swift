@@ -25,10 +25,19 @@ class BaetaverseBusinessService: BusinessService {
         _ = try await networkService.fetchData(for: apiService)
     }
     
-    func fetchEvaluates() async throws {
-        let apiService = BaetaverseAPIService.estimatesRequest
+    func fetchEvaluates(token: String) async throws -> [Estimate] {
+        let apiService = BaetaverseAPIService.estimatesRequest(token: token)
         let data = try await networkService.fetchData(for: apiService)
-        let object = try? data.decodeJSONData(to: APIResponseModel.EstimatesResponse.self)
+        let object = try data.decodeJSONData(to: [APIResponseModel.EstimatesResponse].self)
+        return object.map { estimate in
+            Estimate(
+                id: estimate.id,
+                quoteId: estimate.quoteId,
+                hsCode: estimate.hsCode,
+                country: estimate.country,
+                createdAt: estimate.createdAt
+            )
+        }
     }
     
 }

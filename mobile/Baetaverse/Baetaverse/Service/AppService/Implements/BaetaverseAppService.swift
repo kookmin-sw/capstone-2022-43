@@ -8,7 +8,7 @@
 import Foundation
 
 class BaetaverseAppService: AppService {
-   
+    
     private let auth: Auth
     private let businessService: BusinessService
     
@@ -51,6 +51,10 @@ class BaetaverseAppService: AppService {
             HSCode: HSCode,
             country: country
         )
+    }
+    
+    func fetchEvaluates() async throws -> [Estimate] {
+        return try await businessService.fetchEvaluates(token: token)
     }
     
 }

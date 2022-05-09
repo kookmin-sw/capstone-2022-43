@@ -12,8 +12,12 @@ extension APIRequestModel {
     struct EstimatesRequest: BaetaverseAPIRequestGET {
         
         var path: String = "/api/quote/list"
-        var headers: [String : String] = [:]
+        var headers: [String : String]
         var parameters: [String : String] = [:]
+        
+        init(token: String) {
+            self.headers = ["Authorization": "Bearer \(token)"]
+        }
         
     }
     

@@ -12,11 +12,7 @@ class BaetaverseAppModuleTests: XCTestCase {
     private var sutBaetaverse: AppService!
 
     override func setUpWithError() throws {
-        let networkService = NetworkServiceProvider()
-        let auth = BaetaverseAuth(networkService: networkService)
-        let businessService = BaetaverseBusinessService(networkService: networkService)
-        let appService = BaetaverseAppService(auth: auth, businessService: businessService)
-        self.sutBaetaverse = appService
+        self.sutBaetaverse = BaetaverseAppService.configure()
     }
 
     override func tearDownWithError() throws {
@@ -41,18 +37,24 @@ class BaetaverseAppModuleTests: XCTestCase {
         XCTAssert(true)
     }
     
-    func test_새로운_견적_등록하기가_정상적으로_동작해야한다() async throws {
-        try await sutBaetaverse.login(
-            email: "test@test.com",
-            password: "12341234"
-        )
-        
-        try await sutBaetaverse.registerEvaluate(
-            id: UUID().uuidString,
-            HSCode: "1234",
-            country: "USA"
-        )
-        
+//    func test_새로운_견적_등록하기가_정상적으로_동작해야한다() async throws {
+//        try await sutBaetaverse.login(
+//            email: "test@test.com",
+//            password: "12341234"
+//        )
+//        
+//        try await sutBaetaverse.registerEvaluate(
+//            id: UUID().uuidString,
+//            HSCode: "1234",
+//            country: "USA"
+//        )
+//        
+//        XCTAssert(true)
+//    }
+    
+    func test_견적서_명단_조회하기() async throws {
+        let data = try await sutBaetaverse.fetchEvaluates()
+        print(data)
         XCTAssert(true)
     }
 

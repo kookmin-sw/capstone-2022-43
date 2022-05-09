@@ -11,11 +11,11 @@ extension APIResponseModel {
     
     struct EstimatesResponse: Decodable {
         
-        let id: UUID
-        let quoteId: UUID
+        let id: String
+        let quoteId: String
         let hsCode: String
-        let country: String
-        let createdAt: Date
+        let country: String?
+        let createdAt: String
         
         enum CodingKeys: String, CodingKey {
             
