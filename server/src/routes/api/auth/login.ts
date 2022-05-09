@@ -12,19 +12,20 @@ router.post('/login', (req: Request, res: Response, next: NextFunction) => {
             return next(authError);
         }
         if (!user) {
-            return next(new HttpException(400, info.message));
+            return next(new HttpException(info.status, info.message));
         }
 
         const token = jwt.sign({
             uuid: user.uuid,
             email: user.email,
-            name: user.name
+            name: user.name,
         }, process.env.JWT_SECRET || '', {
-            expiresIn: '1h',
-            issuer: 'BAETAVERSE'
+            expiresIn: '7d',
+            issuer: 'BAETAVERSE-DEV'
         });
 
         return res.status(200).json({
+            status: info.status,
             message: info.message,
             token,
         });

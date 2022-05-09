@@ -6,17 +6,20 @@ const router = express.Router();
 
 router.post('/request', async (req: Request, res: Response, next: NextFunction) =>{
     try{
-        const { id, HSCODE, COUNTRY } = req.body;
+        const { id, hscode, country } = req.body;
 
         const { data: quotation, error: FailToInsert } = await supabase
             .from('Quotation')
-            .insert({ id, HSCODE, COUNTRY });
+            .insert({ id, hscode, country });
 
         if (FailToInsert) {
             return next(FailToInsert);
         }
 
-        return res.status(200).json({ message: 'Success to quote' });
+        return res.status(200).json({
+            status: 200,
+            message: 'Success to quote'
+        });
     }
     catch (error){
         return next(error);

@@ -14,7 +14,10 @@ router.get('/list', async (req : Request, res : Response, next : NextFunction) =
             return next(QuotationNotFoundError);
         }
 
-        return res.status(200).json(existQuotation);
+        return res.status(200).json({
+            status: 200,
+            quotations: existQuotation
+        });
     }
     catch (error){
         return next(error);

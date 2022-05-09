@@ -6,8 +6,8 @@ import { supabase } from '../supabase';
 const verifyLogin = async (email: string, password: string, done: any) => {
     try {
         const { data: existUser, error } = await supabase
-        .from('User')
-        .select('uuid, email, password, name')
+        .from('OWNER')
+        .select('uuid, email, password, name, phone_number')
         .eq('email', email)
         .limit(1)
         .single();
@@ -15,15 +15,14 @@ const verifyLogin = async (email: string, password: string, done: any) => {
         if (existUser) {
             const result = await bcrypt.compare(password, existUser.password);
             if (result) {
-                done(null, existUser, { message: 'Success to login' });
+                done(null, existUser, { status: 200, message: 'Success to login' });
             } else {
-                done(null, null, { message: 'Wrong password' });
+                done(null, null, { status: 403, message: 'Wrong password' });
             }
         } else {
-            done(null, null, { message: 'User does not exist' });
+            done(null, null, { status: 400, message: 'User does not exist' });
         }
     } catch (error) {
-        console.log(error);
         done(error);
     }
 }

@@ -9,7 +9,8 @@ import userAgent from "../@types/UserAgent";
 const errorMiddleware = (err: HttpException, req: Request, res: Response, next: NextFunction): void => {
     const userInfo = new userAgent(req);
     logger.error(err.status + " " + err.message + userInfo);
-    res.status(err.status || 500).send();
+    const status = err.status || 500;
+    res.status(status).send({ status, message: err.message });
 };
 
 export default errorMiddleware;
