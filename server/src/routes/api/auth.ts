@@ -11,6 +11,7 @@ const lowRouters = [
 
 lowRouters.forEach((lowRouter: Router) => {
     router.use('/auth', lowRouter);
+
 });
 
 export default router;
