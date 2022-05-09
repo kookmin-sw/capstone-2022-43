@@ -35,8 +35,8 @@ class BVEstimatesTableViewController: UITableViewController {
     
     func fetch() {
         Task {
-            let data = try await appService?.fetchEvaluates() ?? []
-            self.datass = data
+//            let data = try await appService?.fetchEvaluates() ?? []
+//            self.datass = datab
             updateUI()
         }
     }
