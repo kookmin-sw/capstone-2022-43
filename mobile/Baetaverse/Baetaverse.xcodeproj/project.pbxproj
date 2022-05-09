@@ -48,6 +48,8 @@
 		C1BAFE232820BAC800CC4549 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFE222820BAC800CC4549 /* MainView.swift */; };
 		C1BAFE252820BB9E00CC4549 /* SignUpGroupForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFE242820BB9E00CC4549 /* SignUpGroupForm.swift */; };
 		C1C65CFC28210E5300951A25 /* RecievedEstimateDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C65CFB28210E5200951A25 /* RecievedEstimateDetailView.swift */; };
+		C1C7714E28294A17009E3CB6 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C7714D28294A17009E3CB6 /* AuthService.swift */; };
+		C1C7715028294A2D009E3CB6 /* BusinessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C7714F28294A2D009E3CB6 /* BusinessService.swift */; };
 		C1C9EC5B2818F7A40041F974 /* Extensions+Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C9EC5A2818F7A40041F974 /* Extensions+Encodable.swift */; };
 		C1C9EC632818FA1E0041F974 /* BaetaverseBusinessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C9EC622818FA1E0041F974 /* BaetaverseBusinessApp.swift */; };
 		C1C9EC652818FA1E0041F974 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C9EC642818FA1E0041F974 /* LoginView.swift */; };
@@ -159,6 +161,8 @@
 		C1BAFE222820BAC800CC4549 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C1BAFE242820BB9E00CC4549 /* SignUpGroupForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpGroupForm.swift; sourceTree = "<group>"; };
 		C1C65CFB28210E5200951A25 /* RecievedEstimateDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecievedEstimateDetailView.swift; sourceTree = "<group>"; };
+		C1C7714D28294A17009E3CB6 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		C1C7714F28294A2D009E3CB6 /* BusinessService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessService.swift; sourceTree = "<group>"; };
 		C1C9EC5A2818F7A40041F974 /* Extensions+Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+Encodable.swift"; sourceTree = "<group>"; };
 		C1C9EC602818FA1E0041F974 /* BaetaverseBusiness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaetaverseBusiness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1C9EC622818FA1E0041F974 /* BaetaverseBusinessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseBusinessApp.swift; sourceTree = "<group>"; };
@@ -496,6 +500,8 @@
 			isa = PBXGroup;
 			children = (
 				C1CF674827F735820057A6C3 /* AppService.swift */,
+				C1C7714D28294A17009E3CB6 /* AuthService.swift */,
+				C1C7714F28294A2D009E3CB6 /* BusinessService.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -953,6 +959,7 @@
 				C149737627F5A39800679118 /* SignUpResponse.swift in Sources */,
 				C1E5CC1A27F334E10087882E /* LoginRequest.swift in Sources */,
 				C1E5CC0927F30A590087882E /* APIRequestImplement.swift in Sources */,
+				C1C7715028294A2D009E3CB6 /* BusinessService.swift in Sources */,
 				C1E5CBF527F2BFBD0087882E /* BUEstimateDueDateViewController.swift in Sources */,
 				C1E5CC0727F307C80087882E /* HTTPMethod.swift in Sources */,
 				C1C9EC5B2818F7A40041F974 /* Extensions+Encodable.swift in Sources */,
@@ -964,6 +971,7 @@
 				C1D83A93282903570086D0E7 /* BVEstimatesTableViewController.swift in Sources */,
 				C1E5CC1527F32F040087882E /* SignUpRequest.swift in Sources */,
 				C1CF673E27F732720057A6C3 /* NetworkService.swift in Sources */,
+				C1C7714E28294A17009E3CB6 /* AuthService.swift in Sources */,
 				C1E5CC1027F32BF80087882E /* BaetaverseAPIRequest.swift in Sources */,
 				C1CF674327F735180057A6C3 /* AuthService.swift in Sources */,
 				C1CF674027F733780057A6C3 /* APIRequest.swift in Sources */,

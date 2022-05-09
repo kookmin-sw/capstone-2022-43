@@ -1,16 +1,15 @@
 //
-//  AppAuthService.swift
+//  AuthService.swift
 //  Baetaverse
 //
-//  Created by JeongTaek Han on 2022/04/01.
+//  Created by JeongTaek Han on 2022/05/09.
 //
 
 import Foundation
 
-protocol AppAuthService {
+protocol AuthService {
     
     var isLogin: Bool { get }
-    var token: String { get }
     
     func login(email: String, password: String) async throws
     func logout()

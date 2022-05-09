@@ -7,22 +7,18 @@
 
 import Foundation
 
-class BaetaverseAppService: AppService {
+final class BaetaverseAppService: AppService {
     
-    private let auth: AuthService
-    private let businessService: BusinessService
-    
-    init(auth: AuthService, businessService: BusinessService) {
-        self.auth = auth
-        self.businessService = businessService
-    }
+    private let auth: AppAuthService
+    private let businessService: AppBusinessService
     
     var isLogin: Bool {
         auth.isLogin
     }
     
-    var token: String {
-        auth.token
+    init(auth: AppAuthService, businessService: AppBusinessService) {
+        self.auth = auth
+        self.businessService = businessService
     }
     
     static func configure() -> BaetaverseAppService {
@@ -46,7 +42,7 @@ class BaetaverseAppService: AppService {
     
     func registerEvaluate(id: String, HSCode: String, country: String) async throws {
         try await businessService.registerEvaluate(
-            token: token,
+            token: auth.token,
             id: id,
             HSCode: HSCode,
             country: country
@@ -54,7 +50,7 @@ class BaetaverseAppService: AppService {
     }
     
     func fetchEvaluates() async throws -> [Estimate] {
-        return try await businessService.fetchEvaluates(token: token)
+        return try await businessService.fetchEvaluates(token: auth.token)
     }
     
 }

@@ -7,11 +7,11 @@
 
 import Foundation
 
-class BaetaverseAuth: AuthService {
+final class BaetaverseAuth: AppAuthService {
     
     private let networkService: NetworkService
     
-    private var userToken: String? = nil
+    private var userToken: String?
     
     var isLogin: Bool {
         self.userToken != nil

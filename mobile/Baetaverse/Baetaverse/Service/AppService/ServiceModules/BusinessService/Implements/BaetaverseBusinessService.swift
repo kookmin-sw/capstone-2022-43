@@ -7,7 +7,7 @@
 
 import Foundation
 
-class BaetaverseBusinessService: BusinessService {
+final class BaetaverseBusinessService: AppBusinessService {
     
     private let networkService: NetworkService
     

@@ -7,9 +7,4 @@
 
 import Foundation
 
-protocol AppService: AuthService {
-    
-    func registerEvaluate(id: String, HSCode: String, country: String) async throws
-    func fetchEvaluates() async throws -> [Estimate]
-    
-}
+protocol AppService: AuthService, BusinessService { }
