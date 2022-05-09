@@ -22,7 +22,13 @@ class BaetaverseBusinessService: BusinessService {
             HSCode: HSCode,
             country: country
         )
+        _ = try await networkService.fetchData(for: apiService)
+    }
+    
+    func fetchEvaluates() async throws {
+        let apiService = BaetaverseAPIService.estimatesRequest
         let data = try await networkService.fetchData(for: apiService)
+        let object = try? data.decodeJSONData(to: APIResponseModel.EstimatesResponse.self)
     }
     
 }

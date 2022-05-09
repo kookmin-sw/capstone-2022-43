@@ -10,5 +10,6 @@ import Foundation
 protocol BusinessService {
     
     func registerEvaluate(token: String, id: String, HSCode: String, country: String) async throws
+    func fetchEvaluates() async throws
     
 }

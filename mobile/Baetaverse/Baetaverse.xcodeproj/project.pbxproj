@@ -80,6 +80,8 @@
 		C1CF675D27F737710057A6C3 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197AEBC27F43AEC000E4975 /* APIService.swift */; };
 		C1CF675E27F737740057A6C3 /* APIRequestHostInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC0A27F3296A0087882E /* APIRequestHostInfo.swift */; };
 		C1CF675F27F737760057A6C3 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF673F27F733780057A6C3 /* APIRequest.swift */; };
+		C1D83A812828EB260086D0E7 /* EstimatesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D83A802828EB260086D0E7 /* EstimatesRequest.swift */; };
+		C1D83A832828ECF50086D0E7 /* EstimatesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D83A822828ECF50086D0E7 /* EstimatesResponse.swift */; };
 		C1E257B02820DD1A003F35DF /* RecievedEstimatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E257AF2820DD1A003F35DF /* RecievedEstimatesView.swift */; };
 		C1E257B62820E25D003F35DF /* Estimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E257B52820E25D003F35DF /* Estimate.swift */; };
 		C1E257B82820E5A4003F35DF /* RecievedEstimatesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E257B72820E5A4003F35DF /* RecievedEstimatesViewModel.swift */; };
@@ -186,6 +188,8 @@
 		C1CF674827F735820057A6C3 /* AppService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppService.swift; sourceTree = "<group>"; };
 		C1CF674C27F735E10057A6C3 /* BaetaverseAppService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseAppService.swift; sourceTree = "<group>"; };
 		C1CF675027F736330057A6C3 /* BaetaverseBusinessService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseBusinessService.swift; sourceTree = "<group>"; };
+		C1D83A802828EB260086D0E7 /* EstimatesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimatesRequest.swift; sourceTree = "<group>"; };
+		C1D83A822828ECF50086D0E7 /* EstimatesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimatesResponse.swift; sourceTree = "<group>"; };
 		C1E257AF2820DD1A003F35DF /* RecievedEstimatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecievedEstimatesView.swift; sourceTree = "<group>"; };
 		C1E257B52820E25D003F35DF /* Estimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Estimate.swift; sourceTree = "<group>"; };
 		C1E257B72820E5A4003F35DF /* RecievedEstimatesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecievedEstimatesViewModel.swift; sourceTree = "<group>"; };
@@ -309,6 +313,7 @@
 				C1E5CC1427F32F040087882E /* SignUpRequest.swift */,
 				C1E5CC1927F334E10087882E /* LoginRequest.swift */,
 				C1E5CC1B27F336070087882E /* QuoteRequest.swift */,
+				C1D83A802828EB260086D0E7 /* EstimatesRequest.swift */,
 			);
 			path = RequestModel;
 			sourceTree = "<group>";
@@ -319,6 +324,7 @@
 				C149737027F5A06D00679118 /* APIResponseModel.swift */,
 				C149736C27F59D4500679118 /* LoginResponse.swift */,
 				C149737527F5A39800679118 /* SignUpResponse.swift */,
+				C1D83A822828ECF50086D0E7 /* EstimatesResponse.swift */,
 			);
 			path = ResponseModel;
 			sourceTree = "<group>";
@@ -1029,6 +1035,7 @@
 				C1E5CBF627F2BFBD0087882E /* BUDepartureViewController.swift in Sources */,
 				C149737127F5A06D00679118 /* APIResponseModel.swift in Sources */,
 				C197AEB327F42D6D000E4975 /* NetworkServiceProvider.swift in Sources */,
+				C1D83A832828ECF50086D0E7 /* EstimatesResponse.swift in Sources */,
 				C1E5CC1227F32DC10087882E /* APIRequestModel.swift in Sources */,
 				C1E5CBF327F2BFBD0087882E /* BUEstimateListViewController.swift in Sources */,
 				C1CF674627F735620057A6C3 /* BusinessService.swift in Sources */,
@@ -1045,6 +1052,7 @@
 				C1E5CC0E27F32B4C0087882E /* BaetaverseAPIRequestHostInfo.swift in Sources */,
 				C1E5CC1C27F336070087882E /* QuoteRequest.swift in Sources */,
 				C13778C127F497CF00DAF494 /* BUSignUpFormViewController.swift in Sources */,
+				C1D83A812828EB260086D0E7 /* EstimatesRequest.swift in Sources */,
 				C1E5CC1527F32F040087882E /* SignUpRequest.swift in Sources */,
 				C1CF673E27F732720057A6C3 /* NetworkService.swift in Sources */,
 				C1E5CC1027F32BF80087882E /* BaetaverseAPIRequest.swift in Sources */,
