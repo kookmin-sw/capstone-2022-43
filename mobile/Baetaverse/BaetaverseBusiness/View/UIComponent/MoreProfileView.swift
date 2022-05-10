@@ -14,7 +14,7 @@ struct MoreProfileView: View {
     
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 15)
+            Rectangle()
                 .foregroundColor(Color(UIColor.systemTeal))
             VStack(alignment: .leading) {
                 HStack {

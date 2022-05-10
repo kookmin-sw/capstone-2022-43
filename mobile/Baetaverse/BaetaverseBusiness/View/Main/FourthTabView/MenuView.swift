@@ -35,22 +35,51 @@ private struct MoreContentView: View {
                 name: $name,
                 profileImage: $profileImage
             )
-            Divider()
-            List {
+            LazyVGrid(columns: [GridItem(), GridItem(), GridItem()], spacing: 25) {
                 NavigationLink(destination: Text("Hello World")) {
-                    Text("마이페이지")
+                    MoreShortcutContentView(
+                        label: "견적요청서",
+                        systemImage: "doc.text"
+                    )
                 }
                 NavigationLink(destination: Text("Hello World")) {
-                    Text("받은견적요청서")
+                    MoreShortcutContentView(
+                        label: "상담내역",
+                        systemImage: "message"
+                    )
                 }
                 NavigationLink(destination: Text("Hello World")) {
-                    Text("상담내역")
+                    MoreShortcutContentView(
+                        label: "고객센터",
+                        systemImage: "face.smiling"
+                    )
                 }
                 NavigationLink(destination: Text("Hello World")) {
-                    Text("고객센터")
+                    MoreShortcutContentView(
+                        label: "알림설정",
+                        systemImage: "bell"
+                    )
                 }
             }
+            .padding()
+            .imageScale(.large)
         }
+    }
+    
+}
+
+private struct MoreShortcutContentView: View {
+    
+    let label: String
+    let systemImage: String
+    
+    var body: some View {
+        VStack(spacing: 10) {
+            Image(systemName: systemImage)
+                .font(.title2)
+            Text(label)
+        }
+        .imageScale(.large)
     }
     
 }
@@ -59,6 +88,7 @@ struct MoreView_Previews: PreviewProvider {
     
     static var previews: some View {
         MoreView()
+            .previewInterfaceOrientation(.portrait)
     }
     
 }
