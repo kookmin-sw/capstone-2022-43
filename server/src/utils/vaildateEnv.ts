@@ -1,4 +1,5 @@
-import { cleanEnv, str, port } from 'envalid';
+import { cleanEnv, str, port, url } from 'envalid';
+
 
 const validateEnv = () => {
     cleanEnv(process.env, {
@@ -6,6 +7,7 @@ const validateEnv = () => {
         PUBLIC_SUPABASE_KEY: str(),
         JWT_SECRET: str(),
         PORT: port(),
+        HSCODE_SERVER_HOST: url(),
     });
 }
 
