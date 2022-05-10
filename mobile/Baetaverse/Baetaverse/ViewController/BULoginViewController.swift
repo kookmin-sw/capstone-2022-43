@@ -26,26 +26,28 @@ class BULoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func loginButtonClicked(_ sender: UIButton) {
-        Task {
-            do {
-                self.loadActivityIndicatorView.startAnimating()
-                try await appService?.login(
-                    email: idTextField.text ?? "",
-                    password: passwordTextField.text ?? ""
-                )
-                self.loadActivityIndicatorView.stopAnimating()
-                self.performSegue(withIdentifier: "presentLoginMainSegue", sender: nil)
-            } catch {
-                self.loadActivityIndicatorView.stopAnimating()
-                let alert = UIAlertController(
-                    title: "로그인에 실패하였습니다!",
-                    message: "계정을 다시 한번 확인해주세요!",
-                    preferredStyle: .alert
-                )
-                alert.addAction(UIAlertAction(title: "확인", style: .default))
-                present(alert, animated: true)
-            }
-        }
+//        Task {
+//            do {
+//                self.loadActivityIndicatorView.startAnimating()
+//                try await appService?.login(
+//                    email: idTextField.text ?? "",
+//                    password: passwordTextField.text ?? ""
+//                )
+//                self.loadActivityIndicatorView.stopAnimating()
+//                self.performSegue(withIdentifier: "presentLoginMainSegue", sender: nil)
+//            } catch {
+//                self.loadActivityIndicatorView.stopAnimating()
+//                let alert = UIAlertController(
+//                    title: "로그인에 실패하였습니다!",
+//                    message: "계정을 다시 한번 확인해주세요!",
+//                    preferredStyle: .alert
+//                )
+//                alert.addAction(UIAlertAction(title: "확인", style: .default))
+//                present(alert, animated: true)
+//            }
+//        }
+        
+        self.performSegue(withIdentifier: "presentLoginMainSegue", sender: nil)
     }
     
     @IBAction func unwindToLoginBULoginView(_ segue: UIStoryboardSegue) { }

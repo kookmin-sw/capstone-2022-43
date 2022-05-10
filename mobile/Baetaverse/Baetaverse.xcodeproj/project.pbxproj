@@ -88,10 +88,7 @@
 		C1D83A892828F3140086D0E7 /* Estimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D83A882828F3140086D0E7 /* Estimate.swift */; };
 		C1D83A8A2828F5A60086D0E7 /* Estimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D83A882828F3140086D0E7 /* Estimate.swift */; };
 		C1D83A8F2828F5E10086D0E7 /* EstimatesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D83A802828EB260086D0E7 /* EstimatesRequest.swift */; };
-		C1D83A912828F71A0086D0E7 /* BaetaverseBusinessServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D83A902828F71A0086D0E7 /* BaetaverseBusinessServiceTests.swift */; };
 		C1D83A93282903570086D0E7 /* BVEstimatesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D83A92282903570086D0E7 /* BVEstimatesTableViewController.swift */; };
-		C1D83A962829060F0086D0E7 /* BVEstimatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D83A942829060F0086D0E7 /* BVEstimatesTableViewCell.swift */; };
-		C1D83A972829060F0086D0E7 /* BVEstimatesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1D83A952829060F0086D0E7 /* BVEstimatesTableViewCell.xib */; };
 		C1E257B02820DD1A003F35DF /* RecievedEstimatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E257AF2820DD1A003F35DF /* RecievedEstimatesView.swift */; };
 		C1E257B62820E25D003F35DF /* Estimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E257B52820E25D003F35DF /* Estimate.swift */; };
 		C1E257B82820E5A4003F35DF /* RecievedEstimatesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E257B72820E5A4003F35DF /* RecievedEstimatesViewModel.swift */; };
@@ -184,10 +181,7 @@
 		C1D83A802828EB260086D0E7 /* EstimatesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimatesRequest.swift; sourceTree = "<group>"; };
 		C1D83A822828ECF50086D0E7 /* EstimatesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimatesResponse.swift; sourceTree = "<group>"; };
 		C1D83A882828F3140086D0E7 /* Estimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Estimate.swift; sourceTree = "<group>"; };
-		C1D83A902828F71A0086D0E7 /* BaetaverseBusinessServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseBusinessServiceTests.swift; sourceTree = "<group>"; };
 		C1D83A92282903570086D0E7 /* BVEstimatesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BVEstimatesTableViewController.swift; path = Baetaverse/ViewController/BVEstimatesTableViewController.swift; sourceTree = SOURCE_ROOT; };
-		C1D83A942829060F0086D0E7 /* BVEstimatesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BVEstimatesTableViewCell.swift; sourceTree = "<group>"; };
-		C1D83A952829060F0086D0E7 /* BVEstimatesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BVEstimatesTableViewCell.xib; sourceTree = "<group>"; };
 		C1E257AF2820DD1A003F35DF /* RecievedEstimatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecievedEstimatesView.swift; sourceTree = "<group>"; };
 		C1E257B52820E25D003F35DF /* Estimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Estimate.swift; sourceTree = "<group>"; };
 		C1E257B72820E5A4003F35DF /* RecievedEstimatesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecievedEstimatesViewModel.swift; sourceTree = "<group>"; };
@@ -405,6 +399,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		C1B7652D28297DAF0029B5FC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		C1C9EC612818FA1E0041F974 /* BaetaverseBusiness */ = {
 			isa = PBXGroup;
 			children = (
@@ -615,7 +616,6 @@
 			isa = PBXGroup;
 			children = (
 				C149736727F597E200679118 /* BaetaverseAppModuleTests.swift */,
-				C1D83A902828F71A0086D0E7 /* BaetaverseBusinessServiceTests.swift */,
 			);
 			path = BaetaverseTests;
 			sourceTree = "<group>";
@@ -649,10 +649,9 @@
 		C1E5CC0427F2C37D0087882E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C1B7652D28297DAF0029B5FC /* Components */,
 				C1E5CBC427F2BF350087882E /* LaunchScreen.storyboard */,
 				C1E5CBFF27F2C0AF0087882E /* Main.storyboard */,
-				C1D83A942829060F0086D0E7 /* BVEstimatesTableViewCell.swift */,
-				C1D83A952829060F0086D0E7 /* BVEstimatesTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -840,7 +839,6 @@
 				C1E5CC0127F2C0AF0087882E /* Main.storyboard in Resources */,
 				C1E5CBF827F2C0150087882E /* Assets.xcassets in Resources */,
 				C1E5CBC627F2BF350087882E /* LaunchScreen.storyboard in Resources */,
-				C1D83A972829060F0086D0E7 /* BVEstimatesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -947,7 +945,6 @@
 				C149736D27F59D4500679118 /* LoginResponse.swift in Sources */,
 				C197AEC027F43BEF000E4975 /* BaetaverseAPIService.swift in Sources */,
 				C1D83A892828F3140086D0E7 /* Estimate.swift in Sources */,
-				C1D83A962829060F0086D0E7 /* BVEstimatesTableViewCell.swift in Sources */,
 				C1E5CBF627F2BFBD0087882E /* BUDepartureViewController.swift in Sources */,
 				C149737127F5A06D00679118 /* APIResponseModel.swift in Sources */,
 				C197AEB327F42D6D000E4975 /* NetworkServiceProvider.swift in Sources */,
@@ -1007,7 +1004,6 @@
 				C197AEC427F43EF9000E4975 /* SignUpRequest.swift in Sources */,
 				C1CF675827F737550057A6C3 /* BaetaverseAppService.swift in Sources */,
 				C197AEBA27F43869000E4975 /* APIRequestImplement.swift in Sources */,
-				C1D83A912828F71A0086D0E7 /* BaetaverseBusinessServiceTests.swift in Sources */,
 				C1CF675B27F737620057A6C3 /* AppAuthService.swift in Sources */,
 				C197AEC227F43EF3000E4975 /* QuoteRequest.swift in Sources */,
 				C1CF675627F737120057A6C3 /* BaetaverseAPIRequest.swift in Sources */,

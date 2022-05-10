@@ -58,13 +58,13 @@ class BVEstimatesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "temporaryCell", for: indexPath)
         
-        if let cell = cell as? BVEstimatesTableViewCell {
-            cell.idLabel.text = datass[indexPath.row].id
-            cell.createdAt.text = datass[indexPath.row].createdAt
-            cell.quoteId.text = datass[indexPath.row].quoteId
-            cell.hscode.text = datass[indexPath.row].hsCode
-            cell.country.text = datass[indexPath.row].country
-        }
+//        if let cell = cell as? BVEstimatesTableViewCell {
+//            cell.idLabel.text = datass[indexPath.row].id
+//            cell.createdAt.text = datass[indexPath.row].createdAt
+//            cell.quoteId.text = datass[indexPath.row].quoteId
+//            cell.hscode.text = datass[indexPath.row].hsCode
+//            cell.country.text = datass[indexPath.row].country
+//        }
         
         return cell
     }
