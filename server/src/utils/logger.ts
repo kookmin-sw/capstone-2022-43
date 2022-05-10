@@ -29,18 +29,18 @@ const logger = winston.createLogger({
         logFormat,
     ),
     transports: [
-        new winston.transports.Console({
-            format: logFormat,
-        })
-        // new winstonDaily({ //error, warn, info 모두 남김
-        //     level:'info',
-        //     datePattern: 'YYYY-MM-DD',
-        //     dirname: 'logs',
-        //     filename: '%DATE%.log',
-        //     maxFiles: '30d',
-        //     zippedArchive: true,
+        // new winston.transports.Console({
+        //     format: logFormat,
         // }),
-        //
+        new winstonDaily({ //error, warn, info 모두 남김
+            level:'info',
+            datePattern: 'YYYY-MM-DD',
+            dirname: 'logs',
+            filename: '%DATE%.log',
+            maxFiles: '30d',
+            zippedArchive: true,
+        }),
+
         // new winstonDaily({//error 로그만 남김
         //     level:'error',
         //     datePattern: 'YYYY-MM-DD',
@@ -52,8 +52,8 @@ const logger = winston.createLogger({
     ],
 });
 
-// if (process.env.NODE_ENV !== 'production') {
-//     logger.add(new winston.transports.Console(options.console)); // 개발 시 console로도 출력
-// }
+if (process.env.NODE_ENV !== 'production') {
+    logger.add(new winston.transports.Console(options.console)); // 개발 시 console로도 출력
+}
 
 export default logger;

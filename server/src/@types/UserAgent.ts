@@ -15,7 +15,7 @@ class UserAgent {
     }
 
     toString(){
-        return ` IP: ${ this.ip } OS : ${ this.userOS } Browser : ${ this.userBrowser }`;
+        return `IP: ${ this.ip } OS: ${ this.userOS } Browser: ${ this.userBrowser }`;
     }
 }
 
