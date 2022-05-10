@@ -7,8 +7,9 @@
 
 import Foundation
 
-struct Review {
+struct Review: Identifiable {
     
+    var id: Int
     var title: String = ""
     var created: Date = Date()
     var rating: Int = 0

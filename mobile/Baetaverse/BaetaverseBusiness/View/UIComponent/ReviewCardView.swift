@@ -68,6 +68,7 @@ struct ReviewCardView_Previews: PreviewProvider {
     
     static var previews: some View {
         let review = Review(
+            id: 1,
             title: "안녕하세요",
             created: Date(),
             rating: 4,

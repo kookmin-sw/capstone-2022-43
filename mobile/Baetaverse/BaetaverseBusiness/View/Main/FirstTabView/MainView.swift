@@ -15,7 +15,6 @@ struct MainView: View {
                 MainContentView()
             }
             .navigationTitle("BAETAVERSE")
-            .navigationBarTitleDisplayMode(.inline)
         }
     }
     
@@ -23,13 +22,14 @@ struct MainView: View {
 
 private struct MainContentView: View {
     
+    @StateObject private var viewModel = MainViewModel()
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-            MainWelcomeMessageView(username: .constant("포워더"))
+            MainWelcomeMessageView(username: viewModel.username)
             MainShortcutButtonsView()
-            Divider()
-            MainRecievedReviewBoardView()
-            MainEstimateBoardView()
+            MainRecievedReviewBoardView(reviews: viewModel.reviews)
+            MainEstimateBoardView(estimates: viewModel.estimates)
         }
         .padding()
     }
@@ -38,11 +38,10 @@ private struct MainContentView: View {
 
 private struct MainWelcomeMessageView: View {
     
-    @Binding var username: String
+    let username: String
     
     var body: some View {
         VStack(alignment: .leading) {
-            Spacer()
             Text("\(username) 고객님")
                 .font(.largeTitle)
             Text("배타버스에 오신 것을 환영합니다 ☺️")
@@ -55,16 +54,18 @@ private struct MainWelcomeMessageView: View {
 private struct MainShortcutButtonsView: View {
     
     var body: some View {
-        VStack(alignment: .leading,spacing: 20) {
-            HeaderView(headline: "Popular Features", subheadline: "배타버스의 대표기능을 사용해보세요!") {
-                Text("Hello World")
-            }
-            AutoLazyHGrid(row: 1) {
+        VStack(alignment: .center, spacing: 10) {
+            HeaderView(
+                headline: "Popular Features",
+                subheadline: "배타버스의 대표기능을 사용해보세요!") {
+                    Text("Hello World")
+                }
+            AutoLazyHGrid(row: 1, spacing: 25) {
                 RecievedQuotationButton()
                 ConsultationRequestButton()
             }
-            .font(.title)
-            .buttonStyle(.bordered)
+            .font(.title2)
+            .buttonStyle(.borderedProminent)
         }
     }
     
@@ -72,16 +73,21 @@ private struct MainShortcutButtonsView: View {
 
 private struct MainRecievedReviewBoardView: View {
     
+    let reviews: [Review]
+    
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 10) {
+            HeaderView(
+                headline: "User's Reviews",
+                subheadline: "이용자의 피드백을 확인해보세요!") {
+                    Text("Hello World")
+                }
             VStack(alignment: .leading) {
                 MainReviewCountingView()
                 MainReviewStarRatingView()
             }
-            .font(.title)
-            VStack {
-                MainReviewCarouselView()
-            }
+            .font(.title2)
+            MainReviewCarouselView(reviews: reviews)
         }
     }
     
@@ -89,22 +95,19 @@ private struct MainRecievedReviewBoardView: View {
 
 private struct MainEstimateBoardView: View {
     
-    private let review = Review(
-        title: "견적서 1번",
-        created: Date(),
-        rating: 2,
-        editor: "한정택",
-        reviewText: "견적 내용 작성\n견적 내용 작성\n견적 내용 작성\n견적 내용 작성\n"
-    )
+    let estimates: [Review]
     
     var body: some View {
-        VStack(alignment: .leading) {
-            Text("마감임박견적요청서")
-                .font(.title)
+        VStack(alignment: .leading, spacing: 10) {
+            HeaderView(
+                headline: "Estimate Requests",
+                subheadline: "마감이 임박한 견적요청서를 확인해보세요!") {
+                    Text("Hello World")
+                }
             Carousel {
-                ReviewCardView(review: .constant(review))
-                ReviewCardView(review: .constant(review))
-                ReviewCardView(review: .constant(review))
+                ForEach(estimates) { estimate in
+                    ReviewCardView(review: .constant(estimate))
+                }
             }
             .frame(height: 150)
         }
@@ -116,10 +119,7 @@ private struct RecievedQuotationButton: View {
     
     var body: some View {
         NavigationLink(destination: RecievedEstimatesView()) {
-            VStack {
-                Text("견적 요청 내역")
-                Image(systemName: "doc.text")
-            }
+            Label("견적 요청 내역", systemImage: "doc.text")
         }
     }
     
@@ -129,10 +129,7 @@ private struct ConsultationRequestButton: View {
     
     var body: some View {
         NavigationLink(destination: ConsultationView()) {
-            VStack {
-                Text("상담 요청 내역")
-                Image(systemName: "exclamationmark.bubble")
-            }
+            Label("상담 요청 내역", systemImage: "exclamationmark.bubble")
         }
     }
     
@@ -159,19 +156,13 @@ private struct MainReviewStarRatingView: View {
 
 private struct MainReviewCarouselView: View {
     
-    private let review = Review(
-        title: "Hello World",
-        created: Date(),
-        rating: 2,
-        editor: "한정택",
-        reviewText: "그냥 리뷰 남김\n그냥 리뷰 남김\n그냥 리뷰 남김\n그냥 리뷰 남김\n"
-    )
+    let reviews: [Review]
     
     var body: some View {
         Carousel {
-            ReviewCardView(review: .constant(review))
-            ReviewCardView(review: .constant(review))
-            ReviewCardView(review: .constant(review))
+            ForEach(reviews) { review in
+                ReviewCardView(review: .constant(review))
+            }
         }
         .frame(height: 150)
     }

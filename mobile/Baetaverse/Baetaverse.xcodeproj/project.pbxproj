@@ -11,6 +11,7 @@
 		C1300DBB281FA3B900E9C0CC /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1300DBA281FA3B900E9C0CC /* MainTabView.swift */; };
 		C1300DBE281FBE4E00E9C0CC /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1300DBD281FBE4E00E9C0CC /* StarRatingView.swift */; };
 		C1366CE7282A9EFD00A9CA93 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1366CE6282A9EFD00A9CA93 /* HeaderView.swift */; };
+		C1366CE9282AADC800A9CA93 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1366CE8282AADC800A9CA93 /* MainViewModel.swift */; };
 		C13778C127F497CF00DAF494 /* BUSignUpFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13778C027F497CF00DAF494 /* BUSignUpFormViewController.swift */; };
 		C13778C327F498EE00DAF494 /* BaetaverseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13778C227F498EE00DAF494 /* BaetaverseAuth.swift */; };
 		C13C00EB28191A3600352096 /* SignUpChooseMembershipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13C00EA28191A3600352096 /* SignUpChooseMembershipView.swift */; };
@@ -141,6 +142,7 @@
 		C1300DBA281FA3B900E9C0CC /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		C1300DBD281FBE4E00E9C0CC /* StarRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingView.swift; sourceTree = "<group>"; };
 		C1366CE6282A9EFD00A9CA93 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		C1366CE8282AADC800A9CA93 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		C13778C027F497CF00DAF494 /* BUSignUpFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BUSignUpFormViewController.swift; path = Baetaverse/ViewController/BUSignUpFormViewController.swift; sourceTree = SOURCE_ROOT; };
 		C13778C227F498EE00DAF494 /* BaetaverseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseAuth.swift; sourceTree = "<group>"; };
 		C13C00EA28191A3600352096 /* SignUpChooseMembershipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpChooseMembershipView.swift; sourceTree = "<group>"; };
@@ -593,6 +595,7 @@
 		C1E257B92820E5AC003F35DF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C1366CE8282AADC800A9CA93 /* MainViewModel.swift */,
 				C1E257B72820E5A4003F35DF /* RecievedEstimatesViewModel.swift */,
 			);
 			path = ViewModel;
@@ -921,6 +924,7 @@
 				C19140F62823C55900372CB3 /* ConsultationCellView.swift in Sources */,
 				C1BAFE232820BAC800CC4549 /* MainView.swift in Sources */,
 				C1300DBE281FBE4E00E9C0CC /* StarRatingView.swift in Sources */,
+				C1366CE9282AADC800A9CA93 /* MainViewModel.swift in Sources */,
 				C1965763282013EC00821825 /* ReviewCardView.swift in Sources */,
 				C16B45A2282A132500DDAAE8 /* MoreProfileView.swift in Sources */,
 				C19140ED2823BAE800372CB3 /* MenuView.swift in Sources */,
