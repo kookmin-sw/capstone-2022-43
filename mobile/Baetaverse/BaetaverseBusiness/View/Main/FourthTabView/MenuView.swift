@@ -9,10 +9,16 @@ import SwiftUI
 
 struct MoreView: View {
     
+    @State var name: String = "DemoForwarder"
+    @State var profileImage: Image = Image("demoProfileImage")
+    
     var body: some View {
         NavigationView {
-            MoreContentView()
-                .navigationTitle(Text("더보기"))
+            ScrollView {
+                MoreContentView(name: $name, profileImage: $profileImage)
+            }
+            .navigationTitle(Text("더보기"))
+            
         }
     }
     
@@ -20,19 +26,29 @@ struct MoreView: View {
 
 private struct MoreContentView: View {
     
+    @Binding var name: String
+    @Binding var profileImage: Image
+    
     var body: some View {
-        List {
-            NavigationLink(destination: Text("Hello World")) {
-                Text("마이페이지")
-            }
-            NavigationLink(destination: Text("Hello World")) {
-                Text("받은견적요청서")
-            }
-            NavigationLink(destination: Text("Hello World")) {
-                Text("상담내역")
-            }
-            NavigationLink(destination: Text("Hello World")) {
-                Text("고객센터")
+        VStack {
+            MoreProfileView(
+                name: $name,
+                profileImage: $profileImage
+            )
+            Divider()
+            List {
+                NavigationLink(destination: Text("Hello World")) {
+                    Text("마이페이지")
+                }
+                NavigationLink(destination: Text("Hello World")) {
+                    Text("받은견적요청서")
+                }
+                NavigationLink(destination: Text("Hello World")) {
+                    Text("상담내역")
+                }
+                NavigationLink(destination: Text("Hello World")) {
+                    Text("고객센터")
+                }
             }
         }
     }

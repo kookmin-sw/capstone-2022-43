@@ -16,7 +16,7 @@ struct MoreProfileView: View {
         ZStack {
             RoundedRectangle(cornerRadius: 15)
                 .foregroundColor(Color(UIColor.systemTeal))
-            VStack {
+            VStack(alignment: .leading) {
                 HStack {
                     profileImage
                         .clipShape(Circle())
@@ -32,6 +32,7 @@ struct MoreProfileView: View {
                 }
             }
             .buttonStyle(.borderedProminent)
+            .padding()
         }
     }
     
