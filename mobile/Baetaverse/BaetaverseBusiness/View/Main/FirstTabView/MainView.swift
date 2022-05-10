@@ -16,13 +16,6 @@ struct MainView: View {
             }
             .navigationTitle("BAETAVERSE")
             .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItemGroup(placement: .navigationBarLeading) {
-                    NavigationLink(destination: MenuView()) {
-                        Image(systemName: "line.3.horizontal")
-                    }
-                }
-            }
         }
     }
     

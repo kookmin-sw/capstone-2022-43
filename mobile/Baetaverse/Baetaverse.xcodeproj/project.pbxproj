@@ -22,6 +22,7 @@
 		C149737427F5A12800679118 /* Extensions+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149736A27F59B7500679118 /* Extensions+Data.swift */; };
 		C149737627F5A39800679118 /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149737527F5A39800679118 /* SignUpResponse.swift */; };
 		C149737727F5A39800679118 /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149737527F5A39800679118 /* SignUpResponse.swift */; };
+		C16B45A2282A132500DDAAE8 /* MoreProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B45A1282A132500DDAAE8 /* MoreProfileView.swift */; };
 		C19140E52823AC0000372CB3 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = C19140E42823AC0000372CB3 /* .swiftlint.yml */; };
 		C19140EA2823B6EF00372CB3 /* WriteEstimateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19140E92823B6EF00372CB3 /* WriteEstimateView.swift */; };
 		C19140ED2823BAE800372CB3 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19140EC2823BAE800372CB3 /* MenuView.swift */; };
@@ -143,6 +144,7 @@
 		C149736C27F59D4500679118 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		C149737027F5A06D00679118 /* APIResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseModel.swift; sourceTree = "<group>"; };
 		C149737527F5A39800679118 /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
+		C16B45A1282A132500DDAAE8 /* MoreProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreProfileView.swift; sourceTree = "<group>"; };
 		C19140E42823AC0000372CB3 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		C19140E92823B6EF00372CB3 /* WriteEstimateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteEstimateView.swift; sourceTree = "<group>"; };
 		C19140EC2823BAE800372CB3 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
@@ -255,9 +257,9 @@
 			isa = PBXGroup;
 			children = (
 				C1300DBA281FA3B900E9C0CC /* MainTabView.swift */,
-				C19140EB2823BAD000372CB3 /* Menu */,
 				C19140E62823B5DC00372CB3 /* FirstTabView */,
 				C19140EE2823BC9500372CB3 /* ThirdTabView */,
+				C16B45A5282A19B900DDAAE8 /* FourthTabView */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -269,6 +271,7 @@
 				C196576028200A6B00821825 /* Carousel.swift */,
 				C1965762282013EC00821825 /* ReviewCardView.swift */,
 				C196576728201ECA00821825 /* CardView.swift */,
+				C16B45A1282A132500DDAAE8 /* MoreProfileView.swift */,
 			);
 			path = UIComponent;
 			sourceTree = "<group>";
@@ -311,6 +314,14 @@
 				C1D83A822828ECF50086D0E7 /* EstimatesResponse.swift */,
 			);
 			path = ResponseModel;
+			sourceTree = "<group>";
+		};
+		C16B45A5282A19B900DDAAE8 /* FourthTabView */ = {
+			isa = PBXGroup;
+			children = (
+				C19140EC2823BAE800372CB3 /* MenuView.swift */,
+			);
+			path = FourthTabView;
 			sourceTree = "<group>";
 		};
 		C182FDF7281900E800F66567 /* Tests */ = {
@@ -368,14 +379,6 @@
 				C19140E92823B6EF00372CB3 /* WriteEstimateView.swift */,
 			);
 			path = FirstTabView;
-			sourceTree = "<group>";
-		};
-		C19140EB2823BAD000372CB3 /* Menu */ = {
-			isa = PBXGroup;
-			children = (
-				C19140EC2823BAE800372CB3 /* MenuView.swift */,
-			);
-			path = Menu;
 			sourceTree = "<group>";
 		};
 		C19140EE2823BC9500372CB3 /* ThirdTabView */ = {
@@ -899,6 +902,7 @@
 				C1BAFE232820BAC800CC4549 /* MainView.swift in Sources */,
 				C1300DBE281FBE4E00E9C0CC /* StarRatingView.swift in Sources */,
 				C1965763282013EC00821825 /* ReviewCardView.swift in Sources */,
+				C16B45A2282A132500DDAAE8 /* MoreProfileView.swift in Sources */,
 				C19140ED2823BAE800372CB3 /* MenuView.swift in Sources */,
 				C19140EA2823B6EF00372CB3 /* WriteEstimateView.swift in Sources */,
 				C19140F42823C21000372CB3 /* ConsultationRequestView.swift in Sources */,

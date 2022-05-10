@@ -18,9 +18,9 @@ struct MainTabView: View {
                 Label("견적서", systemImage: "doc.text")
             }
             ConsultationView().tabItem {
-                Label("상담", systemImage: "bell")
+                Label("상담", systemImage: "message.fill")
             }
-            Text("Tab Content 4").tabItem {
+            MoreView().tabItem {
                 Label("더보기", systemImage: "ellipsis")
             }
         }
