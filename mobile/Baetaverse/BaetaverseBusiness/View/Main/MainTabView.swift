@@ -15,10 +15,13 @@ struct MainTabView: View {
                 Label("메인", systemImage: "house")
             }
             Text("Tab Content 2").tabItem {
-                Label("보낸견적서", systemImage: "doc.text")
+                Label("견적서", systemImage: "doc.text")
             }
             ConsultationView().tabItem {
-                Label("상담내역", systemImage: "bell")
+                Label("상담", systemImage: "bell")
+            }
+            Text("Tab Content 4").tabItem {
+                Label("더보기", systemImage: "ellipsis")
             }
         }
     }
