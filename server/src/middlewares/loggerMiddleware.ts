@@ -5,7 +5,7 @@ import userAgent from "../@types/UserAgent";
 
 const loggerMiddleware = (req: Request, res: Response, next: NextFunction): void => {
     const userInfo = new userAgent(req);
-    logger.info(`${req.method} ${req.path} ${userInfo}`);
+    logger.info(`${ res.statusCode } ${ req.method } ${ decodeURI(req.path) } ${ userInfo }`);
     next();
 }
 

@@ -1,13 +1,17 @@
-import express, { Request, Response, NextFunction } from 'express';
-import jwt, { JwtPayload } from 'jsonwebtoken';
+import { Request, Response, NextFunction } from 'express';
+import jwt from 'jsonwebtoken';
 import HttpException from '../exceptions/HttpException';
-
+import DecodedToken from "../interfaces/DecodedToken";
 
 
 const verifyToken = (req: Request, res: Response, next: NextFunction) => {
     try {
         const bearerToken: string = req.headers.authorization || 'Bearer ';
-        req.decoded = jwt.verify(bearerToken.split('Bearer ')[1], process.env.JWT_SECRET || '');
+        const decode_token = jwt.verify(
+            bearerToken.split('Bearer ')[1],
+            process.env.JWT_SECRET || ''
+        );
+        req.decoded = decode_token as DecodedToken;
         return next();
     } catch (err) {
         const error = err as HttpException;

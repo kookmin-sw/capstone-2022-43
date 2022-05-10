@@ -1,8 +1,8 @@
 import { Request, Response, NextFunction } from "express";
-import {supabase} from "../utils/supabase";
+import { supabase } from "../utils/supabase";
 
 const quotation = async (req: Request, res: Response, next: NextFunction) => {
-    try{
+    try {
         const quoteId = req.params.quoteId;
         const { data: existQuotation, error: QuotationNotFoundError } = await supabase
             .from('Quotation')

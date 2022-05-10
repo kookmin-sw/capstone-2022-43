@@ -1,9 +1,11 @@
 # ignore .idea directory
 .idea/
 
-package-lock.json
+# HSCODE IGNORE LIST
+*/__pycache__/*
 
 # SERVER IGNORE LIST
+package-lock.json
 server/node_modules/
 server/dist
 server/.env
