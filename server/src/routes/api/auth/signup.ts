@@ -2,7 +2,6 @@ import express, { Request, Response, NextFunction } from "express";
 import { supabase } from "../../../utils/supabase";
 import bcrypt from "bcrypt";
 import HttpException from "../../../exceptions/HttpException";
-import ShipperController from "../../../controller/ShipperController";
 
 
 const router = express.Router();
@@ -25,8 +24,9 @@ router.post('/signup', async (req: Request, res: Response, next: NextFunction) =
         const hash = await bcrypt.hash(password, 14);
 
         const { data: newUser, error: FailToInsert } = await supabase
-        .from('OWNER')
-        .insert({ email, password: hash, name, phone_number });
+            .from('OWNER')
+            .insert({ email, password: hash, name, phone_number })
+            .single();
 
         // temporary error handler
         if (FailToInsert) {
@@ -35,9 +35,10 @@ router.post('/signup', async (req: Request, res: Response, next: NextFunction) =
 
         return res.status(200).json({
             status: 200,
-            message: 'Success to sign up'
+            message: 'Success to sign up',
+            email: newUser.email,
+            name: newUser.name
         });
-
     } catch (error) {
         return next(error);
     }
