@@ -1,11 +1,14 @@
 import express, { Router } from "express";
 import authRouter from "./api/auth";
-import quoteRouter from "./api/quote";
+import requestRouter from "./api/requests";
+import hscodeRouter from "./api/hscode";
+
 
 const router = express.Router();
 const lowRouters = [
     authRouter,
-    quoteRouter
+    requestRouter,
+    hscodeRouter
 ];
 
 lowRouters.forEach((lowRouter: Router) => {
