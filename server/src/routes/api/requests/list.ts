@@ -5,7 +5,7 @@ import { supabase } from '../../../utils/supabase';
 const router = express.Router();
 
 router.get('/list', async (req : Request, res : Response, next : NextFunction) => {
-    try{
+    try {
         const { data: existQuotation, error: QuotationNotFoundError } = await supabase
             .from('Quotation')
             .select();
@@ -19,7 +19,7 @@ router.get('/list', async (req : Request, res : Response, next : NextFunction) =
             quotations: existQuotation
         });
     }
-    catch (error){
+    catch (error) {
         return next(error);
     }
 });

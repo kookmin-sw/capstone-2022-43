@@ -4,22 +4,19 @@ import { supabase } from '../../../utils/supabase';
 
 const router = express.Router();
 
-router.post('/request', async (req: Request, res: Response, next: NextFunction) =>{
+router.post('/response', async (req: Request, res: Response, next: NextFunction) =>{
     try{
-        const { id, hscode, country } = req.body;
+        const { QUOTATION_KEY, FORWARDER_ID, LANDCHARGE, OCEANCHARGE, DURATION } = req.body;
 
         const { data: quotation, error: FailToInsert } = await supabase
-            .from('Quotation')
-            .insert({ id, hscode, country });
+            .from('Quotation1')
+            .insert({ QUOTATION_KEY, FORWARDER_ID, LANDCHARGE, OCEANCHARGE, DURATION });
 
         if (FailToInsert) {
             return next(FailToInsert);
         }
 
-        return res.status(200).json({
-            status: 200,
-            message: 'Success to quote'
-        });
+        return res.status(200).json({ message: 'Success to requests response' });
     }
     catch (error){
         return next(error);
