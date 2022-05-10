@@ -10,6 +10,7 @@
 		C1300DB6281F707100E9C0CC /* SignUpFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1300DB5281F707100E9C0CC /* SignUpFormView.swift */; };
 		C1300DBB281FA3B900E9C0CC /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1300DBA281FA3B900E9C0CC /* MainTabView.swift */; };
 		C1300DBE281FBE4E00E9C0CC /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1300DBD281FBE4E00E9C0CC /* StarRatingView.swift */; };
+		C1366CE7282A9EFD00A9CA93 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1366CE6282A9EFD00A9CA93 /* HeaderView.swift */; };
 		C13778C127F497CF00DAF494 /* BUSignUpFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13778C027F497CF00DAF494 /* BUSignUpFormViewController.swift */; };
 		C13778C327F498EE00DAF494 /* BaetaverseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13778C227F498EE00DAF494 /* BaetaverseAuth.swift */; };
 		C13C00EB28191A3600352096 /* SignUpChooseMembershipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13C00EA28191A3600352096 /* SignUpChooseMembershipView.swift */; };
@@ -23,6 +24,9 @@
 		C149737627F5A39800679118 /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149737527F5A39800679118 /* SignUpResponse.swift */; };
 		C149737727F5A39800679118 /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149737527F5A39800679118 /* SignUpResponse.swift */; };
 		C16B45A2282A132500DDAAE8 /* MoreProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B45A1282A132500DDAAE8 /* MoreProfileView.swift */; };
+		C16B45A8282A4C9B00DDAAE8 /* EstimatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B45A7282A4C9B00DDAAE8 /* EstimatesView.swift */; };
+		C16B45AB282A4E5000DDAAE8 /* AutoLazyVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B45AA282A4E5000DDAAE8 /* AutoLazyVGrid.swift */; };
+		C16B45AD282A50CE00DDAAE8 /* AutoLazyHGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B45AC282A50CE00DDAAE8 /* AutoLazyHGrid.swift */; };
 		C19140E52823AC0000372CB3 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = C19140E42823AC0000372CB3 /* .swiftlint.yml */; };
 		C19140EA2823B6EF00372CB3 /* WriteEstimateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19140E92823B6EF00372CB3 /* WriteEstimateView.swift */; };
 		C19140ED2823BAE800372CB3 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19140EC2823BAE800372CB3 /* MenuView.swift */; };
@@ -136,6 +140,7 @@
 		C1300DB5281F707100E9C0CC /* SignUpFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFormView.swift; sourceTree = "<group>"; };
 		C1300DBA281FA3B900E9C0CC /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		C1300DBD281FBE4E00E9C0CC /* StarRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingView.swift; sourceTree = "<group>"; };
+		C1366CE6282A9EFD00A9CA93 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		C13778C027F497CF00DAF494 /* BUSignUpFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BUSignUpFormViewController.swift; path = Baetaverse/ViewController/BUSignUpFormViewController.swift; sourceTree = SOURCE_ROOT; };
 		C13778C227F498EE00DAF494 /* BaetaverseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseAuth.swift; sourceTree = "<group>"; };
 		C13C00EA28191A3600352096 /* SignUpChooseMembershipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpChooseMembershipView.swift; sourceTree = "<group>"; };
@@ -145,6 +150,9 @@
 		C149737027F5A06D00679118 /* APIResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseModel.swift; sourceTree = "<group>"; };
 		C149737527F5A39800679118 /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
 		C16B45A1282A132500DDAAE8 /* MoreProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreProfileView.swift; sourceTree = "<group>"; };
+		C16B45A7282A4C9B00DDAAE8 /* EstimatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimatesView.swift; sourceTree = "<group>"; };
+		C16B45AA282A4E5000DDAAE8 /* AutoLazyVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLazyVGrid.swift; sourceTree = "<group>"; };
+		C16B45AC282A50CE00DDAAE8 /* AutoLazyHGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLazyHGrid.swift; sourceTree = "<group>"; };
 		C19140E42823AC0000372CB3 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		C19140E92823B6EF00372CB3 /* WriteEstimateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteEstimateView.swift; sourceTree = "<group>"; };
 		C19140EC2823BAE800372CB3 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
@@ -258,6 +266,7 @@
 			children = (
 				C1300DBA281FA3B900E9C0CC /* MainTabView.swift */,
 				C19140E62823B5DC00372CB3 /* FirstTabView */,
+				C16B45A6282A4C5A00DDAAE8 /* SecondTabView */,
 				C19140EE2823BC9500372CB3 /* ThirdTabView */,
 				C16B45A5282A19B900DDAAE8 /* FourthTabView */,
 			);
@@ -272,6 +281,9 @@
 				C1965762282013EC00821825 /* ReviewCardView.swift */,
 				C196576728201ECA00821825 /* CardView.swift */,
 				C16B45A1282A132500DDAAE8 /* MoreProfileView.swift */,
+				C16B45AA282A4E5000DDAAE8 /* AutoLazyVGrid.swift */,
+				C16B45AC282A50CE00DDAAE8 /* AutoLazyHGrid.swift */,
+				C1366CE6282A9EFD00A9CA93 /* HeaderView.swift */,
 			);
 			path = UIComponent;
 			sourceTree = "<group>";
@@ -322,6 +334,14 @@
 				C19140EC2823BAE800372CB3 /* MenuView.swift */,
 			);
 			path = FourthTabView;
+			sourceTree = "<group>";
+		};
+		C16B45A6282A4C5A00DDAAE8 /* SecondTabView */ = {
+			isa = PBXGroup;
+			children = (
+				C16B45A7282A4C9B00DDAAE8 /* EstimatesView.swift */,
+			);
+			path = SecondTabView;
 			sourceTree = "<group>";
 		};
 		C182FDF7281900E800F66567 /* Tests */ = {
@@ -905,18 +925,22 @@
 				C16B45A2282A132500DDAAE8 /* MoreProfileView.swift in Sources */,
 				C19140ED2823BAE800372CB3 /* MenuView.swift in Sources */,
 				C19140EA2823B6EF00372CB3 /* WriteEstimateView.swift in Sources */,
+				C16B45AD282A50CE00DDAAE8 /* AutoLazyHGrid.swift in Sources */,
 				C19140F42823C21000372CB3 /* ConsultationRequestView.swift in Sources */,
 				C1300DBB281FA3B900E9C0CC /* MainTabView.swift in Sources */,
 				C1E257B62820E25D003F35DF /* Estimate.swift in Sources */,
 				C1C9EC652818FA1E0041F974 /* LoginView.swift in Sources */,
 				C1C9EC8E2818FB080041F974 /* Extensions+Encodable.swift in Sources */,
+				C16B45A8282A4C9B00DDAAE8 /* EstimatesView.swift in Sources */,
 				C19140F02823BCC800372CB3 /* ConsultationView.swift in Sources */,
 				C196576528201CFA00821825 /* Review.swift in Sources */,
 				C13C00EB28191A3600352096 /* SignUpChooseMembershipView.swift in Sources */,
 				C1E257B02820DD1A003F35DF /* RecievedEstimatesView.swift in Sources */,
+				C1366CE7282A9EFD00A9CA93 /* HeaderView.swift in Sources */,
 				C196576128200A6B00821825 /* Carousel.swift in Sources */,
 				C19140F82823C5BD00372CB3 /* ConsultationProceedingView.swift in Sources */,
 				C1C9EC632818FA1E0041F974 /* BaetaverseBusinessApp.swift in Sources */,
+				C16B45AB282A4E5000DDAAE8 /* AutoLazyVGrid.swift in Sources */,
 				C196576828201ECA00821825 /* CardView.swift in Sources */,
 				C1E257B82820E5A4003F35DF /* RecievedEstimatesViewModel.swift in Sources */,
 				C1C9EC8B2818FAFF0041F974 /* Extensions+Data.swift in Sources */,

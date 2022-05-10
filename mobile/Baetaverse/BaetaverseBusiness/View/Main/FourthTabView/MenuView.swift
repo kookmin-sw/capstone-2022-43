@@ -35,7 +35,7 @@ private struct MoreContentView: View {
                 name: $name,
                 profileImage: $profileImage
             )
-            LazyVGrid(columns: [GridItem(), GridItem(), GridItem()], spacing: 25) {
+            AutoLazyVGrid(column: 3, spacing: 20) {
                 NavigationLink(destination: Text("Hello World")) {
                     MoreShortcutContentView(
                         label: "견적요청서",

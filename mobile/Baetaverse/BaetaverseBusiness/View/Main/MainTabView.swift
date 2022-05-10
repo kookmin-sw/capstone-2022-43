@@ -14,7 +14,7 @@ struct MainTabView: View {
             MainView().tabItem {
                 Label("메인", systemImage: "house")
             }
-            Text("Tab Content 2").tabItem {
+            EstimatesView().tabItem {
                 Label("견적서", systemImage: "doc.text")
             }
             ConsultationView().tabItem {

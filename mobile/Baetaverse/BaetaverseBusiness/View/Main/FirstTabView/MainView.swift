@@ -24,12 +24,29 @@ struct MainView: View {
 private struct MainContentView: View {
     
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 20) {
+            MainWelcomeMessageView(username: .constant("포워더"))
             MainShortcutButtonsView()
             Divider()
             MainRecievedReviewBoardView()
-            Divider()
             MainEstimateBoardView()
+        }
+        .padding()
+    }
+    
+}
+
+private struct MainWelcomeMessageView: View {
+    
+    @Binding var username: String
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            Spacer()
+            Text("\(username) 고객님")
+                .font(.largeTitle)
+            Text("배타버스에 오신 것을 환영합니다 ☺️")
+                .font(.title2)
         }
     }
     
@@ -38,17 +55,15 @@ private struct MainContentView: View {
 private struct MainShortcutButtonsView: View {
     
     var body: some View {
-        HStack {
-            Spacer()
-            RecievedQuotationButton()
-            Spacer()
-            Divider()
-            Spacer()
-            ConsultationRequestButton()
-            Spacer()
+        VStack(alignment: .leading,spacing: 20) {
+            Text("Title")
+            AutoLazyHGrid(row: 1) {
+                RecievedQuotationButton()
+                ConsultationRequestButton()
+            }
+            .font(.title)
+            .buttonStyle(.bordered)
         }
-        .font(.title)
-        .buttonStyle(.bordered)
     }
     
 }
@@ -66,7 +81,6 @@ private struct MainRecievedReviewBoardView: View {
                 MainReviewCarouselView()
             }
         }
-        .padding()
     }
     
 }
@@ -92,7 +106,6 @@ private struct MainEstimateBoardView: View {
             }
             .frame(height: 150)
         }
-        .padding()
     }
     
 }

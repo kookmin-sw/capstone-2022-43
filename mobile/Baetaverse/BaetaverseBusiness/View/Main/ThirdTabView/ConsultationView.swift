@@ -14,8 +14,7 @@ struct ConsultationView: View {
     var body: some View {
         NavigationView {
             ConsultationContentView(currentSegmentView: $currentSegmentView)
-                .navigationTitle("상담내역")
-                .navigationBarTitleDisplayMode(.inline)
+                .navigationTitle("상담")
         }
     }
     
