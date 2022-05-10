@@ -26,7 +26,7 @@ struct HeaderView<Content: View>: View {
             HStack {
                 VStack(alignment: .leading) {
                     Text(headline)
-                        .font(.headline)
+                        .font(.system(size: 20, weight: .bold, design: .default))
                     Text(subheadline)
                         .font(.subheadline)
                         .foregroundColor(.gray)

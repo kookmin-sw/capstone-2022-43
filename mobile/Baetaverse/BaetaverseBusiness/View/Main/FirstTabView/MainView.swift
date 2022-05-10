@@ -56,7 +56,9 @@ private struct MainShortcutButtonsView: View {
     
     var body: some View {
         VStack(alignment: .leading,spacing: 20) {
-            Text("Title")
+            HeaderView(headline: "Popular Features", subheadline: "배타버스의 대표기능을 사용해보세요!") {
+                Text("Hello World")
+            }
             AutoLazyHGrid(row: 1) {
                 RecievedQuotationButton()
                 ConsultationRequestButton()
