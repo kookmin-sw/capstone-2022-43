@@ -41,14 +41,26 @@ final class BaetaverseAuth: AppAuthService {
         }
     }
     
-    func signUp(email: String, password: String, name: String) async throws {
+    func signUp(email: String, password: String, name: String, phoneNumber: String) async throws {
         let apiService = BaetaverseAPIService.signUp(
             email: email,
             password: password,
-            name: name
+            name: name,
+            phoneNumber: phoneNumber
         )
-        let result = try await networkService.fetchData(for: apiService)
-        let _ = try result.decodeJSONData(to: APIResponseModel.SignUpResponse.self)
+        
+        let data = try await networkService.fetchData(for: apiService)
+        let result = try data.decodeJSONData(to: APIResponseModel.SignUpResponse.self)
+        
+        if result.status == 400 {
+            throw AuthError.signUpError
+        }
+    }
+    
+    enum AuthError: Error {
+        
+        case signUpError
+        
     }
     
 }

@@ -12,7 +12,7 @@ protocol BaetaverseAPIRequestHostInfo: APIRequestHostInfo { }
 extension BaetaverseAPIRequestHostInfo {
     
     var baseURL: String {
-        "http://baetaverse.kro.kr/"
+        "http://baetaverse.kro.kr"
     }
     
 }

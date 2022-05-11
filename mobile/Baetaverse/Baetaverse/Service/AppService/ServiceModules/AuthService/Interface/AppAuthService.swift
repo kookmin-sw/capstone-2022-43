@@ -14,6 +14,6 @@ protocol AppAuthService {
     
     func login(email: String, password: String) async throws
     func logout()
-    func signUp(email: String, password: String, name: String) async throws
+    func signUp(email: String, password: String, name: String, phoneNumber: String) async throws
     
 }

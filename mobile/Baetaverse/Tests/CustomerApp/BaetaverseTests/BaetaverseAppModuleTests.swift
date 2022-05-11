@@ -29,12 +29,23 @@ class BaetaverseAppModuleTests: XCTestCase {
     }
     
     func test_회원가입_정상적으로_동작해야한다() async throws {
-        try await sutBaetaverse.signUp(
-            email: "\(Int.random(in: 0...999))@test.com",
-            password: "12341234",
-            name: "testSignUp"
-        )
-        XCTAssert(true)
+        // given
+        let email = "test1@test1.com"
+        let password = "12341234"
+        let name = "testUserName"
+        let phoneNumber = "010-1234-5678"
+        
+        // when then
+        do {
+            try await sutBaetaverse.signUp(
+                email: email,
+                password: password,
+                name: name,
+                phoneNumber: phoneNumber
+            )
+        } catch {
+            XCTFail("\(error)")
+        }
     }
     
     func test_새로운_견적_등록하기가_정상적으로_동작해야한다() async throws {

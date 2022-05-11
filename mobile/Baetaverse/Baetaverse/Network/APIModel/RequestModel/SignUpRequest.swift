@@ -17,11 +17,12 @@ extension APIRequestModel {
         var query: [String: String] = [:]
         var body: Data?
         
-        init(email: String, password: String, name: String) {
+        init(email: String, password: String, name: String, phoneNumber: String) {
             let parameters = [
                 "email": email,
                 "password": password,
-                "name": name
+                "name": name,
+                "phone_number": phoneNumber
             ]
             self.body = try? parameters.encodeToJSONData()
         }

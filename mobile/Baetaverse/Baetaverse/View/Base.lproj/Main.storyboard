@@ -373,6 +373,7 @@
                         <outlet property="idTextField" destination="wOk-Wi-8xj" id="Kqa-hl-U4C"/>
                         <outlet property="nameTextField" destination="moX-PY-4iv" id="laZ-fx-oUD"/>
                         <outlet property="passwordTextField" destination="F7J-ur-CBL" id="rtH-3i-2fP"/>
+                        <outlet property="phoneNumberTextField" destination="Ss0-pn-I71" id="dQE-X3-nbf"/>
                         <segue destination="xR3-vh-btr" kind="unwind" identifier="closeSignUpViewSegue" unwindAction="unwindToLoginBULoginView:" id="tps-fC-xL4"/>
                     </connections>
                 </viewController>

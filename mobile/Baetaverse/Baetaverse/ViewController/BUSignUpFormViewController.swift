@@ -12,6 +12,7 @@ class BUSignUpFormViewController: UIViewController {
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
     private var appService: AppService? {
@@ -34,7 +35,8 @@ class BUSignUpFormViewController: UIViewController {
                 try await appService?.signUp(
                     email: idTextField.text ?? "",
                     password: passwordTextField.text ?? "",
-                    name: nameTextField.text ?? ""
+                    name: nameTextField.text ?? "",
+                    phoneNumber: phoneNumberTextField.text ?? ""
                 )
                 activityIndicatorView.stopAnimating()
                 let alert = UIAlertController(
