@@ -44,8 +44,8 @@ router.get('/:id', verifyToken , async (req: Request, res: Response, next: NextF
         return res.status(200).json({
             status: 200,
             message: 'Success to find requests',
-            selected_request,
-            selected_goods_array
+            selectedRequest: selected_request,
+            selectedGoods: selected_goods_array
         });
     }
     catch (error){

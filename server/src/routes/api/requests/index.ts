@@ -40,7 +40,7 @@ router.get('/', verifyToken , async (req: Request, res: Response, next: NextFunc
 router.post('/', verifyToken, async (req: Request, res: Response, next: NextFunction) => {
     try {
         const { uuid } = req.decoded;
-        let quote_request: any = req.body.quoteRequest;
+        const quote_request: any = req.body.quoteRequest;
         const goods_array: any[] = req.body.goodsRequests;
 
         const insertRequest = async () => {
@@ -49,6 +49,7 @@ router.post('/', verifyToken, async (req: Request, res: Response, next: NextFunc
             return supabase.from('REQUEST').insert(quote_request).single();
         };
         const { data: created_request, error: FailToRequest } = await insertRequest();
+        delete created_request.owner_uuid;
 
         if (FailToRequest) {
             return next(FailToRequest);
