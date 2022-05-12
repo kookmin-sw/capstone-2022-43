@@ -11,7 +11,7 @@ extension APIRequestModel {
     
     struct EstimateRequestsRequest: BaetaverseAPIRequestGET {
         
-        var path: String = "/api/quote/list"
+        var path: String = "/api/requests"
         var headers: [String: String]
         var parameters: [String: String] = [:]
         

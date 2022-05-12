@@ -124,6 +124,8 @@
 		C1E86269282D269F00D9971A /* HSCodeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E86266282D222000D9971A /* HSCodeResponse.swift */; };
 		C1E8626C282D50DE00D9971A /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8626B282D50DE00D9971A /* Product.swift */; };
 		C1E8626E282D526800D9971A /* EstimateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8626D282D526800D9971A /* EstimateRequest.swift */; };
+		C1E86270282D545900D9971A /* EstimateRequestsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8626F282D545900D9971A /* EstimateRequestsResponse.swift */; };
+		C1E86271282D545D00D9971A /* EstimateRequestsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8626F282D545900D9971A /* EstimateRequestsResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -230,6 +232,7 @@
 		C1E86266282D222000D9971A /* HSCodeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSCodeResponse.swift; sourceTree = "<group>"; };
 		C1E8626B282D50DE00D9971A /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		C1E8626D282D526800D9971A /* EstimateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateRequest.swift; sourceTree = "<group>"; };
+		C1E8626F282D545900D9971A /* EstimateRequestsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateRequestsResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -338,6 +341,7 @@
 				C149737527F5A39800679118 /* SignUpResponse.swift */,
 				C1D83A822828ECF50086D0E7 /* EstimatesResponse.swift */,
 				C1E86266282D222000D9971A /* HSCodeResponse.swift */,
+				C1E86272282D546A00D9971A /* EstimateRequests */,
 			);
 			path = ResponseModel;
 			sourceTree = "<group>";
@@ -740,6 +744,14 @@
 			path = EstimateRequests;
 			sourceTree = "<group>";
 		};
+		C1E86272282D546A00D9971A /* EstimateRequests */ = {
+			isa = PBXGroup;
+			children = (
+				C1E8626F282D545900D9971A /* EstimateRequestsResponse.swift */,
+			);
+			path = EstimateRequests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -988,6 +1000,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1E86270282D545900D9971A /* EstimateRequestsResponse.swift in Sources */,
 				C1E86267282D222000D9971A /* HSCodeResponse.swift in Sources */,
 				C149736B27F59B7500679118 /* Extensions+Data.swift in Sources */,
 				C197AEBD27F43AEC000E4975 /* APIService.swift in Sources */,
@@ -1066,6 +1079,7 @@
 				C1CF675B27F737620057A6C3 /* AppAuthService.swift in Sources */,
 				C197AEC227F43EF3000E4975 /* QuoteRequest.swift in Sources */,
 				C1CF675627F737120057A6C3 /* BaetaverseAPIRequest.swift in Sources */,
+				C1E86271282D545D00D9971A /* EstimateRequestsResponse.swift in Sources */,
 				C1E86269282D269F00D9971A /* HSCodeResponse.swift in Sources */,
 				C149737427F5A12800679118 /* Extensions+Data.swift in Sources */,
 				C1C9EC8D2818FB060041F974 /* Extensions+Encodable.swift in Sources */,
