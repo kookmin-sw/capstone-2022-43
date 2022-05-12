@@ -126,6 +126,7 @@
 		C1E8626E282D526800D9971A /* EstimateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8626D282D526800D9971A /* EstimateRequest.swift */; };
 		C1E86270282D545900D9971A /* EstimateRequestsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8626F282D545900D9971A /* EstimateRequestsResponse.swift */; };
 		C1E86271282D545D00D9971A /* EstimateRequestsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8626F282D545900D9971A /* EstimateRequestsResponse.swift */; };
+		C1E86275282D5B6700D9971A /* APIEnity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E86274282D5B6700D9971A /* APIEnity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -233,6 +234,7 @@
 		C1E8626B282D50DE00D9971A /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		C1E8626D282D526800D9971A /* EstimateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateRequest.swift; sourceTree = "<group>"; };
 		C1E8626F282D545900D9971A /* EstimateRequestsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateRequestsResponse.swift; sourceTree = "<group>"; };
+		C1E86274282D5B6700D9971A /* APIEnity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,7 +330,7 @@
 				C1E5CC1927F334E10087882E /* LoginRequest.swift */,
 				C1E5CC1B27F336070087882E /* QuoteRequest.swift */,
 				C1E86264282D211700D9971A /* HSCodeRequest.swift */,
-				C1E8626A282D311F00D9971A /* EstimateRequests */,
+				C1D83A802828EB260086D0E7 /* EstimateRequestsRequest.swift */,
 			);
 			path = RequestModel;
 			sourceTree = "<group>";
@@ -341,7 +343,7 @@
 				C149737527F5A39800679118 /* SignUpResponse.swift */,
 				C1D83A822828ECF50086D0E7 /* EstimatesResponse.swift */,
 				C1E86266282D222000D9971A /* HSCodeResponse.swift */,
-				C1E86272282D546A00D9971A /* EstimateRequests */,
+				C1E8626F282D545900D9971A /* EstimateRequestsResponse.swift */,
 			);
 			path = ResponseModel;
 			sourceTree = "<group>";
@@ -704,6 +706,7 @@
 			isa = PBXGroup;
 			children = (
 				C1E5CC1327F32EB40087882E /* APIModel */,
+				C1E86273282D5B4C00D9971A /* APIEntity */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -736,20 +739,12 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		C1E8626A282D311F00D9971A /* EstimateRequests */ = {
+		C1E86273282D5B4C00D9971A /* APIEntity */ = {
 			isa = PBXGroup;
 			children = (
-				C1D83A802828EB260086D0E7 /* EstimateRequestsRequest.swift */,
+				C1E86274282D5B6700D9971A /* APIEnity.swift */,
 			);
-			path = EstimateRequests;
-			sourceTree = "<group>";
-		};
-		C1E86272282D546A00D9971A /* EstimateRequests */ = {
-			isa = PBXGroup;
-			children = (
-				C1E8626F282D545900D9971A /* EstimateRequestsResponse.swift */,
-			);
-			path = EstimateRequests;
+			path = APIEntity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1036,6 +1031,7 @@
 				C1E5CC0E27F32B4C0087882E /* BaetaverseAPIRequestHostInfo.swift in Sources */,
 				C1E5CC1C27F336070087882E /* QuoteRequest.swift in Sources */,
 				C13778C127F497CF00DAF494 /* BUSignUpFormViewController.swift in Sources */,
+				C1E86275282D5B6700D9971A /* APIEnity.swift in Sources */,
 				C1D83A812828EB260086D0E7 /* EstimateRequestsRequest.swift in Sources */,
 				C1D83A93282903570086D0E7 /* BVEstimatesTableViewController.swift in Sources */,
 				C1E5CC1527F32F040087882E /* SignUpRequest.swift in Sources */,
