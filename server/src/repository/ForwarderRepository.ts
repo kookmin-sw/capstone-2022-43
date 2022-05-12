@@ -1,5 +1,5 @@
 import Forwarder from "../domain/Forwarder";
-import Shipper from "../domain/Shipper";
+
 
 interface ForwarderRepository {
     save(forwarder: Forwarder): Forwarder;
