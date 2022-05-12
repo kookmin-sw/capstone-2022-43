@@ -53,13 +53,15 @@ final class BaetaverseAuth: AppAuthService {
         let result = try data.decodeJSONData(to: APIResponseModel.SignUpResponse.self)
         
         if result.status == 400 {
-            throw AuthError.signUpError
+            throw AuthError.alreadyExistUserError
         }
     }
     
     enum AuthError: Error {
         
-        case signUpError
+        case alreadyExistUserError
+        case notExistUserError
+        case invalidPasswordError
         
     }
     
