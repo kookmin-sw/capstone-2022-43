@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct EstimateRequest: Identifiable, Codable {
+struct EstimateRequest: Identifiable {
     
     let id: Int?
     let tradeType: String
@@ -20,21 +20,5 @@ struct EstimateRequest: Identifiable, Codable {
     let incoterms: String
     let closingDate: Date
     let createdAt: Date?
-    
-    enum CodingKeys: String, CodingKey {
-        
-        case id
-        case tradeType = "trade_type"
-        case tradeDetail = "trade_detail"
-        case forwardingDate = "forwarding_date"
-        case departureCountry = "departure_country"
-        case departureDetail = "departure_detail"
-        case destinationCountry = "destination_country"
-        case destinationDetail = "destination_detail"
-        case incoterms
-        case closingDate = "closing_date"
-        case createdAt = "created_at"
-        
-    }
     
 }
