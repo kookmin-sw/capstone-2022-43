@@ -123,6 +123,7 @@
 		C1E86268282D269600D9971A /* HSCodeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E86264282D211700D9971A /* HSCodeRequest.swift */; };
 		C1E86269282D269F00D9971A /* HSCodeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E86266282D222000D9971A /* HSCodeResponse.swift */; };
 		C1E8626C282D50DE00D9971A /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8626B282D50DE00D9971A /* Product.swift */; };
+		C1E8626E282D526800D9971A /* EstimateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8626D282D526800D9971A /* EstimateRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -228,6 +229,7 @@
 		C1E86264282D211700D9971A /* HSCodeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSCodeRequest.swift; sourceTree = "<group>"; };
 		C1E86266282D222000D9971A /* HSCodeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSCodeResponse.swift; sourceTree = "<group>"; };
 		C1E8626B282D50DE00D9971A /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		C1E8626D282D526800D9971A /* EstimateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -599,6 +601,7 @@
 			children = (
 				C1D83A882828F3140086D0E7 /* Estimate.swift */,
 				C1E8626B282D50DE00D9971A /* Product.swift */,
+				C1E8626D282D526800D9971A /* EstimateRequest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1026,6 +1029,7 @@
 				C1CF673E27F732720057A6C3 /* NetworkService.swift in Sources */,
 				C1B7652928294F850029B5FC /* AuthService.swift in Sources */,
 				C1E5CC1027F32BF80087882E /* BaetaverseAPIRequest.swift in Sources */,
+				C1E8626E282D526800D9971A /* EstimateRequest.swift in Sources */,
 				C1CF674327F735180057A6C3 /* AppAuthService.swift in Sources */,
 				C1CF674027F733780057A6C3 /* APIRequest.swift in Sources */,
 				C1E5CBBC27F2BF330087882E /* SceneDelegate.swift in Sources */,
