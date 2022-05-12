@@ -118,6 +118,7 @@
 		C1E5CC1527F32F040087882E /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1427F32F040087882E /* SignUpRequest.swift */; };
 		C1E5CC1A27F334E10087882E /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1927F334E10087882E /* LoginRequest.swift */; };
 		C1E5CC1C27F336070087882E /* QuoteRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1B27F336070087882E /* QuoteRequest.swift */; };
+		C1E86265282D211700D9971A /* HSCodeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E86264282D211700D9971A /* HSCodeRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -220,6 +221,7 @@
 		C1E5CC1427F32F040087882E /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
 		C1E5CC1927F334E10087882E /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		C1E5CC1B27F336070087882E /* QuoteRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteRequest.swift; sourceTree = "<group>"; };
+		C1E86264282D211700D9971A /* HSCodeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSCodeRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -315,6 +317,7 @@
 				C1E5CC1927F334E10087882E /* LoginRequest.swift */,
 				C1E5CC1B27F336070087882E /* QuoteRequest.swift */,
 				C1D83A802828EB260086D0E7 /* EstimatesRequest.swift */,
+				C1E86264282D211700D9971A /* HSCodeRequest.swift */,
 			);
 			path = RequestModel;
 			sourceTree = "<group>";
@@ -995,6 +998,7 @@
 				C1E5CC0727F307C80087882E /* HTTPMethod.swift in Sources */,
 				C1C9EC5B2818F7A40041F974 /* Extensions+Encodable.swift in Sources */,
 				C1E5CC0B27F3296A0087882E /* APIRequestHostInfo.swift in Sources */,
+				C1E86265282D211700D9971A /* HSCodeRequest.swift in Sources */,
 				C1E5CC0E27F32B4C0087882E /* BaetaverseAPIRequestHostInfo.swift in Sources */,
 				C1E5CC1C27F336070087882E /* QuoteRequest.swift in Sources */,
 				C13778C127F497CF00DAF494 /* BUSignUpFormViewController.swift in Sources */,
