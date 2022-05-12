@@ -30,8 +30,16 @@ final class BaetaverseAuth: AppAuthService {
             email: email,
             password: password
         )
+        
         let result = try await networkService.fetchData(for: apiService)
         let object = try result.decodeJSONData(to: APIResponseModel.LoginResponse.self)
+        
+        if object.status == 400 {
+            throw AuthError.notExistUserError
+        } else if object.status == 403 {
+            throw AuthError.invalidPasswordError
+        }
+        
         self.userToken = object.token
     }
     

@@ -20,17 +20,57 @@ class BaetaverseAppModuleTests: XCTestCase {
     }
 
     func test_알맞은_계정이_입력되면_정상적으로_로그인되어야한다() async throws {
+        // given
+        let email = "test1@test1.com"
+        let password = "12341234"
+        
+        // when
         try await sutBaetaverse.login(
-            email: "test@test.com",
-            password: "12341234"
+            email: email,
+            password: password
         )
         
-        XCTAssert(sutBaetaverse.isLogin)
+        // then
+        XCTAssertTrue(sutBaetaverse.isLogin)
+    }
+    
+    func test_비밀번호가_잘못된_계정이_입력되면_오류를_반환해야한다() async throws {
+        // given
+        let email = "test1@test1.com"
+        let password = "1234"
+        
+        // when then
+        do {
+            try await sutBaetaverse.login(
+                email: email,
+                password: password
+            )
+            XCTFail("로그인에 실패해야 하는데 성공하는 오류 발생")
+        } catch {
+            XCTAssertTrue(true)
+        }
+    }
+    
+    func test_없는_사용자_계정으로_로그인하면_오류를_반환해야한다() async throws {
+        // given
+        let email = "unknown@unknown.com"
+        let password = "1234"
+        
+        // when then
+        do {
+            try await sutBaetaverse.login(
+                email: email,
+                password: password
+            )
+            XCTFail("로그인에 실패해야 하는데 성공하는 오류 발생")
+        } catch {
+            XCTAssertTrue(true)
+        }
     }
     
     func test_회원가입_정상적으로_동작해야한다() async throws {
         // given
-        let email = "test1@test1.com"
+        let email = "test2@test2.com"
         let password = "12341234"
         let name = "testUserName"
         let phoneNumber = "010-1234-5678"
