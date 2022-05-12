@@ -13,7 +13,7 @@ extension APIResponseModel {
         
         let status: Int
         let message: String
-        let selectedRequests: [EstimateRequest]
+        let selectedRequests: [APIEntity.EstimateRequestsQuery]
         
         enum CodingKeys: CodingKey {
             

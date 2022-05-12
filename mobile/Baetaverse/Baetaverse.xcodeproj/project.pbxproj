@@ -127,6 +127,7 @@
 		C1E86270282D545900D9971A /* EstimateRequestsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8626F282D545900D9971A /* EstimateRequestsResponse.swift */; };
 		C1E86271282D545D00D9971A /* EstimateRequestsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8626F282D545900D9971A /* EstimateRequestsResponse.swift */; };
 		C1E86275282D5B6700D9971A /* APIEnity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E86274282D5B6700D9971A /* APIEnity.swift */; };
+		C1E86277282D5D4E00D9971A /* EstimateRequestsQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E86276282D5D4E00D9971A /* EstimateRequestsQuery.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -235,6 +236,7 @@
 		C1E8626D282D526800D9971A /* EstimateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateRequest.swift; sourceTree = "<group>"; };
 		C1E8626F282D545900D9971A /* EstimateRequestsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateRequestsResponse.swift; sourceTree = "<group>"; };
 		C1E86274282D5B6700D9971A /* APIEnity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnity.swift; sourceTree = "<group>"; };
+		C1E86276282D5D4E00D9971A /* EstimateRequestsQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateRequestsQuery.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -743,6 +745,7 @@
 			isa = PBXGroup;
 			children = (
 				C1E86274282D5B6700D9971A /* APIEnity.swift */,
+				C1E86276282D5D4E00D9971A /* EstimateRequestsQuery.swift */,
 			);
 			path = APIEntity;
 			sourceTree = "<group>";
@@ -1031,6 +1034,7 @@
 				C1E5CC0E27F32B4C0087882E /* BaetaverseAPIRequestHostInfo.swift in Sources */,
 				C1E5CC1C27F336070087882E /* QuoteRequest.swift in Sources */,
 				C13778C127F497CF00DAF494 /* BUSignUpFormViewController.swift in Sources */,
+				C1E86277282D5D4E00D9971A /* EstimateRequestsQuery.swift in Sources */,
 				C1E86275282D5B6700D9971A /* APIEnity.swift in Sources */,
 				C1D83A812828EB260086D0E7 /* EstimateRequestsRequest.swift in Sources */,
 				C1D83A93282903570086D0E7 /* BVEstimatesTableViewController.swift in Sources */,
