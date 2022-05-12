@@ -4,7 +4,7 @@ import HttpException from '../exceptions/HttpException';
 import DecodedToken from "../interfaces/DecodedToken";
 
 
-const verifyToken = (req: Request, res: Response, next: NextFunction) => {
+const verifyToken = (req:Request, res: Response, next: NextFunction) => {
     try {
         const bearerToken: string = req.headers.authorization || 'Bearer ';
         const decode_token = jwt.verify(

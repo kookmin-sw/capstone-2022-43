@@ -1,9 +1,9 @@
-import { Strategy } from 'passport-local';
+import { Strategy, VerifyFunction} from 'passport-local';
 import bcrypt from 'bcrypt';
 import { supabase } from '../supabase';
 
 
-const verifyLogin = async (email: string, password: string, done: any) => {
+const verifyLogin: VerifyFunction = async (email: string, password: string, done: any) => {
     try {
         const { data: existUser, error } = await supabase
         .from('OWNER')

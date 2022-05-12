@@ -1,6 +1,7 @@
 import 'dotenv/config';
 import './utils/passport/config';
-import express, { Router } from 'express';
+import express from 'express';
+import Route from "./@types/Route";
 import logger from './utils/logger';
 import pageNotFoundRouter from './routes/pageNotFoundRouter';
 import errorMiddleware from './middlewares/errorMiddleware';
@@ -11,13 +12,13 @@ class App {
     public app: express.Application;
     public port: number;
 
-    constructor(routers: Router[], port: number) {
+    constructor(routes: Route[], port: number) {
         this.app = express();
         this.port = port;
 
         this.initializeApp();
         this.initializeMiddlewares();
-        this.initializeRouters(routers);
+        this.initializeRouters(routes);
     };
 
     private initializeApp(): void {
@@ -33,9 +34,9 @@ class App {
 
     };
 
-    private initializeRouters(routers: Router[]): void {
-        routers.forEach((router: Router) => {
-            this.app.use('/', router);
+    private initializeRouters(routes: Route[]): void {
+        routes.forEach((route: Route) => {
+            this.app.use(route.path, route.router);
         });
         this.app.use(pageNotFoundRouter);
         this.app.use(errorMiddleware);
