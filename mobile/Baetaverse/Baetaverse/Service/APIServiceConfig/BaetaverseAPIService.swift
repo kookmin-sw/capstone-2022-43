@@ -44,7 +44,7 @@ extension BaetaverseAPIService: APIService {
             )
             return requestModel.urlRequest
         case .estimatesRequest(let token):
-            let requestModel = APIRequestModel.EstimatesRequest(token: token)
+            let requestModel = APIRequestModel.EstimateRequestsRequest(token: token)
             return requestModel.urlRequest
         case .hscodeRequest(let token, let code):
             let requestModel = APIRequestModel.HSCodeRequest(

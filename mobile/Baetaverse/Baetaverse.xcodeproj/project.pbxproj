@@ -88,12 +88,12 @@
 		C1CF675D27F737710057A6C3 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197AEBC27F43AEC000E4975 /* APIService.swift */; };
 		C1CF675E27F737740057A6C3 /* APIRequestHostInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC0A27F3296A0087882E /* APIRequestHostInfo.swift */; };
 		C1CF675F27F737760057A6C3 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF673F27F733780057A6C3 /* APIRequest.swift */; };
-		C1D83A812828EB260086D0E7 /* EstimatesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D83A802828EB260086D0E7 /* EstimatesRequest.swift */; };
+		C1D83A812828EB260086D0E7 /* EstimateRequestsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D83A802828EB260086D0E7 /* EstimateRequestsRequest.swift */; };
 		C1D83A832828ECF50086D0E7 /* EstimatesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D83A822828ECF50086D0E7 /* EstimatesResponse.swift */; };
 		C1D83A842828F1DC0086D0E7 /* EstimatesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D83A822828ECF50086D0E7 /* EstimatesResponse.swift */; };
 		C1D83A892828F3140086D0E7 /* Estimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D83A882828F3140086D0E7 /* Estimate.swift */; };
 		C1D83A8A2828F5A60086D0E7 /* Estimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D83A882828F3140086D0E7 /* Estimate.swift */; };
-		C1D83A8F2828F5E10086D0E7 /* EstimatesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D83A802828EB260086D0E7 /* EstimatesRequest.swift */; };
+		C1D83A8F2828F5E10086D0E7 /* EstimateRequestsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D83A802828EB260086D0E7 /* EstimateRequestsRequest.swift */; };
 		C1D83A93282903570086D0E7 /* BVEstimatesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D83A92282903570086D0E7 /* BVEstimatesTableViewController.swift */; };
 		C1E257B02820DD1A003F35DF /* RecievedEstimatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E257AF2820DD1A003F35DF /* RecievedEstimatesView.swift */; };
 		C1E257B62820E25D003F35DF /* Estimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E257B52820E25D003F35DF /* Estimate.swift */; };
@@ -122,6 +122,7 @@
 		C1E86267282D222000D9971A /* HSCodeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E86266282D222000D9971A /* HSCodeResponse.swift */; };
 		C1E86268282D269600D9971A /* HSCodeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E86264282D211700D9971A /* HSCodeRequest.swift */; };
 		C1E86269282D269F00D9971A /* HSCodeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E86266282D222000D9971A /* HSCodeResponse.swift */; };
+		C1E8626C282D50DE00D9971A /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8626B282D50DE00D9971A /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -194,7 +195,7 @@
 		C1CF674827F735820057A6C3 /* AppService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppService.swift; sourceTree = "<group>"; };
 		C1CF674C27F735E10057A6C3 /* BaetaverseAppService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseAppService.swift; sourceTree = "<group>"; };
 		C1CF675027F736330057A6C3 /* BaetaverseBusinessService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseBusinessService.swift; sourceTree = "<group>"; };
-		C1D83A802828EB260086D0E7 /* EstimatesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimatesRequest.swift; sourceTree = "<group>"; };
+		C1D83A802828EB260086D0E7 /* EstimateRequestsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateRequestsRequest.swift; sourceTree = "<group>"; };
 		C1D83A822828ECF50086D0E7 /* EstimatesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimatesResponse.swift; sourceTree = "<group>"; };
 		C1D83A882828F3140086D0E7 /* Estimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Estimate.swift; sourceTree = "<group>"; };
 		C1D83A92282903570086D0E7 /* BVEstimatesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BVEstimatesTableViewController.swift; path = Baetaverse/ViewController/BVEstimatesTableViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -226,6 +227,7 @@
 		C1E5CC1B27F336070087882E /* QuoteRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteRequest.swift; sourceTree = "<group>"; };
 		C1E86264282D211700D9971A /* HSCodeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSCodeRequest.swift; sourceTree = "<group>"; };
 		C1E86266282D222000D9971A /* HSCodeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSCodeResponse.swift; sourceTree = "<group>"; };
+		C1E8626B282D50DE00D9971A /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -320,8 +322,8 @@
 				C1E5CC1427F32F040087882E /* SignUpRequest.swift */,
 				C1E5CC1927F334E10087882E /* LoginRequest.swift */,
 				C1E5CC1B27F336070087882E /* QuoteRequest.swift */,
-				C1D83A802828EB260086D0E7 /* EstimatesRequest.swift */,
 				C1E86264282D211700D9971A /* HSCodeRequest.swift */,
+				C1E8626A282D311F00D9971A /* EstimateRequests */,
 			);
 			path = RequestModel;
 			sourceTree = "<group>";
@@ -596,6 +598,7 @@
 			isa = PBXGroup;
 			children = (
 				C1D83A882828F3140086D0E7 /* Estimate.swift */,
+				C1E8626B282D50DE00D9971A /* Product.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -724,6 +727,14 @@
 				C1C9EC5A2818F7A40041F974 /* Extensions+Encodable.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C1E8626A282D311F00D9971A /* EstimateRequests */ = {
+			isa = PBXGroup;
+			children = (
+				C1D83A802828EB260086D0E7 /* EstimateRequestsRequest.swift */,
+			);
+			path = EstimateRequests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -979,6 +990,7 @@
 				C197AEBD27F43AEC000E4975 /* APIService.swift in Sources */,
 				C1CF675127F736330057A6C3 /* BaetaverseBusinessService.swift in Sources */,
 				C1E5CBF227F2BFBD0087882E /* BUMainViewController.swift in Sources */,
+				C1E8626C282D50DE00D9971A /* Product.swift in Sources */,
 				C13778C327F498EE00DAF494 /* BaetaverseAuth.swift in Sources */,
 				C1B7652628294F810029B5FC /* AppService.swift in Sources */,
 				C1E5CBF127F2BFBD0087882E /* BULoginViewController.swift in Sources */,
@@ -1008,7 +1020,7 @@
 				C1E5CC0E27F32B4C0087882E /* BaetaverseAPIRequestHostInfo.swift in Sources */,
 				C1E5CC1C27F336070087882E /* QuoteRequest.swift in Sources */,
 				C13778C127F497CF00DAF494 /* BUSignUpFormViewController.swift in Sources */,
-				C1D83A812828EB260086D0E7 /* EstimatesRequest.swift in Sources */,
+				C1D83A812828EB260086D0E7 /* EstimateRequestsRequest.swift in Sources */,
 				C1D83A93282903570086D0E7 /* BVEstimatesTableViewController.swift in Sources */,
 				C1E5CC1527F32F040087882E /* SignUpRequest.swift in Sources */,
 				C1CF673E27F732720057A6C3 /* NetworkService.swift in Sources */,
@@ -1039,7 +1051,7 @@
 				C1CF675E27F737740057A6C3 /* APIRequestHostInfo.swift in Sources */,
 				C1E86268282D269600D9971A /* HSCodeRequest.swift in Sources */,
 				C1CF675927F7375A0057A6C3 /* AppBusinessService.swift in Sources */,
-				C1D83A8F2828F5E10086D0E7 /* EstimatesRequest.swift in Sources */,
+				C1D83A8F2828F5E10086D0E7 /* EstimateRequestsRequest.swift in Sources */,
 				C1B7652A28294F860029B5FC /* AuthService.swift in Sources */,
 				C149737227F5A11A00679118 /* APIResponseModel.swift in Sources */,
 				C149736827F597E200679118 /* BaetaverseAppModuleTests.swift in Sources */,

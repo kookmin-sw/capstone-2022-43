@@ -1,5 +1,5 @@
 //
-//  EstimatesRequest.swift
+//  EstimateRequestsRequest.swift
 //  Baetaverse
 //
 //  Created by JeongTaek Han on 2022/05/09.
@@ -9,7 +9,7 @@ import Foundation
 
 extension APIRequestModel {
     
-    struct EstimatesRequest: BaetaverseAPIRequestGET {
+    struct EstimateRequestsRequest: BaetaverseAPIRequestGET {
         
         var path: String = "/api/quote/list"
         var headers: [String: String]
