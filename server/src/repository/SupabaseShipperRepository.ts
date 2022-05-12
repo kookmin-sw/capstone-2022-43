@@ -1,19 +1,19 @@
-import Shipper from "../domain/Shipper";
+import Forwarder from "../domain/Forwarder";
 import shipperRepository from "./ShipperRepository";
 import {supabase} from "../utils/supabase";
-import shipper from "../domain/Shipper";
+import shipper from "../domain/Forwarder";
 
 class SupabaseShipperRepository implements shipperRepository {
-    findAll(): Shipper[] {
+    findAll(): Forwarder[] {
         return [];
     }
 
-    findById(id: String): Shipper | undefined {
+    findById(id: String): Forwarder | undefined {
         return undefined;
 
     }
 
-    save(shipper: Shipper): Shipper | undefined{
+    save(shipper: Forwarder): Forwarder | undefined{
         return undefined;
     }
 

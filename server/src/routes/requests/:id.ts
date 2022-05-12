@@ -1,8 +1,8 @@
 import express, { Request, Response, NextFunction } from 'express';
-import { supabase } from '../../../utils/supabase';
-import verifyToken from "../../../middlewares/verifyToken";
-import PageNotFoundRouter from "../../pageNotFoundRouter";
-import { isoToUnix } from "../../../middlewares/timeConvert";
+import { supabase } from '../../utils/supabase';
+import verifyToken from "../../middlewares/verifyToken";
+import PageNotFoundRouter from "../pageNotFoundRouter";
+import { isoToUnix } from "../../middlewares/timeConvert";
 
 
 const router = express.Router();

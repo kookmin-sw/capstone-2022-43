@@ -1,9 +1,9 @@
-import Shipper from "../domain/Shipper";
+import Forwarder from "../domain/Forwarder";
 
 interface ShipperRepository {
-    save(shipper: Shipper): Shipper | undefined;
-    findById?(id: String): Shipper | undefined;
-    findAll(): Shipper[] | undefined;
+    save(shipper: Forwarder): Forwarder | undefined;
+    findById?(id: String): Forwarder | undefined;
+    findAll(): Forwarder[] | undefined;
 }
 
 export default ShipperRepository;
