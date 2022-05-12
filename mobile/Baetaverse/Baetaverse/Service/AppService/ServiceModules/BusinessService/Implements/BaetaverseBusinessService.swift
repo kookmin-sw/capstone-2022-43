@@ -40,4 +40,22 @@ final class BaetaverseBusinessService: AppBusinessService {
         }
     }
     
+    func queryHSCode(token: String, code: String) async throws -> [String] {
+        let apiService = BaetaverseAPIService.hscodeRequest(token: token, code: code)
+        let data = try await networkService.fetchData(for: apiService)
+        let object = try data.decodeJSONData(to: APIResponseModel.HSCodeResponse.self)
+        
+        if (400...499).contains(object.status) {
+            throw BusinessServiceError.hscodeQueryFailure
+        }
+        
+        return object.hscode
+    }
+    
+    enum BusinessServiceError: Error {
+        
+        case hscodeQueryFailure
+        
+    }
+    
 }

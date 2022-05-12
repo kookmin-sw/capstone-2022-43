@@ -88,6 +88,45 @@ class BaetaverseAppModuleTests: XCTestCase {
         }
     }
     
+    func test_이미_등록된_사용자가_회원가입하면_오류를_반환해야한다() async throws {
+        // given
+        let email = "test1@test1.com"
+        let password = "12341234"
+        let name = "testUserName"
+        let phoneNumber = "010-1234-5678"
+        
+        // when then
+        do {
+            try await sutBaetaverse.signUp(
+                email: email,
+                password: password,
+                name: name,
+                phoneNumber: phoneNumber
+            )
+            XCTFail("사용자가 중복 가입되었습니다")
+        } catch {
+            XCTAssertTrue(true)
+        }
+    }
+    
+    func test_010121_코드가_입력되면_살아있는_말이_반환되어야_한다() async throws {
+        // given
+        let email = "test1@test1.com"
+        let password = "12341234"
+        let code = "010121"
+        
+        // when
+        try await sutBaetaverse.login(
+            email: email,
+            password: password
+        )
+        
+        let result = try await sutBaetaverse.queryHSCode(code: code)
+        
+        // then
+        XCTAssertEqual(result, ["010121 : 말(번식용,산동물)"])
+    }
+    
     func test_새로운_견적_등록하기가_정상적으로_동작해야한다() async throws {
         try await sutBaetaverse.login(
             email: "11@1.com",

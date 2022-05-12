@@ -53,4 +53,8 @@ final class BaetaverseAppService: AppService {
         return try await businessService.fetchEvaluates(token: auth.token)
     }
     
+    func queryHSCode(code: String) async throws -> [String] {
+        return try await businessService.queryHSCode(token: auth.token, code: code)
+    }
+    
 }

@@ -11,5 +11,6 @@ protocol AppBusinessService {
     
     func registerEvaluate(token: String, id: String, HSCode: String, country: String) async throws
     func fetchEvaluates(token: String) async throws -> [Estimate]
+    func queryHSCode(token: String, code: String) async throws -> [String]
     
 }
