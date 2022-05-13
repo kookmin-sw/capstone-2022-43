@@ -17,4 +17,13 @@ final class EstimateRequestsTableViewModel {
         return appDelegate.appService
     }
     
+    private(set) var estimateRequests: [EstimateRequest] = []
+    
+    func fetchEstimateRequests() async throws {
+        let result = try await appService?.queryEstimateRequests()
+        if let result = result {
+            self.estimateRequests = result
+        }
+    }
+    
 }

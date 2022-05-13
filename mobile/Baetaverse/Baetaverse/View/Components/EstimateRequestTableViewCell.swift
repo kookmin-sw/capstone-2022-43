@@ -12,13 +12,13 @@ final class EstimateRequestTableViewCell: UITableViewCell {
     @IBOutlet private var deadlineLabel: UILabel!
     @IBOutlet private var departmentLabel: UILabel!
     @IBOutlet private var destinationLabel: UILabel!
-    @IBOutlet private var itemNameLabel: UILabel!
+    @IBOutlet private var typeNameLabel: UILabel!
     
-    func update(deadline: String, department: String, destination: String, itemName: String) {
+    func update(deadline: String, department: String, destination: String, typeName: String) {
         self.deadlineLabel.text = deadline
         self.departmentLabel.text = department
         self.destinationLabel.text = destination
-        self.itemNameLabel.text = itemName
+        self.typeNameLabel.text = typeName
     }
 
 }

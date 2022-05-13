@@ -1421,14 +1421,14 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rQE-U3-EFa">
                                                     <rect key="frame" x="0.0" y="41.5" width="345.5" height="20.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="물품명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfb-hd-0uJ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="44.5" height="20.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="분류" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfb-hd-0uJ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="29.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="물품명필드" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwp-5a-okX">
-                                                            <rect key="frame" x="54.5" y="0.0" width="291" height="20.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="분류필드" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwp-5a-okX">
+                                                            <rect key="frame" x="39.5" y="0.0" width="306" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -1449,7 +1449,7 @@
                                     <outlet property="deadlineLabel" destination="ELv-xp-OQ4" id="Pvt-aM-Nqy"/>
                                     <outlet property="departmentLabel" destination="wXe-uc-h7H" id="Ekc-4O-WU7"/>
                                     <outlet property="destinationLabel" destination="peD-yH-Ina" id="dM3-bp-6Zr"/>
-                                    <outlet property="itemNameLabel" destination="kwp-5a-okX" id="2U9-8t-bxL"/>
+                                    <outlet property="typeNameLabel" destination="kwp-5a-okX" id="2U9-8t-bxL"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
