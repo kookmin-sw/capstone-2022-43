@@ -149,6 +149,8 @@
 		C1E8629A282E1D2000D9971A /* EstimateRequestDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E86295282E15AD00D9971A /* EstimateRequestDetailResponse.swift */; };
 		C1E8629D282E235000D9971A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8629C282E235000D9971A /* LoginViewModel.swift */; };
 		C1E8629F282E2F2800D9971A /* SignUpFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8629E282E2F2800D9971A /* SignUpFormViewModel.swift */; };
+		C1E862A1282E34BC00D9971A /* BUEstimateRequestsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E862A0282E34BC00D9971A /* BUEstimateRequestsTableViewController.swift */; };
+		C1E862A3282E356C00D9971A /* EstimateRequestsTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E862A2282E356C00D9971A /* EstimateRequestsTableViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -268,6 +270,8 @@
 		C1E86295282E15AD00D9971A /* EstimateRequestDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateRequestDetailResponse.swift; sourceTree = "<group>"; };
 		C1E8629C282E235000D9971A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		C1E8629E282E2F2800D9971A /* SignUpFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFormViewModel.swift; sourceTree = "<group>"; };
+		C1E862A0282E34BC00D9971A /* BUEstimateRequestsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BUEstimateRequestsTableViewController.swift; path = Baetaverse/ViewController/BUEstimateRequestsTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		C1E862A2282E356C00D9971A /* EstimateRequestsTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EstimateRequestsTableViewModel.swift; path = Baetaverse/ViewModel/EstimateRequestsTableViewModel.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -723,6 +727,7 @@
 				C1E5CBED27F2BFBC0087882E /* BUEstimateListViewController.swift */,
 				C1E5CBEB27F2BFBC0087882E /* BULoginViewController.swift */,
 				C1E5CBEC27F2BFBC0087882E /* BUMainViewController.swift */,
+				C1E862A0282E34BC00D9971A /* BUEstimateRequestsTableViewController.swift */,
 				C13778C027F497CF00DAF494 /* BUSignUpFormViewController.swift */,
 				C1CF673927F724600057A6C3 /* BUMenuTableViewController.swift */,
 			);
@@ -810,6 +815,7 @@
 			isa = PBXGroup;
 			children = (
 				C1E8629C282E235000D9971A /* LoginViewModel.swift */,
+				C1E862A2282E356C00D9971A /* EstimateRequestsTableViewModel.swift */,
 				C1E8629E282E2F2800D9971A /* SignUpFormViewModel.swift */,
 			);
 			path = ViewModel;
@@ -1078,6 +1084,7 @@
 				C149736D27F59D4500679118 /* LoginResponse.swift in Sources */,
 				C197AEC027F43BEF000E4975 /* BaetaverseAPIService.swift in Sources */,
 				C1D83A892828F3140086D0E7 /* Estimate.swift in Sources */,
+				C1E862A3282E356C00D9971A /* EstimateRequestsTableViewModel.swift in Sources */,
 				C1E5CBF627F2BFBD0087882E /* BUDepartureViewController.swift in Sources */,
 				C149737127F5A06D00679118 /* APIResponseModel.swift in Sources */,
 				C1E8629D282E235000D9971A /* LoginViewModel.swift in Sources */,
@@ -1092,6 +1099,7 @@
 				C1E5CBBA27F2BF330087882E /* AppDelegate.swift in Sources */,
 				C1E5CBF427F2BFBD0087882E /* BUEstimateDetailViewController.swift in Sources */,
 				C149737627F5A39800679118 /* SignUpResponse.swift in Sources */,
+				C1E862A1282E34BC00D9971A /* BUEstimateRequestsTableViewController.swift in Sources */,
 				C1E5CC1A27F334E10087882E /* LoginRequest.swift in Sources */,
 				C1E86285282DF43E00D9971A /* EstimateRequestRegisterForm.swift in Sources */,
 				C1E86296282E15AE00D9971A /* EstimateRequestDetailResponse.swift in Sources */,
