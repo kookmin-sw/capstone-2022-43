@@ -147,6 +147,7 @@
 		C1E86298282E1CBA00D9971A /* GoodsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E86291282E0FFC00D9971A /* GoodsDetail.swift */; };
 		C1E86299282E1D0400D9971A /* EstimateRequestDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8628A282E0CBD00D9971A /* EstimateRequestDetailRequest.swift */; };
 		C1E8629A282E1D2000D9971A /* EstimateRequestDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E86295282E15AD00D9971A /* EstimateRequestDetailResponse.swift */; };
+		C1E8629D282E235000D9971A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8629C282E235000D9971A /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -264,6 +265,7 @@
 		C1E8628F282E0ED500D9971A /* EstimateRequestDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateRequestDetail.swift; sourceTree = "<group>"; };
 		C1E86291282E0FFC00D9971A /* GoodsDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsDetail.swift; sourceTree = "<group>"; };
 		C1E86295282E15AD00D9971A /* EstimateRequestDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateRequestDetailResponse.swift; sourceTree = "<group>"; };
+		C1E8629C282E235000D9971A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -683,6 +685,7 @@
 				C1CF673B27F731F60057A6C3 /* Service */,
 				C1E5CC0527F3073D0087882E /* Network */,
 				C1D83A872828F2F00086D0E7 /* Model */,
+				C1E8629B282E232B00D9971A /* ViewModel */,
 				C1E5CC0327F2C36B0087882E /* ViewController */,
 				C1E5CC0427F2C37D0087882E /* View */,
 				C1E5CBC727F2BF350087882E /* Info.plist */,
@@ -799,6 +802,14 @@
 				C1E86291282E0FFC00D9971A /* GoodsDetail.swift */,
 			);
 			path = EstimateRequestDetail;
+			sourceTree = "<group>";
+		};
+		C1E8629B282E232B00D9971A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C1E8629C282E235000D9971A /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1066,6 +1077,7 @@
 				C1D83A892828F3140086D0E7 /* Estimate.swift in Sources */,
 				C1E5CBF627F2BFBD0087882E /* BUDepartureViewController.swift in Sources */,
 				C149737127F5A06D00679118 /* APIResponseModel.swift in Sources */,
+				C1E8629D282E235000D9971A /* LoginViewModel.swift in Sources */,
 				C197AEB327F42D6D000E4975 /* NetworkServiceProvider.swift in Sources */,
 				C1D83A832828ECF50086D0E7 /* EstimatesResponse.swift in Sources */,
 				C1E5CC1227F32DC10087882E /* APIRequestModel.swift in Sources */,
