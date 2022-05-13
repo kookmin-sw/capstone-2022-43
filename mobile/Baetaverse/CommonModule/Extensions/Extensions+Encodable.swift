@@ -12,6 +12,7 @@ extension Encodable {
     func encodeToJSONData() throws -> Data {
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted
+        encoder.dateEncodingStrategy = .secondsSince1970
         let jsonData = try encoder.encode(self)
         return jsonData
     }

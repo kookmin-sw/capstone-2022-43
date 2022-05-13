@@ -15,6 +15,6 @@ struct Product: Identifiable {
     let weight: Int
     let standardUnit: String
     let hsCode: String
-    let createdAt: Date
+    let createdAt: Date?
     
 }

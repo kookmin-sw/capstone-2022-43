@@ -20,7 +20,9 @@ extension APIRequestModel {
         init(token: String, estimateRequest: EstimateRequest, products: [Product]) {
             self.headers = ["Authorization": "Bearer \(token)"]
             
-            let quoteRequest = APIEntity.EstimateRequestsRegister(estimateRequest: estimateRequest)
+            let quoteRequest = APIEntity.EstimateRequestsRegister(
+                estimateRequest: estimateRequest
+            )
             let goodsRequests = products.map { product in
                 APIEntity.GoodsRegister(product: product)
             }

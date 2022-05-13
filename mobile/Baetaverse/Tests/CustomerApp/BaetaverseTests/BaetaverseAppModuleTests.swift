@@ -139,23 +139,57 @@ class BaetaverseAppModuleTests: XCTestCase {
         
         // when
         let result = try? await sutBaetaverse.queryEstimateRequests()
+        if let result = result {
+            print(result)
+        }
         
         // then
         XCTAssertNotNil(result)
     }
     
     func test_새로운_견적_등록하기가_정상적으로_동작해야한다() async throws {
+        // given
+        let email = "test1@test1.com"
+        let password = "12341234"
+        
+        let estimateRequest = EstimateRequest(
+            id: nil,
+            tradeType: "수입",
+            tradeDetail: "Port to Port",
+            forwardingDate: Date(),
+            departureCountry: "Japan",
+            departureDetail: "Tokyo",
+            destinationCountry: "South Korea",
+            destinationDetail: "Seoul",
+            incoterms: "DEF",
+            closingDate: Date(),
+            createdAt: nil
+        )
+        
+        let products = [
+            Product(
+                id: nil,
+                name: "Apple MacBook Pro",
+                price: 2490000,
+                weight: 10,
+                standardUnit: "Kg",
+                hsCode: "123456",
+                createdAt: nil
+            )
+        ]
+        
         try await sutBaetaverse.login(
-            email: "11@1.com",
-            password: "12341234"
+            email: email,
+            password: password
         )
         
+        // when
         try await sutBaetaverse.registerEvaluate(
-            id: UUID().uuidString,
-            HSCode: "1234",
-            country: "USA"
+            estimateRequest: estimateRequest,
+            products: products
         )
         
+        // then
         XCTAssert(true)
     }
 
