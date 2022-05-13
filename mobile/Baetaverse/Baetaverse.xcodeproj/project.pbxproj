@@ -139,6 +139,8 @@
 		C1E86288282E0A6A00D9971A /* GoodsRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8627D282DEBB900D9971A /* GoodsRegister.swift */; };
 		C1E86289282E0A6C00D9971A /* EstimateRequestRegisterForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E86284282DF43E00D9971A /* EstimateRequestRegisterForm.swift */; };
 		C1E8628B282E0CBD00D9971A /* EstimateRequestDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8628A282E0CBD00D9971A /* EstimateRequestDetailRequest.swift */; };
+		C1E8628D282E0DF700D9971A /* RegisterEstimateRequestsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8628C282E0DF700D9971A /* RegisterEstimateRequestsResponse.swift */; };
+		C1E86290282E0ED500D9971A /* EstimateRequestDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8628F282E0ED500D9971A /* EstimateRequestDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -252,6 +254,8 @@
 		C1E8627D282DEBB900D9971A /* GoodsRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsRegister.swift; sourceTree = "<group>"; };
 		C1E86284282DF43E00D9971A /* EstimateRequestRegisterForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateRequestRegisterForm.swift; sourceTree = "<group>"; };
 		C1E8628A282E0CBD00D9971A /* EstimateRequestDetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateRequestDetailRequest.swift; sourceTree = "<group>"; };
+		C1E8628C282E0DF700D9971A /* RegisterEstimateRequestsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEstimateRequestsResponse.swift; sourceTree = "<group>"; };
+		C1E8628F282E0ED500D9971A /* EstimateRequestDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateRequestDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -362,6 +366,7 @@
 				C1D83A822828ECF50086D0E7 /* EstimatesResponse.swift */,
 				C1E86266282D222000D9971A /* HSCodeResponse.swift */,
 				C1E8626F282D545900D9971A /* EstimateRequestsResponse.swift */,
+				C1E8628C282E0DF700D9971A /* RegisterEstimateRequestsResponse.swift */,
 			);
 			path = ResponseModel;
 			sourceTree = "<group>";
@@ -763,6 +768,7 @@
 				C1E86274282D5B6700D9971A /* APIEnity.swift */,
 				C1E86276282D5D4E00D9971A /* EstimateRequestsQuery.swift */,
 				C1E8627F282DECED00D9971A /* EstimateRequestRegister */,
+				C1E8628E282E0E9E00D9971A /* EstimateRequestDetail */,
 			);
 			path = APIEntity;
 			sourceTree = "<group>";
@@ -775,6 +781,14 @@
 				C1E86284282DF43E00D9971A /* EstimateRequestRegisterForm.swift */,
 			);
 			path = EstimateRequestRegister;
+			sourceTree = "<group>";
+		};
+		C1E8628E282E0E9E00D9971A /* EstimateRequestDetail */ = {
+			isa = PBXGroup;
+			children = (
+				C1E8628F282E0ED500D9971A /* EstimateRequestDetail.swift */,
+			);
+			path = EstimateRequestDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1060,6 +1074,7 @@
 				C1E5CC0727F307C80087882E /* HTTPMethod.swift in Sources */,
 				C1E8627C282DE9F800D9971A /* EstimateRequestsRegister.swift in Sources */,
 				C1C9EC5B2818F7A40041F974 /* Extensions+Encodable.swift in Sources */,
+				C1E8628D282E0DF700D9971A /* RegisterEstimateRequestsResponse.swift in Sources */,
 				C1E5CC0B27F3296A0087882E /* APIRequestHostInfo.swift in Sources */,
 				C1E86265282D211700D9971A /* HSCodeRequest.swift in Sources */,
 				C1E5CC0E27F32B4C0087882E /* BaetaverseAPIRequestHostInfo.swift in Sources */,
@@ -1068,6 +1083,7 @@
 				C1E86277282D5D4E00D9971A /* EstimateRequestsQuery.swift in Sources */,
 				C1E86275282D5B6700D9971A /* APIEnity.swift in Sources */,
 				C1D83A812828EB260086D0E7 /* EstimateRequestsRequest.swift in Sources */,
+				C1E86290282E0ED500D9971A /* EstimateRequestDetail.swift in Sources */,
 				C1D83A93282903570086D0E7 /* BVEstimatesTableViewController.swift in Sources */,
 				C1E5CC1527F32F040087882E /* SignUpRequest.swift in Sources */,
 				C1CF673E27F732720057A6C3 /* NetworkService.swift in Sources */,
