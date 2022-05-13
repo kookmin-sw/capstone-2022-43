@@ -1,5 +1,5 @@
 import express, { Request, Response, NextFunction } from 'express';
-import verifyToken from '../../middlewares/verifyToken';
+import { verifyAnyToken } from '../../middlewares/verifyToken';
 import axios from 'axios';
 import logger from "../../utils/logger";
 import HttpException from "../../exceptions/HttpException";
@@ -7,7 +7,7 @@ import HttpException from "../../exceptions/HttpException";
 
 const router = express.Router();
 
-router.get('/:code', verifyToken, async (req: Request, res: Response, next: NextFunction) => {
+router.get('/:code', verifyAnyToken, async (req: Request, res: Response, next: NextFunction) => {
     try {
         const { data: proxy_response } = await axios.get(encodeURIComponent(req.params.code), {
             baseURL: process.env.HSCODE_SERVER_HOST

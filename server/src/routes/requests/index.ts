@@ -1,13 +1,13 @@
 import express, { Request, Response, NextFunction } from 'express';
 import { supabase } from '../../utils/supabase';
-import verifyToken from "../../middlewares/verifyToken";
+import { verifyOwnerToken } from "../../middlewares/verifyToken";
 import insertGoods from "../../middlewares/insertGoods";
 import { isoToUnix, unixToIso } from "../../middlewares/timeConvert";
 
 
 const router = express.Router();
 
-router.get('/', verifyToken , async (req: Request, res: Response, next: NextFunction) => {
+router.get('/', verifyOwnerToken , async (req: Request, res: Response, next: NextFunction) => {
     try {
         const { uuid } = req.decoded;
 
@@ -37,7 +37,7 @@ router.get('/', verifyToken , async (req: Request, res: Response, next: NextFunc
 });
 
 
-router.post('/', verifyToken, async (req: Request, res: Response, next: NextFunction) => {
+router.post('/', verifyOwnerToken, async (req: Request, res: Response, next: NextFunction) => {
     try {
         const { uuid } = req.decoded;
         const quote_request: any = req.body.quoteRequest;
