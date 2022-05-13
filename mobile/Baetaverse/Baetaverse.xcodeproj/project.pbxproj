@@ -138,6 +138,7 @@
 		C1E86287282E0A6700D9971A /* EstimateRequestsRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8627B282DE9F800D9971A /* EstimateRequestsRegister.swift */; };
 		C1E86288282E0A6A00D9971A /* GoodsRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8627D282DEBB900D9971A /* GoodsRegister.swift */; };
 		C1E86289282E0A6C00D9971A /* EstimateRequestRegisterForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E86284282DF43E00D9971A /* EstimateRequestRegisterForm.swift */; };
+		C1E8628B282E0CBD00D9971A /* EstimateRequestDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8628A282E0CBD00D9971A /* EstimateRequestDetailRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -250,6 +251,7 @@
 		C1E8627B282DE9F800D9971A /* EstimateRequestsRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateRequestsRegister.swift; sourceTree = "<group>"; };
 		C1E8627D282DEBB900D9971A /* GoodsRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsRegister.swift; sourceTree = "<group>"; };
 		C1E86284282DF43E00D9971A /* EstimateRequestRegisterForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateRequestRegisterForm.swift; sourceTree = "<group>"; };
+		C1E8628A282E0CBD00D9971A /* EstimateRequestDetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateRequestDetailRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -341,6 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				C1E5CC1127F32DC10087882E /* APIRequestModel.swift */,
+				C1E8628A282E0CBD00D9971A /* EstimateRequestDetailRequest.swift */,
 				C1E5CC1427F32F040087882E /* SignUpRequest.swift */,
 				C1E5CC1927F334E10087882E /* LoginRequest.swift */,
 				C1E5CC1B27F336070087882E /* RegisterEstimateRequestsRequest.swift */,
@@ -1044,6 +1047,7 @@
 				C1E5CC1227F32DC10087882E /* APIRequestModel.swift in Sources */,
 				C1E5CBF327F2BFBD0087882E /* BUEstimateListViewController.swift in Sources */,
 				C1CF674627F735620057A6C3 /* AppBusinessService.swift in Sources */,
+				C1E8628B282E0CBD00D9971A /* EstimateRequestDetailRequest.swift in Sources */,
 				C1CF673A27F724600057A6C3 /* BUMenuTableViewController.swift in Sources */,
 				C1E5CBBA27F2BF330087882E /* AppDelegate.swift in Sources */,
 				C1E5CBF427F2BFBD0087882E /* BUEstimateDetailViewController.swift in Sources */,
