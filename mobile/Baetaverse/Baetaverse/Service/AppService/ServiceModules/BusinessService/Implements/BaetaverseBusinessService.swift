@@ -40,6 +40,15 @@ final class BaetaverseBusinessService: AppBusinessService {
         }
     }
     
+    func queryEstimateRequests(token: String) async throws -> [EstimateRequest] {
+        let apiService = BaetaverseAPIService.queryEstimateRequests(token: token)
+        let data = try await networkService.fetchData(for: apiService)
+        let object = try data.decodeJSONData(to: APIResponseModel.EstimateRequestsResponse.self)
+        return object.selectedRequests.map { estimateRequest in
+            EstimateRequest(estimateRequest: estimateRequest)
+        }
+    }
+    
     func queryHSCode(token: String, code: String) async throws -> [String] {
         let apiService = BaetaverseAPIService.queryHSCode(token: token, code: code)
         let data = try await networkService.fetchData(for: apiService)
