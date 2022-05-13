@@ -142,6 +142,7 @@
 		C1E8628D282E0DF700D9971A /* RegisterEstimateRequestsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8628C282E0DF700D9971A /* RegisterEstimateRequestsResponse.swift */; };
 		C1E86290282E0ED500D9971A /* EstimateRequestDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8628F282E0ED500D9971A /* EstimateRequestDetail.swift */; };
 		C1E86292282E0FFC00D9971A /* GoodsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E86291282E0FFC00D9971A /* GoodsDetail.swift */; };
+		C1E86296282E15AE00D9971A /* EstimateRequestDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E86295282E15AD00D9971A /* EstimateRequestDetailResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -258,6 +259,7 @@
 		C1E8628C282E0DF700D9971A /* RegisterEstimateRequestsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEstimateRequestsResponse.swift; sourceTree = "<group>"; };
 		C1E8628F282E0ED500D9971A /* EstimateRequestDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateRequestDetail.swift; sourceTree = "<group>"; };
 		C1E86291282E0FFC00D9971A /* GoodsDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsDetail.swift; sourceTree = "<group>"; };
+		C1E86295282E15AD00D9971A /* EstimateRequestDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateRequestDetailResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -363,6 +365,7 @@
 			isa = PBXGroup;
 			children = (
 				C149737027F5A06D00679118 /* APIResponseModel.swift */,
+				C1E86295282E15AD00D9971A /* EstimateRequestDetailResponse.swift */,
 				C149736C27F59D4500679118 /* LoginResponse.swift */,
 				C149737527F5A39800679118 /* SignUpResponse.swift */,
 				C1D83A822828ECF50086D0E7 /* EstimatesResponse.swift */,
@@ -1072,6 +1075,7 @@
 				C149737627F5A39800679118 /* SignUpResponse.swift in Sources */,
 				C1E5CC1A27F334E10087882E /* LoginRequest.swift in Sources */,
 				C1E86285282DF43E00D9971A /* EstimateRequestRegisterForm.swift in Sources */,
+				C1E86296282E15AE00D9971A /* EstimateRequestDetailResponse.swift in Sources */,
 				C1E5CC0927F30A590087882E /* APIRequestImplement.swift in Sources */,
 				C1B7652C28294F880029B5FC /* BusinessService.swift in Sources */,
 				C1E5CBF527F2BFBD0087882E /* BUEstimateDueDateViewController.swift in Sources */,
