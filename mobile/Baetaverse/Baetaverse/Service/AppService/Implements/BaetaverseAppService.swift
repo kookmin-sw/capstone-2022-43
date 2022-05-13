@@ -40,12 +40,11 @@ final class BaetaverseAppService: AppService {
         try await auth.signUp(email: email, password: password, name: name, phoneNumber: phoneNumber)
     }
     
-    func registerEvaluate(id: String, HSCode: String, country: String) async throws {
+    func registerEvaluate(estimateRequest: EstimateRequest, products: [Product]) async throws {
         try await businessService.registerEvaluate(
             token: auth.token,
-            id: id,
-            HSCode: HSCode,
-            country: country
+            estimateRequest: estimateRequest,
+            products: products
         )
     }
     

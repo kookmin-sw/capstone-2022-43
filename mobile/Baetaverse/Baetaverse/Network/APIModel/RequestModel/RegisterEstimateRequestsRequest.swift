@@ -17,13 +17,19 @@ extension APIRequestModel {
         var query: [String: String] = [:]
         var body: Data?
         
-        init(token: String, id: String, HSCode: String, country: String) {
+        init(token: String, estimateRequest: EstimateRequest, products: [Product]) {
             self.headers = ["Authorization": "Bearer \(token)"]
-            let parameter = [
-                "id": id,
-                "HSCODE": HSCode,
-                "country": country
-            ]
+            
+            let quoteRequest = APIEntity.EstimateRequestsRegister(estimateRequest: estimateRequest)
+            let goodsRequests = products.map { product in
+                APIEntity.GoodsRegister(product: product)
+            }
+            
+            let parameter = APIEntity.EstimateRequestRegisterForm(
+                quoteRequest: quoteRequest,
+                goodsRequests: goodsRequests
+            )
+            
             self.body = try? parameter.encodeToJSONData()
         }
         

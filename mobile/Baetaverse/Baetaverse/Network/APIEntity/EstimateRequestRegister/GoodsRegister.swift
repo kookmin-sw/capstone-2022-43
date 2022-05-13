@@ -9,7 +9,7 @@ import Foundation
 
 extension APIEntity {
     
-    struct GoodsRegister: Decodable {
+    struct GoodsRegister: Encodable {
         
         let name: String
         let price: Int
@@ -27,6 +27,18 @@ extension APIEntity {
             
         }
         
+    }
+    
+}
+
+extension APIEntity.GoodsRegister {
+    
+    init(product: Product) {
+        self.name = product.name
+        self.price = product.price
+        self.weight = product.weight
+        self.standardUnit = product.standardUnit
+        self.hscode = product.hsCode
     }
     
 }

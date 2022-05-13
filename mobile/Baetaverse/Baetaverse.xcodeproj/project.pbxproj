@@ -133,6 +133,7 @@
 		C1E8627A282DE6DF00D9971A /* EstimateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8626D282D526800D9971A /* EstimateRequest.swift */; };
 		C1E8627C282DE9F800D9971A /* EstimateRequestsRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8627B282DE9F800D9971A /* EstimateRequestsRegister.swift */; };
 		C1E8627E282DEBB900D9971A /* GoodsRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8627D282DEBB900D9971A /* GoodsRegister.swift */; };
+		C1E86285282DF43E00D9971A /* EstimateRequestRegisterForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E86284282DF43E00D9971A /* EstimateRequestRegisterForm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -244,6 +245,7 @@
 		C1E86276282D5D4E00D9971A /* EstimateRequestsQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateRequestsQuery.swift; sourceTree = "<group>"; };
 		C1E8627B282DE9F800D9971A /* EstimateRequestsRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateRequestsRegister.swift; sourceTree = "<group>"; };
 		C1E8627D282DEBB900D9971A /* GoodsRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsRegister.swift; sourceTree = "<group>"; };
+		C1E86284282DF43E00D9971A /* EstimateRequestRegisterForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateRequestRegisterForm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -753,10 +755,19 @@
 			children = (
 				C1E86274282D5B6700D9971A /* APIEnity.swift */,
 				C1E86276282D5D4E00D9971A /* EstimateRequestsQuery.swift */,
-				C1E8627B282DE9F800D9971A /* EstimateRequestsRegister.swift */,
-				C1E8627D282DEBB900D9971A /* GoodsRegister.swift */,
+				C1E8627F282DECED00D9971A /* EstimateRequestRegister */,
 			);
 			path = APIEntity;
+			sourceTree = "<group>";
+		};
+		C1E8627F282DECED00D9971A /* EstimateRequestRegister */ = {
+			isa = PBXGroup;
+			children = (
+				C1E8627B282DE9F800D9971A /* EstimateRequestsRegister.swift */,
+				C1E8627D282DEBB900D9971A /* GoodsRegister.swift */,
+				C1E86284282DF43E00D9971A /* EstimateRequestRegisterForm.swift */,
+			);
+			path = EstimateRequestRegister;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1034,6 +1045,7 @@
 				C1E5CBF427F2BFBD0087882E /* BUEstimateDetailViewController.swift in Sources */,
 				C149737627F5A39800679118 /* SignUpResponse.swift in Sources */,
 				C1E5CC1A27F334E10087882E /* LoginRequest.swift in Sources */,
+				C1E86285282DF43E00D9971A /* EstimateRequestRegisterForm.swift in Sources */,
 				C1E5CC0927F30A590087882E /* APIRequestImplement.swift in Sources */,
 				C1B7652C28294F880029B5FC /* BusinessService.swift in Sources */,
 				C1E5CBF527F2BFBD0087882E /* BUEstimateDueDateViewController.swift in Sources */,

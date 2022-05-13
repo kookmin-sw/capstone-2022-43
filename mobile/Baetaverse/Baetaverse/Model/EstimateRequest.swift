@@ -12,7 +12,7 @@ struct EstimateRequest: Identifiable {
     let id: Int?
     let tradeType: String
     let tradeDetail: String
-    let forwardingDate: Int
+    let forwardingDate: Date
     let departureCountry: String
     let departureDetail: String
     let destinationCountry: String
@@ -25,18 +25,18 @@ struct EstimateRequest: Identifiable {
 
 extension EstimateRequest {
     
-    init(estimateRequest: APIEntity.EstimateRequestsQuery) {
-        self.id = estimateRequest.id
-        self.tradeType = estimateRequest.tradeType
-        self.tradeDetail = estimateRequest.tradeDetail
-        self.forwardingDate = estimateRequest.forwardingDate
-        self.departureCountry = estimateRequest.departureCountry
-        self.departureDetail = estimateRequest.departureDetail
-        self.destinationCountry = estimateRequest.destinationCountry
-        self.destinationDetail = estimateRequest.destinationDetail
-        self.incoterms = estimateRequest.incoterms
-        self.closingDate = estimateRequest.closingDate
-        self.createdAt = estimateRequest.createdAt
+    init(estimateRequestQuery: APIEntity.EstimateRequestsQuery) {
+        self.id = estimateRequestQuery.id
+        self.tradeType = estimateRequestQuery.tradeType
+        self.tradeDetail = estimateRequestQuery.tradeDetail
+        self.forwardingDate = estimateRequestQuery.forwardingDate
+        self.departureCountry = estimateRequestQuery.departureCountry
+        self.departureDetail = estimateRequestQuery.departureDetail
+        self.destinationCountry = estimateRequestQuery.destinationCountry
+        self.destinationDetail = estimateRequestQuery.destinationDetail
+        self.incoterms = estimateRequestQuery.incoterms
+        self.closingDate = estimateRequestQuery.closingDate
+        self.createdAt = estimateRequestQuery.createdAt
     }
     
 }

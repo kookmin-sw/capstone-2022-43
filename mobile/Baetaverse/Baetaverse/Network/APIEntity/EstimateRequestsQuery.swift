@@ -14,7 +14,7 @@ extension APIEntity {
         let id: Int
         let tradeType: String
         let tradeDetail: String
-        let forwardingDate: Int
+        let forwardingDate: Date
         let departureCountry: String
         let departureDetail: String
         let destinationCountry: String

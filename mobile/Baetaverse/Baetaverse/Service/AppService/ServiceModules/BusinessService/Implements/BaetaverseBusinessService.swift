@@ -15,12 +15,11 @@ final class BaetaverseBusinessService: AppBusinessService {
         self.networkService = networkService
     }
     
-    func registerEvaluate(token: String, id: String, HSCode: String, country: String) async throws {
+    func registerEvaluate(token: String, estimateRequest: EstimateRequest, products: [Product]) async throws {
         let apiService = BaetaverseAPIService.registerEstimateRequest(
             token: token,
-            id: id,
-            HSCode: HSCode,
-            country: country
+            estimateRequest: estimateRequest,
+            products: products
         )
         _ = try await networkService.fetchData(for: apiService)
     }
@@ -30,7 +29,7 @@ final class BaetaverseBusinessService: AppBusinessService {
         let data = try await networkService.fetchData(for: apiService)
         let object = try data.decodeJSONData(to: APIResponseModel.EstimateRequestsResponse.self)
         return object.selectedRequests.map { estimateRequest in
-            EstimateRequest(estimateRequest: estimateRequest)
+            EstimateRequest(estimateRequestQuery: estimateRequest)
         }
     }
     

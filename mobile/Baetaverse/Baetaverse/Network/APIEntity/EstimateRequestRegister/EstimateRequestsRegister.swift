@@ -9,7 +9,7 @@ import Foundation
 
 extension APIEntity {
     
-    struct EstimateRequestsRegister: Decodable {
+    struct EstimateRequestsRegister: Encodable {
         
         let tradeType: String
         let tradeDetail: String
@@ -35,6 +35,22 @@ extension APIEntity {
             
         }
         
+    }
+    
+}
+
+extension APIEntity.EstimateRequestsRegister {
+    
+    init(estimateRequest: EstimateRequest) {
+        self.tradeType = estimateRequest.tradeType
+        self.tradeDetail = estimateRequest.tradeDetail
+        self.forwardingDate = estimateRequest.forwardingDate
+        self.departureCountry = estimateRequest.departureCountry
+        self.departureDetail = estimateRequest.departureDetail
+        self.destinationCountry = estimateRequest.destinationCountry
+        self.destinationDetail = estimateRequest.destinationDetail
+        self.incoterms = estimateRequest.incoterms
+        self.closingDate = estimateRequest.closingDate
     }
     
 }
