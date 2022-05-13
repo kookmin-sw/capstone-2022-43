@@ -28,6 +28,7 @@
 		C16B45A8282A4C9B00DDAAE8 /* EstimatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B45A7282A4C9B00DDAAE8 /* EstimatesView.swift */; };
 		C16B45AB282A4E5000DDAAE8 /* AutoLazyVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B45AA282A4E5000DDAAE8 /* AutoLazyVGrid.swift */; };
 		C16B45AD282A50CE00DDAAE8 /* AutoLazyHGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B45AC282A50CE00DDAAE8 /* AutoLazyHGrid.swift */; };
+		C184F7B0282E620000336677 /* EstimateRequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C184F7AF282E620000336677 /* EstimateRequestTableViewCell.swift */; };
 		C19140E52823AC0000372CB3 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = C19140E42823AC0000372CB3 /* .swiftlint.yml */; };
 		C19140EA2823B6EF00372CB3 /* WriteEstimateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19140E92823B6EF00372CB3 /* WriteEstimateView.swift */; };
 		C19140ED2823BAE800372CB3 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19140EC2823BAE800372CB3 /* MenuView.swift */; };
@@ -188,6 +189,7 @@
 		C16B45A7282A4C9B00DDAAE8 /* EstimatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimatesView.swift; sourceTree = "<group>"; };
 		C16B45AA282A4E5000DDAAE8 /* AutoLazyVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLazyVGrid.swift; sourceTree = "<group>"; };
 		C16B45AC282A50CE00DDAAE8 /* AutoLazyHGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLazyHGrid.swift; sourceTree = "<group>"; };
+		C184F7AF282E620000336677 /* EstimateRequestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateRequestTableViewCell.swift; sourceTree = "<group>"; };
 		C19140E42823AC0000372CB3 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		C19140E92823B6EF00372CB3 /* WriteEstimateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteEstimateView.swift; sourceTree = "<group>"; };
 		C19140EC2823BAE800372CB3 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
@@ -485,6 +487,7 @@
 		C1B7652D28297DAF0029B5FC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				C184F7AF282E620000336677 /* EstimateRequestTableViewCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -1095,6 +1098,7 @@
 				C1CF674627F735620057A6C3 /* AppBusinessService.swift in Sources */,
 				C1E86292282E0FFC00D9971A /* GoodsDetail.swift in Sources */,
 				C1E8628B282E0CBD00D9971A /* EstimateRequestDetailRequest.swift in Sources */,
+				C184F7B0282E620000336677 /* EstimateRequestTableViewCell.swift in Sources */,
 				C1CF673A27F724600057A6C3 /* BUMenuTableViewController.swift in Sources */,
 				C1E5CBBA27F2BF330087882E /* AppDelegate.swift in Sources */,
 				C1E5CBF427F2BFBD0087882E /* BUEstimateDetailViewController.swift in Sources */,
