@@ -16,10 +16,10 @@ const requestRoute = new Route('/api', requestRouter);
 
 const app = new App(
     [
+        indexRoute,
+        authRoute,
         hscodeRoute,
         requestRoute,
-        indexRoute,
-        authRoute
     ],
     Number(process.env.PORT) || 8080,
 );

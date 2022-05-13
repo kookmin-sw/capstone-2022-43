@@ -1,13 +1,11 @@
-import {supabase} from "../utils/supabase";
-import ShipperRepository from "../repository/ShipperRepository";
-import SupabaseShipperRepository from "../repository/SupabaseShipperRepository";
+import { supabase } from "../utils/supabase";
 import Owner from "../domain/owner";
 import HttpException from "../exceptions/HttpException";
 
 
 class OwnerService {
     public async checkDuplicated(email: String) {
-        const {data: existUser, error: UserNotFoundError} = await supabase
+        const { data: existUser, error: UserNotFoundError } = await supabase
             .from('OWNER')
             .select('email, password')
             .eq('email', email)
