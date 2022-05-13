@@ -9,7 +9,7 @@ import loggerMiddleware from "./middlewares/loggerMiddleware";
 
 
 class App {
-    public app: express.Application;
+    private app: express.Application;
     public port: number;
 
     constructor(routes: Route[], port: number) {
@@ -24,6 +24,7 @@ class App {
     private initializeApp(): void {
         this.app.use(express.json());
         this.app.use(express.urlencoded({ extended: false }));
+        process.env.TZ = 'Asia/Seoul';
     };
 
     private initializeMiddlewares(): void {
