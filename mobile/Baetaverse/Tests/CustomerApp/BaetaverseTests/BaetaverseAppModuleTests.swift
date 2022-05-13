@@ -192,5 +192,24 @@ class BaetaverseAppModuleTests: XCTestCase {
         // then
         XCTAssert(true)
     }
+    
+    func test_로그인한_사용자의_2번_견적서가_정상적으로_조회되어야_한다() async throws {
+        // given
+        let email = "test2@test2.com"
+        let password = "12341234"
+        
+        try await sutBaetaverse.login(
+            email: email,
+            password: password
+        )
+        
+        // when then
+        do {
+            let result = try await sutBaetaverse.queryEstimateRequestDetail(id: "0")
+            XCTAssertNotNil(result)
+        } catch {
+            XCTFail("\(error)")
+        }
+    }
 
 }

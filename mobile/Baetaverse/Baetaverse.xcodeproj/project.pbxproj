@@ -143,6 +143,10 @@
 		C1E86290282E0ED500D9971A /* EstimateRequestDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8628F282E0ED500D9971A /* EstimateRequestDetail.swift */; };
 		C1E86292282E0FFC00D9971A /* GoodsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E86291282E0FFC00D9971A /* GoodsDetail.swift */; };
 		C1E86296282E15AE00D9971A /* EstimateRequestDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E86295282E15AD00D9971A /* EstimateRequestDetailResponse.swift */; };
+		C1E86297282E1CB700D9971A /* EstimateRequestDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8628F282E0ED500D9971A /* EstimateRequestDetail.swift */; };
+		C1E86298282E1CBA00D9971A /* GoodsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E86291282E0FFC00D9971A /* GoodsDetail.swift */; };
+		C1E86299282E1D0400D9971A /* EstimateRequestDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8628A282E0CBD00D9971A /* EstimateRequestDetailRequest.swift */; };
+		C1E8629A282E1D2000D9971A /* EstimateRequestDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E86295282E15AD00D9971A /* EstimateRequestDetailResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1114,6 +1118,7 @@
 				C149737327F5A11C00679118 /* LoginResponse.swift in Sources */,
 				C197AEB827F43862000E4975 /* NetworkServiceProvider.swift in Sources */,
 				C197AEB727F4385E000E4975 /* BaetaverseAPIRequestHostInfo.swift in Sources */,
+				C1E86299282E1D0400D9971A /* EstimateRequestDetailRequest.swift in Sources */,
 				C1D83A842828F1DC0086D0E7 /* EstimatesResponse.swift in Sources */,
 				C1E86288282E0A6A00D9971A /* GoodsRegister.swift in Sources */,
 				C1CF675C27F737660057A6C3 /* BaetaverseAuth.swift in Sources */,
@@ -1129,7 +1134,9 @@
 				C1CF675927F7375A0057A6C3 /* AppBusinessService.swift in Sources */,
 				C1D83A8F2828F5E10086D0E7 /* EstimateRequestsRequest.swift in Sources */,
 				C1B7652A28294F860029B5FC /* AuthService.swift in Sources */,
+				C1E86298282E1CBA00D9971A /* GoodsDetail.swift in Sources */,
 				C149737227F5A11A00679118 /* APIResponseModel.swift in Sources */,
+				C1E8629A282E1D2000D9971A /* EstimateRequestDetailResponse.swift in Sources */,
 				C1E86286282E08A900D9971A /* Product.swift in Sources */,
 				C149736827F597E200679118 /* BaetaverseAppModuleTests.swift in Sources */,
 				C1CF675527F736E50057A6C3 /* NetworkService.swift in Sources */,
@@ -1146,6 +1153,7 @@
 				C1C9EC8D2818FB060041F974 /* Extensions+Encodable.swift in Sources */,
 				C1D83A8A2828F5A60086D0E7 /* Estimate.swift in Sources */,
 				C1B7652728294F820029B5FC /* AppService.swift in Sources */,
+				C1E86297282E1CB700D9971A /* EstimateRequestDetail.swift in Sources */,
 				C1CF675D27F737710057A6C3 /* APIService.swift in Sources */,
 				C197AEC327F43EF6000E4975 /* LoginRequest.swift in Sources */,
 				C1E8627A282DE6DF00D9971A /* EstimateRequest.swift in Sources */,
