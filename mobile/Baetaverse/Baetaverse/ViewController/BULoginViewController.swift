@@ -18,33 +18,33 @@ final class BULoginViewController: UIViewController {
     @IBAction func unwindToLoginBULoginView(_ segue: UIStoryboardSegue) { }
     
     @IBAction func loginButtonClicked(_ sender: UIButton) {
-        do {
-            self.loadActivityIndicatorView.startAnimating()
-            try login()
-            self.loadActivityIndicatorView.stopAnimating()
-            self.performSegue(
-                withIdentifier: "presentLoginMainSegue",
-                sender: nil
-            )
-        } catch {
-            self.loadActivityIndicatorView.stopAnimating()
-            let alert = UIAlertController(
-                title: "로그인에 실패하였습니다!",
-                message: "계정을 다시 한번 확인해주세요!",
-                preferredStyle: .alert
-            )
-            alert.addAction(UIAlertAction(title: "확인", style: .default))
-            present(alert, animated: true)
+        Task {
+            do {
+                loadActivityIndicatorView.startAnimating()
+                try await login()
+                loadActivityIndicatorView.stopAnimating()
+                performSegue(
+                    withIdentifier: "presentLoginMainSegue",
+                    sender: nil
+                )
+            } catch {
+                loadActivityIndicatorView.stopAnimating()
+                let alert = UIAlertController(
+                    title: "로그인에 실패하였습니다!",
+                    message: "계정을 다시 한번 확인해주세요!",
+                    preferredStyle: .alert
+                )
+                alert.addAction(UIAlertAction(title: "확인", style: .default))
+                present(alert, animated: true)
+            }
         }
     }
     
-    private func login() throws {
-        Task {
-            try await viewModel.login(
-                email: idTextField.text ?? "",
-                password: passwordTextField.text ?? ""
-            )
-        }
+    private func login() async throws {
+        try await viewModel.login(
+            email: idTextField.text ?? "",
+            password: passwordTextField.text ?? ""
+        )
     }
     
 }
