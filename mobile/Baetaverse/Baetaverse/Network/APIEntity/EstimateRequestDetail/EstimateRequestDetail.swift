@@ -14,14 +14,14 @@ extension APIEntity {
         let id: Int
         let tradeType: String
         let tradeDetail: String
-        let forwardingDate: Int
+        let forwardingDate: Date
         let departureCountry: String
         let departureDetail: String
         let destinationCountry: String
         let destinationDetail: String
         let incoterms: String
-        let closingDate: Int
-        let createdAt: Int
+        let closingDate: Date
+        let createdAt: Date
         
         enum CodingKeys: String, CodingKey {
             

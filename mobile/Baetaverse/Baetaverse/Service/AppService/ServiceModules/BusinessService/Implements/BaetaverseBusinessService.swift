@@ -45,6 +45,17 @@ final class BaetaverseBusinessService: AppBusinessService {
         return object.hscode
     }
     
+    func queryEstimateRequestDetail(token: String, id: String) async throws -> (EstimateRequest, [Product]) {
+        let apiService = BaetaverseAPIService.queryEstimateRequestDetail(token: token, id: id)
+        let data = try await networkService.fetchData(for: apiService)
+        let object = try data.decodeJSONData(to: APIResponseModel.EstimateRequestDetailResponse.self)
+        
+        let estimateRequest = EstimateRequest(estimateRequestDetail: object.selectedRequest)
+        let products = object.selectedGoods
+        
+        return object.
+    }
+    
     enum BusinessServiceError: Error {
         
         case hscodeQueryFailure

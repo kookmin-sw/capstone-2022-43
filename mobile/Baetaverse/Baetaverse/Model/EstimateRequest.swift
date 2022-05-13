@@ -39,4 +39,18 @@ extension EstimateRequest {
         self.createdAt = estimateRequestQuery.createdAt
     }
     
+    init(estimateRequestDetail: APIEntity.EstimateRequestDetail) {
+        self.id = estimateRequestDetail.id
+        self.tradeType = estimateRequestDetail.tradeType
+        self.tradeDetail = estimateRequestDetail.tradeDetail
+        self.forwardingDate = estimateRequestDetail.forwardingDate
+        self.departureCountry = estimateRequestDetail.departureCountry
+        self.departureDetail = estimateRequestDetail.departureDetail
+        self.destinationCountry = estimateRequestDetail.destinationCountry
+        self.destinationDetail = estimateRequestDetail.destinationDetail
+        self.incoterms = estimateRequestDetail.incoterms
+        self.closingDate = estimateRequestDetail.closingDate
+        self.createdAt = estimateRequestDetail.createdAt
+    }
+    
 }
