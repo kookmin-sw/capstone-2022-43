@@ -9,7 +9,7 @@ import Foundation
 
 extension APIEntity {
     
-    struct EstimateRequestsRegister {
+    struct EstimateRequestsRegister: Decodable {
         
         let tradeType: String
         let tradeDetail: String
@@ -20,6 +20,20 @@ extension APIEntity {
         let destinationDetail: String
         let incoterms: String
         let closingDate: Date
+        
+        enum CodingKeys: String, CodingKey {
+            
+            case tradeType = "trade_type"
+            case tradeDetail = "trade_detail"
+            case forwardingDate = "forwarding_date"
+            case departureCountry = "departure_country"
+            case departureDetail = "departure_detail"
+            case destinationCountry = "destination_country"
+            case destinationDetail = "destination_detail"
+            case incoterms = "incoterms"
+            case closingDate = "closing_date"
+            
+        }
         
     }
     
