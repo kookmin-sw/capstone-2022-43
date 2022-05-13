@@ -132,6 +132,7 @@
 		C1E86279282DE6CC00D9971A /* APIEnity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E86274282D5B6700D9971A /* APIEnity.swift */; };
 		C1E8627A282DE6DF00D9971A /* EstimateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8626D282D526800D9971A /* EstimateRequest.swift */; };
 		C1E8627C282DE9F800D9971A /* EstimateRequestsRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8627B282DE9F800D9971A /* EstimateRequestsRegister.swift */; };
+		C1E8627E282DEBB900D9971A /* GoodsRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8627D282DEBB900D9971A /* GoodsRegister.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -242,6 +243,7 @@
 		C1E86274282D5B6700D9971A /* APIEnity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnity.swift; sourceTree = "<group>"; };
 		C1E86276282D5D4E00D9971A /* EstimateRequestsQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateRequestsQuery.swift; sourceTree = "<group>"; };
 		C1E8627B282DE9F800D9971A /* EstimateRequestsRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateRequestsRegister.swift; sourceTree = "<group>"; };
+		C1E8627D282DEBB900D9971A /* GoodsRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsRegister.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -752,6 +754,7 @@
 				C1E86274282D5B6700D9971A /* APIEnity.swift */,
 				C1E86276282D5D4E00D9971A /* EstimateRequestsQuery.swift */,
 				C1E8627B282DE9F800D9971A /* EstimateRequestsRegister.swift */,
+				C1E8627D282DEBB900D9971A /* GoodsRegister.swift */,
 			);
 			path = APIEntity;
 			sourceTree = "<group>";
@@ -1011,6 +1014,7 @@
 				C1CF675127F736330057A6C3 /* BaetaverseBusinessService.swift in Sources */,
 				C1E5CBF227F2BFBD0087882E /* BUMainViewController.swift in Sources */,
 				C1E8626C282D50DE00D9971A /* Product.swift in Sources */,
+				C1E8627E282DEBB900D9971A /* GoodsRegister.swift in Sources */,
 				C13778C327F498EE00DAF494 /* BaetaverseAuth.swift in Sources */,
 				C1B7652628294F810029B5FC /* AppService.swift in Sources */,
 				C1E5CBF127F2BFBD0087882E /* BULoginViewController.swift in Sources */,
