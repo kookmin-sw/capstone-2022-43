@@ -22,3 +22,21 @@ struct EstimateRequest: Identifiable {
     let createdAt: Date?
     
 }
+
+extension EstimateRequest {
+    
+    init(estimateRequest: APIEntity.EstimateRequestsQuery) {
+        self.id = estimateRequest.id
+        self.tradeType = estimateRequest.tradeType
+        self.tradeDetail = estimateRequest.tradeDetail
+        self.forwardingDate = estimateRequest.forwardingDate
+        self.departureCountry = estimateRequest.departureCountry
+        self.departureDetail = estimateRequest.departureDetail
+        self.destinationCountry = estimateRequest.destinationCountry
+        self.destinationDetail = estimateRequest.destinationDetail
+        self.incoterms = estimateRequest.incoterms
+        self.closingDate = estimateRequest.closingDate
+        self.createdAt = estimateRequest.createdAt
+    }
+    
+}
