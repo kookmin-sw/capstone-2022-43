@@ -206,7 +206,6 @@ class BaetaverseAppModuleTests: XCTestCase {
         // when then
         do {
             let result = try await sutBaetaverse.queryEstimateRequestDetail(id: "2")
-            print(result)
             XCTAssertNotNil(result)
         } catch {
             XCTFail("\(error)")
