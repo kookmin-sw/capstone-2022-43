@@ -128,6 +128,9 @@
 		C1E86271282D545D00D9971A /* EstimateRequestsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8626F282D545900D9971A /* EstimateRequestsResponse.swift */; };
 		C1E86275282D5B6700D9971A /* APIEnity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E86274282D5B6700D9971A /* APIEnity.swift */; };
 		C1E86277282D5D4E00D9971A /* EstimateRequestsQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E86276282D5D4E00D9971A /* EstimateRequestsQuery.swift */; };
+		C1E86278282DE6CA00D9971A /* EstimateRequestsQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E86276282D5D4E00D9971A /* EstimateRequestsQuery.swift */; };
+		C1E86279282DE6CC00D9971A /* APIEnity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E86274282D5B6700D9971A /* APIEnity.swift */; };
+		C1E8627A282DE6DF00D9971A /* EstimateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8626D282D526800D9971A /* EstimateRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1065,6 +1068,7 @@
 				C197AEB927F43866000E4975 /* HTTPMethod.swift in Sources */,
 				C149737727F5A39800679118 /* SignUpResponse.swift in Sources */,
 				C1B7652528294CA90029B5FC /* BusinessService.swift in Sources */,
+				C1E86279282DE6CC00D9971A /* APIEnity.swift in Sources */,
 				C1CF675E27F737740057A6C3 /* APIRequestHostInfo.swift in Sources */,
 				C1E86268282D269600D9971A /* HSCodeRequest.swift in Sources */,
 				C1CF675927F7375A0057A6C3 /* AppBusinessService.swift in Sources */,
@@ -1075,6 +1079,7 @@
 				C1CF675527F736E50057A6C3 /* NetworkService.swift in Sources */,
 				C197AEC427F43EF9000E4975 /* SignUpRequest.swift in Sources */,
 				C1CF675827F737550057A6C3 /* BaetaverseAppService.swift in Sources */,
+				C1E86278282DE6CA00D9971A /* EstimateRequestsQuery.swift in Sources */,
 				C197AEBA27F43869000E4975 /* APIRequestImplement.swift in Sources */,
 				C1CF675B27F737620057A6C3 /* AppAuthService.swift in Sources */,
 				C197AEC227F43EF3000E4975 /* QuoteRequest.swift in Sources */,
@@ -1087,6 +1092,7 @@
 				C1B7652728294F820029B5FC /* AppService.swift in Sources */,
 				C1CF675D27F737710057A6C3 /* APIService.swift in Sources */,
 				C197AEC327F43EF6000E4975 /* LoginRequest.swift in Sources */,
+				C1E8627A282DE6DF00D9971A /* EstimateRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

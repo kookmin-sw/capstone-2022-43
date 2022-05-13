@@ -138,11 +138,10 @@ class BaetaverseAppModuleTests: XCTestCase {
         )
         
         // when
-        let result = try await sutBaetaverse.queryEstimateRequests()
-        print(result)
+        let result = try? await sutBaetaverse.queryEstimateRequests()
         
-        //then
-        XCTAssert(true)
+        // then
+        XCTAssertNotNil(result)
     }
     
     func test_새로운_견적_등록하기가_정상적으로_동작해야한다() async throws {
