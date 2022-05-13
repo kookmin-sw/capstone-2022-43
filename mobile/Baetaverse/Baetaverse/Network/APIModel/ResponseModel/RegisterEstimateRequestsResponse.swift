@@ -14,7 +14,7 @@ extension APIResponseModel {
         let status: Int
         let message: String
         let selectedRequest: APIEntity.EstimateRequestDetail
-        let selectedGoods: 
+        let selectedGoods: APIEntity.GoodsDetail
         
     }
     
