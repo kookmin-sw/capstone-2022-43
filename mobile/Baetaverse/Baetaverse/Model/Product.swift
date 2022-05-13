@@ -18,3 +18,17 @@ struct Product: Identifiable {
     let createdAt: Date?
     
 }
+
+extension Product {
+    
+    init(goods: APIEntity.GoodsDetail) {
+        self.id = goods.id
+        self.name = goods.name
+        self.price = goods.price
+        self.weight = goods.weight
+        self.standardUnit = goods.standardUnit
+        self.hsCode = goods.hscode
+        self.createdAt = goods.createdAt
+    }
+    
+}

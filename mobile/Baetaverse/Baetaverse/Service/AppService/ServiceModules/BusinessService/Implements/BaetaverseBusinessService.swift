@@ -51,9 +51,11 @@ final class BaetaverseBusinessService: AppBusinessService {
         let object = try data.decodeJSONData(to: APIResponseModel.EstimateRequestDetailResponse.self)
         
         let estimateRequest = EstimateRequest(estimateRequestDetail: object.selectedRequest)
-        let products = object.selectedGoods
+        let products = object.selectedGoods.map { goods in
+            Product(goods: goods)
+        }
         
-        return object.
+        return (estimateRequest, products)
     }
     
     enum BusinessServiceError: Error {
