@@ -11,7 +11,7 @@ extension APIEntity {
     
     struct EstimateRequestDetail: Decodable {
         
-        let id: Int
+        let id: Int?
         let tradeType: String
         let tradeDetail: String
         let forwardingDate: Date

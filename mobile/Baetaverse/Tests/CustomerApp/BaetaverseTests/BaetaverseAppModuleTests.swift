@@ -195,7 +195,7 @@ class BaetaverseAppModuleTests: XCTestCase {
     
     func test_로그인한_사용자의_2번_견적서가_정상적으로_조회되어야_한다() async throws {
         // given
-        let email = "test2@test2.com"
+        let email = "test1@test1.com"
         let password = "12341234"
         
         try await sutBaetaverse.login(
@@ -205,7 +205,8 @@ class BaetaverseAppModuleTests: XCTestCase {
         
         // when then
         do {
-            let result = try await sutBaetaverse.queryEstimateRequestDetail(id: "0")
+            let result = try await sutBaetaverse.queryEstimateRequestDetail(id: "2")
+            print(result)
             XCTAssertNotNil(result)
         } catch {
             XCTFail("\(error)")
