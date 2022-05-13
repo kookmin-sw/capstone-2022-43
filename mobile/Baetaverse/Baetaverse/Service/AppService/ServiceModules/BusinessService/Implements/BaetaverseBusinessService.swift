@@ -16,7 +16,7 @@ final class BaetaverseBusinessService: AppBusinessService {
     }
     
     func registerEvaluate(token: String, id: String, HSCode: String, country: String) async throws {
-        let apiService = BaetaverseAPIService.quoteRequest(
+        let apiService = BaetaverseAPIService.registerEstimateRequest(
             token: token,
             id: id,
             HSCode: HSCode,
