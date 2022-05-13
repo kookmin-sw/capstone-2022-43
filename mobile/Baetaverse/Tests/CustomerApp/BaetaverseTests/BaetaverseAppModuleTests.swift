@@ -127,6 +127,24 @@ class BaetaverseAppModuleTests: XCTestCase {
         XCTAssertEqual(result, ["010121 : 말(번식용,산동물)"])
     }
     
+    func test_로그인된_사용자의_견적요청서_명단이_조회되어야한다() async throws {
+        // given
+        let email = "test1@test1.com"
+        let password = "12341234"
+        
+        try await sutBaetaverse.login(
+            email: email,
+            password: password
+        )
+        
+        // when
+        let result = try await sutBaetaverse.queryEstimateRequests()
+        print(result)
+        
+        //then
+        XCTAssert(true)
+    }
+    
     func test_새로운_견적_등록하기가_정상적으로_동작해야한다() async throws {
         try await sutBaetaverse.login(
             email: "11@1.com",
@@ -138,12 +156,6 @@ class BaetaverseAppModuleTests: XCTestCase {
             HSCode: "1234",
             country: "USA"
         )
-        
-        XCTAssert(true)
-    }
-    
-    func test_견적서_명단_조회하기() async throws {
-        try await sutBaetaverse.fetchEvaluates()
         
         XCTAssert(true)
     }

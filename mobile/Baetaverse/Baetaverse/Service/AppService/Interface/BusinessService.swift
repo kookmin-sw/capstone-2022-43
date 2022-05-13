@@ -10,8 +10,7 @@ import Foundation
 protocol BusinessService {
     
     func registerEvaluate(id: String, HSCode: String, country: String) async throws
-    func fetchEvaluates() async throws -> [Estimate]
     func queryHSCode(code: String) async throws -> [String]
-    func queryEstimateRequests(token: String) async throws -> [EstimateRequest]
+    func queryEstimateRequests() async throws -> [EstimateRequest]
     
 }
