@@ -148,6 +148,7 @@
 		C1E86299282E1D0400D9971A /* EstimateRequestDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8628A282E0CBD00D9971A /* EstimateRequestDetailRequest.swift */; };
 		C1E8629A282E1D2000D9971A /* EstimateRequestDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E86295282E15AD00D9971A /* EstimateRequestDetailResponse.swift */; };
 		C1E8629D282E235000D9971A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8629C282E235000D9971A /* LoginViewModel.swift */; };
+		C1E8629F282E2F2800D9971A /* SignUpFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8629E282E2F2800D9971A /* SignUpFormViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -266,6 +267,7 @@
 		C1E86291282E0FFC00D9971A /* GoodsDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsDetail.swift; sourceTree = "<group>"; };
 		C1E86295282E15AD00D9971A /* EstimateRequestDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateRequestDetailResponse.swift; sourceTree = "<group>"; };
 		C1E8629C282E235000D9971A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		C1E8629E282E2F2800D9971A /* SignUpFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFormViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -808,6 +810,7 @@
 			isa = PBXGroup;
 			children = (
 				C1E8629C282E235000D9971A /* LoginViewModel.swift */,
+				C1E8629E282E2F2800D9971A /* SignUpFormViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1098,6 +1101,7 @@
 				C1E5CC0727F307C80087882E /* HTTPMethod.swift in Sources */,
 				C1E8627C282DE9F800D9971A /* EstimateRequestsRegister.swift in Sources */,
 				C1C9EC5B2818F7A40041F974 /* Extensions+Encodable.swift in Sources */,
+				C1E8629F282E2F2800D9971A /* SignUpFormViewModel.swift in Sources */,
 				C1E8628D282E0DF700D9971A /* RegisterEstimateRequestsResponse.swift in Sources */,
 				C1E5CC0B27F3296A0087882E /* APIRequestHostInfo.swift in Sources */,
 				C1E86265282D211700D9971A /* HSCodeRequest.swift in Sources */,

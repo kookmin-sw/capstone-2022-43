@@ -182,7 +182,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="다음" buttonSize="large"/>
                                 <connections>
-                                    <action selector="buttonClicked:" destination="kbR-bL-3pV" eventType="touchUpInside" id="23K-Rx-Sqj"/>
+                                    <action selector="signUpButtonClicked:" destination="kbR-bL-3pV" eventType="touchUpInside" id="eId-Cn-tP3"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8nj-lg-9Jc">
@@ -2534,7 +2534,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2bg-yb-kRs"/>
+        <segue reference="hdh-DO-u6g"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="BoxContainer" width="800" height="439"/>
