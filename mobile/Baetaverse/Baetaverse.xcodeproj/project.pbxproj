@@ -141,6 +141,7 @@
 		C1E8628B282E0CBD00D9971A /* EstimateRequestDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8628A282E0CBD00D9971A /* EstimateRequestDetailRequest.swift */; };
 		C1E8628D282E0DF700D9971A /* RegisterEstimateRequestsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8628C282E0DF700D9971A /* RegisterEstimateRequestsResponse.swift */; };
 		C1E86290282E0ED500D9971A /* EstimateRequestDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8628F282E0ED500D9971A /* EstimateRequestDetail.swift */; };
+		C1E86292282E0FFC00D9971A /* GoodsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E86291282E0FFC00D9971A /* GoodsDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -256,6 +257,7 @@
 		C1E8628A282E0CBD00D9971A /* EstimateRequestDetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateRequestDetailRequest.swift; sourceTree = "<group>"; };
 		C1E8628C282E0DF700D9971A /* RegisterEstimateRequestsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEstimateRequestsResponse.swift; sourceTree = "<group>"; };
 		C1E8628F282E0ED500D9971A /* EstimateRequestDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateRequestDetail.swift; sourceTree = "<group>"; };
+		C1E86291282E0FFC00D9971A /* GoodsDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -787,6 +789,7 @@
 			isa = PBXGroup;
 			children = (
 				C1E8628F282E0ED500D9971A /* EstimateRequestDetail.swift */,
+				C1E86291282E0FFC00D9971A /* GoodsDetail.swift */,
 			);
 			path = EstimateRequestDetail;
 			sourceTree = "<group>";
@@ -1061,6 +1064,7 @@
 				C1E5CC1227F32DC10087882E /* APIRequestModel.swift in Sources */,
 				C1E5CBF327F2BFBD0087882E /* BUEstimateListViewController.swift in Sources */,
 				C1CF674627F735620057A6C3 /* AppBusinessService.swift in Sources */,
+				C1E86292282E0FFC00D9971A /* GoodsDetail.swift in Sources */,
 				C1E8628B282E0CBD00D9971A /* EstimateRequestDetailRequest.swift in Sources */,
 				C1CF673A27F724600057A6C3 /* BUMenuTableViewController.swift in Sources */,
 				C1E5CBBA27F2BF330087882E /* AppDelegate.swift in Sources */,
