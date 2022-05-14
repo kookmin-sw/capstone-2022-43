@@ -5,8 +5,8 @@ import indexRouter from './routes/index';
 import authRouter from './routes/auth';
 import hscodeRouter from './routes/hscode';
 import requestRouter from './routes/requests';
-import quotationRouter from './routes/quotation';
-import reviewRouter from './routes/review';
+import quotationRouter from './routes/quotations';
+import reviewRouter from './routes/reviews';
 
 validateEnv();
 

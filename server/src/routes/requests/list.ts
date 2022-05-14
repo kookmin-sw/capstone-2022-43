@@ -1,11 +1,12 @@
 import express, {Request, Response, NextFunction,} from 'express';
 import { supabase } from '../../utils/supabase';
 import {isoToUnix} from "../../middlewares/timeConvert";
+import {verifyAnyToken, verifyForwarderToken} from "../../middlewares/verifyToken";
 
 
 const router = express.Router();
 
-router.get('/list', async (req : Request, res : Response, next : NextFunction) => {
+router.get('/list', verifyForwarderToken, async (req : Request, res : Response, next : NextFunction) => {
     try {
         const { data: existRequests, error: QuotationNotFoundError } = await supabase
             .from('REQUEST')
@@ -19,6 +20,7 @@ router.get('/list', async (req : Request, res : Response, next : NextFunction) =
         existRequests.forEach((selected_request) => {
             isoToUnix(selected_request, ["forwarding_date", "closing_date", "created_at"]);
         });
+
 
         return res.status(200).json({
             status: 200,

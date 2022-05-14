@@ -1,15 +1,15 @@
 import express, { Request, Response, NextFunction } from 'express';
 import { supabase } from '../../utils/supabase';
-import verifyToken from "../../middlewares/verifyToken";
 import PageNotFoundRouter from "../pageNotFoundRouter";
 import { isoToUnix } from "../../middlewares/timeConvert";
+import {verifyAnyToken} from "../../middlewares/verifyToken";
 
 
 const router = express.Router();
 
-router.get('/:id', async (req: Request, res: Response, next: NextFunction) =>{
+router.get('/:id', verifyAnyToken ,async (req: Request, res: Response, next: NextFunction) =>{
     try {
-        // const { uuid } = req.decoded;
+        const { uuid } = req.decoded;
         const quotation_id = req.params.id;
 
         const {data: quotation, error: FailToFind } = await supabase
@@ -34,7 +34,7 @@ router.get('/:id', async (req: Request, res: Response, next: NextFunction) =>{
 
         const { data: selected_goods_array, error: FailToFindGoods } = await supabase
             .from('GOODS')
-            .select(`requests:`)
+            .select('id, name, price, weight, standard_unit, hscode, created_at')
             .eq('request_id', quoteId);
 
         if (FailToFindGoods) {
