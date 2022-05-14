@@ -19,7 +19,7 @@ class OwnerService {
 
     public async join(owner: Owner) {
         const checkDuplicated = await this.checkDuplicated(owner.email);
-        const {data: newUser, error: FailToInsert} = await supabase
+        const { data: newUser, error: FailToInsert } = await supabase
             .from('OWNER')
             .insert(owner);
 
