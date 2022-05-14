@@ -82,7 +82,7 @@ router.post('/',verifyOwnerToken ,async (req: Request, res: Response, next: Next
 
         return res.status(200).json({
             status: 200,
-            message: 'Success to insert review',
+            message: 'Success to insert reviews',
         });
 
     } catch (error){
