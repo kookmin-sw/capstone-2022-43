@@ -47,7 +47,7 @@ router.get('/', verifyAnyToken ,async (req: Request, res: Response, next: NextFu
 
         return res.status(200).json({
             status: 200,
-            message: 'Success to find requests',
+            message: 'Success to find reviews',
             Review: review
         });
 
@@ -82,7 +82,7 @@ router.post('/',verifyOwnerToken ,async (req: Request, res: Response, next: Next
 
         return res.status(200).json({
             status: 200,
-            message: 'Success to insert reviews',
+            message: 'Success to insert review',
             Review: review
         });
 
