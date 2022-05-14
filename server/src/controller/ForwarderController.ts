@@ -10,7 +10,8 @@ import Forwarder from "../domain/Forwarder";
 
 class ForwarderController {
     private forwarderService : ForwarderService = new ForwarderService();
-    public signUp = async (req: Request, res: Response, next: NextFunction) => {
+
+    public signup = async (req: Request, res: Response, next: NextFunction) => {
         try {
             const { email, password, name, phone_number, corporation_name, corporation_number } = req.body;
 
@@ -30,7 +31,7 @@ class ForwarderController {
     }
 
 
-    public logIn = async (req: Request, res: Response, next: NextFunction) => {
+    public login = (req: Request, res: Response, next: NextFunction) => {
         passport.authenticate('local', (authError, user, info) => {
             if (authError) {
                 return next(authError);
@@ -43,7 +44,7 @@ class ForwarderController {
                 uuid: user.uuid,
                 email: user.email,
                 name: user.name
-            }, process.env.JWT_SECRET || '', {
+            }, process.env.JWT_FORWARDER_SECRET || '', {
                 expiresIn: '7d',
                 issuer: 'BAETAVERSE-DEV'
             });

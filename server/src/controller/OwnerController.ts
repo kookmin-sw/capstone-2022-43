@@ -1,4 +1,4 @@
-import {NextFunction, Request, Response} from "express";
+import { NextFunction, Request, Response } from "express";
 import HttpException from "../exceptions/HttpException";
 import bcrypt from "bcrypt";
 import passport from "passport";
@@ -9,7 +9,8 @@ import OwnerService from "../service/OwnerService";
 
 class OwnerController {
     private ownerService : OwnerService = new OwnerService();
-    public signUp = async (req: Request, res: Response, next: NextFunction) => {
+
+    public signup = async (req: Request, res: Response, next: NextFunction) => {
         try {
             const { email, password, name, phone_number } = req.body;
 
@@ -29,7 +30,7 @@ class OwnerController {
     }
 
 
-    public logIn = async (req: Request, res: Response, next: NextFunction) => {
+    public login = (req: Request, res: Response, next: NextFunction) => {
         passport.authenticate('local', (authError, user, info) => {
             if (authError) {
                 return next(authError);
@@ -42,7 +43,7 @@ class OwnerController {
                 uuid: user.uuid,
                 email: user.email,
                 name: user.name
-            }, process.env.JWT_SECRET || '', {
+            }, process.env.JWT_OWNER_SECRET || '', {
                 expiresIn: '7d',
                 issuer: 'BAETAVERSE-DEV'
             });

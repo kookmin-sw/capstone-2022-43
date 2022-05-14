@@ -7,18 +7,17 @@
     "test": "jest",
     "start": "node dist/server.js",
     "build": "tsc",
-    "dev": "set NODE_ENV=develop && npx nodemon",
+    "dev": "set NODE_ENV=develop && npx nodemon src/server.ts",
     "deploy": "pm2 start dist/server.js --watch --ignore-watch=\"logs/*\""
   },
   "nodemonConfig": {
-    "start": "src/app.ts",
     "watch": [
       "src/"
     ],
     "ext": "ts",
-    "exec": "ts-node ./src/server.ts",
     "ignore": [
-      "dist/"
+      "dist/",
+      "logs/"
     ]
   },
   "keywords": [],
