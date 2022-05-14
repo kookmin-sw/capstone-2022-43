@@ -1,12 +1,16 @@
 import express, {Request, Response, NextFunction} from "express";
 import {supabase} from "../../utils/supabase";
+import {verifyAnyToken, verifyOwnerToken} from "../../middlewares/verifyToken";
 
 
 const router = express.Router();
 
-router.get('/', async (req: Request, res: Response, next: NextFunction) => {
+router.get('/', verifyAnyToken ,async (req: Request, res: Response, next: NextFunction) => {
     try {
-        const { role, owner_uuid, forwarder_uuid } = req.body;
+        const role = req.decoded.role;
+        const uuid = req.decoded.uuid;
+
+            // { role, owner_uuid, forwarder_uuid } = req.body;
 
         if (role == 'forwarder') {
             const {data: review, error: error} = await supabase
@@ -17,7 +21,7 @@ router.get('/', async (req: Request, res: Response, next: NextFunction) => {
                 requests: request_id(id, trade_type, trade_detail, forwarding_date, departure_country, 
                           departure_detail, destination_country, destination_detail, incoterms, closing_date, created_at)
                 quotation: quotation_id(id, ocean_freight_price, inland_freight_price, total_price, estimated_time, created_at)`)
-                .eq('forwarder_uuid', forwarder_uuid);
+                .eq('forwarder_uuid', uuid);
             if (error) {
                 return next(error);
             }
@@ -36,7 +40,7 @@ router.get('/', async (req: Request, res: Response, next: NextFunction) => {
                 requests: request_id(id, trade_type, trade_detail, forwarding_date, departure_country, 
                           departure_detail, destination_country, destination_detail, incoterms, closing_date, created_at)
                 quotation: quotation_id(id, ocean_freight_price, inland_freight_price, total_price, estimated_time, created_at)`)
-            .eq('onwer_uuid', owner_uuid);
+            .eq('onwer_uuid', uuid);
         if (error) {
             return next(error);
         }
@@ -52,9 +56,22 @@ router.get('/', async (req: Request, res: Response, next: NextFunction) => {
     }
 
 });
-router.post('/', async (req: Request, res: Response, next: NextFunction) => {
+router.post('/',verifyOwnerToken ,async (req: Request, res: Response, next: NextFunction) => {
     try {
-        const { score, message, owner_uuid, forwarder_uuid, quotation_id, request_id } = req.body;
+        const owner_uuid = req.decoded.uuid;
+        const { score, message, quotation_id, request_id } = req.body;
+
+        const {data: uuid, error: FailToFindFowarder_uuid} = await supabase
+            .from('QUOTATION')
+            .select('forwarder_uuid')
+            .eq('id', quotation_id);
+
+        if (FailToFindFowarder_uuid) {
+            return next(FailToFindFowarder_uuid);
+        }
+
+        const forwarder_uuid = uuid[0]['forwarder_uuid'];
+
         const {data: review, error: FailtoInsert} = await supabase
             .from('REVIEW')
             .insert({ score, message, owner_uuid, forwarder_uuid, quotation_id, request_id });
