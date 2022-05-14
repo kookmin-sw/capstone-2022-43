@@ -1,6 +1,7 @@
 import express, {Request, Response, NextFunction} from "express";
 import {supabase} from "../../utils/supabase";
 import {verifyAnyToken, verifyOwnerToken} from "../../middlewares/verifyToken";
+import {isoToUnix} from "../../middlewares/timeConvert";
 
 
 const router = express.Router();
@@ -26,6 +27,12 @@ router.get('/', verifyAnyToken ,async (req: Request, res: Response, next: NextFu
                 return next(error);
             }
 
+            review.forEach(selected_request => {
+                isoToUnix(selected_request['requests'], ["forwarding_date", "closing_date", "created_at"]);
+                isoToUnix(selected_request['quotation'], ["estimated_time", "created_at"]);
+
+            });
+
             return res.status(200).json({
                 status: 200,
                 message: 'Success to find requests',
@@ -38,17 +45,23 @@ router.get('/', verifyAnyToken ,async (req: Request, res: Response, next: NextFu
                 forwarder: forwarder_uuid(name, corporation_name), 
                 owner: owner_uuid(name),          
                 requests: request_id(id, trade_type, trade_detail, forwarding_date, departure_country, 
-                          departure_detail, destination_country, destination_detail, incoterms, closing_date, created_at)
+                          departure_detail, destination_country, destination_detail, incoterms, closing_date, created_at),
                 quotation: quotation_id(id, ocean_freight_price, inland_freight_price, total_price, estimated_time, created_at)`)
-            .eq('onwer_uuid', uuid);
+            .eq('owner_uuid', uuid);
+
         if (error) {
             return next(error);
         }
 
+        review.forEach(selected_request => {
+            isoToUnix(selected_request['requests'], ["forwarding_date", "closing_date", "created_at"]);
+            isoToUnix(selected_request['quotation'], ["estimated_time", "created_at"]);
+        });
+
         return res.status(200).json({
             status: 200,
-            message: 'Success to find requests',
-            Quotation: review
+            message: 'Success to find reviews',
+            Review: review
         });
 
     } catch (error) {
@@ -74,15 +87,28 @@ router.post('/',verifyOwnerToken ,async (req: Request, res: Response, next: Next
 
         const {data: review, error: FailtoInsert} = await supabase
             .from('REVIEW')
-            .insert({ score, message, owner_uuid, forwarder_uuid, quotation_id, request_id });
+            .insert({ score, message, owner_uuid, forwarder_uuid, quotation_id, request_id })
+            .select(`score, message,
+                forwarder: forwarder_uuid(name, corporation_name), 
+                owner: owner_uuid(name),          
+                requests: request_id(id, trade_type, trade_detail, forwarding_date, departure_country, 
+                          departure_detail, destination_country, destination_detail, incoterms, closing_date, created_at),
+                quotation: quotation_id(id, ocean_freight_price, inland_freight_price, total_price, estimated_time, created_at)`);
 
         if (FailtoInsert) {
             return next(FailtoInsert);
         }
 
+        review.forEach(selected_request => {
+            isoToUnix(selected_request['requests'], ["forwarding_date", "closing_date", "created_at"]);
+            isoToUnix(selected_request['quotation'], ["estimated_time", "created_at"]);
+
+        });
+
         return res.status(200).json({
             status: 200,
-            message: 'Success to insert reviews',
+            message: 'Success to insert review',
+            Review: review
         });
 
     } catch (error){

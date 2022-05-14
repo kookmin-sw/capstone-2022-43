@@ -42,7 +42,7 @@ router.get('/', verifyForwarderToken , async (req: Request, res: Response, next:
 
         return res.status(200).json({
             status: 200,
-            message: 'Success to find requests',
+            message: 'Success to find quotation',
             Quotation: quotation,
             selectedGoods: selected_goods_array
         });
@@ -102,7 +102,7 @@ router.post('/', verifyForwarderToken, async (req: Request, res: Response, next:
         // isoToUnix(quotation, ["estimated_time", "created_at"]);
         return res.status(200).json({
             status: 200,
-            message: 'Success to requests response',
+            message: 'Success to insert quotation',
             Quotation: quotation,
             Goods: selected_goods_array
         });
