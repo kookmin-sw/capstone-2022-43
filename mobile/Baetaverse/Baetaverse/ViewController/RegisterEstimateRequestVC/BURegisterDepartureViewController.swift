@@ -1,5 +1,5 @@
 //
-//  BUDepartureViewController.swift
+//  BURegisterDepartureViewController.swift
 //  Baetaverse
 //
 //  Created by JeongTaek Han on 2022/03/13.
@@ -7,17 +7,19 @@
 
 import UIKit
 
-class BUDepartureViewController: UIViewController {
+final class BURegisterDepartureViewController: UIViewController {
 
-    @IBOutlet weak var departurePicker: UIPickerView!
+    @IBOutlet private weak var departureCountryPicker: UIPickerView!
+    
+    private var estimateRequest = EstimateRequest()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        
-        departurePicker.dataSource = self
-        
+        departureCountryPicker.dataSource = self
+    }
+    
+    func passData(estimateRequest: EstimateRequest) {
+        self.estimateRequest = estimateRequest
     }
     
     /*
@@ -32,7 +34,7 @@ class BUDepartureViewController: UIViewController {
 
 }
 
-extension BUDepartureViewController: UIPickerViewDataSource {
+extension BURegisterDepartureViewController: UIPickerViewDataSource {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1

@@ -52,6 +52,7 @@
 		C197AEC327F43EF6000E4975 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1927F334E10087882E /* LoginRequest.swift */; };
 		C197AEC427F43EF9000E4975 /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1427F32F040087882E /* SignUpRequest.swift */; };
 		C197AEC527F43EFC000E4975 /* APIRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1127F32DC10087882E /* APIRequestModel.swift */; };
+		C19E6785282F80FE00B88413 /* BUSelectRegionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E6783282F80C100B88413 /* BUSelectRegionTableViewController.swift */; };
 		C1B7652528294CA90029B5FC /* BusinessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C7714F28294A2D009E3CB6 /* BusinessService.swift */; };
 		C1B7652628294F810029B5FC /* AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF674827F735820057A6C3 /* AppService.swift */; };
 		C1B7652728294F820029B5FC /* AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF674827F735820057A6C3 /* AppService.swift */; };
@@ -106,7 +107,7 @@
 		C1E5CBF327F2BFBD0087882E /* BUEstimateListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CBED27F2BFBC0087882E /* BUEstimateListViewController.swift */; };
 		C1E5CBF427F2BFBD0087882E /* BUEstimateDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CBEE27F2BFBD0087882E /* BUEstimateDetailViewController.swift */; };
 		C1E5CBF527F2BFBD0087882E /* BUEstimateDueDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CBEF27F2BFBD0087882E /* BUEstimateDueDateViewController.swift */; };
-		C1E5CBF627F2BFBD0087882E /* BUDepartureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CBF027F2BFBD0087882E /* BUDepartureViewController.swift */; };
+		C1E5CBF627F2BFBD0087882E /* BURegisterDepartureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CBF027F2BFBD0087882E /* BURegisterDepartureViewController.swift */; };
 		C1E5CBF827F2C0150087882E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1E5CBF727F2C0150087882E /* Assets.xcassets */; };
 		C1E5CC0127F2C0AF0087882E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1E5CBFF27F2C0AF0087882E /* Main.storyboard */; };
 		C1E5CC0727F307C80087882E /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC0627F307C70087882E /* HTTPMethod.swift */; };
@@ -205,6 +206,7 @@
 		C197AEB227F42D6D000E4975 /* NetworkServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProvider.swift; sourceTree = "<group>"; };
 		C197AEBC27F43AEC000E4975 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		C197AEBF27F43BEF000E4975 /* BaetaverseAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseAPIService.swift; sourceTree = "<group>"; };
+		C19E6783282F80C100B88413 /* BUSelectRegionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BUSelectRegionTableViewController.swift; sourceTree = "<group>"; };
 		C1BAFE222820BAC800CC4549 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C1BAFE242820BB9E00CC4549 /* SignUpGroupForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpGroupForm.swift; sourceTree = "<group>"; };
 		C1C65CFB28210E5200951A25 /* RecievedEstimateDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecievedEstimateDetailView.swift; sourceTree = "<group>"; };
@@ -243,7 +245,7 @@
 		C1E5CBED27F2BFBC0087882E /* BUEstimateListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BUEstimateListViewController.swift; sourceTree = "<group>"; };
 		C1E5CBEE27F2BFBD0087882E /* BUEstimateDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BUEstimateDetailViewController.swift; sourceTree = "<group>"; };
 		C1E5CBEF27F2BFBD0087882E /* BUEstimateDueDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BUEstimateDueDateViewController.swift; sourceTree = "<group>"; };
-		C1E5CBF027F2BFBD0087882E /* BUDepartureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BUDepartureViewController.swift; sourceTree = "<group>"; };
+		C1E5CBF027F2BFBD0087882E /* BURegisterDepartureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BURegisterDepartureViewController.swift; sourceTree = "<group>"; };
 		C1E5CBF727F2C0150087882E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1E5CC0027F2C0AF0087882E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C1E5CC0627F307C70087882E /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -726,9 +728,9 @@
 			isa = PBXGroup;
 			children = (
 				C1F53A84282F6334006203E2 /* RegisterEstimateRequestVC */,
-				C1E5CBF027F2BFBD0087882E /* BUDepartureViewController.swift */,
 				C1E5CBEE27F2BFBD0087882E /* BUEstimateDetailViewController.swift */,
 				C1E5CBEF27F2BFBD0087882E /* BUEstimateDueDateViewController.swift */,
+				C19E6783282F80C100B88413 /* BUSelectRegionTableViewController.swift */,
 				C1E5CBED27F2BFBC0087882E /* BUEstimateListViewController.swift */,
 				C1E5CBEB27F2BFBC0087882E /* BULoginViewController.swift */,
 				C1E5CBEC27F2BFBC0087882E /* BUMainViewController.swift */,
@@ -831,6 +833,7 @@
 			children = (
 				C1F53A87282F63D0006203E2 /* BURegisterTradeTypeViewController.swift */,
 				C1F53A89282F6B39006203E2 /* BURegisterDeliveryDateViewController.swift */,
+				C1E5CBF027F2BFBD0087882E /* BURegisterDepartureViewController.swift */,
 			);
 			path = RegisterEstimateRequestVC;
 			sourceTree = "<group>";
@@ -1086,6 +1089,7 @@
 				C1E86270282D545900D9971A /* EstimateRequestsResponse.swift in Sources */,
 				C1E86267282D222000D9971A /* HSCodeResponse.swift in Sources */,
 				C149736B27F59B7500679118 /* Extensions+Data.swift in Sources */,
+				C19E6785282F80FE00B88413 /* BUSelectRegionTableViewController.swift in Sources */,
 				C197AEBD27F43AEC000E4975 /* APIService.swift in Sources */,
 				C1CF675127F736330057A6C3 /* BaetaverseBusinessService.swift in Sources */,
 				C1E5CBF227F2BFBD0087882E /* BUMainViewController.swift in Sources */,
@@ -1100,7 +1104,7 @@
 				C197AEC027F43BEF000E4975 /* BaetaverseAPIService.swift in Sources */,
 				C1D83A892828F3140086D0E7 /* Estimate.swift in Sources */,
 				C1E862A3282E356C00D9971A /* EstimateRequestsTableViewModel.swift in Sources */,
-				C1E5CBF627F2BFBD0087882E /* BUDepartureViewController.swift in Sources */,
+				C1E5CBF627F2BFBD0087882E /* BURegisterDepartureViewController.swift in Sources */,
 				C149737127F5A06D00679118 /* APIResponseModel.swift in Sources */,
 				C1E8629D282E235000D9971A /* LoginViewModel.swift in Sources */,
 				C197AEB327F42D6D000E4975 /* NetworkServiceProvider.swift in Sources */,

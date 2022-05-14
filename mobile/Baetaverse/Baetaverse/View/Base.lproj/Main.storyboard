@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qYI-HY-SPf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9v4-Az-dup">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -1084,7 +1084,7 @@
         <!--출발지-->
         <scene sceneID="Rcn-DJ-O4i">
             <objects>
-                <viewController id="hm3-NB-gdc" customClass="BUDepartureViewController" customModule="Baetaverse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hm3-NB-gdc" customClass="BURegisterDepartureViewController" customModule="Baetaverse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A0N-jz-K0w">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1146,7 +1146,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="출발지" id="lDe-Ug-1ln"/>
                     <connections>
-                        <outlet property="departurePicker" destination="woQ-gv-Gfq" id="ieI-Vr-Ykm"/>
+                        <outlet property="departureCountryPicker" destination="woQ-gv-Gfq" id="ieI-Vr-Ykm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4GQ-rV-MJa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2163,7 +2163,7 @@
         <!--도착지-->
         <scene sceneID="dPY-e1-0Th">
             <objects>
-                <viewController id="JVy-SJ-EV5" customClass="BUDepartureViewController" customModule="Baetaverse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="JVy-SJ-EV5" customClass="BURegisterDepartureViewController" customModule="Baetaverse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wYE-uv-sJ4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2225,17 +2225,62 @@
                     </view>
                     <navigationItem key="navigationItem" title="도착지" id="2cK-58-odT"/>
                     <connections>
-                        <outlet property="departurePicker" destination="Efa-bg-g6y" id="cSD-ff-nq9"/>
+                        <outlet property="departureCountryPicker" destination="Efa-bg-g6y" id="cSD-ff-nq9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pDU-cw-TEo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="12367" y="-3302"/>
         </scene>
+        <!--Select Region-->
+        <scene sceneID="5X8-ic-0dD">
+            <objects>
+                <tableViewController id="aw8-10-POE" customClass="BUSelectRegionTableViewController" customModule="Baetaverse" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="ofQ-F8-kHe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="D1b-fM-8iJ">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D1b-fM-8iJ" id="M0q-T5-Ccu">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="aw8-10-POE" id="HfF-Nh-ybL"/>
+                            <outlet property="delegate" destination="aw8-10-POE" id="hIx-JF-1yp"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Select Region" id="FcL-9u-ODJ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vsp-sE-Slv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="12367" y="-4179"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="U65-Nm-y8S">
+            <objects>
+                <navigationController id="9v4-Az-dup" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nJ3-no-9hf">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="aw8-10-POE" kind="relationship" relationship="rootViewController" id="lNN-Pp-Vhq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i6W-Q0-8U6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="12367" y="-4953"/>
+        </scene>
         <!--인도 조건-->
         <scene sceneID="Ui7-zE-o4R">
             <objects>
-                <viewController id="yL0-zv-938" customClass="BUDepartureViewController" customModule="Baetaverse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="yL0-zv-938" customClass="BURegisterDepartureViewController" customModule="Baetaverse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NJD-Mt-5U3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2281,12 +2326,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="인도 조건" id="pDL-Wk-1h9"/>
                     <connections>
-                        <outlet property="departurePicker" destination="ZYT-NO-7l6" id="eVc-C8-ykj"/>
+                        <outlet property="departureCountryPicker" destination="ZYT-NO-7l6" id="eVc-C8-ykj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jqB-xW-yX0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="13229" y="-3302"/>
+            <point key="canvasLocation" x="13346" y="-3302"/>
         </scene>
         <!--물품 정보 등록-->
         <scene sceneID="03t-s4-MFI">
@@ -2469,7 +2514,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hWk-6b-dh7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="14216" y="-3302"/>
+            <point key="canvasLocation" x="14333" y="-3302"/>
         </scene>
         <!--견적 요청 마감일-->
         <scene sceneID="CeO-9M-wRv">
@@ -2544,7 +2589,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ca-nv-xYI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="hQN-Z1-ZQE" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="15093" y="-3302"/>
+            <point key="canvasLocation" x="15210" y="-3302"/>
         </scene>
         <!--상담-->
         <scene sceneID="gah-3f-7AT">
