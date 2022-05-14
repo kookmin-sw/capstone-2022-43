@@ -810,11 +810,6 @@
                                 <segue destination="h3C-Mt-Cif" kind="show" id="xAH-ek-Ehk"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="bell" catalog="system" id="BI0-Vx-q2g">
-                            <connections>
-                                <segue destination="9Mb-YN-So5" kind="show" id="Xc5-Ha-5OS"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9yv-aJ-z4u" sceneMemberID="firstResponder"/>
@@ -938,86 +933,10 @@
             </objects>
             <point key="canvasLocation" x="7390" y="-2467"/>
         </scene>
-        <!--알림-->
-        <scene sceneID="9ob-MB-ybW">
-            <objects>
-                <tableViewController hidesBottomBarWhenPushed="YES" id="9Mb-YN-So5" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="bDn-F9-l2I">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <sections>
-                            <tableViewSection id="DX0-gQ-FAR">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="Gcw-Ee-yly" style="IBUITableViewCellStyleDefault" id="5eB-2L-tgE">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5eB-2L-tgE" id="JXL-tA-PGt">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="알림 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Gcw-Ee-yly">
-                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="asI-Qe-xcf" style="IBUITableViewCellStyleDefault" id="dlq-sf-D4U">
-                                        <rect key="frame" x="0.0" y="88" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dlq-sf-D4U" id="u61-R4-YAh">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="알림 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="asI-Qe-xcf">
-                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="JmM-gy-Tgy" style="IBUITableViewCellStyleDefault" id="M8U-mI-puB">
-                                        <rect key="frame" x="0.0" y="131.5" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="M8U-mI-puB" id="ceZ-v0-fRs">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="알림 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JmM-gy-Tgy">
-                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="9Mb-YN-So5" id="zeW-F0-8fN"/>
-                            <outlet property="delegate" destination="9Mb-YN-So5" id="DzH-iQ-miP"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="알림" id="FIl-RH-eUZ"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="r1k-s7-Bnc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6480" y="-2427"/>
-        </scene>
         <!--LCL 무역 종류-->
         <scene sceneID="UR0-GW-9GE">
             <objects>
-                <viewController id="J6g-4b-jZ2" sceneMemberID="viewController">
+                <viewController id="J6g-4b-jZ2" customClass="BURegisterTradeTypeViewController" customModule="Baetaverse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0cc-bC-QYE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1049,6 +968,9 @@
                                                     <segment title="수입"/>
                                                 </segments>
                                                 <color key="selectedSegmentTintColor" systemColor="systemTealColor"/>
+                                                <connections>
+                                                    <action selector="tradeTypeValueChanged:" destination="J6g-4b-jZ2" eventType="valueChanged" id="bHE-zI-IiN"/>
+                                                </connections>
                                             </segmentedControl>
                                         </subviews>
                                     </stackView>
@@ -1068,6 +990,9 @@
                                                     <segment title="Port To Port"/>
                                                 </segments>
                                                 <color key="selectedSegmentTintColor" systemColor="systemTealColor"/>
+                                                <connections>
+                                                    <action selector="tradeTypeDetail:" destination="J6g-4b-jZ2" eventType="valueChanged" id="jb9-YK-fdR"/>
+                                                </connections>
                                             </segmentedControl>
                                         </subviews>
                                     </stackView>
@@ -1905,7 +1830,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gy9-PU-nAC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8317" y="-1590"/>
+            <point key="canvasLocation" x="8367" y="-1590"/>
         </scene>
         <!--업체 견적 세부정보-->
         <scene sceneID="Rl4-mk-sGI">
@@ -2092,7 +2017,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aya-5c-bpp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="iki-Ue-f5k" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="9340.579710144928" y="-1590.4017857142856"/>
+            <point key="canvasLocation" x="9391" y="-1590"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="aIK-O2-4RQ">
@@ -2223,7 +2148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ky8-vE-hVQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10364" y="-1590"/>
+            <point key="canvasLocation" x="10414" y="-1590"/>
         </scene>
         <!--도착지-->
         <scene sceneID="dPY-e1-0Th">
@@ -2638,7 +2563,6 @@
         <image name="BoxContainer" width="800" height="439"/>
         <image name="CorporationImage" width="690" height="460"/>
         <image name="MainViewImage" width="1000" height="668"/>
-        <image name="bell" catalog="system" width="128" height="124"/>
         <image name="doc.text.fill" catalog="system" width="115" height="128"/>
         <image name="ellipsis.circle.fill" catalog="system" width="128" height="121"/>
         <image name="ferry.fill" catalog="system" width="128" height="128"/>

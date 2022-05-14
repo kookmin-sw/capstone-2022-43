@@ -9,17 +9,17 @@ import Foundation
 
 struct EstimateRequest: Identifiable {
     
-    let id: Int?
-    let tradeType: String
-    let tradeDetail: String
-    let forwardingDate: Date
-    let departureCountry: String
-    let departureDetail: String
-    let destinationCountry: String
-    let destinationDetail: String
-    let incoterms: String
-    let closingDate: Date
-    let createdAt: Date?
+    var id: Int?
+    var tradeType: String
+    var tradeDetail: String
+    var forwardingDate: Date
+    var departureCountry: String
+    var departureDetail: String
+    var destinationCountry: String
+    var destinationDetail: String
+    var incoterms: String
+    var closingDate: Date
+    var createdAt: Date?
     
 }
 
@@ -51,6 +51,20 @@ extension EstimateRequest {
         self.incoterms = estimateRequestDetail.incoterms
         self.closingDate = estimateRequestDetail.closingDate
         self.createdAt = estimateRequestDetail.createdAt
+    }
+    
+    init() {
+        self.id = nil
+        self.tradeType = ""
+        self.tradeDetail = ""
+        self.forwardingDate = Date()
+        self.departureCountry = ""
+        self.departureDetail = ""
+        self.destinationCountry = ""
+        self.destinationDetail = ""
+        self.incoterms = ""
+        self.closingDate = Date()
+        self.createdAt = Date()
     }
     
 }
