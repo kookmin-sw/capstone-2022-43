@@ -1017,6 +1017,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tradeDetailSegmentedControl" destination="iSQ-LN-5aB" id="MXB-Rv-R1U"/>
+                        <outlet property="tradeTypeSegmentedControl" destination="RBq-UK-Wnw" id="0eC-s7-Leq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aCc-5F-V2U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Iar-lh-Sdx" userLabel="Exit" sceneMemberID="exit"/>
@@ -1026,7 +1030,7 @@
         <!--출고 예정일-->
         <scene sceneID="lOn-Lj-DU9">
             <objects>
-                <viewController id="slc-Qu-diQ" sceneMemberID="viewController">
+                <viewController id="slc-Qu-diQ" customClass="BURegisterDeliveryDateViewController" customModule="Baetaverse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3d8-CJ-YKM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

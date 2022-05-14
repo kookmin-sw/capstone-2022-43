@@ -9,14 +9,31 @@ import UIKit
 
 final class BURegisterTradeTypeViewController: UIViewController {
     
+    @IBOutlet private weak var tradeTypeSegmentedControl: UISegmentedControl!
+    @IBOutlet private weak var tradeDetailSegmentedControl: UISegmentedControl!
+        
     private var estimateRequest = EstimateRequest()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateData()
     }
     
-    @IBAction func tradeTypeValueChanged(_ sender: UISegmentedControl) {
-        let selectedValue = sender.selectedSegmentIndex
+    @IBAction private func tradeTypeValueChanged(_ sender: UISegmentedControl) {
+        updateTradeTypeValue(with: sender)
+    }
+    
+    @IBAction private func tradeTypeDetail(_ sender: UISegmentedControl) {
+        updateTradeDetailValue(with: sender)
+    }
+    
+    private func updateData() {
+        updateTradeTypeValue(with: tradeTypeSegmentedControl)
+        updateTradeDetailValue(with: tradeDetailSegmentedControl)
+    }
+    
+    private func updateTradeTypeValue(with segmentedControl: UISegmentedControl) {
+        let selectedValue = segmentedControl.selectedSegmentIndex
         
         if selectedValue == 0 {
             estimateRequest.tradeType = "수출"
@@ -25,8 +42,8 @@ final class BURegisterTradeTypeViewController: UIViewController {
         }
     }
     
-    @IBAction func tradeTypeDetail(_ sender: UISegmentedControl) {
-        let selectedValue = sender.selectedSegmentIndex
+    private func updateTradeDetailValue(with segmentedControl: UISegmentedControl) {
+        let selectedValue = segmentedControl.selectedSegmentIndex
         
         if selectedValue == 0 {
             estimateRequest.tradeDetail = "Door to Door"
@@ -35,14 +52,12 @@ final class BURegisterTradeTypeViewController: UIViewController {
         }
     }
     
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if let deliveryDateVC = segue.destination as? BURegisterDeliveryDateViewController {
+            deliveryDateVC.passData(estimateRequest: estimateRequest)
+        }
     }
-    */
 
 }
