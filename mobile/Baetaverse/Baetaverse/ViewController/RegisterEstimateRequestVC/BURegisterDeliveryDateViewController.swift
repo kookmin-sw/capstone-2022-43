@@ -9,16 +9,26 @@ import UIKit
 
 final class BURegisterDeliveryDateViewController: UIViewController {
     
+    @IBOutlet private weak var diliveryDatePicker: UIDatePicker!
+    
     private var estimateRequest = EstimateRequest()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(estimateRequest)
+        updateDiliveryDate(with: diliveryDatePicker)
+    }
+    
+    @IBAction func diliveryDateValueChanged(_ sender: UIDatePicker) {
+        updateDiliveryDate(with: sender)
     }
     
     func passData(estimateRequest: EstimateRequest) {
         self.estimateRequest = estimateRequest
+    }
+    
+    private func updateDiliveryDate(with datePicker: UIDatePicker) {
+        let date = datePicker.date
+        estimateRequest.forwardingDate = date
     }
     
     /*

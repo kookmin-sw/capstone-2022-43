@@ -1036,7 +1036,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="FbC-qh-jWB">
-                                <rect key="frame" x="20" y="196" width="374" height="504"/>
+                                <rect key="frame" x="20" y="227" width="374" height="442"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="출고 예정일은 언제인가요?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4NM-LZ-CfQ">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
@@ -1045,7 +1045,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="z9Q-yE-s2W">
-                                        <rect key="frame" x="0.0" y="90" width="374" height="414"/>
+                                        <rect key="frame" x="0.0" y="90" width="374" height="352"/>
+                                        <connections>
+                                            <action selector="diliveryDateValueChanged:" destination="slc-Qu-diQ" eventType="valueChanged" id="xHT-gx-n4t"/>
+                                        </connections>
                                     </datePicker>
                                 </subviews>
                             </stackView>
@@ -1070,6 +1073,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="출고 예정일" largeTitleDisplayMode="always" id="kiB-fL-nUz"/>
+                    <connections>
+                        <outlet property="diliveryDatePicker" destination="z9Q-yE-s2W" id="JnI-JD-oFs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O0p-sw-68M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
