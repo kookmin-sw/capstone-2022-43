@@ -31,7 +31,7 @@ class OwnerController {
 
 
     public login = (req: Request, res: Response, next: NextFunction) => {
-        passport.authenticate('local', (authError, user, info) => {
+        passport.authenticate('owner', (authError, user, info) => {
             if (authError) {
                 return next(authError);
             }

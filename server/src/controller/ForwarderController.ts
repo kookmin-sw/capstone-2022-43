@@ -32,7 +32,7 @@ class ForwarderController {
 
 
     public login = (req: Request, res: Response, next: NextFunction) => {
-        passport.authenticate('local', (authError, user, info) => {
+        passport.authenticate('forwarder', (authError, user, info) => {
             if (authError) {
                 return next(authError);
             }
