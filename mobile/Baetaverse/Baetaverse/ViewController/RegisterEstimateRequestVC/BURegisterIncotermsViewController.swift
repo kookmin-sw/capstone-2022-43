@@ -9,12 +9,18 @@ import UIKit
 
 class BURegisterIncotermsViewController: UIViewController {
 
+    @IBOutlet private weak var incotermsTextField: UITextField!
+    
+    private var estimateRequest = EstimateRequest()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        incotermsTextField.delegate = self
     }
     
+    func passData(estimateRequest: EstimateRequest) {
+        self.estimateRequest = estimateRequest
+    }
 
     /*
     // MARK: - Navigation
@@ -26,4 +32,21 @@ class BURegisterIncotermsViewController: UIViewController {
     }
     */
 
+}
+
+extension BURegisterIncotermsViewController: UITextFieldDelegate {
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        self.estimateRequest.incoterms = textField.text ?? ""
+        print(self.estimateRequest)
+    }
+    
+}
+
+extension BURegisterIncotermsViewController {
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
 }

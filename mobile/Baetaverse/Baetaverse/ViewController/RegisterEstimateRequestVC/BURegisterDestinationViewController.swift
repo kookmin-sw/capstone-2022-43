@@ -29,6 +29,10 @@ final class BURegisterDestinationViewController: UIViewController {
            let rootVC = navVC.topViewController as? BUSelectRegionTableViewController {
             rootVC.selectRegionDelegate = self
         }
+        
+        if let incotermsVC = segue.destination as? BURegisterIncotermsViewController {
+            incotermsVC.passData(estimateRequest: estimateRequest)
+        }
     }
 
 }
