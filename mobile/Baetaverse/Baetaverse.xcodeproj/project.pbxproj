@@ -57,7 +57,6 @@
 		C1982050283120A800A79AD6 /* Extensions+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C198204F283120A800A79AD6 /* Extensions+UIViewController.swift */; };
 		C19E6785282F80FE00B88413 /* BUSelectRegionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E6783282F80C100B88413 /* BUSelectRegionTableViewController.swift */; };
 		C19E678A282FA5CC00B88413 /* BUSelectRegionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E6789282FA5CC00B88413 /* BUSelectRegionDataSource.swift */; };
-		C19E678E282FB22700B88413 /* Extensions+Locale.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E678D282FB22700B88413 /* Extensions+Locale.swift */; };
 		C19E67902830B1E100B88413 /* SelectRegionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E678F2830B1E100B88413 /* SelectRegionTableViewCell.swift */; };
 		C19E67922830CDBC00B88413 /* BURegisterDestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E67912830CDBC00B88413 /* BURegisterDestinationViewController.swift */; };
 		C19E67942830D20200B88413 /* BURegisterIncotermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E67932830D20200B88413 /* BURegisterIncotermsViewController.swift */; };
@@ -219,7 +218,6 @@
 		C198204F283120A800A79AD6 /* Extensions+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIViewController.swift"; sourceTree = "<group>"; };
 		C19E6783282F80C100B88413 /* BUSelectRegionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BUSelectRegionTableViewController.swift; sourceTree = "<group>"; };
 		C19E6789282FA5CC00B88413 /* BUSelectRegionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BUSelectRegionDataSource.swift; sourceTree = "<group>"; };
-		C19E678D282FB22700B88413 /* Extensions+Locale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+Locale.swift"; sourceTree = "<group>"; };
 		C19E678F2830B1E100B88413 /* SelectRegionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRegionTableViewCell.swift; sourceTree = "<group>"; };
 		C19E67912830CDBC00B88413 /* BURegisterDestinationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BURegisterDestinationViewController.swift; sourceTree = "<group>"; };
 		C19E67932830D20200B88413 /* BURegisterIncotermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BURegisterIncotermsViewController.swift; sourceTree = "<group>"; };
@@ -810,7 +808,6 @@
 			children = (
 				C149736A27F59B7500679118 /* Extensions+Data.swift */,
 				C1C9EC5A2818F7A40041F974 /* Extensions+Encodable.swift */,
-				C19E678D282FB22700B88413 /* Extensions+Locale.swift */,
 				C198204F283120A800A79AD6 /* Extensions+UIViewController.swift */,
 			);
 			path = Extensions;
@@ -1152,7 +1149,6 @@
 				C1E86292282E0FFC00D9971A /* GoodsDetail.swift in Sources */,
 				C1E8628B282E0CBD00D9971A /* EstimateRequestDetailRequest.swift in Sources */,
 				C184F7B0282E620000336677 /* EstimateRequestTableViewCell.swift in Sources */,
-				C19E678E282FB22700B88413 /* Extensions+Locale.swift in Sources */,
 				C1CF673A27F724600057A6C3 /* BUMenuTableViewController.swift in Sources */,
 				C19E67922830CDBC00B88413 /* BURegisterDestinationViewController.swift in Sources */,
 				C1E5CBBA27F2BF330087882E /* AppDelegate.swift in Sources */,
