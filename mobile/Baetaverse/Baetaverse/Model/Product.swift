@@ -9,13 +9,13 @@ import Foundation
 
 struct Product: Identifiable {
     
-    let id: Int?
-    let name: String
-    let price: Int
-    let weight: Int
-    let standardUnit: String
-    let hsCode: String
-    let createdAt: Date?
+    var id: Int?
+    var name: String
+    var price: Int
+    var weight: Int
+    var standardUnit: String
+    var hsCode: String
+    var createdAt: Date?
     
 }
 
@@ -29,6 +29,16 @@ extension Product {
         self.standardUnit = goods.standardUnit
         self.hsCode = goods.hscode
         self.createdAt = goods.createdAt
+    }
+    
+    init() {
+        self.id = nil
+        self.name = ""
+        self.price = 0
+        self.weight = 0
+        self.standardUnit = ""
+        self.hsCode = ""
+        self.createdAt = nil
     }
     
 }

@@ -2359,7 +2359,7 @@
         <!--물품 정보 등록-->
         <scene sceneID="03t-s4-MFI">
             <objects>
-                <viewController id="gWT-og-bwg" sceneMemberID="viewController">
+                <viewController id="gWT-og-bwg" customClass="BURegisterProductViewController" customModule="Baetaverse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ICE-OM-vbE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2477,6 +2477,19 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="물품 정보 등록" id="yLZ-KA-7SI"/>
+                    <connections>
+                        <outlet property="heightTextField" destination="5Zu-pb-lhS" id="1H2-0m-8EQ"/>
+                        <outlet property="horizontalTextField" destination="Bc9-HV-DGC" id="g6r-Zd-Jvv"/>
+                        <outlet property="hscodeTextField" destination="bT5-yN-Dc1" id="wy9-gM-Um6"/>
+                        <outlet property="lengthUnit" destination="M3m-LU-6Fr" id="Prl-0d-b1G"/>
+                        <outlet property="packagingMethodTextField" destination="nDl-Di-nMw" id="t8d-iv-DMW"/>
+                        <outlet property="productCountTextField" destination="jKC-5E-lsT" id="FpF-wL-5Ri"/>
+                        <outlet property="productNameTextField" destination="pPd-q7-5f1" id="14u-5I-m0P"/>
+                        <outlet property="totalPriceTextField" destination="abQ-hU-dJ2" id="VjB-zW-s77"/>
+                        <outlet property="unitTextField" destination="gz1-I4-CpB" id="WkG-GG-sjc"/>
+                        <outlet property="verticalTextField" destination="WOw-95-Y1a" id="OQU-nf-YXQ"/>
+                        <outlet property="volumeTextField" destination="IN9-vD-B1d" id="s7G-Yf-DEH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hWk-6b-dh7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
