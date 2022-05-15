@@ -9,11 +9,13 @@ import UIKit
 
 final class BUSelectRegionDataSource: NSObject {
     
-    private var countries: [String: [(String, String)]]
+    private(set) var countries: [String: [(String, String)]]
     
     private lazy var sections: [String] = {
         self.countries.keys.sorted(by: <).map({ String($0) })
     }()
+    
+    private(set) var selectedRegion = IndexPath(row: 0, section: 0)
     
     override init() {
         self.countries = Self.configure()
@@ -46,6 +48,10 @@ final class BUSelectRegionDataSource: NSObject {
         }
     }
     
+    func changeSelectedRegion(to indexPath: IndexPath) {
+        self.selectedRegion = indexPath
+    }
+    
 }
 
 extension BUSelectRegionDataSource: UITableViewDataSource {
@@ -68,6 +74,10 @@ extension BUSelectRegionDataSource: UITableViewDataSource {
         var content = cell.defaultContentConfiguration()
         content.text = countryName
         cell.contentConfiguration = content
+        
+        if indexPath == selectedRegion {
+            cell.accessoryType = .checkmark
+        }
         
         return cell
     }

@@ -9,8 +9,6 @@ import UIKit
 
 final class BUSelectRegionTableViewController: UITableViewController {
     
-//    private let viewModel = SelectRegionViewModel()
-    
     private let dataSource = BUSelectRegionDataSource()
     
     private let searchController: UISearchController = {
@@ -22,13 +20,6 @@ final class BUSelectRegionTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
         configureUIComponents()
     }
     
@@ -51,6 +42,28 @@ final class BUSelectRegionTableViewController: UITableViewController {
     }
     */
 
+}
+
+extension BUSelectRegionTableViewController {
+    
+    // MARK: - TableViewDelegate
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Unselect the row.
+        tableView.deselectRow(at: indexPath, animated: false)
+        
+        if let cell = tableView.cellForRow(at: dataSource.selectedRegion) {
+            cell.accessoryType = .none
+        }
+        
+        dataSource.changeSelectedRegion(to: indexPath)
+        
+        // Mark the newly selected filter item with a checkmark.
+        if let cell = tableView.cellForRow(at: indexPath) {
+            cell.accessoryType = .checkmark
+        }
+    }
+    
 }
 
 extension BUSelectRegionTableViewController: UISearchBarDelegate {

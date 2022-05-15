@@ -8,14 +8,11 @@
 import UIKit
 
 final class BURegisterDepartureViewController: UIViewController {
-
-    @IBOutlet private weak var departureCountryPicker: UIPickerView!
     
     private var estimateRequest = EstimateRequest()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        departureCountryPicker.dataSource = self
     }
     
     func passData(estimateRequest: EstimateRequest) {

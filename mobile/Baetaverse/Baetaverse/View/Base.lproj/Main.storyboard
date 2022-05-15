@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9v4-Az-dup">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qYI-HY-SPf">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -1074,7 +1074,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="출고 예정일" largeTitleDisplayMode="always" id="kiB-fL-nUz"/>
                     <connections>
-                        <outlet property="diliveryDatePicker" destination="z9Q-yE-s2W" id="JnI-JD-oFs"/>
+                        <outlet property="diliveryDatePicker" destination="z9Q-yE-s2W" id="Pii-Yj-CSy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O0p-sw-68M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1090,10 +1090,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="b1M-nX-Fwq">
-                                <rect key="frame" x="20" y="243" width="374" height="410"/>
+                                <rect key="frame" x="20" y="335.5" width="374" height="225"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9Ji-Jv-AYm">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="266"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="81"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="출발하는 국가를 알려주세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZi-gy-RRw">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
@@ -1101,13 +1101,18 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="woQ-gv-Gfq">
-                                                <rect key="frame" x="0.0" y="50" width="374" height="216"/>
-                                            </pickerView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTZ-hK-d6b">
+                                                <rect key="frame" x="0.0" y="50" width="374" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <connections>
+                                                    <segue destination="9v4-Az-dup" kind="presentation" id="rm2-PS-nl1"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Nm8-ZG-vhe">
-                                        <rect key="frame" x="0.0" y="326" width="374" height="84"/>
+                                        <rect key="frame" x="0.0" y="141" width="374" height="84"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="세부 주소를 입력해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0Y-01-OF2">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
@@ -1145,9 +1150,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="출발지" id="lDe-Ug-1ln"/>
-                    <connections>
-                        <outlet property="departureCountryPicker" destination="woQ-gv-Gfq" id="ieI-Vr-Ykm"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4GQ-rV-MJa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2169,10 +2171,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="6Dk-6s-cXn">
-                                <rect key="frame" x="20" y="243" width="374" height="410"/>
+                                <rect key="frame" x="20" y="335.5" width="374" height="225"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Rex-KJ-yaR">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="266"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="81"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="도착하는 국가를 알려주세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyf-3k-8Lh">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
@@ -2180,13 +2182,18 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Efa-bg-g6y">
-                                                <rect key="frame" x="0.0" y="50" width="374" height="216"/>
-                                            </pickerView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kl1-Ur-0cF">
+                                                <rect key="frame" x="0.0" y="50" width="374" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <connections>
+                                                    <segue destination="9v4-Az-dup" kind="presentation" id="wDc-bo-KRQ"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uWC-en-LpJ">
-                                        <rect key="frame" x="0.0" y="326" width="374" height="84"/>
+                                        <rect key="frame" x="0.0" y="141" width="374" height="84"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="세부 주소를 입력해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4r-Bn-6AS">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
@@ -2224,9 +2231,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="도착지" id="2cK-58-odT"/>
-                    <connections>
-                        <outlet property="departureCountryPicker" destination="Efa-bg-g6y" id="cSD-ff-nq9"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pDU-cw-TEo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2237,11 +2241,11 @@
             <objects>
                 <tableViewController id="aw8-10-POE" customClass="BUSelectRegionTableViewController" customModule="Baetaverse" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="ofQ-F8-kHe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="countryCell" textLabel="u96-f7-u4c" style="IBUITableViewCellStyleDefault" id="D1b-fM-8iJ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="countryCell" textLabel="u96-f7-u4c" style="IBUITableViewCellStyleDefault" id="D1b-fM-8iJ" customClass="SelectRegionTableViewCell" customModule="Baetaverse" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="49.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D1b-fM-8iJ" id="M0q-T5-Ccu">
@@ -2268,14 +2272,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vsp-sE-Slv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="12367" y="-4179"/>
+            <point key="canvasLocation" x="13345" y="-4085"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="U65-Nm-y8S">
             <objects>
                 <navigationController id="9v4-Az-dup" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nJ3-no-9hf">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -2284,7 +2288,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i6W-Q0-8U6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="12367" y="-4953"/>
+            <point key="canvasLocation" x="13345" y="-4822"/>
         </scene>
         <!--인도 조건-->
         <scene sceneID="Ui7-zE-o4R">
@@ -2621,6 +2625,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="wDc-bo-KRQ"/>
         <segue reference="hdh-DO-u6g"/>
     </inferredMetricsTieBreakers>
     <resources>
