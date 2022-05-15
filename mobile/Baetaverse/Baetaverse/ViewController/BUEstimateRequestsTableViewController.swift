@@ -33,22 +33,6 @@ final class BUEstimateRequestsTableViewController: UITableViewController {
     func updateUI() {
         self.tableView.reloadData()
     }
-    
-    func displayError(_ error: Error, title: String) {
-        guard let _ = viewIfLoaded?.window else { return }
-        
-        let alert = UIAlertController(
-            title: title,
-            message: error.localizedDescription,
-            preferredStyle: .alert
-        )
-        alert.addAction(UIAlertAction(
-            title: "확인",
-            style: .default
-        ))
-        
-        present(alert, animated: true)
-    }
 
 }
 

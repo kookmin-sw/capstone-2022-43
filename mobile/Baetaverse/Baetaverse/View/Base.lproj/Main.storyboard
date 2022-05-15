@@ -2364,7 +2364,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iuL-YT-Hoa">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="iuL-YT-Hoa">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="u0q-yn-v2N">
@@ -2498,7 +2498,7 @@
         <!--견적 요청 마감일-->
         <scene sceneID="CeO-9M-wRv">
             <objects>
-                <viewController id="A5c-Qk-4Xq" customClass="BUEstimateDueDateViewController" customModule="Baetaverse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="A5c-Qk-4Xq" customClass="BURegisterDueDateViewController" customModule="Baetaverse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="anD-fh-oCW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2514,6 +2514,9 @@
                                     </label>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="eQ1-1e-kwk">
                                         <rect key="frame" x="0.0" y="90" width="374" height="414"/>
+                                        <connections>
+                                            <action selector="dueDateValueChanged:" destination="A5c-Qk-4Xq" eventType="valueChanged" id="Mer-qB-nlJ"/>
+                                        </connections>
                                     </datePicker>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="수출 수입 통관 서비스" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhY-TL-ARS">
                                         <rect key="frame" x="0.0" y="564" width="374" height="20.5"/>
@@ -2536,7 +2539,6 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="declinedButtonClicked:" destination="Roq-L8-A13" eventType="touchUpInside" id="rFs-7a-3Pr"/>
-                                            <segue destination="hQN-Z1-ZQE" kind="unwind" unwindAction="unwindToBUMainView:" id="PBE-lb-l06"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ab-qt-m6s">
@@ -2546,7 +2548,6 @@
                                         <connections>
                                             <action selector="acceptButtonClicked:" destination="Roq-L8-A13" eventType="touchUpInside" id="bBG-3c-GYj"/>
                                             <action selector="acceptButtonClicked:" destination="A5c-Qk-4Xq" eventType="touchUpInside" id="v8S-QJ-7gZ"/>
-                                            <segue destination="hQN-Z1-ZQE" kind="unwind" unwindAction="unwindToBUMainView:" id="VZX-vd-uS8"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -2564,6 +2565,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="견적 요청 마감일" largeTitleDisplayMode="always" id="kxB-ZB-Q2l"/>
+                    <connections>
+                        <segue destination="hQN-Z1-ZQE" kind="unwind" identifier="unwindToBUMainSegue" unwindAction="unwindToBUMainView:" id="WgU-bT-0HL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ca-nv-xYI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="hQN-Z1-ZQE" userLabel="Exit" sceneMemberID="exit"/>
