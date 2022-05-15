@@ -76,7 +76,7 @@ extension BUSelectRegionTableViewController {
 extension BUSelectRegionTableViewController: UISearchBarDelegate {
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        print("cancleButtonClicked")
+        dismiss(animated: true)
     }
     
 }

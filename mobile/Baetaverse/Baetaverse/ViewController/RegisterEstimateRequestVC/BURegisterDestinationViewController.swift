@@ -10,6 +10,7 @@ import UIKit
 final class BURegisterDestinationViewController: UIViewController {
     
     @IBOutlet private weak var destinationDetailTextField: UITextField!
+    @IBOutlet private weak var countrySelectButton: UIButton!
     
     private var estimateRequest = EstimateRequest()
 
@@ -49,6 +50,10 @@ extension BURegisterDestinationViewController: SelectRegionDelegate {
     
     func send(region: String) {
         self.estimateRequest.destinationCountry = region
+        self.countrySelectButton.setTitle(
+            Locale.current.localizedString(forRegionCode: region),
+            for: .normal
+        )
     }
     
 }

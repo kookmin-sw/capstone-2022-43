@@ -11,6 +11,8 @@ final class BURegisterDepartureViewController: UIViewController {
     
     @IBOutlet private weak var departureDetailAddressTextField: UITextField!
     @IBOutlet private weak var formStackView: UIStackView!
+    @IBOutlet private weak var nextButton: UIButton!
+    @IBOutlet private weak var countrySelectButton: UIButton!
     
     private var estimateRequest = EstimateRequest()
     
@@ -30,10 +32,10 @@ final class BURegisterDepartureViewController: UIViewController {
                 item: view.keyboardLayoutGuide,
                 attribute: .top,
                 relatedBy: .equal,
-                toItem: formStackView,
+                toItem: nextButton,
                 attribute: .bottom,
                 multiplier: 1,
-                constant: 200
+                constant: 20
             )
         ])
     }
@@ -63,6 +65,10 @@ extension BURegisterDepartureViewController: SelectRegionDelegate {
     
     func send(region: String) {
         self.estimateRequest.departureCountry = region
+        self.countrySelectButton.setTitle(
+            Locale.current.localizedString(forRegionCode: region),
+            for: .normal
+        )
     }
     
 }
