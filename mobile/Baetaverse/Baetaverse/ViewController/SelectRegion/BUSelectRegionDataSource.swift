@@ -9,32 +9,41 @@ import UIKit
 
 final class BUSelectRegionDataSource: NSObject {
     
-    private(set) var countries: [Character: [String]]
-    private var sections: [Character]
+    private var countries: [String: [(String, String)]]
+    
+    private lazy var sections: [String] = {
+        self.countries.keys.sorted(by: <).map({ String($0) })
+    }()
     
     override init() {
-        self.countries = [
-            "China",
-            "Japan",
-            "South Korea",
-            "United States"
-        ].reduce([Character: [String]]()) { partialResult, countryName in
-            guard let alphabetIndex = countryName.capitalized.first else {
+        self.countries = Self.configure()
+        super.init()
+    }
+    
+    private static func configure() -> [String: [(String, String)]] {
+        Locale.isoRegionCodes.reduce([String: [(String, String)]]()) { partialResult, countryCode in
+            guard let localizedCountryName = Locale.current.localizedString(forRegionCode: countryCode) else {
+                return partialResult
+            }
+            guard let countryIndex = localizedCountryName.capitalized.first else {
                 return partialResult
             }
             
-            var dict = partialResult
+            var newResult = partialResult
+            let index = String(countryIndex)
+            let countryPair = (countryCode, localizedCountryName)
             
-            if let existValue = partialResult[alphabetIndex] {
-                dict.updateValue(existValue + [countryName], forKey: alphabetIndex)
+            if partialResult[index] == nil {
+                newResult[index] = [countryPair]
             } else {
-                dict[alphabetIndex] = [countryName]
+                newResult[index]?.append(contentsOf: [countryPair])
+                newResult[index]?.sort(by: { first, second in
+                    first.1 < second.1
+                })
             }
             
-            return dict
+            return newResult
         }
-        self.sections = countries.keys.sorted(by: <)
-        super.init()
     }
     
 }
@@ -53,22 +62,22 @@ extension BUSelectRegionDataSource: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "countryCell", for: indexPath)
         
-        var content = cell.defaultContentConfiguration()
         let index = sections[indexPath.section]
-        content.text = countries[index]?[indexPath.row] ?? ""
+        let countryName = countries[index]?[indexPath.row].1 ?? ""
+        
+        var content = cell.defaultContentConfiguration()
+        content.text = countryName
         cell.contentConfiguration = content
-
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return String(sections[section])
+        return sections[section]
     }
     
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
-        return sections.map { char in
-            String(char)
-        }
+        return sections
     }
     
 }
