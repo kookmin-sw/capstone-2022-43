@@ -11,6 +11,8 @@ final class BUSelectRegionTableViewController: UITableViewController {
     
     private let dataSource = BUSelectRegionDataSource()
     
+    var selectRegionDelegate: SelectRegionDelegate?
+    
     private let searchController: UISearchController = {
         let controller = UISearchController(searchResultsController: nil)
         controller.hidesNavigationBarDuringPresentation = false
@@ -21,6 +23,11 @@ final class BUSelectRegionTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUIComponents()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.selectRegionDelegate?.send(region: dataSource.currentRegion)
     }
     
     private func configureUIComponents() {
@@ -71,5 +78,11 @@ extension BUSelectRegionTableViewController: UISearchBarDelegate {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         print("cancleButtonClicked")
     }
+    
+}
+
+protocol SelectRegionDelegate {
+    
+    func send(region: String)
     
 }

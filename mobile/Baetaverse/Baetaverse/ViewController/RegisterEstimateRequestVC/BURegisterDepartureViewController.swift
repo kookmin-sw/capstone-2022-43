@@ -9,36 +9,66 @@ import UIKit
 
 final class BURegisterDepartureViewController: UIViewController {
     
+    @IBOutlet private weak var departureDetailAddressTextField: UITextField!
+    @IBOutlet private weak var formStackView: UIStackView!
+    
     private var estimateRequest = EstimateRequest()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        departureDetailAddressTextField.delegate = self
+        configureUILayout()
     }
-    
+        
     func passData(estimateRequest: EstimateRequest) {
         self.estimateRequest = estimateRequest
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func configureUILayout() {
+        NSLayoutConstraint.activate([
+            NSLayoutConstraint(
+                item: view.keyboardLayoutGuide,
+                attribute: .top,
+                relatedBy: .equal,
+                toItem: formStackView,
+                attribute: .bottom,
+                multiplier: 1,
+                constant: 200
+            )
+        ])
     }
-    */
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let navVC = segue.destination as? UINavigationController,
+           let rootVC = navVC.topViewController as? BUSelectRegionTableViewController {
+            rootVC.selectRegionDelegate = self
+        }
+    }
+    
 }
 
-extension BURegisterDepartureViewController: UIPickerViewDataSource {
+extension BURegisterDepartureViewController: UITextFieldDelegate {
     
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        self.estimateRequest.departureDetail = textField.text ?? ""
+        print(self.estimateRequest)
     }
     
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 2
+}
+
+extension BURegisterDepartureViewController: SelectRegionDelegate {
+    
+    func send(region: String) {
+        self.estimateRequest.departureCountry = region
+        print(self.estimateRequest)
+    }
+    
+}
+
+extension BURegisterDepartureViewController {
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
 }

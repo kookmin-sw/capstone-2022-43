@@ -17,6 +17,12 @@ final class BUSelectRegionDataSource: NSObject {
     
     private(set) var selectedRegion = IndexPath(row: 0, section: 0)
     
+    var currentRegion: String {
+        let index = sections[selectedRegion.section]
+        let code = countries[index]?[selectedRegion.row].0 ?? ""
+        return code
+    }
+    
     override init() {
         self.countries = Self.configure()
         super.init()
