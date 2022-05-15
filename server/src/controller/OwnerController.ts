@@ -14,9 +14,12 @@ class OwnerController {
         try {
             const { email, password, name, phone_number } = req.body;
 
-            const hash = await bcrypt.hash(password, 14);
-            const owner: Owner = new Owner(name, phone_number, email, hash);
-            await this.ownerService.join(owner);
+            const hash = await bcrypt.hash(password, 12);
+            const owner: Owner = await this.ownerService.join({
+                email,
+                password: hash,
+                name, phone_number
+            });
 
             return res.status(200).json({
                 status: 200,
@@ -36,14 +39,14 @@ class OwnerController {
                 return next(authError);
             }
             if (!user) {
-                return next(new HttpException(400, info.message));
+                return next(new HttpException(info.status, info.message));
             }
 
             const token = jwt.sign({
                 uuid: user.uuid,
                 email: user.email,
                 name: user.name
-            }, process.env.JWT_OWNER_SECRET || '', {
+            }, process.env.JWT_OWNER_SECRET!, {
                 expiresIn: '7d',
                 issuer: 'BAETAVERSE-DEV'
             });
