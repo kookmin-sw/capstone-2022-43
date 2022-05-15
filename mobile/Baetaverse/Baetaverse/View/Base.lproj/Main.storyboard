@@ -2365,172 +2365,115 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iuL-YT-Hoa">
-                                <rect key="frame" x="0.0" y="140" width="414" height="655"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="u0q-yn-v2N">
-                                        <rect key="frame" x="0.0" y="0.0" width="800" height="928.5"/>
+                                        <rect key="frame" x="20" y="0.0" width="374" height="816.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="물품 정보를 입력해주세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMi-oB-WFJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="800" height="30"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="물품명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6N-Mv-7wt">
-                                                <rect key="frame" x="0.0" y="38" width="800" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pPd-q7-5f1">
-                                                <rect key="frame" x="0.0" y="66.5" width="800" height="34"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="물품명" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pPd-q7-5f1">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HSCode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVM-Ki-0Cr">
-                                                <rect key="frame" x="0.0" y="108.5" width="800" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bT5-yN-Dc1">
-                                                <rect key="frame" x="0.0" y="137" width="800" height="34"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="HSCode" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bT5-yN-Dc1">
+                                                <rect key="frame" x="0.0" y="42" width="374" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="물품 총 가액" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nX9-D5-nl6">
-                                                <rect key="frame" x="0.0" y="179" width="800" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="abQ-hU-dJ2">
-                                                <rect key="frame" x="0.0" y="207.5" width="800" height="34"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="총금액" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="abQ-hU-dJ2">
+                                                <rect key="frame" x="0.0" y="84" width="374" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="총중량" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXf-qe-aKW">
-                                                <rect key="frame" x="0.0" y="249.5" width="800" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="CzG-fh-PAs">
-                                                <rect key="frame" x="0.0" y="278" width="800" height="34"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="CzG-fh-PAs">
+                                                <rect key="frame" x="0.0" y="126" width="374" height="34"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IN9-vD-B1d">
-                                                        <rect key="frame" x="0.0" y="0.0" width="400" height="34"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="부피" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IN9-vD-B1d">
+                                                        <rect key="frame" x="0.0" y="0.0" width="177" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="단위" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gz1-I4-CpB">
-                                                        <rect key="frame" x="400" y="0.0" width="400" height="34"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="단위" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gz1-I4-CpB">
+                                                        <rect key="frame" x="197" y="0.0" width="177" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="화물포장정보" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bZ-0U-uaC">
-                                                <rect key="frame" x="0.0" y="320" width="800" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nDl-Di-nMw">
-                                                <rect key="frame" x="0.0" y="348.5" width="800" height="34"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="포장정보" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nDl-Di-nMw">
+                                                <rect key="frame" x="0.0" y="168" width="374" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="HQa-al-84Y">
-                                                <rect key="frame" x="0.0" y="390.5" width="800" height="34"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HQa-al-84Y">
+                                                <rect key="frame" x="0.0" y="210" width="374" height="34"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가로" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZi-D0-YRq">
-                                                        <rect key="frame" x="0.0" y="0.0" width="114.5" height="34"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bc9-HV-DGC">
-                                                        <rect key="frame" x="114.5" y="0.0" width="114" height="34"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="가로" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bc9-HV-DGC">
+                                                        <rect key="frame" x="0.0" y="0.0" width="87.5" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="세로" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qM7-gI-pe8">
-                                                        <rect key="frame" x="228.5" y="0.0" width="114.5" height="34"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WOw-95-Y1a">
-                                                        <rect key="frame" x="343" y="0.0" width="114" height="34"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="세로" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WOw-95-Y1a">
+                                                        <rect key="frame" x="95.5" y="0.0" width="87.5" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="높이" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1k-az-nGp">
-                                                        <rect key="frame" x="457" y="0.0" width="114.5" height="34"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Zu-pb-lhS">
-                                                        <rect key="frame" x="571.5" y="0.0" width="114" height="34"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="높이" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Zu-pb-lhS">
+                                                        <rect key="frame" x="191" y="0.0" width="87.5" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="단위" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M3m-LU-6Fr">
-                                                        <rect key="frame" x="685.5" y="0.0" width="114.5" height="34"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="단위" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M3m-LU-6Fr">
+                                                        <rect key="frame" x="286.5" y="0.0" width="87.5" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="개수" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncN-ew-sk4">
-                                                <rect key="frame" x="0.0" y="432.5" width="800" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="개수" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jKC-5E-lsT">
+                                                <rect key="frame" x="0.0" y="252" width="374" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제품사진 등록" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDZ-cF-OUe">
-                                                <rect key="frame" x="0.0" y="461" width="800" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="294" width="374" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BoxContainer" translatesAutoresizingMaskIntoConstraints="NO" id="31o-xm-2PZ">
-                                                <rect key="frame" x="0.0" y="489.5" width="800" height="439"/>
+                                                <rect key="frame" x="0.0" y="322.5" width="374" height="439"/>
                                             </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="91D-QL-wUw">
+                                                <rect key="frame" x="0.0" y="769.5" width="374" height="47"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="tinted" title="다음" buttonSize="large"/>
+                                                <connections>
+                                                    <segue destination="A5c-Qk-4Xq" kind="show" id="pgA-RI-VWg"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="u0q-yn-v2N" firstAttribute="top" secondItem="BtQ-5C-783" secondAttribute="top" id="5Uk-hc-80Y"/>
-                                    <constraint firstItem="u0q-yn-v2N" firstAttribute="leading" secondItem="BtQ-5C-783" secondAttribute="leading" id="CrD-k5-kNc"/>
-                                    <constraint firstItem="u0q-yn-v2N" firstAttribute="width" secondItem="3FL-eR-15J" secondAttribute="width" multiplier="1.93237" id="DJH-xt-Rqh"/>
-                                    <constraint firstItem="u0q-yn-v2N" firstAttribute="trailing" secondItem="BtQ-5C-783" secondAttribute="trailing" id="SRx-aO-jID"/>
-                                    <constraint firstItem="u0q-yn-v2N" firstAttribute="bottom" secondItem="BtQ-5C-783" secondAttribute="bottom" id="Tes-UD-y9e"/>
+                                    <constraint firstItem="u0q-yn-v2N" firstAttribute="top" secondItem="BtQ-5C-783" secondAttribute="top" id="4TH-o5-Rn9"/>
+                                    <constraint firstItem="u0q-yn-v2N" firstAttribute="trailing" secondItem="BtQ-5C-783" secondAttribute="trailing" constant="394" id="BlE-x0-hXx"/>
+                                    <constraint firstItem="u0q-yn-v2N" firstAttribute="trailing" secondItem="3FL-eR-15J" secondAttribute="trailing" constant="-20" id="Jkf-dJ-SMT"/>
+                                    <constraint firstItem="u0q-yn-v2N" firstAttribute="leading" secondItem="BtQ-5C-783" secondAttribute="leading" constant="20" id="fQt-jr-ZDh"/>
+                                    <constraint firstItem="3FL-eR-15J" firstAttribute="leading" secondItem="u0q-yn-v2N" secondAttribute="leading" constant="-20" id="tHF-Vg-2RH"/>
+                                    <constraint firstItem="u0q-yn-v2N" firstAttribute="bottom" secondItem="BtQ-5C-783" secondAttribute="bottom" id="wm2-Bf-Htz"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="BtQ-5C-783"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="3FL-eR-15J"/>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="91D-QL-wUw">
-                                <rect key="frame" x="20" y="795" width="374" height="47"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="다음" buttonSize="large"/>
-                                <connections>
-                                    <segue destination="A5c-Qk-4Xq" kind="show" id="pgA-RI-VWg"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NfK-Uo-PDG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="NfK-Uo-PDG" firstAttribute="trailing" secondItem="91D-QL-wUw" secondAttribute="trailing" constant="20" id="953-7R-aW6"/>
-                            <constraint firstItem="iuL-YT-Hoa" firstAttribute="leading" secondItem="NfK-Uo-PDG" secondAttribute="leading" id="AW6-9C-mHc"/>
-                            <constraint firstItem="NfK-Uo-PDG" firstAttribute="bottom" secondItem="91D-QL-wUw" secondAttribute="bottom" constant="20" id="ObC-4I-ROn"/>
-                            <constraint firstItem="91D-QL-wUw" firstAttribute="leading" secondItem="NfK-Uo-PDG" secondAttribute="leading" constant="20" id="pNK-33-VXn"/>
-                            <constraint firstItem="iuL-YT-Hoa" firstAttribute="top" secondItem="NfK-Uo-PDG" secondAttribute="top" id="qQV-4j-UDe"/>
-                            <constraint firstItem="91D-QL-wUw" firstAttribute="top" secondItem="iuL-YT-Hoa" secondAttribute="bottom" id="qs1-v4-Eve"/>
-                            <constraint firstItem="NfK-Uo-PDG" firstAttribute="trailing" secondItem="iuL-YT-Hoa" secondAttribute="trailing" id="w3C-3H-qEz"/>
+                            <constraint firstItem="iuL-YT-Hoa" firstAttribute="leading" secondItem="NfK-Uo-PDG" secondAttribute="leading" id="7ig-Ho-Mou"/>
+                            <constraint firstItem="iuL-YT-Hoa" firstAttribute="bottom" secondItem="ICE-OM-vbE" secondAttribute="bottom" id="LF3-k6-L0P"/>
+                            <constraint firstItem="iuL-YT-Hoa" firstAttribute="trailing" secondItem="NfK-Uo-PDG" secondAttribute="trailing" id="gjF-Fv-lmE"/>
+                            <constraint firstItem="iuL-YT-Hoa" firstAttribute="top" secondItem="ICE-OM-vbE" secondAttribute="top" id="z1J-ZV-IxC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="물품 정보 등록" id="yLZ-KA-7SI"/>
