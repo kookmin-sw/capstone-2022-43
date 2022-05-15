@@ -1,18 +1,29 @@
-class Owner {
-    public name: String;
-    public phone_number: String;
-    public email: String;
-    public password: String;
-    // public created_at: string;
+import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
-    constructor(name: String, phone_number: String, email: String, password: String, created_at: string=new Date().toISOString()) {
+@Entity('OWNER')
+export default class Owner {
+    @PrimaryGeneratedColumn('uuid')
+    public uuid?: string;
+
+    @Column('varchar', { length: 45 })
+    public name: string;
+
+    @Column('varchar', { length: 45 })
+    public phone_number: string;
+
+    @Column('varchar', { unique: true, length: 45 })
+    public email: string;
+
+    @Column('varchar', { length: 80 })
+    public password: string;
+
+    @Column('datetime', { default: () => "CURRENT_TIMESTAMP" })
+    public created_at?: number;
+
+    constructor(name: string, phone_number: string, email: string, password: string) {
         this.name = name;
         this.phone_number = phone_number;
         this.email = email;
         this.password = password;
-        // this.created_at = created_at;
     }
-
 }
-
-export default Owner;
