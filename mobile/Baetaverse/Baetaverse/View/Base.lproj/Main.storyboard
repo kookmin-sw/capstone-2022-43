@@ -2169,7 +2169,7 @@
         <!--도착지-->
         <scene sceneID="dPY-e1-0Th">
             <objects>
-                <viewController id="JVy-SJ-EV5" customClass="BURegisterDepartureViewController" customModule="Baetaverse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="JVy-SJ-EV5" customClass="BURegisterDestinationViewController" customModule="Baetaverse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wYE-uv-sJ4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2190,6 +2190,9 @@
                                                 <rect key="frame" x="0.0" y="50" width="374" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <connections>
+                                                    <segue destination="9v4-Az-dup" kind="presentation" id="hth-34-XXh"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -2216,7 +2219,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="다음" buttonSize="large"/>
                                 <connections>
-                                    <segue destination="yL0-zv-938" kind="show" id="aMt-ui-umx"/>
+                                    <segue destination="yL0-zv-938" kind="show" id="Bbm-Gg-pQA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2232,6 +2235,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="도착지" id="2cK-58-odT"/>
+                    <connections>
+                        <outlet property="destinationDetailTextField" destination="uYg-rX-8iT" id="Czx-Zw-x1q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pDU-cw-TEo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2273,7 +2279,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vsp-sE-Slv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="12367" y="-4365"/>
+            <point key="canvasLocation" x="13854" y="-4728"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="U65-Nm-y8S">
@@ -2290,12 +2296,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i6W-Q0-8U6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11688" y="-4365"/>
+            <point key="canvasLocation" x="13017" y="-4728"/>
         </scene>
         <!--인도 조건-->
         <scene sceneID="Ui7-zE-o4R">
             <objects>
-                <viewController id="yL0-zv-938" customClass="BURegisterDepartureViewController" customModule="Baetaverse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="yL0-zv-938" customClass="BURegisterIncotermsViewController" customModule="Baetaverse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NJD-Mt-5U3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2340,9 +2346,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="인도 조건" id="pDL-Wk-1h9"/>
-                    <connections>
-                        <outlet property="departureCountryPicker" destination="ZYT-NO-7l6" id="eVc-C8-ykj"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jqB-xW-yX0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2627,6 +2630,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="hth-34-XXh"/>
         <segue reference="hdh-DO-u6g"/>
     </inferredMetricsTieBreakers>
     <resources>

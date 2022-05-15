@@ -57,6 +57,8 @@
 		C19E678A282FA5CC00B88413 /* BUSelectRegionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E6789282FA5CC00B88413 /* BUSelectRegionDataSource.swift */; };
 		C19E678E282FB22700B88413 /* Extensions+Locale.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E678D282FB22700B88413 /* Extensions+Locale.swift */; };
 		C19E67902830B1E100B88413 /* SelectRegionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E678F2830B1E100B88413 /* SelectRegionTableViewCell.swift */; };
+		C19E67922830CDBC00B88413 /* BURegisterDestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E67912830CDBC00B88413 /* BURegisterDestinationViewController.swift */; };
+		C19E67942830D20200B88413 /* BURegisterIncotermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E67932830D20200B88413 /* BURegisterIncotermsViewController.swift */; };
 		C1B7652528294CA90029B5FC /* BusinessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C7714F28294A2D009E3CB6 /* BusinessService.swift */; };
 		C1B7652628294F810029B5FC /* AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF674827F735820057A6C3 /* AppService.swift */; };
 		C1B7652728294F820029B5FC /* AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF674827F735820057A6C3 /* AppService.swift */; };
@@ -215,6 +217,8 @@
 		C19E6789282FA5CC00B88413 /* BUSelectRegionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BUSelectRegionDataSource.swift; sourceTree = "<group>"; };
 		C19E678D282FB22700B88413 /* Extensions+Locale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+Locale.swift"; sourceTree = "<group>"; };
 		C19E678F2830B1E100B88413 /* SelectRegionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRegionTableViewCell.swift; sourceTree = "<group>"; };
+		C19E67912830CDBC00B88413 /* BURegisterDestinationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BURegisterDestinationViewController.swift; sourceTree = "<group>"; };
+		C19E67932830D20200B88413 /* BURegisterIncotermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BURegisterIncotermsViewController.swift; sourceTree = "<group>"; };
 		C1BAFE222820BAC800CC4549 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C1BAFE242820BB9E00CC4549 /* SignUpGroupForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpGroupForm.swift; sourceTree = "<group>"; };
 		C1C65CFB28210E5200951A25 /* RecievedEstimateDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecievedEstimateDetailView.swift; sourceTree = "<group>"; };
@@ -851,6 +855,8 @@
 		C1F53A84282F6334006203E2 /* RegisterEstimateRequestVC */ = {
 			isa = PBXGroup;
 			children = (
+				C19E67932830D20200B88413 /* BURegisterIncotermsViewController.swift */,
+				C19E67912830CDBC00B88413 /* BURegisterDestinationViewController.swift */,
 				C1F53A87282F63D0006203E2 /* BURegisterTradeTypeViewController.swift */,
 				C1F53A89282F6B39006203E2 /* BURegisterDeliveryDateViewController.swift */,
 				C1E5CBF027F2BFBD0087882E /* BURegisterDepartureViewController.swift */,
@@ -1111,6 +1117,7 @@
 				C149736B27F59B7500679118 /* Extensions+Data.swift in Sources */,
 				C19E6785282F80FE00B88413 /* BUSelectRegionTableViewController.swift in Sources */,
 				C197AEBD27F43AEC000E4975 /* APIService.swift in Sources */,
+				C19E67942830D20200B88413 /* BURegisterIncotermsViewController.swift in Sources */,
 				C1CF675127F736330057A6C3 /* BaetaverseBusinessService.swift in Sources */,
 				C19E6787282F91DD00B88413 /* SelectRegionViewModel.swift in Sources */,
 				C19E678A282FA5CC00B88413 /* BUSelectRegionDataSource.swift in Sources */,
@@ -1139,6 +1146,7 @@
 				C184F7B0282E620000336677 /* EstimateRequestTableViewCell.swift in Sources */,
 				C19E678E282FB22700B88413 /* Extensions+Locale.swift in Sources */,
 				C1CF673A27F724600057A6C3 /* BUMenuTableViewController.swift in Sources */,
+				C19E67922830CDBC00B88413 /* BURegisterDestinationViewController.swift in Sources */,
 				C1E5CBBA27F2BF330087882E /* AppDelegate.swift in Sources */,
 				C1E5CBF427F2BFBD0087882E /* BUEstimateDetailViewController.swift in Sources */,
 				C149737627F5A39800679118 /* SignUpResponse.swift in Sources */,

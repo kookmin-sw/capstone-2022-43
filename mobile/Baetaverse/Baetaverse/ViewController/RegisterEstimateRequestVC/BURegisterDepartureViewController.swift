@@ -43,6 +43,10 @@ final class BURegisterDepartureViewController: UIViewController {
            let rootVC = navVC.topViewController as? BUSelectRegionTableViewController {
             rootVC.selectRegionDelegate = self
         }
+        
+        if let registerDestVC = segue.destination as? BURegisterDestinationViewController {
+            registerDestVC.passData(estimateRequest: estimateRequest)
+        }
     }
     
 }
@@ -51,7 +55,6 @@ extension BURegisterDepartureViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         self.estimateRequest.departureDetail = textField.text ?? ""
-        print(self.estimateRequest)
     }
     
 }
@@ -60,7 +63,6 @@ extension BURegisterDepartureViewController: SelectRegionDelegate {
     
     func send(region: String) {
         self.estimateRequest.departureCountry = region
-        print(self.estimateRequest)
     }
     
 }

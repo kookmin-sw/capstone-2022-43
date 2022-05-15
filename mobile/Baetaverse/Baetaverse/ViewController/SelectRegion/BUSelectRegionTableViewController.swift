@@ -11,7 +11,7 @@ final class BUSelectRegionTableViewController: UITableViewController {
     
     private let dataSource = BUSelectRegionDataSource()
     
-    var selectRegionDelegate: SelectRegionDelegate?
+    weak var selectRegionDelegate: SelectRegionDelegate?
     
     private let searchController: UISearchController = {
         let controller = UISearchController(searchResultsController: nil)
@@ -81,7 +81,7 @@ extension BUSelectRegionTableViewController: UISearchBarDelegate {
     
 }
 
-protocol SelectRegionDelegate {
+protocol SelectRegionDelegate: AnyObject {
     
     func send(region: String)
     
