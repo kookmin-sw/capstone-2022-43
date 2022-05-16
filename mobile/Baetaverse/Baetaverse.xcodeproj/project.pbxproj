@@ -31,6 +31,9 @@
 		C149D22328321CE50044404D /* EstimateRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D22228321CE50044404D /* EstimateRegister.swift */; };
 		C149D22528326A500044404D /* RegisterEstimateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D22428326A500044404D /* RegisterEstimateRequest.swift */; };
 		C149D22728326B370044404D /* Estimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D22628326B370044404D /* Estimate.swift */; };
+		C149D22928326EB10044404D /* RegisterEstimateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D22828326EB10044404D /* RegisterEstimateResponse.swift */; };
+		C149D22B28326F870044404D /* Quotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D22A28326F870044404D /* Quotation.swift */; };
+		C149D22D283271DF0044404D /* Forwarder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D22C283271DF0044404D /* Forwarder.swift */; };
 		C16B45A2282A132500DDAAE8 /* MoreProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B45A1282A132500DDAAE8 /* MoreProfileView.swift */; };
 		C16B45A8282A4C9B00DDAAE8 /* EstimatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B45A7282A4C9B00DDAAE8 /* EstimatesView.swift */; };
 		C16B45AB282A4E5000DDAAE8 /* AutoLazyVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B45AA282A4E5000DDAAE8 /* AutoLazyVGrid.swift */; };
@@ -206,6 +209,9 @@
 		C149D22228321CE50044404D /* EstimateRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateRegister.swift; sourceTree = "<group>"; };
 		C149D22428326A500044404D /* RegisterEstimateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEstimateRequest.swift; sourceTree = "<group>"; };
 		C149D22628326B370044404D /* Estimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Estimate.swift; sourceTree = "<group>"; };
+		C149D22828326EB10044404D /* RegisterEstimateResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEstimateResponse.swift; sourceTree = "<group>"; };
+		C149D22A28326F870044404D /* Quotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quotation.swift; sourceTree = "<group>"; };
+		C149D22C283271DF0044404D /* Forwarder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forwarder.swift; sourceTree = "<group>"; };
 		C16B45A1282A132500DDAAE8 /* MoreProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreProfileView.swift; sourceTree = "<group>"; };
 		C16B45A7282A4C9B00DDAAE8 /* EstimatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimatesView.swift; sourceTree = "<group>"; };
 		C16B45AA282A4E5000DDAAE8 /* AutoLazyVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLazyVGrid.swift; sourceTree = "<group>"; };
@@ -416,6 +422,7 @@
 				C1E86266282D222000D9971A /* HSCodeResponse.swift */,
 				C1E8626F282D545900D9971A /* EstimateRequestsResponse.swift */,
 				C1E8628C282E0DF700D9971A /* RegisterEstimateRequestsResponse.swift */,
+				C149D22828326EB10044404D /* RegisterEstimateResponse.swift */,
 			);
 			path = ResponseModel;
 			sourceTree = "<group>";
@@ -847,6 +854,8 @@
 			isa = PBXGroup;
 			children = (
 				C1E86274282D5B6700D9971A /* APIEnity.swift */,
+				C149D22A28326F870044404D /* Quotation.swift */,
+				C149D22C283271DF0044404D /* Forwarder.swift */,
 				C1E86276282D5D4E00D9971A /* EstimateRequestsQuery.swift */,
 				C1E8627F282DECED00D9971A /* EstimateRequestRegister */,
 				C1E8628E282E0E9E00D9971A /* EstimateRequestDetail */,
@@ -1176,12 +1185,14 @@
 				C197AEB327F42D6D000E4975 /* NetworkServiceProvider.swift in Sources */,
 				C1982050283120A800A79AD6 /* Extensions+UIViewController.swift in Sources */,
 				C1D83A832828ECF50086D0E7 /* EstimatesResponse.swift in Sources */,
+				C149D22D283271DF0044404D /* Forwarder.swift in Sources */,
 				C198204C2831141100A79AD6 /* BURegisterProductViewController.swift in Sources */,
 				C149D22328321CE50044404D /* EstimateRegister.swift in Sources */,
 				C149D22528326A500044404D /* RegisterEstimateRequest.swift in Sources */,
 				C1E5CC1227F32DC10087882E /* APIRequestModel.swift in Sources */,
 				C1E5CBF327F2BFBD0087882E /* BUEstimateListViewController.swift in Sources */,
 				C149D21E2831E9940044404D /* SelectHSCodeDelegate.swift in Sources */,
+				C149D22928326EB10044404D /* RegisterEstimateResponse.swift in Sources */,
 				C1CF674627F735620057A6C3 /* AppBusinessService.swift in Sources */,
 				C1E86292282E0FFC00D9971A /* GoodsDetail.swift in Sources */,
 				C1E8628B282E0CBD00D9971A /* EstimateRequestDetailRequest.swift in Sources */,
@@ -1203,6 +1214,7 @@
 				C1E8627C282DE9F800D9971A /* EstimateRequestsRegister.swift in Sources */,
 				C1C9EC5B2818F7A40041F974 /* Extensions+Encodable.swift in Sources */,
 				C1E8629F282E2F2800D9971A /* SignUpFormViewModel.swift in Sources */,
+				C149D22B28326F870044404D /* Quotation.swift in Sources */,
 				C1E8628D282E0DF700D9971A /* RegisterEstimateRequestsResponse.swift in Sources */,
 				C1E5CC0B27F3296A0087882E /* APIRequestHostInfo.swift in Sources */,
 				C1E86265282D211700D9971A /* HSCodeRequest.swift in Sources */,
