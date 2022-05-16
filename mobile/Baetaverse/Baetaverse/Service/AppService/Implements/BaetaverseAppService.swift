@@ -48,6 +48,10 @@ final class BaetaverseAppService: AppService {
         )
     }
     
+    func registerEstimate(estimate: Estimate) async throws {
+        try await businessService.registerEstimate(token: auth.token, estimate: estimate)
+    }
+    
     func queryHSCode(code: String) async throws -> [String] {
         return try await businessService.queryHSCode(token: auth.token, code: code)
     }

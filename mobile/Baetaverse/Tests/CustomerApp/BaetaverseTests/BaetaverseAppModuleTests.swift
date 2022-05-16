@@ -184,7 +184,7 @@ class BaetaverseAppModuleTests: XCTestCase {
         )
         
         // when
-        try await sutBaetaverse.registerEvaluate(
+        try await sutBaetaverse.registerEvaluateRequest(
             estimateRequest: estimateRequest,
             products: products
         )
@@ -205,8 +205,34 @@ class BaetaverseAppModuleTests: XCTestCase {
         
         // when then
         do {
-            let result = try await sutBaetaverse.queryEstimateRequestDetail(id: "2")
-            XCTAssertNotNil(result)
+            _ = try await sutBaetaverse.queryEstimateRequestDetail(id: "2")
+            XCTAssert(true)
+        } catch {
+            XCTFail("\(error)")
+        }
+    }
+    
+    func test() async throws {
+        // given
+        let email = "test1@test1.com"
+        let password = "12341234"
+        let estimate = Estimate(
+            requestId: 2,
+            oceanRightPrice: 100,
+            inlandFreightPrice: 123,
+            totalPrice: 223,
+            estimatedTime: 5
+        )
+        
+        try await sutBaetaverse.login(
+            email: email,
+            password: password
+        )
+        
+        // when then
+        do {
+            try await sutBaetaverse.registerEstimate(estimate: estimate)
+            XCTAssert(true)
         } catch {
             XCTFail("\(error)")
         }

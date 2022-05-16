@@ -34,6 +34,12 @@
 		C149D22928326EB10044404D /* RegisterEstimateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D22828326EB10044404D /* RegisterEstimateResponse.swift */; };
 		C149D22B28326F870044404D /* Quotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D22A28326F870044404D /* Quotation.swift */; };
 		C149D22D283271DF0044404D /* Forwarder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D22C283271DF0044404D /* Forwarder.swift */; };
+		C149D22E283274DF0044404D /* Estimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D22628326B370044404D /* Estimate.swift */; };
+		C149D22F283275930044404D /* Forwarder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D22C283271DF0044404D /* Forwarder.swift */; };
+		C149D230283275960044404D /* Quotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D22A28326F870044404D /* Quotation.swift */; };
+		C149D2312832759A0044404D /* RegisterEstimateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D22828326EB10044404D /* RegisterEstimateResponse.swift */; };
+		C149D2322832759D0044404D /* RegisterEstimateRequestsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8628C282E0DF700D9971A /* RegisterEstimateRequestsResponse.swift */; };
+		C149D233283275A60044404D /* RegisterEstimateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D22428326A500044404D /* RegisterEstimateRequest.swift */; };
 		C16B45A2282A132500DDAAE8 /* MoreProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B45A1282A132500DDAAE8 /* MoreProfileView.swift */; };
 		C16B45A8282A4C9B00DDAAE8 /* EstimatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B45A7282A4C9B00DDAAE8 /* EstimatesView.swift */; };
 		C16B45AB282A4E5000DDAAE8 /* AutoLazyVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B45AA282A4E5000DDAAE8 /* AutoLazyVGrid.swift */; };
@@ -1252,10 +1258,12 @@
 				C1E86299282E1D0400D9971A /* EstimateRequestDetailRequest.swift in Sources */,
 				C1D83A842828F1DC0086D0E7 /* EstimatesResponse.swift in Sources */,
 				C1E86288282E0A6A00D9971A /* GoodsRegister.swift in Sources */,
+				C149D2312832759A0044404D /* RegisterEstimateResponse.swift in Sources */,
 				C1CF675C27F737660057A6C3 /* BaetaverseAuth.swift in Sources */,
 				C197AEC527F43EFC000E4975 /* APIRequestModel.swift in Sources */,
 				C197AEB927F43866000E4975 /* HTTPMethod.swift in Sources */,
 				C149737727F5A39800679118 /* SignUpResponse.swift in Sources */,
+				C149D230283275960044404D /* Quotation.swift in Sources */,
 				C1E86289282E0A6C00D9971A /* EstimateRequestRegisterForm.swift in Sources */,
 				C1B7652528294CA90029B5FC /* BusinessService.swift in Sources */,
 				C1E86279282DE6CC00D9971A /* APIEnity.swift in Sources */,
@@ -1268,15 +1276,18 @@
 				C1E86298282E1CBA00D9971A /* GoodsDetail.swift in Sources */,
 				C149737227F5A11A00679118 /* APIResponseModel.swift in Sources */,
 				C1E8629A282E1D2000D9971A /* EstimateRequestDetailResponse.swift in Sources */,
+				C149D2322832759D0044404D /* RegisterEstimateRequestsResponse.swift in Sources */,
 				C1E86286282E08A900D9971A /* Product.swift in Sources */,
 				C149736827F597E200679118 /* BaetaverseAppModuleTests.swift in Sources */,
 				C1CF675527F736E50057A6C3 /* NetworkService.swift in Sources */,
+				C149D22F283275930044404D /* Forwarder.swift in Sources */,
 				C197AEC427F43EF9000E4975 /* SignUpRequest.swift in Sources */,
 				C1CF675827F737550057A6C3 /* BaetaverseAppService.swift in Sources */,
 				C1E86278282DE6CA00D9971A /* EstimateRequestsQuery.swift in Sources */,
 				C197AEBA27F43869000E4975 /* APIRequestImplement.swift in Sources */,
 				C1CF675B27F737620057A6C3 /* AppAuthService.swift in Sources */,
 				C197AEC227F43EF3000E4975 /* RegisterEstimateRequestsRequest.swift in Sources */,
+				C149D22E283274DF0044404D /* Estimate.swift in Sources */,
 				C1CF675627F737120057A6C3 /* BaetaverseAPIRequest.swift in Sources */,
 				C1E86271282D545D00D9971A /* EstimateRequestsResponse.swift in Sources */,
 				C1E86269282D269F00D9971A /* HSCodeResponse.swift in Sources */,
@@ -1284,6 +1295,7 @@
 				C1C9EC8D2818FB060041F974 /* Extensions+Encodable.swift in Sources */,
 				C1B7652728294F820029B5FC /* AppService.swift in Sources */,
 				C1E86297282E1CB700D9971A /* EstimateRequestDetail.swift in Sources */,
+				C149D233283275A60044404D /* RegisterEstimateRequest.swift in Sources */,
 				C1CF675D27F737710057A6C3 /* APIService.swift in Sources */,
 				C197AEC327F43EF6000E4975 /* LoginRequest.swift in Sources */,
 				C1E8627A282DE6DF00D9971A /* EstimateRequest.swift in Sources */,
