@@ -11,7 +11,7 @@ extension APIResponseModel {
     
     struct LoginResponse: Decodable {
         
-        let status: Int
+        let status: Int?
         let message: String
         let token: String
         

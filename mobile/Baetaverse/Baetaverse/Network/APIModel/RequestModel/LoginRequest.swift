@@ -17,7 +17,8 @@ extension APIRequestModel {
         var query: [String: String] = [:]
         var body: Data?
         
-        init(email: String, password: String) {
+        init(permission: String, email: String, password: String) {
+            self.path = "/api/auth/login/" + permission
             let parameter = [
                 "email": email,
                 "password": password

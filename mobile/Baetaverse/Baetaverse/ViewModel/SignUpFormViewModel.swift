@@ -23,7 +23,9 @@ final class SignUpFormViewModel {
             email: email,
             password: password,
             name: name,
-            phoneNumber: phoneNumber
+            phoneNumber: phoneNumber,
+            corporationName: "Hello",
+            corporationNumber: "world"
         )
     }
     

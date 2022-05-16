@@ -20,7 +20,6 @@ extension APIEntity {
         var forwarder: APIEntity.Forwarder
         var requests: [APIEntity.EstimateRequestDetail]
         
-        
         enum CodingKeys: String, CodingKey {
             
             case id

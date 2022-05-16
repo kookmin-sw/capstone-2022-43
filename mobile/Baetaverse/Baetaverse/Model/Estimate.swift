@@ -10,7 +10,7 @@ import Foundation
 struct Estimate {
     
     var requestId: Int
-    var oceanRightPrice: Int
+    var oceanFreightPrice: Int
     var inlandFreightPrice: Int
     var totalPrice: Int
     var estimatedTime: Int

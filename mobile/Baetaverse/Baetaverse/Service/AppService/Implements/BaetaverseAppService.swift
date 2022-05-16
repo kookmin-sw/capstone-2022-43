@@ -28,16 +28,16 @@ final class BaetaverseAppService: AppService {
         return BaetaverseAppService(auth: auth, businessService: businessService)
     }
     
-    func login(email: String, password: String) async throws {
-        try await auth.login(email: email, password: password)
+    func login(permission: AuthPermission, email: String, password: String) async throws {
+        try await auth.login(permission: permission, email: email, password: password)
     }
     
     func logout() {
         auth.logout()
     }
     
-    func signUp(permission: SignUpPermission, email: String, password: String, name: String, phoneNumber: String) async throws {
-        try await auth.signUp(permission: permission, email: email, password: password, name: name, phoneNumber: phoneNumber)
+    func signUp(permission: AuthPermission, email: String, password: String, name: String, phoneNumber: String, corporationName: String? = nil, corporationNumber: String? = nil) async throws {
+        try await auth.signUp(permission: permission, email: email, password: password, name: name, phoneNumber: phoneNumber, corporationName: corporationName, corporationNumber: corporationNumber)
     }
     
     func registerEvaluateRequest(estimateRequest: EstimateRequest, products: [Product]) async throws {

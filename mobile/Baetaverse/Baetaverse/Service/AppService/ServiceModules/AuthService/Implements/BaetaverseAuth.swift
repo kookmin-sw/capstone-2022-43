@@ -25,8 +25,9 @@ final class BaetaverseAuth: AppAuthService {
         self.networkService = networkService
     }
     
-    func login(email: String, password: String) async throws {
+    func login(permission: AuthPermission, email: String, password: String) async throws {
         let apiService = BaetaverseAPIService.login(
+            permission: permission,
             email: email,
             password: password
         )
@@ -49,13 +50,17 @@ final class BaetaverseAuth: AppAuthService {
         }
     }
     
-    func signUp(permission: SignUpPermission, email: String, password: String, name: String, phoneNumber: String) async throws {
+    func signUp(permission: AuthPermission, email: String, password: String,
+                name: String, phoneNumber: String, corporationName: String? = nil,
+                corporationNumber: String? = nil) async throws {
         let apiService = BaetaverseAPIService.signUp(
             permission: permission,
             email: email,
             password: password,
             name: name,
-            phoneNumber: phoneNumber
+            phoneNumber: phoneNumber,
+            corporationName: corporationName,
+            corporationNumber: corporationNumber
         )
         
         let data = try await networkService.fetchData(for: apiService)

@@ -21,7 +21,7 @@ extension APIRequestModel {
             self.headers = ["Authorization": "Bearer \(token)"]
             
             let parameter = [
-                "ocean_right_price": estimate.oceanRightPrice,
+                "ocean_freight_price": estimate.oceanFreightPrice,
                 "inland_freight_price": estimate.inlandFreightPrice,
                 "total_price": estimate.totalPrice,
                 "estimated_time": estimate.estimatedTime,
