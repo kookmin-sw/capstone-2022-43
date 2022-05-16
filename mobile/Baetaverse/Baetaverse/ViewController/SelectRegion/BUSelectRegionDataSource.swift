@@ -23,8 +23,6 @@ final class BUSelectRegionDataSource: NSObject {
         return code
     }
     
-    
-    
     func changeSelectedRegion(to indexPath: IndexPath) {
         self.selectedRegion = indexPath
     }
