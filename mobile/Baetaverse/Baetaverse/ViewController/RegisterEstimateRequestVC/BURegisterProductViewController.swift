@@ -36,6 +36,7 @@ final class BURegisterProductViewController: UIViewController {
         heightTextField.delegate = self
         lengthUnit.delegate = self
         productCountTextField.delegate = self
+        hscodeTextField.allowsEditingTextAttributes = false
     }
     
     func passData(estimateRequest: EstimateRequest) {
@@ -48,6 +49,11 @@ final class BURegisterProductViewController: UIViewController {
                 estimateRequest: estimateRequest,
                 product: product
             )
+        }
+        
+        if let navVC = segue.destination as? UINavigationController,
+           let rootVC = navVC.topViewController as? BUSelectHSCodeTableViewController {
+            rootVC.selectHSCodeDelegate = self
         }
     }
     
@@ -68,6 +74,19 @@ extension BURegisterProductViewController: UITextFieldDelegate {
         } else if textField == unitTextField {
             product.standardUnit = text
         }
+    }
+    
+}
+
+extension BURegisterProductViewController: SelectHSCodeDelegate {
+    
+    func send(code: String) {
+        let result = code
+            .components(separatedBy: [" "])
+            .joined()
+            .components(separatedBy: [":"])
+        self.hscodeTextField.text = result[0]
+        
     }
     
 }
