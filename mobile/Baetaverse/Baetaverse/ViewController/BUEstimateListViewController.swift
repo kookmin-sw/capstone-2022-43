@@ -9,6 +9,15 @@ import UIKit
 
 final class BUEstimateListViewController: UIViewController {
     
+    @IBOutlet private weak var tradeTypeLabel: UILabel!
+    @IBOutlet private weak var tradeDetailLabel: UILabel!
+    @IBOutlet private weak var departureDateLabel: UILabel!
+    @IBOutlet private weak var departureCountryLabel: UILabel!
+    @IBOutlet private weak var destinationCountryLabel: UILabel!
+    @IBOutlet private weak var incotermsLabel: UILabel!
+    @IBOutlet private weak var dueDateLabel: UILabel!
+    
+    private let viewModel = BUEstimateListViewModel()
     private var id: Int?
     
     static var estimateRecordCount = 10
@@ -17,21 +26,53 @@ final class BUEstimateListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.dataSource = self
-        tableView.delegate = self
+        configureDelegate()
+        fetchData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
-        print(self.id)
     }
     
     func passData(id: Int?) {
         self.id = id
     }
     
+    private func fetchData() {
+        Task {
+            do {
+                let result = try await viewModel.queryEstimateRequestDetail(id: id)
+                updateUI(with: result)
+            } catch {
+                displayError(
+                    error,
+                    title: "견적 정보를 불러올 수 없습니다"
+                )
+            }
+        }
+    }
+    
+    private func updateUI(with estimateReqeust: EstimateRequest) {
+        tradeTypeLabel.text = estimateReqeust.tradeType
+        tradeDetailLabel.text = estimateReqeust.tradeDetail
+        departureDateLabel.text = estimateReqeust.forwardingDate.formatted()
+        departureCountryLabel.text = estimateReqeust.departureCountry
+        destinationCountryLabel.text = estimateReqeust.destinationCountry
+        incotermsLabel.text = estimateReqeust.incoterms
+        dueDateLabel.text = estimateReqeust.closingDate.formatted()
+    }
+    
     @IBAction func unwindToBUEstimateListView(_ segue: UIStoryboardSegue) { }
 
+}
+
+extension BUEstimateListViewController {
+    
+    private func configureDelegate() {
+        tableView.dataSource = self
+        tableView.delegate = self
+    }
+    
 }
 
 extension BUEstimateListViewController: UITableViewDataSource {
