@@ -16,7 +16,8 @@ extension APIRequestModel {
         var parameters: [String: String]
         
         init(token: String, code: String) {
-            self.path = "/api/hscode/\(code)"
+            let convertedCode = code.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+            self.path = "/api/hscode/\(convertedCode)"
             self.headers = ["Authorization": "Bearer \(token)"]
             self.parameters = [:]
         }
