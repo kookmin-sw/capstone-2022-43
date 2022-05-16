@@ -69,7 +69,7 @@
 		C197AEC127F43EEC000E4975 /* BaetaverseAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197AEBF27F43BEF000E4975 /* BaetaverseAPIService.swift */; };
 		C197AEC227F43EF3000E4975 /* RegisterEstimateRequestsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1B27F336070087882E /* RegisterEstimateRequestsRequest.swift */; };
 		C197AEC327F43EF6000E4975 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1927F334E10087882E /* LoginRequest.swift */; };
-		C197AEC427F43EF9000E4975 /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1427F32F040087882E /* SignUpRequest.swift */; };
+		C197AEC427F43EF9000E4975 /* SignUpOwnerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1427F32F040087882E /* SignUpOwnerRequest.swift */; };
 		C197AEC527F43EFC000E4975 /* APIRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1127F32DC10087882E /* APIRequestModel.swift */; };
 		C198204C2831141100A79AD6 /* BURegisterProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C198204B2831141100A79AD6 /* BURegisterProductViewController.swift */; };
 		C198204E28311E7400A79AD6 /* RegisterEstimateRequestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C198204D28311E7400A79AD6 /* RegisterEstimateRequestViewModel.swift */; };
@@ -140,7 +140,7 @@
 		C1E5CC0E27F32B4C0087882E /* BaetaverseAPIRequestHostInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC0D27F32B4C0087882E /* BaetaverseAPIRequestHostInfo.swift */; };
 		C1E5CC1027F32BF80087882E /* BaetaverseAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC0F27F32BF80087882E /* BaetaverseAPIRequest.swift */; };
 		C1E5CC1227F32DC10087882E /* APIRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1127F32DC10087882E /* APIRequestModel.swift */; };
-		C1E5CC1527F32F040087882E /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1427F32F040087882E /* SignUpRequest.swift */; };
+		C1E5CC1527F32F040087882E /* SignUpOwnerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1427F32F040087882E /* SignUpOwnerRequest.swift */; };
 		C1E5CC1A27F334E10087882E /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1927F334E10087882E /* LoginRequest.swift */; };
 		C1E5CC1C27F336070087882E /* RegisterEstimateRequestsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1B27F336070087882E /* RegisterEstimateRequestsRequest.swift */; };
 		C1E86265282D211700D9971A /* HSCodeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E86264282D211700D9971A /* HSCodeRequest.swift */; };
@@ -296,7 +296,7 @@
 		C1E5CC0D27F32B4C0087882E /* BaetaverseAPIRequestHostInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseAPIRequestHostInfo.swift; sourceTree = "<group>"; };
 		C1E5CC0F27F32BF80087882E /* BaetaverseAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseAPIRequest.swift; sourceTree = "<group>"; };
 		C1E5CC1127F32DC10087882E /* APIRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestModel.swift; sourceTree = "<group>"; };
-		C1E5CC1427F32F040087882E /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
+		C1E5CC1427F32F040087882E /* SignUpOwnerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpOwnerRequest.swift; sourceTree = "<group>"; };
 		C1E5CC1927F334E10087882E /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		C1E5CC1B27F336070087882E /* RegisterEstimateRequestsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEstimateRequestsRequest.swift; sourceTree = "<group>"; };
 		C1E86264282D211700D9971A /* HSCodeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSCodeRequest.swift; sourceTree = "<group>"; };
@@ -412,7 +412,7 @@
 			children = (
 				C1E5CC1127F32DC10087882E /* APIRequestModel.swift */,
 				C1E8628A282E0CBD00D9971A /* EstimateRequestDetailRequest.swift */,
-				C1E5CC1427F32F040087882E /* SignUpRequest.swift */,
+				C1E5CC1427F32F040087882E /* SignUpOwnerRequest.swift */,
 				C1E5CC1927F334E10087882E /* LoginRequest.swift */,
 				C1E5CC1B27F336070087882E /* RegisterEstimateRequestsRequest.swift */,
 				C1E86264282D211700D9971A /* HSCodeRequest.swift */,
@@ -1242,7 +1242,7 @@
 				C1D83A812828EB260086D0E7 /* EstimateRequestsRequest.swift in Sources */,
 				C149D2182831E2950044404D /* BUSelectHSCodeTableViewController.swift in Sources */,
 				C1E86290282E0ED500D9971A /* EstimateRequestDetail.swift in Sources */,
-				C1E5CC1527F32F040087882E /* SignUpRequest.swift in Sources */,
+				C1E5CC1527F32F040087882E /* SignUpOwnerRequest.swift in Sources */,
 				C1CF673E27F732720057A6C3 /* NetworkService.swift in Sources */,
 				C1B7652928294F850029B5FC /* AuthService.swift in Sources */,
 				C1E5CC1027F32BF80087882E /* BaetaverseAPIRequest.swift in Sources */,
@@ -1291,7 +1291,7 @@
 				C149736827F597E200679118 /* BaetaverseAppModuleTests.swift in Sources */,
 				C1CF675527F736E50057A6C3 /* NetworkService.swift in Sources */,
 				C149D22F283275930044404D /* Forwarder.swift in Sources */,
-				C197AEC427F43EF9000E4975 /* SignUpRequest.swift in Sources */,
+				C197AEC427F43EF9000E4975 /* SignUpOwnerRequest.swift in Sources */,
 				C1CF675827F737550057A6C3 /* BaetaverseAppService.swift in Sources */,
 				C1E86278282DE6CA00D9971A /* EstimateRequestsQuery.swift in Sources */,
 				C197AEBA27F43869000E4975 /* APIRequestImplement.swift in Sources */,

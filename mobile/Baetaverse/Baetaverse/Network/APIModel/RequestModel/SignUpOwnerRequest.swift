@@ -1,5 +1,5 @@
 //
-//  SignUpRequest.swift
+//  SignUpOwnerRequest.swift
 //  Baetaverse
 //
 //  Created by JeongTaek Han on 2022/03/29.
@@ -9,7 +9,7 @@ import Foundation
 
 extension APIRequestModel {
     
-    struct SignUpRequest: BaetaverseAPIRequestPOST {
+    struct SignUpOwnerRequest: BaetaverseAPIRequestPOST {
         
         var path: String = "/api/auth/signup"
         var headers: [String: String] = [:]

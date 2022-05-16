@@ -36,8 +36,8 @@ final class BaetaverseAppService: AppService {
         auth.logout()
     }
     
-    func signUp(email: String, password: String, name: String, phoneNumber: String) async throws {
-        try await auth.signUp(email: email, password: password, name: name, phoneNumber: phoneNumber)
+    func signUpOwner(email: String, password: String, name: String, phoneNumber: String) async throws {
+        try await auth.signUpOwner(email: email, password: password, name: name, phoneNumber: phoneNumber)
     }
     
     func registerEvaluateRequest(estimateRequest: EstimateRequest, products: [Product]) async throws {

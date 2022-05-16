@@ -77,7 +77,7 @@ class BaetaverseAppModuleTests: XCTestCase {
         
         // when then
         do {
-            try await sutBaetaverse.signUp(
+            try await sutBaetaverse.signUpOwner(
                 email: email,
                 password: password,
                 name: name,
@@ -97,7 +97,7 @@ class BaetaverseAppModuleTests: XCTestCase {
         
         // when then
         do {
-            try await sutBaetaverse.signUp(
+            try await sutBaetaverse.signUpOwner(
                 email: email,
                 password: password,
                 name: name,
