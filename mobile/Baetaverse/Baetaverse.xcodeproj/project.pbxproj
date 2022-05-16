@@ -24,6 +24,9 @@
 		C149737427F5A12800679118 /* Extensions+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149736A27F59B7500679118 /* Extensions+Data.swift */; };
 		C149737627F5A39800679118 /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149737527F5A39800679118 /* SignUpResponse.swift */; };
 		C149737727F5A39800679118 /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149737527F5A39800679118 /* SignUpResponse.swift */; };
+		C149D2182831E2950044404D /* BUSelectHSCodeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D2172831E2950044404D /* BUSelectHSCodeTableViewController.swift */; };
+		C149D21C2831E79A0044404D /* SelectHSCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D21B2831E79A0044404D /* SelectHSCodeViewModel.swift */; };
+		C149D21E2831E9940044404D /* SelectHSCodeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D21D2831E9940044404D /* SelectHSCodeDelegate.swift */; };
 		C16B45A2282A132500DDAAE8 /* MoreProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B45A1282A132500DDAAE8 /* MoreProfileView.swift */; };
 		C16B45A8282A4C9B00DDAAE8 /* EstimatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B45A7282A4C9B00DDAAE8 /* EstimatesView.swift */; };
 		C16B45AB282A4E5000DDAAE8 /* AutoLazyVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B45AA282A4E5000DDAAE8 /* AutoLazyVGrid.swift */; };
@@ -58,7 +61,7 @@
 		C19820532831447B00A79AD6 /* SelectRegionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19820512831447700A79AD6 /* SelectRegionDelegate.swift */; };
 		C19E6785282F80FE00B88413 /* BUSelectRegionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E6783282F80C100B88413 /* BUSelectRegionTableViewController.swift */; };
 		C19E678A282FA5CC00B88413 /* BUSelectRegionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E6789282FA5CC00B88413 /* BUSelectRegionDataSource.swift */; };
-		C19E67902830B1E100B88413 /* SelectRegionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E678F2830B1E100B88413 /* SelectRegionTableViewCell.swift */; };
+		C19E67902830B1E100B88413 /* SelectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E678F2830B1E100B88413 /* SelectTableViewCell.swift */; };
 		C19E67922830CDBC00B88413 /* BURegisterDestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E67912830CDBC00B88413 /* BURegisterDestinationViewController.swift */; };
 		C19E67942830D20200B88413 /* BURegisterIncotermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E67932830D20200B88413 /* BURegisterIncotermsViewController.swift */; };
 		C1B7652528294CA90029B5FC /* BusinessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C7714F28294A2D009E3CB6 /* BusinessService.swift */; };
@@ -194,6 +197,9 @@
 		C149736C27F59D4500679118 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		C149737027F5A06D00679118 /* APIResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseModel.swift; sourceTree = "<group>"; };
 		C149737527F5A39800679118 /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
+		C149D2172831E2950044404D /* BUSelectHSCodeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BUSelectHSCodeTableViewController.swift; sourceTree = "<group>"; };
+		C149D21B2831E79A0044404D /* SelectHSCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectHSCodeViewModel.swift; sourceTree = "<group>"; };
+		C149D21D2831E9940044404D /* SelectHSCodeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectHSCodeDelegate.swift; sourceTree = "<group>"; };
 		C16B45A1282A132500DDAAE8 /* MoreProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreProfileView.swift; sourceTree = "<group>"; };
 		C16B45A7282A4C9B00DDAAE8 /* EstimatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimatesView.swift; sourceTree = "<group>"; };
 		C16B45AA282A4E5000DDAAE8 /* AutoLazyVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLazyVGrid.swift; sourceTree = "<group>"; };
@@ -219,7 +225,7 @@
 		C19820512831447700A79AD6 /* SelectRegionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRegionDelegate.swift; sourceTree = "<group>"; };
 		C19E6783282F80C100B88413 /* BUSelectRegionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BUSelectRegionTableViewController.swift; sourceTree = "<group>"; };
 		C19E6789282FA5CC00B88413 /* BUSelectRegionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BUSelectRegionDataSource.swift; sourceTree = "<group>"; };
-		C19E678F2830B1E100B88413 /* SelectRegionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRegionTableViewCell.swift; sourceTree = "<group>"; };
+		C19E678F2830B1E100B88413 /* SelectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTableViewCell.swift; sourceTree = "<group>"; };
 		C19E67912830CDBC00B88413 /* BURegisterDestinationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BURegisterDestinationViewController.swift; sourceTree = "<group>"; };
 		C19E67932830D20200B88413 /* BURegisterIncotermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BURegisterIncotermsViewController.swift; sourceTree = "<group>"; };
 		C1BAFE222820BAC800CC4549 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -408,6 +414,15 @@
 			path = ResponseModel;
 			sourceTree = "<group>";
 		};
+		C149D2162831E25D0044404D /* SelectHScode */ = {
+			isa = PBXGroup;
+			children = (
+				C149D2172831E2950044404D /* BUSelectHSCodeTableViewController.swift */,
+				C149D21D2831E9940044404D /* SelectHSCodeDelegate.swift */,
+			);
+			path = SelectHScode;
+			sourceTree = "<group>";
+		};
 		C16B45A5282A19B900DDAAE8 /* FourthTabView */ = {
 			isa = PBXGroup;
 			children = (
@@ -516,7 +531,7 @@
 			isa = PBXGroup;
 			children = (
 				C184F7AF282E620000336677 /* EstimateRequestTableViewCell.swift */,
-				C19E678F2830B1E100B88413 /* SelectRegionTableViewCell.swift */,
+				C19E678F2830B1E100B88413 /* SelectTableViewCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -754,6 +769,7 @@
 			children = (
 				C1F53A84282F6334006203E2 /* RegisterEstimateRequestVC */,
 				C19E6788282FA58500B88413 /* SelectRegion */,
+				C149D2162831E25D0044404D /* SelectHScode */,
 				C1E5CBEE27F2BFBD0087882E /* BUEstimateDetailViewController.swift */,
 				C1E5CBEF27F2BFBD0087882E /* BURegisterDueDateViewController.swift */,
 				C1E5CBED27F2BFBC0087882E /* BUEstimateListViewController.swift */,
@@ -850,6 +866,7 @@
 				C1E862A2282E356C00D9971A /* EstimateRequestsTableViewModel.swift */,
 				C198204D28311E7400A79AD6 /* RegisterEstimateRequestViewModel.swift */,
 				C1E8629E282E2F2800D9971A /* SignUpFormViewModel.swift */,
+				C149D21B2831E79A0044404D /* SelectHSCodeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1146,6 +1163,7 @@
 				C198204C2831141100A79AD6 /* BURegisterProductViewController.swift in Sources */,
 				C1E5CC1227F32DC10087882E /* APIRequestModel.swift in Sources */,
 				C1E5CBF327F2BFBD0087882E /* BUEstimateListViewController.swift in Sources */,
+				C149D21E2831E9940044404D /* SelectHSCodeDelegate.swift in Sources */,
 				C1CF674627F735620057A6C3 /* AppBusinessService.swift in Sources */,
 				C1E86292282E0FFC00D9971A /* GoodsDetail.swift in Sources */,
 				C1E8628B282E0CBD00D9971A /* EstimateRequestDetailRequest.swift in Sources */,
@@ -1171,10 +1189,12 @@
 				C1E86265282D211700D9971A /* HSCodeRequest.swift in Sources */,
 				C1E5CC0E27F32B4C0087882E /* BaetaverseAPIRequestHostInfo.swift in Sources */,
 				C1E5CC1C27F336070087882E /* RegisterEstimateRequestsRequest.swift in Sources */,
+				C149D21C2831E79A0044404D /* SelectHSCodeViewModel.swift in Sources */,
 				C13778C127F497CF00DAF494 /* BUSignUpFormViewController.swift in Sources */,
 				C1E86277282D5D4E00D9971A /* EstimateRequestsQuery.swift in Sources */,
 				C1E86275282D5B6700D9971A /* APIEnity.swift in Sources */,
 				C1D83A812828EB260086D0E7 /* EstimateRequestsRequest.swift in Sources */,
+				C149D2182831E2950044404D /* BUSelectHSCodeTableViewController.swift in Sources */,
 				C1E86290282E0ED500D9971A /* EstimateRequestDetail.swift in Sources */,
 				C1E5CC1527F32F040087882E /* SignUpRequest.swift in Sources */,
 				C1CF673E27F732720057A6C3 /* NetworkService.swift in Sources */,
@@ -1183,7 +1203,7 @@
 				C1E8626E282D526800D9971A /* EstimateRequest.swift in Sources */,
 				C1CF674327F735180057A6C3 /* AppAuthService.swift in Sources */,
 				C1CF674027F733780057A6C3 /* APIRequest.swift in Sources */,
-				C19E67902830B1E100B88413 /* SelectRegionTableViewCell.swift in Sources */,
+				C19E67902830B1E100B88413 /* SelectTableViewCell.swift in Sources */,
 				C1E5CBBC27F2BF330087882E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
