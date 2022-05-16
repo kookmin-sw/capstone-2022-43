@@ -15,9 +15,12 @@ class ForwarderController {
         try {
             const { email, password, name, phone_number, corporation_name, corporation_number } = req.body;
 
-            const hash = await bcrypt.hash(password, 14);
-            const forwarder: Forwarder = new Forwarder(name, phone_number, email, hash, corporation_name, corporation_number);
-            await this.forwarderService.join(forwarder);
+            const hash = await bcrypt.hash(password, 12);
+            const forwarder = await this.forwarderService.join({
+                email,
+                password: hash,
+                name, phone_number, corporation_name, corporation_number
+            });
 
             return res.status(200).json({
                 status: 200,
@@ -44,7 +47,7 @@ class ForwarderController {
                 uuid: user.uuid,
                 email: user.email,
                 name: user.name
-            }, process.env.JWT_FORWARDER_SECRET || '', {
+            }, process.env.JWT_FORWARDER_SECRET!, {
                 expiresIn: '7d',
                 issuer: 'BAETAVERSE-DEV'
             });

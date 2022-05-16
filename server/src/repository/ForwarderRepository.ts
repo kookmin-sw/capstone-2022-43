@@ -1,10 +1,5 @@
-import Forwarder from "../domain/Forwarder";
+import dataSource from "../data-source";
+import { Forwarder } from "../domain";
 
 
-interface ForwarderRepository {
-    save(forwarder: Forwarder): Forwarder;
-    findById?(id: String): Forwarder;
-    findAll(): Forwarder[];
-}
-
-export default ForwarderRepository;
+export default dataSource.getRepository(Forwarder);

@@ -1,17 +1,17 @@
 import { Strategy, VerifyFunction} from 'passport-local';
 import bcrypt from 'bcrypt';
-import { supabase } from '../supabase';
+import { Repository } from "typeorm";
+import ownerRepository from "../../repository/ownerRepository";
+import forwarderRepository from "../../repository/ForwarderRepository";
+import { Owner, Forwarder } from "../../domain";
 
 
-const verifyLogin = (table: string): VerifyFunction => {
+const verifyLogin = (repository: Repository<Owner | Forwarder>): VerifyFunction => {
     return async (email: string, password: string, done: any) => {
         try {
-            const { data: existUser, error } = await supabase
-            .from(table)
-            .select('uuid, email, password, name, phone_number')
-            .eq('email', email)
-            .limit(1)
-            .single();
+            const existUser = await repository.findOneBy({
+                email: email
+            });
 
             if (existUser) {
                 const result = await bcrypt.compare(password, existUser.password);
@@ -29,7 +29,7 @@ const verifyLogin = (table: string): VerifyFunction => {
     }
 };
 
-const ownerStrategy = new Strategy({ usernameField: 'email', passwordField: 'password' }, verifyLogin('OWNER'));
-const forwarderStrategy = new Strategy({ usernameField: 'email', passwordField: 'password' }, verifyLogin('FORWARDER'));
+const ownerStrategy = new Strategy({ usernameField: 'email', passwordField: 'password' }, verifyLogin(ownerRepository));
+const forwarderStrategy = new Strategy({ usernameField: 'email', passwordField: 'password' }, verifyLogin(forwarderRepository));
 
 export { ownerStrategy, forwarderStrategy };
