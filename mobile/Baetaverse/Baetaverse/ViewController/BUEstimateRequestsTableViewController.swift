@@ -14,6 +14,8 @@ final class BUEstimateRequestsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
+        configureRefreshControl()
+        
     }
     
     private func loadData() {
@@ -27,11 +29,25 @@ final class BUEstimateRequestsTableViewController: UITableViewController {
                     title: "견적서 명단 조회에 실패하였습니다"
                 )
             }
+            refreshControl?.endRefreshing()
         }
     }
     
-    func updateUI() {
+    private func updateUI() {
         self.tableView.reloadData()
+    }
+    
+    private func configureRefreshControl() {
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(
+            self,
+            action: #selector(handleRefreshControl),
+            for: .valueChanged
+        )
+    }
+    
+    @objc private func handleRefreshControl() {
+        loadData()
     }
 
 }
