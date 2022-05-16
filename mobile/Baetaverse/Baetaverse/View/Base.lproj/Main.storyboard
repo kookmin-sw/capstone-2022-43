@@ -1281,6 +1281,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="견적서" id="R9A-vX-ZBm"/>
+                    <connections>
+                        <segue destination="0m0-fm-Udd" kind="show" identifier="estimateDetailSegue" id="K7v-LP-dF0"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n0a-8C-mSP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1565,7 +1568,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xEV-Q8-nWK">
-                                <rect key="frame" x="20" y="64" width="374" height="107"/>
+                                <rect key="frame" x="20" y="108" width="374" height="107"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="U41-Y5-EjY">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
@@ -1618,7 +1621,7 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5U7-BX-dEq">
-                                <rect key="frame" x="0.0" y="191" width="414" height="671"/>
+                                <rect key="frame" x="0.0" y="235" width="414" height="627"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="estimatesummarycell" rowHeight="107" id="M5i-Vw-agB">
@@ -1750,11 +1753,11 @@
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="Roq-L8-A13" customClass="BUEstimateDetailViewController" customModule="Baetaverse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l6g-cZ-qXT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4q9-43-a9d">
-                                <rect key="frame" x="20" y="774" width="374" height="48"/>
+                                <rect key="frame" x="20" y="794" width="374" height="48"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JPc-6w-r3s">
                                         <rect key="frame" x="0.0" y="0.0" width="183" height="48"/>
@@ -1780,13 +1783,13 @@
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CorporationImage" translatesAutoresizingMaskIntoConstraints="NO" id="SjX-Y3-KXA">
-                                <rect key="frame" x="0.0" y="44" width="414" height="261"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="261"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="261" id="3WY-a3-pDt"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="8Jg-cj-rrX">
-                                <rect key="frame" x="20" y="325" width="374" height="31"/>
+                                <rect key="frame" x="20" y="369" width="374" height="31"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zaz-8C-97k">
                                         <rect key="frame" x="0.0" y="-3" width="117.5" height="37"/>
@@ -1809,7 +1812,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="DKd-Z8-X5J">
-                                <rect key="frame" x="20" y="376" width="374" height="166.5"/>
+                                <rect key="frame" x="20" y="420" width="374" height="166.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="견적서" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pps-7K-9Ey">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
@@ -1888,7 +1891,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HhK-fw-fkh">
-                                <rect key="frame" x="20" y="562.5" width="374" height="49"/>
+                                <rect key="frame" x="20" y="606.5" width="374" height="49"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="받은 견적은 견적 마감일 전까지 유효합니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tj8-A9-2I8">
                                         <rect key="frame" x="41.5" y="0.0" width="291.5" height="20.5"/>

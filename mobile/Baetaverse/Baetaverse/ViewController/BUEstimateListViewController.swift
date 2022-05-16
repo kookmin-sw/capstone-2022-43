@@ -7,7 +7,9 @@
 
 import UIKit
 
-class BUEstimateListViewController: UIViewController {
+final class BUEstimateListViewController: UIViewController {
+    
+    private var id: Int?
     
     static var estimateRecordCount = 10
     
@@ -21,6 +23,11 @@ class BUEstimateListViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
+        print(self.id)
+    }
+    
+    func passData(id: Int?) {
+        self.id = id
     }
     
     @IBAction func unwindToBUEstimateListView(_ segue: UIStoryboardSegue) { }
