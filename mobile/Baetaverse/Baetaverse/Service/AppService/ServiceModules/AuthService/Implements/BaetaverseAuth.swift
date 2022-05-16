@@ -49,8 +49,9 @@ final class BaetaverseAuth: AppAuthService {
         }
     }
     
-    func signUpOwner(email: String, password: String, name: String, phoneNumber: String) async throws {
-        let apiService = BaetaverseAPIService.signUpOwner(
+    func signUp(permission: SignUpPermission, email: String, password: String, name: String, phoneNumber: String) async throws {
+        let apiService = BaetaverseAPIService.signUp(
+            permission: permission,
             email: email,
             password: password,
             name: name,

@@ -43,6 +43,8 @@
 		C149D23528327B3F0044404D /* QuotationsRequst.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D23428327B3F0044404D /* QuotationsRequst.swift */; };
 		C149D23728327C790044404D /* QuotationsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D23628327C790044404D /* QuotationsResponse.swift */; };
 		C149D23828327C790044404D /* QuotationsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D23628327C790044404D /* QuotationsResponse.swift */; };
+		C149D23A283280510044404D /* SignUpPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D239283280510044404D /* SignUpPermission.swift */; };
+		C149D23B283280510044404D /* SignUpPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D239283280510044404D /* SignUpPermission.swift */; };
 		C16B45A2282A132500DDAAE8 /* MoreProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B45A1282A132500DDAAE8 /* MoreProfileView.swift */; };
 		C16B45A8282A4C9B00DDAAE8 /* EstimatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B45A7282A4C9B00DDAAE8 /* EstimatesView.swift */; };
 		C16B45AB282A4E5000DDAAE8 /* AutoLazyVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B45AA282A4E5000DDAAE8 /* AutoLazyVGrid.swift */; };
@@ -69,7 +71,7 @@
 		C197AEC127F43EEC000E4975 /* BaetaverseAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197AEBF27F43BEF000E4975 /* BaetaverseAPIService.swift */; };
 		C197AEC227F43EF3000E4975 /* RegisterEstimateRequestsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1B27F336070087882E /* RegisterEstimateRequestsRequest.swift */; };
 		C197AEC327F43EF6000E4975 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1927F334E10087882E /* LoginRequest.swift */; };
-		C197AEC427F43EF9000E4975 /* SignUpOwnerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1427F32F040087882E /* SignUpOwnerRequest.swift */; };
+		C197AEC427F43EF9000E4975 /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1427F32F040087882E /* SignUpRequest.swift */; };
 		C197AEC527F43EFC000E4975 /* APIRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1127F32DC10087882E /* APIRequestModel.swift */; };
 		C198204C2831141100A79AD6 /* BURegisterProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C198204B2831141100A79AD6 /* BURegisterProductViewController.swift */; };
 		C198204E28311E7400A79AD6 /* RegisterEstimateRequestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C198204D28311E7400A79AD6 /* RegisterEstimateRequestViewModel.swift */; };
@@ -140,7 +142,7 @@
 		C1E5CC0E27F32B4C0087882E /* BaetaverseAPIRequestHostInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC0D27F32B4C0087882E /* BaetaverseAPIRequestHostInfo.swift */; };
 		C1E5CC1027F32BF80087882E /* BaetaverseAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC0F27F32BF80087882E /* BaetaverseAPIRequest.swift */; };
 		C1E5CC1227F32DC10087882E /* APIRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1127F32DC10087882E /* APIRequestModel.swift */; };
-		C1E5CC1527F32F040087882E /* SignUpOwnerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1427F32F040087882E /* SignUpOwnerRequest.swift */; };
+		C1E5CC1527F32F040087882E /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1427F32F040087882E /* SignUpRequest.swift */; };
 		C1E5CC1A27F334E10087882E /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1927F334E10087882E /* LoginRequest.swift */; };
 		C1E5CC1C27F336070087882E /* RegisterEstimateRequestsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1B27F336070087882E /* RegisterEstimateRequestsRequest.swift */; };
 		C1E86265282D211700D9971A /* HSCodeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E86264282D211700D9971A /* HSCodeRequest.swift */; };
@@ -223,6 +225,7 @@
 		C149D22C283271DF0044404D /* Forwarder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forwarder.swift; sourceTree = "<group>"; };
 		C149D23428327B3F0044404D /* QuotationsRequst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotationsRequst.swift; sourceTree = "<group>"; };
 		C149D23628327C790044404D /* QuotationsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotationsResponse.swift; sourceTree = "<group>"; };
+		C149D239283280510044404D /* SignUpPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPermission.swift; sourceTree = "<group>"; };
 		C16B45A1282A132500DDAAE8 /* MoreProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreProfileView.swift; sourceTree = "<group>"; };
 		C16B45A7282A4C9B00DDAAE8 /* EstimatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimatesView.swift; sourceTree = "<group>"; };
 		C16B45AA282A4E5000DDAAE8 /* AutoLazyVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLazyVGrid.swift; sourceTree = "<group>"; };
@@ -296,7 +299,7 @@
 		C1E5CC0D27F32B4C0087882E /* BaetaverseAPIRequestHostInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseAPIRequestHostInfo.swift; sourceTree = "<group>"; };
 		C1E5CC0F27F32BF80087882E /* BaetaverseAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseAPIRequest.swift; sourceTree = "<group>"; };
 		C1E5CC1127F32DC10087882E /* APIRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestModel.swift; sourceTree = "<group>"; };
-		C1E5CC1427F32F040087882E /* SignUpOwnerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpOwnerRequest.swift; sourceTree = "<group>"; };
+		C1E5CC1427F32F040087882E /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
 		C1E5CC1927F334E10087882E /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		C1E5CC1B27F336070087882E /* RegisterEstimateRequestsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEstimateRequestsRequest.swift; sourceTree = "<group>"; };
 		C1E86264282D211700D9971A /* HSCodeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSCodeRequest.swift; sourceTree = "<group>"; };
@@ -412,7 +415,7 @@
 			children = (
 				C1E5CC1127F32DC10087882E /* APIRequestModel.swift */,
 				C1E8628A282E0CBD00D9971A /* EstimateRequestDetailRequest.swift */,
-				C1E5CC1427F32F040087882E /* SignUpOwnerRequest.swift */,
+				C1E5CC1427F32F040087882E /* SignUpRequest.swift */,
 				C1E5CC1927F334E10087882E /* LoginRequest.swift */,
 				C1E5CC1B27F336070087882E /* RegisterEstimateRequestsRequest.swift */,
 				C1E86264282D211700D9971A /* HSCodeRequest.swift */,
@@ -701,6 +704,7 @@
 			isa = PBXGroup;
 			children = (
 				C1CF674227F735180057A6C3 /* AppAuthService.swift */,
+				C149D239283280510044404D /* SignUpPermission.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -1220,6 +1224,7 @@
 				C1E5CC1A27F334E10087882E /* LoginRequest.swift in Sources */,
 				C1E86285282DF43E00D9971A /* EstimateRequestRegisterForm.swift in Sources */,
 				C1E86296282E15AE00D9971A /* EstimateRequestDetailResponse.swift in Sources */,
+				C149D23A283280510044404D /* SignUpPermission.swift in Sources */,
 				C1E5CC0927F30A590087882E /* APIRequestImplement.swift in Sources */,
 				C1B7652C28294F880029B5FC /* BusinessService.swift in Sources */,
 				C1E5CBF527F2BFBD0087882E /* BURegisterDueDateViewController.swift in Sources */,
@@ -1242,7 +1247,7 @@
 				C1D83A812828EB260086D0E7 /* EstimateRequestsRequest.swift in Sources */,
 				C149D2182831E2950044404D /* BUSelectHSCodeTableViewController.swift in Sources */,
 				C1E86290282E0ED500D9971A /* EstimateRequestDetail.swift in Sources */,
-				C1E5CC1527F32F040087882E /* SignUpOwnerRequest.swift in Sources */,
+				C1E5CC1527F32F040087882E /* SignUpRequest.swift in Sources */,
 				C1CF673E27F732720057A6C3 /* NetworkService.swift in Sources */,
 				C1B7652928294F850029B5FC /* AuthService.swift in Sources */,
 				C1E5CC1027F32BF80087882E /* BaetaverseAPIRequest.swift in Sources */,
@@ -1258,6 +1263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C149D23B283280510044404D /* SignUpPermission.swift in Sources */,
 				C197AEC127F43EEC000E4975 /* BaetaverseAPIService.swift in Sources */,
 				C1CF675F27F737760057A6C3 /* APIRequest.swift in Sources */,
 				C1CF675A27F7375E0057A6C3 /* BaetaverseBusinessService.swift in Sources */,
@@ -1291,7 +1297,7 @@
 				C149736827F597E200679118 /* BaetaverseAppModuleTests.swift in Sources */,
 				C1CF675527F736E50057A6C3 /* NetworkService.swift in Sources */,
 				C149D22F283275930044404D /* Forwarder.swift in Sources */,
-				C197AEC427F43EF9000E4975 /* SignUpOwnerRequest.swift in Sources */,
+				C197AEC427F43EF9000E4975 /* SignUpRequest.swift in Sources */,
 				C1CF675827F737550057A6C3 /* BaetaverseAppService.swift in Sources */,
 				C1E86278282DE6CA00D9971A /* EstimateRequestsQuery.swift in Sources */,
 				C197AEBA27F43869000E4975 /* APIRequestImplement.swift in Sources */,

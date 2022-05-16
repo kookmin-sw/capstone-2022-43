@@ -9,7 +9,7 @@ import Foundation
 
 enum BaetaverseAPIService {
     
-    case signUpOwner(email: String, password: String, name: String, phoneNumber: String)
+    case signUp(permission: SignUpPermission, email: String, password: String, name: String, phoneNumber: String)
     case login(email: String, password: String)
     case registerEstimateRequest(token: String, estimateRequest: EstimateRequest, products: [Product])
     case registerEstimate(token: String, estimate: Estimate)
@@ -23,8 +23,9 @@ extension BaetaverseAPIService: APIService {
     
     var urlRequest: URLRequest? {
         switch self {
-        case .signUpOwner(let email, let password, let name, let phoneNumber):
-            let requestModel = APIRequestModel.SignUpOwnerRequest(
+        case .signUp(let permission, let email, let password, let name, let phoneNumber):
+            let requestModel = APIRequestModel.SignUpRequest(
+                permission: permission.rawValue,
                 email: email,
                 password: password,
                 name: name,

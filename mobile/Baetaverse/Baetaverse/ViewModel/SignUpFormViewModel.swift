@@ -18,7 +18,8 @@ final class SignUpFormViewModel {
     }
     
     func signUp(email: String, password: String, name: String, phoneNumber: String) async throws {
-        try await appService?.signUpOwner(
+        try await appService?.signUp(
+            permission: .forwarder, 
             email: email,
             password: password,
             name: name,

@@ -9,15 +9,16 @@ import Foundation
 
 extension APIRequestModel {
     
-    struct SignUpOwnerRequest: BaetaverseAPIRequestPOST {
+    struct SignUpRequest: BaetaverseAPIRequestPOST {
         
-        var path: String = "/api/auth/signup"
+        var path: String
         var headers: [String: String] = [:]
         var contentType: String = "application/json"
         var query: [String: String] = [:]
         var body: Data?
         
-        init(email: String, password: String, name: String, phoneNumber: String) {
+        init(permission: String, email: String, password: String, name: String, phoneNumber: String) {
+            self.path = "/api/auth/signup/" + permission
             let parameters = [
                 "email": email,
                 "password": password,

@@ -70,14 +70,15 @@ class BaetaverseAppModuleTests: XCTestCase {
     
     func test_회원가입_정상적으로_동작해야한다() async throws {
         // given
-        let email = "test2@test2.com"
+        let email = "test8@test8.com"
         let password = "12341234"
-        let name = "testUserName"
+        let name = "testUserName8"
         let phoneNumber = "010-1234-5678"
         
         // when then
         do {
-            try await sutBaetaverse.signUpOwner(
+            try await sutBaetaverse.signUp(
+                permission: .owner,
                 email: email,
                 password: password,
                 name: name,
@@ -97,7 +98,8 @@ class BaetaverseAppModuleTests: XCTestCase {
         
         // when then
         do {
-            try await sutBaetaverse.signUpOwner(
+            try await sutBaetaverse.signUp(
+                permission: .forwarder,
                 email: email,
                 password: password,
                 name: name,
