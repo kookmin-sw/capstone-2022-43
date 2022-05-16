@@ -9,7 +9,7 @@ import UIKit
 
 final class BUSelectRegionDataSource: NSObject {
     
-    private(set) var countries: [String: [(String, String)]]
+    private(set) var countries = [String: [(String, String)]]()
     
     private lazy var sections: [String] = {
         self.countries.keys.sorted(by: <).map({ String($0) })
@@ -23,36 +23,7 @@ final class BUSelectRegionDataSource: NSObject {
         return code
     }
     
-    override init() {
-        self.countries = Self.configure()
-        super.init()
-    }
     
-    private static func configure() -> [String: [(String, String)]] {
-        Locale.isoRegionCodes.reduce([String: [(String, String)]]()) { partialResult, countryCode in
-            guard let localizedCountryName = Locale.current.localizedString(forRegionCode: countryCode) else {
-                return partialResult
-            }
-            guard let countryIndex = localizedCountryName.capitalized.first else {
-                return partialResult
-            }
-            
-            var newResult = partialResult
-            let index = String(countryIndex)
-            let countryPair = (countryCode, localizedCountryName)
-            
-            if partialResult[index] == nil {
-                newResult[index] = [countryPair]
-            } else {
-                newResult[index]?.append(contentsOf: [countryPair])
-                newResult[index]?.sort(by: { first, second in
-                    first.1 < second.1
-                })
-            }
-            
-            return newResult
-        }
-    }
     
     func changeSelectedRegion(to indexPath: IndexPath) {
         self.selectedRegion = indexPath

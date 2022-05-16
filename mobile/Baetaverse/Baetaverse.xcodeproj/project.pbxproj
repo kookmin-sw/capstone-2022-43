@@ -55,6 +55,7 @@
 		C198204C2831141100A79AD6 /* BURegisterProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C198204B2831141100A79AD6 /* BURegisterProductViewController.swift */; };
 		C198204E28311E7400A79AD6 /* RegisterEstimateRequestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C198204D28311E7400A79AD6 /* RegisterEstimateRequestViewModel.swift */; };
 		C1982050283120A800A79AD6 /* Extensions+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C198204F283120A800A79AD6 /* Extensions+UIViewController.swift */; };
+		C19820532831447B00A79AD6 /* SelectRegionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19820512831447700A79AD6 /* SelectRegionDelegate.swift */; };
 		C19E6785282F80FE00B88413 /* BUSelectRegionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E6783282F80C100B88413 /* BUSelectRegionTableViewController.swift */; };
 		C19E678A282FA5CC00B88413 /* BUSelectRegionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E6789282FA5CC00B88413 /* BUSelectRegionDataSource.swift */; };
 		C19E67902830B1E100B88413 /* SelectRegionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E678F2830B1E100B88413 /* SelectRegionTableViewCell.swift */; };
@@ -216,6 +217,7 @@
 		C198204B2831141100A79AD6 /* BURegisterProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BURegisterProductViewController.swift; sourceTree = "<group>"; };
 		C198204D28311E7400A79AD6 /* RegisterEstimateRequestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEstimateRequestViewModel.swift; sourceTree = "<group>"; };
 		C198204F283120A800A79AD6 /* Extensions+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIViewController.swift"; sourceTree = "<group>"; };
+		C19820512831447700A79AD6 /* SelectRegionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRegionDelegate.swift; sourceTree = "<group>"; };
 		C19E6783282F80C100B88413 /* BUSelectRegionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BUSelectRegionTableViewController.swift; sourceTree = "<group>"; };
 		C19E6789282FA5CC00B88413 /* BUSelectRegionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BUSelectRegionDataSource.swift; sourceTree = "<group>"; };
 		C19E678F2830B1E100B88413 /* SelectRegionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRegionTableViewCell.swift; sourceTree = "<group>"; };
@@ -505,6 +507,7 @@
 		C19E6788282FA58500B88413 /* SelectRegion */ = {
 			isa = PBXGroup;
 			children = (
+				C19820512831447700A79AD6 /* SelectRegionDelegate.swift */,
 				C19E6783282F80C100B88413 /* BUSelectRegionTableViewController.swift */,
 				C19E6789282FA5CC00B88413 /* BUSelectRegionDataSource.swift */,
 			);
@@ -1120,6 +1123,7 @@
 				C149736B27F59B7500679118 /* Extensions+Data.swift in Sources */,
 				C198204E28311E7400A79AD6 /* RegisterEstimateRequestViewModel.swift in Sources */,
 				C19E6785282F80FE00B88413 /* BUSelectRegionTableViewController.swift in Sources */,
+				C19820532831447B00A79AD6 /* SelectRegionDelegate.swift in Sources */,
 				C197AEBD27F43AEC000E4975 /* APIService.swift in Sources */,
 				C19E67942830D20200B88413 /* BURegisterIncotermsViewController.swift in Sources */,
 				C1CF675127F736330057A6C3 /* BaetaverseBusinessService.swift in Sources */,
