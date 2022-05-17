@@ -9,16 +9,21 @@ import SwiftUI
 
 struct MoreView: View {
     
+    @StateObject private var viewModel = MenuViewModel()
+    
     @State var name: String = "DemoForwarder"
     @State var profileImage: Image = Image("demoProfileImage")
     
     var body: some View {
         NavigationView {
             ScrollView {
-                MoreContentView(name: $name, profileImage: $profileImage)
+                MoreContentView(
+                    name: $name,
+                    profileImage: $profileImage,
+                    viewModel: viewModel
+                )
             }
             .navigationTitle(Text("더보기"))
-            
         }
     }
     
@@ -28,6 +33,7 @@ private struct MoreContentView: View {
     
     @Binding var name: String
     @Binding var profileImage: Image
+    let viewModel: MenuViewModel
     
     var body: some View {
         VStack {
@@ -58,6 +64,14 @@ private struct MoreContentView: View {
                     MoreShortcutContentView(
                         label: "알림설정",
                         systemImage: "bell"
+                    )
+                }
+                Button(action: {
+                    viewModel.logout()
+                }) {
+                    MoreShortcutContentView(
+                        label: "로그아웃",
+                        systemImage: "person.crop.circle.badge.xmark"
                     )
                 }
             }

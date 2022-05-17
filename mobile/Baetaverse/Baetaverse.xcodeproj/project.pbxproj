@@ -121,6 +121,7 @@
 		C11214BA283344D8001E4384 /* EstimateRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D22228321CE50044404D /* EstimateRegister.swift */; };
 		C11214BB2833451C001E4384 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CBB927F2BF330087882E /* AppDelegate.swift */; };
 		C11214C028334795001E4384 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11214BF28334795001E4384 /* LoginViewModel.swift */; };
+		C11214C22833567E001E4384 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11214C12833567E001E4384 /* MenuViewModel.swift */; };
 		C1300DB6281F707100E9C0CC /* SignUpFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1300DB5281F707100E9C0CC /* SignUpFormView.swift */; };
 		C1300DBB281FA3B900E9C0CC /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1300DBA281FA3B900E9C0CC /* MainTabView.swift */; };
 		C1300DBE281FBE4E00E9C0CC /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1300DBD281FBE4E00E9C0CC /* StarRatingView.swift */; };
@@ -319,6 +320,7 @@
 		C1121376283338D3001E4384 /* MoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewModel.swift; sourceTree = "<group>"; };
 		C11214BE283345FC001E4384 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C11214BF28334795001E4384 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		C11214C12833567E001E4384 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuViewModel.swift; path = BaetaverseBusiness/View/Main/FourthTabView/MenuViewModel.swift; sourceTree = SOURCE_ROOT; };
 		C1300DB5281F707100E9C0CC /* SignUpFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFormView.swift; sourceTree = "<group>"; };
 		C1300DBA281FA3B900E9C0CC /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		C1300DBD281FBE4E00E9C0CC /* StarRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingView.swift; sourceTree = "<group>"; };
@@ -864,6 +866,7 @@
 		C1E257B92820E5AC003F35DF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C11214C12833567E001E4384 /* MenuViewModel.swift */,
 				C11214BF28334795001E4384 /* LoginViewModel.swift */,
 				C1366CE8282AADC800A9CA93 /* MainViewModel.swift */,
 				C1E257B72820E5A4003F35DF /* RecievedEstimatesViewModel.swift */,
@@ -1266,6 +1269,7 @@
 				C112147828334471001E4384 /* Product.swift in Sources */,
 				C112145828334432001E4384 /* BaetaverseAppService.swift in Sources */,
 				C1300DBE281FBE4E00E9C0CC /* StarRatingView.swift in Sources */,
+				C11214C22833567E001E4384 /* MenuViewModel.swift in Sources */,
 				C112149C283344B0001E4384 /* HSCodeResponse.swift in Sources */,
 				C1366CE9282AADC800A9CA93 /* MainViewModel.swift in Sources */,
 				C112147028334457001E4384 /* APIRequest.swift in Sources */,
