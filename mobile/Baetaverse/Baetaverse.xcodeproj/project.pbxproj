@@ -119,6 +119,7 @@
 		C11214B8283344D8001E4384 /* EstimateRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D22228321CE50044404D /* EstimateRegister.swift */; };
 		C11214B9283344D8001E4384 /* EstimateRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D22228321CE50044404D /* EstimateRegister.swift */; };
 		C11214BA283344D8001E4384 /* EstimateRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D22228321CE50044404D /* EstimateRegister.swift */; };
+		C11214BB2833451C001E4384 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CBB927F2BF330087882E /* AppDelegate.swift */; };
 		C1300DB6281F707100E9C0CC /* SignUpFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1300DB5281F707100E9C0CC /* SignUpFormView.swift */; };
 		C1300DBB281FA3B900E9C0CC /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1300DBA281FA3B900E9C0CC /* MainTabView.swift */; };
 		C1300DBE281FBE4E00E9C0CC /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1300DBD281FBE4E00E9C0CC /* StarRatingView.swift */; };
@@ -1492,6 +1493,7 @@
 				C197AEC127F43EEC000E4975 /* BaetaverseAPIService.swift in Sources */,
 				C1CF675F27F737760057A6C3 /* APIRequest.swift in Sources */,
 				C1CF675A27F7375E0057A6C3 /* BaetaverseBusinessService.swift in Sources */,
+				C11214BB2833451C001E4384 /* AppDelegate.swift in Sources */,
 				C149737327F5A11C00679118 /* LoginResponse.swift in Sources */,
 				C197AEB827F43862000E4975 /* NetworkServiceProvider.swift in Sources */,
 				C11213752833387A001E4384 /* BUMoreViewController.swift in Sources */,
