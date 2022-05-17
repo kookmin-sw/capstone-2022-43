@@ -17,15 +17,16 @@ final class SignUpFormViewModel {
         return appDelegate.appService
     }
     
-    func signUp(email: String, password: String, name: String, phoneNumber: String) async throws {
+    func signUp(permission: AuthPermission, email: String, password: String, name: String, phoneNumber: String,
+                corporationName: String? = nil, corporationNumber: String? = nil) async throws {
         try await appService?.signUp(
-            permission: .forwarder, 
+            permission: permission,
             email: email,
             password: password,
             name: name,
             phoneNumber: phoneNumber,
-            corporationName: "Hello",
-            corporationNumber: "world"
+            corporationName: corporationName,
+            corporationNumber: corporationNumber
         )
     }
     
