@@ -139,6 +139,7 @@
 		C11214DB28339283001E4384 /* QuotationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11214D328338D02001E4384 /* QuotationEntity.swift */; };
 		C11214DD2833B391001E4384 /* EstimatesDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11214DC2833B391001E4384 /* EstimatesDetailView.swift */; };
 		C11214E12833B77F001E4384 /* RegisterEstimatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11214E02833B77F001E4384 /* RegisterEstimatesView.swift */; };
+		C11214E42833BDC7001E4384 /* RegisterEstimatesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11214E32833BDC7001E4384 /* RegisterEstimatesViewModel.swift */; };
 		C1300DB6281F707100E9C0CC /* SignUpFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1300DB5281F707100E9C0CC /* SignUpFormView.swift */; };
 		C1300DBB281FA3B900E9C0CC /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1300DBA281FA3B900E9C0CC /* MainTabView.swift */; };
 		C1300DBE281FBE4E00E9C0CC /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1300DBD281FBE4E00E9C0CC /* StarRatingView.swift */; };
@@ -346,6 +347,7 @@
 		C11214D328338D02001E4384 /* QuotationEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotationEntity.swift; sourceTree = "<group>"; };
 		C11214DC2833B391001E4384 /* EstimatesDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimatesDetailView.swift; sourceTree = "<group>"; };
 		C11214E02833B77F001E4384 /* RegisterEstimatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEstimatesView.swift; sourceTree = "<group>"; };
+		C11214E32833BDC7001E4384 /* RegisterEstimatesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterEstimatesViewModel.swift; path = BaetaverseBusiness/RegisterEstimatesViewModel.swift; sourceTree = SOURCE_ROOT; };
 		C1300DB5281F707100E9C0CC /* SignUpFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFormView.swift; sourceTree = "<group>"; };
 		C1300DBA281FA3B900E9C0CC /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		C1300DBD281FBE4E00E9C0CC /* StarRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingView.swift; sourceTree = "<group>"; };
@@ -905,6 +907,7 @@
 		C1E257B92820E5AC003F35DF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C11214E32833BDC7001E4384 /* RegisterEstimatesViewModel.swift */,
 				C11214C12833567E001E4384 /* MenuViewModel.swift */,
 				C11214BF28334795001E4384 /* LoginViewModel.swift */,
 				C1366CE8282AADC800A9CA93 /* MainViewModel.swift */,
@@ -1350,6 +1353,7 @@
 				C1C9EC8E2818FB080041F974 /* Extensions+Encodable.swift in Sources */,
 				C1121492283344A5001E4384 /* APIResponseModel.swift in Sources */,
 				C11214C4283372D0001E4384 /* QueryAllEstimateRequestsRequest.swift in Sources */,
+				C11214E42833BDC7001E4384 /* RegisterEstimatesViewModel.swift in Sources */,
 				C11214B2283344D0001E4384 /* GoodsRegister.swift in Sources */,
 				C112149A283344AE001E4384 /* EstimatesResponse.swift in Sources */,
 				C11214E12833B77F001E4384 /* RegisterEstimatesView.swift in Sources */,

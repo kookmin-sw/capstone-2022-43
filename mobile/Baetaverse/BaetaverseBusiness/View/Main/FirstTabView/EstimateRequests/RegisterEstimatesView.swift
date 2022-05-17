@@ -10,6 +10,9 @@ import SwiftUI
 struct RegisterEstimatesView: View {
     
     @Environment(\.dismiss) private var dismiss
+    let id: Int
+    
+    @StateObject private var viewModel = RegisterEstimatesViewModel()
     
     var body: some View {
         NavigationView {
@@ -23,7 +26,11 @@ struct RegisterEstimatesView: View {
                         }
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
-                        Button(role: .none, action: { dismiss() }) {
+                        Button(role: .none, action: {
+                            Task {
+                                try? await viewModel.register(estimate:)
+                            }
+                        }) {
                             Text("등록")
                         }
                     }
@@ -52,7 +59,7 @@ private struct RegisterEstimatesContentView: View {
 struct RegisterEstimatesView_Previews: PreviewProvider {
     
     static var previews: some View {
-        RegisterEstimatesView()
+        RegisterEstimatesView(id: 0)
     }
     
 }
