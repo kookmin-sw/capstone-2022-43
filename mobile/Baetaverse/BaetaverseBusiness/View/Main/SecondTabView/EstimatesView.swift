@@ -28,7 +28,7 @@ private struct EstimatesContentView: View {
     var body: some View {
         List {
             ForEach(viewModel.estimates) { estimate in
-                NavigationLink(destination: Text("Hello World")) {
+                NavigationLink(destination: { EstimatesDetailView(estimates: estimate) }) {
                     EstimatesListCellView(estimate: estimate)
                 }
             }
