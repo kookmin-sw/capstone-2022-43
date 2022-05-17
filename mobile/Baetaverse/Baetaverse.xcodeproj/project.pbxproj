@@ -152,6 +152,14 @@
 		C134B185283400E600F7DF4C /* Quotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C134B183283400E600F7DF4C /* Quotation.swift */; };
 		C134B186283400E600F7DF4C /* Quotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C134B183283400E600F7DF4C /* Quotation.swift */; };
 		C134B187283400E600F7DF4C /* Quotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C134B183283400E600F7DF4C /* Quotation.swift */; };
+		C134B189283409D200F7DF4C /* ReviewsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C134B188283409D200F7DF4C /* ReviewsResponse.swift */; };
+		C134B18A283409D200F7DF4C /* ReviewsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C134B188283409D200F7DF4C /* ReviewsResponse.swift */; };
+		C134B18B283409D200F7DF4C /* ReviewsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C134B188283409D200F7DF4C /* ReviewsResponse.swift */; };
+		C134B18C283409D200F7DF4C /* ReviewsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C134B188283409D200F7DF4C /* ReviewsResponse.swift */; };
+		C134B18E28340AE200F7DF4C /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = C134B18D28340AE200F7DF4C /* Review.swift */; };
+		C134B18F28340AE200F7DF4C /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = C134B18D28340AE200F7DF4C /* Review.swift */; };
+		C134B19028340AE200F7DF4C /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = C134B18D28340AE200F7DF4C /* Review.swift */; };
+		C134B19128340AE200F7DF4C /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = C134B18D28340AE200F7DF4C /* Review.swift */; };
 		C1366CE7282A9EFD00A9CA93 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1366CE6282A9EFD00A9CA93 /* HeaderView.swift */; };
 		C1366CE9282AADC800A9CA93 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1366CE8282AADC800A9CA93 /* MainViewModel.swift */; };
 		C13778C127F497CF00DAF494 /* BUSignUpFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13778C027F497CF00DAF494 /* BUSignUpFormViewController.swift */; };
@@ -363,6 +371,8 @@
 		C134B1772833DAEC00F7DF4C /* EstimateRequestCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateRequestCardView.swift; sourceTree = "<group>"; };
 		C134B1792833FD0D00F7DF4C /* ReviewsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsRequest.swift; sourceTree = "<group>"; };
 		C134B183283400E600F7DF4C /* Quotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quotation.swift; sourceTree = "<group>"; };
+		C134B188283409D200F7DF4C /* ReviewsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsResponse.swift; sourceTree = "<group>"; };
+		C134B18D28340AE200F7DF4C /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		C1366CE6282A9EFD00A9CA93 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		C1366CE8282AADC800A9CA93 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		C13778C027F497CF00DAF494 /* BUSignUpFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BUSignUpFormViewController.swift; path = Baetaverse/ViewController/BUSignUpFormViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -612,6 +622,7 @@
 				C1E8628C282E0DF700D9971A /* RegisterEstimateRequestsResponse.swift */,
 				C149D22828326EB10044404D /* RegisterEstimateResponse.swift */,
 				C149D23628327C790044404D /* QuotationsResponse.swift */,
+				C134B188283409D200F7DF4C /* ReviewsResponse.swift */,
 			);
 			path = ResponseModel;
 			sourceTree = "<group>";
@@ -1056,6 +1067,7 @@
 			children = (
 				C1E86274282D5B6700D9971A /* APIEnity.swift */,
 				C149D22A28326F870044404D /* QuotationDetail.swift */,
+				C134B18D28340AE200F7DF4C /* Review.swift */,
 				C134B183283400E600F7DF4C /* Quotation.swift */,
 				C149D22C283271DF0044404D /* Forwarder.swift */,
 				C1E86276282D5D4E00D9971A /* EstimateRequestsQuery.swift */,
@@ -1374,6 +1386,7 @@
 				C11214E42833BDC7001E4384 /* RegisterEstimatesViewModel.swift in Sources */,
 				C11214B2283344D0001E4384 /* GoodsRegister.swift in Sources */,
 				C112149A283344AE001E4384 /* EstimatesResponse.swift in Sources */,
+				C134B18B283409D200F7DF4C /* ReviewsResponse.swift in Sources */,
 				C11214E12833B77F001E4384 /* RegisterEstimatesView.swift in Sources */,
 				C11214A0283344B5001E4384 /* RegisterEstimateRequestsResponse.swift in Sources */,
 				C112146E28334455001E4384 /* APIRequestHostInfo.swift in Sources */,
@@ -1405,6 +1418,7 @@
 				C196576828201ECA00821825 /* CardView.swift in Sources */,
 				C11214B0283344CD001E4384 /* EstimateRequestRegisterForm.swift in Sources */,
 				C11214742833445C001E4384 /* HTTPMethod.swift in Sources */,
+				C134B19028340AE200F7DF4C /* Review.swift in Sources */,
 				C11214AC283344C8001E4384 /* EstimateRequestsQuery.swift in Sources */,
 				C1E257B82820E5A4003F35DF /* RecievedEstimatesViewModel.swift in Sources */,
 				C1C9EC8B2818FAFF0041F974 /* Extensions+Data.swift in Sources */,
@@ -1441,10 +1455,12 @@
 				C11214772833445E001E4384 /* APIRequestImplement.swift in Sources */,
 				C1121491283344A3001E4384 /* QuotationsRequst.swift in Sources */,
 				C112149F283344B3001E4384 /* EstimateRequestsResponse.swift in Sources */,
+				C134B19128340AE200F7DF4C /* Review.swift in Sources */,
 				C112148B2833449C001E4384 /* HSCodeRequest.swift in Sources */,
 				C112147F28334479001E4384 /* UserProfile.swift in Sources */,
 				C11214B5283344D2001E4384 /* EstimateRequestDetail.swift in Sources */,
 				C11214532833442A001E4384 /* AppService.swift in Sources */,
+				C134B18C283409D200F7DF4C /* ReviewsResponse.swift in Sources */,
 				C11214B3283344D0001E4384 /* GoodsRegister.swift in Sources */,
 				C112149D283344B1001E4384 /* HSCodeResponse.swift in Sources */,
 				C11214D928339282001E4384 /* QuotationEntity.swift in Sources */,
@@ -1508,6 +1524,7 @@
 				C197AEC027F43BEF000E4975 /* BaetaverseAPIService.swift in Sources */,
 				C11214C8283376BC001E4384 /* QueryAllEstimateRequestsRequest.swift in Sources */,
 				C1E862A3282E356C00D9971A /* EstimateRequestsTableViewModel.swift in Sources */,
+				C134B189283409D200F7DF4C /* ReviewsResponse.swift in Sources */,
 				C1E5CBF627F2BFBD0087882E /* BURegisterDepartureViewController.swift in Sources */,
 				C149737127F5A06D00679118 /* APIResponseModel.swift in Sources */,
 				C1E8629D282E235000D9971A /* LoginViewModel.swift in Sources */,
@@ -1535,6 +1552,7 @@
 				C149737627F5A39800679118 /* SignUpResponse.swift in Sources */,
 				C149D23728327C790044404D /* QuotationsResponse.swift in Sources */,
 				C1E862A1282E34BC00D9971A /* BUEstimateRequestsTableViewController.swift in Sources */,
+				C134B18E28340AE200F7DF4C /* Review.swift in Sources */,
 				C1E5CC1A27F334E10087882E /* LoginRequest.swift in Sources */,
 				C1E86285282DF43E00D9971A /* EstimateRequestRegisterForm.swift in Sources */,
 				C1E86296282E15AE00D9971A /* EstimateRequestDetailResponse.swift in Sources */,
@@ -1616,6 +1634,7 @@
 				C149737227F5A11A00679118 /* APIResponseModel.swift in Sources */,
 				C1E8629A282E1D2000D9971A /* EstimateRequestDetailResponse.swift in Sources */,
 				C149D2322832759D0044404D /* RegisterEstimateRequestsResponse.swift in Sources */,
+				C134B18A283409D200F7DF4C /* ReviewsResponse.swift in Sources */,
 				C1121371283329C9001E4384 /* UserProfile.swift in Sources */,
 				C1E86286282E08A900D9971A /* Product.swift in Sources */,
 				C149736827F597E200679118 /* BaetaverseAppModuleTests.swift in Sources */,
@@ -1639,6 +1658,7 @@
 				C1B7652728294F820029B5FC /* AppService.swift in Sources */,
 				C1E86297282E1CB700D9971A /* EstimateRequestDetail.swift in Sources */,
 				C149D233283275A60044404D /* RegisterEstimateRequest.swift in Sources */,
+				C134B18F28340AE200F7DF4C /* Review.swift in Sources */,
 				C1CF675D27F737710057A6C3 /* APIService.swift in Sources */,
 				C1121378283338D3001E4384 /* MoreViewModel.swift in Sources */,
 				C197AEC327F43EF6000E4975 /* LoginRequest.swift in Sources */,

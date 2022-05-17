@@ -21,7 +21,7 @@ class BaetaverseBusinessTests: XCTestCase {
 
     func test_알맞은_계정이_입력되면_정상적으로_로그인되어야한다() async throws {
         // given
-        let email = "test8@test8.com"
+        let email = "test1@test1.com"
         let password = "12341234"
         
         // when

@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 extension APIEntity {
     
     struct Forwarder: Decodable {
