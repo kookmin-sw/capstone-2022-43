@@ -13,8 +13,8 @@ extension APIEntity {
         
         let score: Int
         let message: String
-        let forwarder: Forwarder
-        let owner: Forwarder
+        let forwarder: APIEntity.UserInformation
+        let owner: APIEntity.UserInformation
         let requests: APIEntity.EstimateRequestDetail
         let quotation: APIEntity.Quotation
         

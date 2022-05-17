@@ -17,7 +17,7 @@ extension APIEntity {
         var totalPrice: Int
         var estimatedTime: Int
         var createdAt: Date
-        var forwarder: APIEntity.Forwarder
+        var forwarder: APIEntity.UserInformation
         var requests: APIEntity.EstimateRequestDetail
         
         enum CodingKeys: String, CodingKey {

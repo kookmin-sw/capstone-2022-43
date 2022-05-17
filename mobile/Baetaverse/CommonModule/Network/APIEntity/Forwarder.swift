@@ -9,12 +9,12 @@ import Foundation
 
 extension APIEntity {
     
-    struct Forwarder: Decodable {
+    struct UserInformation: Decodable {
         
         var name: String
-        var phoneNumber: String
-        var corporationName: String
-        var corporationNumber: String
+        var phoneNumber: String?
+        var corporationName: String?
+        var corporationNumber: String?
         
         enum CodingKeys: String, CodingKey {
             

@@ -20,9 +20,9 @@ extension UserProfile {
     
     init(quotation: APIEntity.QuotationDetail) {
         self.name = quotation.forwarder.name
-        self.phoneNumber = quotation.forwarder.phoneNumber
-        self.corporationName = quotation.forwarder.corporationName 
-        self.corporationNumber = quotation.forwarder.corporationNumber 
+        self.phoneNumber = quotation.forwarder.phoneNumber ?? ""
+        self.corporationName = quotation.forwarder.corporationName ?? ""
+        self.corporationNumber = quotation.forwarder.corporationNumber ?? ""
     }
     
 }
