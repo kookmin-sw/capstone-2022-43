@@ -9,10 +9,12 @@ import SwiftUI
 
 struct MainView: View {
     
+    @StateObject private var viewModel = MainViewModel()
+    
     var body: some View {
         NavigationView {
             ScrollView {
-                MainContentView()
+                MainContentView(viewModel: viewModel)
             }
             .navigationTitle("BAETAVERSE")
         }
@@ -22,7 +24,7 @@ struct MainView: View {
 
 private struct MainContentView: View {
     
-    @StateObject private var viewModel = MainViewModel()
+    let viewModel: MainViewModel
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
