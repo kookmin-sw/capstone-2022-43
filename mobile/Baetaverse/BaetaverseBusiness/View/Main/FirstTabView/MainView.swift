@@ -24,13 +24,13 @@ struct MainView: View {
 
 private struct MainContentView: View {
     
-    let viewModel: MainViewModel
+    @ObservedObject var viewModel: MainViewModel
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             MainWelcomeMessageView()
-//            MainShortcutButtonsView()
-            MainEstimateBoardView(estimates: viewModel.estimates)
+            //            MainShortcutButtonsView()
+            MainEstimateBoardView(viewModel: viewModel)
             MainRecievedReviewBoardView(reviews: viewModel.reviews)
         }
         .padding()
@@ -95,7 +95,7 @@ private struct MainRecievedReviewBoardView: View {
 
 private struct MainEstimateBoardView: View {
     
-    let estimates: [Review]
+    @ObservedObject var viewModel: MainViewModel
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -104,12 +104,17 @@ private struct MainEstimateBoardView: View {
                 subheadline: "마감이 임박한 견적요청서를 확인해보세요!") {
                     EstimateRequestsView()
                 }
-            Carousel {
-                ForEach(estimates) { estimate in
-                    ReviewCardView(review: .constant(estimate))
+            if !$viewModel.estimateRequests.isEmpty {
+                Carousel {
+                    ForEach($viewModel.estimateRequests) { estimate in
+                        EstimateRequestCardView(estimateRequest: estimate)
+                    }
                 }
+                .frame(height: 130)
             }
-            .frame(height: 150)
+        }
+        .task {
+            try? await viewModel.fetchEstimateRequests()
         }
     }
     
