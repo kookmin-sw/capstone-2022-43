@@ -14,8 +14,8 @@ struct ReviewCardView: View {
     var body: some View {
         CardView {
             VStack {
-                ReviewCardTitleView(title: $review.title, created: $review.created)
-                ReviewCardHeaderView(rating: $review.rating, editor: $review.editor)
+                ReviewCardTitleView(title: $review.reviewText, created: $review.created)
+                ReviewCardHeaderView(rating: $review.rating, editor: $review.owner)
             }
             ReviewCardContentView(reviewText: $review.reviewText)
         }
@@ -60,22 +60,6 @@ private struct ReviewCardContentView: View {
     var body: some View {
         Text(reviewText)
             .lineLimit(3)
-    }
-    
-}
-
-struct ReviewCardView_Previews: PreviewProvider {
-    
-    static var previews: some View {
-        let review = ReviewEntity(
-            id: 1,
-            title: "안녕하세요",
-            created: Date(),
-            rating: 4,
-            editor: "한정택",
-            reviewText: "리뷰 남깁니다! 리뷰 카드가 잘 동작하고 있나요?"
-        )
-        ReviewCardView(review: .constant(review))
     }
     
 }

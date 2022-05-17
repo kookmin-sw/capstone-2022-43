@@ -199,6 +199,7 @@
 		C16B45A8282A4C9B00DDAAE8 /* EstimateRequestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B45A7282A4C9B00DDAAE8 /* EstimateRequestsView.swift */; };
 		C16B45AB282A4E5000DDAAE8 /* AutoLazyVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B45AA282A4E5000DDAAE8 /* AutoLazyVGrid.swift */; };
 		C16B45AD282A50CE00DDAAE8 /* AutoLazyHGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B45AC282A50CE00DDAAE8 /* AutoLazyHGrid.swift */; };
+		C16E03162834158C00B2CDCF /* ReviewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C196576428201CFA00821825 /* ReviewEntity.swift */; };
 		C184F7B0282E620000336677 /* EstimateRequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C184F7AF282E620000336677 /* EstimateRequestTableViewCell.swift */; };
 		C19140E52823AC0000372CB3 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = C19140E42823AC0000372CB3 /* .swiftlint.yml */; };
 		C19140EA2823B6EF00372CB3 /* WriteEstimateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19140E92823B6EF00372CB3 /* WriteEstimateView.swift */; };
@@ -1452,6 +1453,7 @@
 				C112147128334458001E4384 /* APIRequest.swift in Sources */,
 				C11214BA283344D8001E4384 /* EstimateRegister.swift in Sources */,
 				C112146328334440001E4384 /* BaetaverseBusinessService.swift in Sources */,
+				C16E03162834158C00B2CDCF /* ReviewEntity.swift in Sources */,
 				C11214772833445E001E4384 /* APIRequestImplement.swift in Sources */,
 				C1121491283344A3001E4384 /* QuotationsRequst.swift in Sources */,
 				C112149F283344B3001E4384 /* EstimateRequestsResponse.swift in Sources */,

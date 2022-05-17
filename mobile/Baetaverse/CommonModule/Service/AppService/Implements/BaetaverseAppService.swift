@@ -77,4 +77,8 @@ final class BaetaverseAppService: AppService {
         return try await businessService.queryAllEstimatesRequest(token: auth.token)
     }
     
+    func queryReviews() async throws -> [ReviewEntity] {
+        return try await businessService.queryReviews(token: auth.token)
+    }
+    
 }

@@ -27,4 +27,12 @@ extension Estimate {
         self.estimatedTime = quotation.estimatedTime
     }
     
+    init(quotation: APIEntity.Quotation) {
+        self.requestId = 0
+        self.oceanFreightPrice = quotation.oceanFreightPrice
+        self.inlandFreightPrice = quotation.inlandFreightPrice
+        self.totalPrice = quotation.totalPrice
+        self.estimatedTime = quotation.estimatedTime
+    }
+    
 }

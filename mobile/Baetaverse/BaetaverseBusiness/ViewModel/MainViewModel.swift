@@ -14,11 +14,8 @@ final class MainViewModel: ObservableObject {
         BaetaverseBusinessApp.appService
     }
     
-    @Published var estimateRequests: [EstimateRequest] = [] {
-        didSet {
-            print(estimateRequests)
-        }
-    }
+    @Published var estimateRequests: [EstimateRequest] = []
+    @Published var reviews: [ReviewEntity] = []
     
     func fetchEstimateRequests() async throws {
         let datas = try await appService.queryAllEstimatesRequest()
@@ -26,48 +23,6 @@ final class MainViewModel: ObservableObject {
             .filter({ $0.closingDate > Date() })
             .sorted(by: { $0.closingDate < $1.closingDate })
         self.estimateRequests = result.count > 5 ? Array(result[...5]): result
-    }
-    
-    var estimates: [ReviewEntity] {
-        [
-            ReviewEntity(
-                id: 1,
-                title: "견적서 1번",
-                created: Date(),
-                rating: 2,
-                editor: "한정택",
-                reviewText: "견적 내용 작성\n견적 내용 작성\n견적 내용 작성\n견적 내용 작성\n"
-            ),
-            ReviewEntity(
-                id: 2,
-                title: "견적서 2번",
-                created: Date(),
-                rating: 4,
-                editor: "택정한",
-                reviewText: "견적 내용 작성\n견적 내용 작성\n견적 내용 작성\n견적 내용 작성\n"
-            )
-        ]
-    }
-    
-    var reviews: [ReviewEntity] {
-        [
-            ReviewEntity(
-                id: 1,
-                title: "Hello World1",
-                created: Date(),
-                rating: 2,
-                editor: "한정택",
-                reviewText: "그냥 리뷰 남김\n그냥 리뷰 남김\n그냥 리뷰 남김\n그냥 리뷰 남김\n"
-            ),
-            ReviewEntity(
-                id: 2,
-                title: "Hello World2",
-                created: Date(),
-                rating: 2,
-                editor: "택정한",
-                reviewText: "그냥 리뷰 남김\n그냥 리뷰 남김\n그냥 리뷰 남김\n그냥 리뷰 남김\n"
-            )
-        ]
     }
     
 }

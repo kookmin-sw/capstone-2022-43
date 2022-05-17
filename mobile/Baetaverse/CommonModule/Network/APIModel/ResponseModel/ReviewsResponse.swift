@@ -13,7 +13,7 @@ extension APIResponseModel {
         
         let status: Int
         let message: String
-        let review: APIEntity.Review
+        let review: [APIEntity.Review]
         
         enum CodingKeys: String, CodingKey {
             

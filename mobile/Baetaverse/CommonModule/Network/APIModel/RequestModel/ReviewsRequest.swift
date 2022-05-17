@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension APIEntity {
+extension APIRequestModel {
     
     struct ReviewsRequest: BaetaverseAPIRequestGET {
         

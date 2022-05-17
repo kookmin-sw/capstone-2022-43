@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@MainActor
 struct MainView: View {
     
     @StateObject private var viewModel = MainViewModel()
@@ -31,7 +32,7 @@ private struct MainContentView: View {
             MainWelcomeMessageView()
             //            MainShortcutButtonsView()
             MainEstimateBoardView(viewModel: viewModel)
-            MainRecievedReviewBoardView(reviews: viewModel.reviews)
+            MainRecievedReviewBoardView(viewModel: viewModel)
         }
         .padding()
     }
@@ -73,7 +74,7 @@ private struct MainShortcutButtonsView: View {
 
 private struct MainRecievedReviewBoardView: View {
     
-    let reviews: [ReviewEntity]
+    @ObservedObject var viewModel: MainViewModel
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -82,12 +83,14 @@ private struct MainRecievedReviewBoardView: View {
                 subheadline: "이용자의 피드백을 확인해보세요!") {
                     Text("Hello World")
                 }
-            VStack(alignment: .leading) {
-                MainReviewCountingView()
-                MainReviewStarRatingView()
+            if !$viewModel.reviews.isEmpty {
+                VStack(alignment: .leading) {
+                    MainReviewCountingView()
+                    MainReviewStarRatingView()
+                }
+                .font(.title2)
+                MainReviewCarouselView(reviews: viewModel.reviews)
             }
-            .font(.title2)
-            MainReviewCarouselView(reviews: reviews)
         }
     }
     

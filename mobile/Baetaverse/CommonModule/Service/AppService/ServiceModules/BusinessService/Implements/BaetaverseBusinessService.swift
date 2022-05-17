@@ -85,6 +85,14 @@ final class BaetaverseBusinessService: AppBusinessService {
         }
     }
     
+    func queryReviews(token: String) async throws -> [ReviewEntity] {
+        let apiService = BaetaverseAPIService.queryReviews(token: token)
+        let datas = try await networkService.fetchData(for: apiService)
+        let objects = try datas.decodeJSONData(to: APIResponseModel.ReviewsResponse.self)
+        let results = objects.review.map { ReviewEntity(review: $0) }
+        return results
+    }
+    
     enum BusinessServiceError: Error {
         
         case hscodeQueryFailure
