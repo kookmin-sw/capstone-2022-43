@@ -14,8 +14,8 @@ final class MainViewModel: ObservableObject {
         BaetaverseBusinessApp.appService
     }
     
-    @Published var estimateRequests: [EstimateRequest] = []
-    @Published var reviews: [ReviewEntity] = []
+    @Published private(set) var estimateRequests: [EstimateRequest] = []
+    @Published private(set) var reviews: [ReviewEntity] = []
     
     func fetchEstimateRequests() async throws {
         let datas = try await appService.queryAllEstimatesRequest()
@@ -23,6 +23,10 @@ final class MainViewModel: ObservableObject {
             .filter({ $0.closingDate > Date() })
             .sorted(by: { $0.closingDate < $1.closingDate })
         self.estimateRequests = result.count > 5 ? Array(result[...5]): result
+    }
+    
+    func fetchReviews() async throws {
+        self.reviews = try await appService.queryReviews()
     }
     
 }

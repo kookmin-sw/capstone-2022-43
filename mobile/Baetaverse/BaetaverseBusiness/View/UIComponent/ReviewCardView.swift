@@ -18,6 +18,7 @@ struct ReviewCardView: View {
                 ReviewCardHeaderView(rating: $review.rating, editor: $review.owner)
             }
             ReviewCardContentView(reviewText: $review.reviewText)
+            Spacer()
         }
     }
     
@@ -31,6 +32,7 @@ private struct ReviewCardTitleView: View {
     var body: some View {
         HStack {
             Text(title)
+                .lineLimit(1)
             Spacer()
             Text(created.formatted())
         }

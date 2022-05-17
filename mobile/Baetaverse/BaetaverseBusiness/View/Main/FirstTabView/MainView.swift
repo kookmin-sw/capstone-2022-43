@@ -83,14 +83,17 @@ private struct MainRecievedReviewBoardView: View {
                 subheadline: "이용자의 피드백을 확인해보세요!") {
                     Text("Hello World")
                 }
-            if !$viewModel.reviews.isEmpty {
+            if !viewModel.reviews.isEmpty {
                 VStack(alignment: .leading) {
-                    MainReviewCountingView()
+                    MainReviewCountingView(viewModel: viewModel)
                     MainReviewStarRatingView()
                 }
                 .font(.title2)
                 MainReviewCarouselView(reviews: viewModel.reviews)
             }
+        }
+        .task {
+            try? await viewModel.fetchReviews()
         }
     }
     
@@ -107,10 +110,10 @@ private struct MainEstimateBoardView: View {
                 subheadline: "마감이 임박한 견적요청서를 확인해보세요!") {
                     EstimateRequestsView()
                 }
-            if !$viewModel.estimateRequests.isEmpty {
+            if !viewModel.estimateRequests.isEmpty {
                 Carousel {
-                    ForEach($viewModel.estimateRequests) { estimate in
-                        EstimateRequestCardView(estimateRequest: estimate)
+                    ForEach(viewModel.estimateRequests) { estimate in
+                        EstimateRequestCardView(estimateRequest: .constant(estimate))
                     }
                 }
                 .frame(height: 130)
@@ -145,8 +148,10 @@ private struct ConsultationRequestButton: View {
 
 private struct MainReviewCountingView: View {
     
+    @ObservedObject var viewModel: MainViewModel
+    
     var body: some View {
-        Text("받은리뷰: 7건")
+        Text("받은리뷰: \(viewModel.reviews.count)건")
     }
     
 }
