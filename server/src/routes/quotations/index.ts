@@ -39,6 +39,10 @@ router.get('/', verifyForwarderToken , async (req: Request, res: Response, next:
         if (FailToFindGoods) {
             return next(FailToFindGoods);
         }
+        selected_goods_array.forEach(good => {
+            isoToUnix(good, ["created_at"]);
+        })
+
 
         return res.status(200).json({
             status: 200,
