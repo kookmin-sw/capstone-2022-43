@@ -138,6 +138,7 @@
 		C11214DA28339283001E4384 /* QuotationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11214D328338D02001E4384 /* QuotationEntity.swift */; };
 		C11214DB28339283001E4384 /* QuotationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11214D328338D02001E4384 /* QuotationEntity.swift */; };
 		C11214DD2833B391001E4384 /* EstimatesDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11214DC2833B391001E4384 /* EstimatesDetailView.swift */; };
+		C11214E12833B77F001E4384 /* RegisterEstimatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11214E02833B77F001E4384 /* RegisterEstimatesView.swift */; };
 		C1300DB6281F707100E9C0CC /* SignUpFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1300DB5281F707100E9C0CC /* SignUpFormView.swift */; };
 		C1300DBB281FA3B900E9C0CC /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1300DBA281FA3B900E9C0CC /* MainTabView.swift */; };
 		C1300DBE281FBE4E00E9C0CC /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1300DBD281FBE4E00E9C0CC /* StarRatingView.swift */; };
@@ -344,6 +345,7 @@
 		C11214D128338AB2001E4384 /* EstimateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateViewModel.swift; sourceTree = "<group>"; };
 		C11214D328338D02001E4384 /* QuotationEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotationEntity.swift; sourceTree = "<group>"; };
 		C11214DC2833B391001E4384 /* EstimatesDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimatesDetailView.swift; sourceTree = "<group>"; };
+		C11214E02833B77F001E4384 /* RegisterEstimatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEstimatesView.swift; sourceTree = "<group>"; };
 		C1300DB5281F707100E9C0CC /* SignUpFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFormView.swift; sourceTree = "<group>"; };
 		C1300DBA281FA3B900E9C0CC /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		C1300DBD281FBE4E00E9C0CC /* StarRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingView.swift; sourceTree = "<group>"; };
@@ -510,6 +512,15 @@
 			path = ServiceModules;
 			sourceTree = "<group>";
 		};
+		C11214E22833B8F0001E4384 /* EstimateRequests */ = {
+			isa = PBXGroup;
+			children = (
+				C16B45A7282A4C9B00DDAAE8 /* EstimateRequestsView.swift */,
+				C11214E02833B77F001E4384 /* RegisterEstimatesView.swift */,
+			);
+			path = EstimateRequests;
+			sourceTree = "<group>";
+		};
 		C1300DB9281FA3AA00E9C0CC /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -673,8 +684,8 @@
 			isa = PBXGroup;
 			children = (
 				C1BAFE222820BAC800CC4549 /* MainView.swift */,
+				C11214E22833B8F0001E4384 /* EstimateRequests */,
 				C1E257AF2820DD1A003F35DF /* RecievedEstimatesView.swift */,
-				C16B45A7282A4C9B00DDAAE8 /* EstimateRequestsView.swift */,
 				C1C65CFB28210E5200951A25 /* RecievedEstimateDetailView.swift */,
 				C19140E92823B6EF00372CB3 /* WriteEstimateView.swift */,
 			);
@@ -1341,6 +1352,7 @@
 				C11214C4283372D0001E4384 /* QueryAllEstimateRequestsRequest.swift in Sources */,
 				C11214B2283344D0001E4384 /* GoodsRegister.swift in Sources */,
 				C112149A283344AE001E4384 /* EstimatesResponse.swift in Sources */,
+				C11214E12833B77F001E4384 /* RegisterEstimatesView.swift in Sources */,
 				C11214A0283344B5001E4384 /* RegisterEstimateRequestsResponse.swift in Sources */,
 				C112146E28334455001E4384 /* APIRequestHostInfo.swift in Sources */,
 				C112146C28334453001E4384 /* APIService.swift in Sources */,

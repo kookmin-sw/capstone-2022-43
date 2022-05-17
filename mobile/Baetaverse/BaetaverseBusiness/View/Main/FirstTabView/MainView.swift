@@ -28,7 +28,7 @@ private struct MainContentView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-            MainWelcomeMessageView(username: viewModel.username)
+            MainWelcomeMessageView()
 //            MainShortcutButtonsView()
             MainEstimateBoardView(estimates: viewModel.estimates)
             MainRecievedReviewBoardView(reviews: viewModel.reviews)
@@ -40,11 +40,9 @@ private struct MainContentView: View {
 
 private struct MainWelcomeMessageView: View {
     
-    let username: String
-    
     var body: some View {
         VStack(alignment: .leading) {
-            Text("\(username) 고객님")
+            Text("고객님")
                 .font(.largeTitle)
             Text("배타버스에 오신 것을 환영합니다 ☺️")
                 .font(.title2)

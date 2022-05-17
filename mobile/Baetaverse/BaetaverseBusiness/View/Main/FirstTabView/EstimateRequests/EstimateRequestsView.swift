@@ -11,10 +11,17 @@ import SwiftUI
 struct EstimateRequestsView: View {
     
     @StateObject var viewModel = EstimateRequestsViewModel()
+    @State private var registerSheetIsPresented = false
     
     var body: some View {
-        EstimatesContentView(viewModel: viewModel)
-            .navigationTitle("견적서요청서")
+        EstimatesContentView(
+            viewModel: viewModel,
+            formIsPresented: $registerSheetIsPresented
+        )
+        .navigationTitle("견적 요청서")
+        .sheet(isPresented: $registerSheetIsPresented) {
+            RegisterEstimatesView()
+        }
     }
     
 }
@@ -22,11 +29,14 @@ struct EstimateRequestsView: View {
 private struct EstimatesContentView: View {
     
     @ObservedObject var viewModel: EstimateRequestsViewModel
+    @Binding var formIsPresented: Bool
     
     var body: some View {
         List {
             ForEach(viewModel.estimatesRequests) { estimateRequest in
-                EstimatesListCellView(estimateRequest: estimateRequest)
+                Button(action: { formIsPresented.toggle() }) {
+                    EstimatesListCellView(estimateRequest: estimateRequest)
+                }
             }
         }
         .task {
