@@ -693,11 +693,11 @@
 		C1C9EC612818FA1E0041F974 /* BaetaverseBusiness */ = {
 			isa = PBXGroup;
 			children = (
-				C11214BE283345FC001E4384 /* Info.plist */,
 				C182FDFB281901F600F66567 /* SupportingFiles */,
 				C182FDFA281901D000F66567 /* View */,
 				C1E257B92820E5AC003F35DF /* ViewModel */,
 				C196576628201D0300821825 /* Model */,
+				C11214BE283345FC001E4384 /* Info.plist */,
 			);
 			path = BaetaverseBusiness;
 			sourceTree = "<group>";
