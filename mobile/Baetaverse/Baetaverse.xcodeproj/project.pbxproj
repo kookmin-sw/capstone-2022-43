@@ -197,7 +197,7 @@
 		C19140F82823C5BD00372CB3 /* ConsultationProceedingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19140F72823C5BD00372CB3 /* ConsultationProceedingView.swift */; };
 		C196576128200A6B00821825 /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C196576028200A6B00821825 /* Carousel.swift */; };
 		C1965763282013EC00821825 /* ReviewCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1965762282013EC00821825 /* ReviewCardView.swift */; };
-		C196576528201CFA00821825 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = C196576428201CFA00821825 /* Review.swift */; };
+		C196576528201CFA00821825 /* ReviewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C196576428201CFA00821825 /* ReviewEntity.swift */; };
 		C196576828201ECA00821825 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C196576728201ECA00821825 /* CardView.swift */; };
 		C197AEB327F42D6D000E4975 /* NetworkServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197AEB227F42D6D000E4975 /* NetworkServiceProvider.swift */; };
 		C197AEB727F4385E000E4975 /* BaetaverseAPIRequestHostInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC0D27F32B4C0087882E /* BaetaverseAPIRequestHostInfo.swift */; };
@@ -395,7 +395,7 @@
 		C19140F72823C5BD00372CB3 /* ConsultationProceedingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationProceedingView.swift; sourceTree = "<group>"; };
 		C196576028200A6B00821825 /* Carousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
 		C1965762282013EC00821825 /* ReviewCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCardView.swift; sourceTree = "<group>"; };
-		C196576428201CFA00821825 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		C196576428201CFA00821825 /* ReviewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewEntity.swift; sourceTree = "<group>"; };
 		C196576728201ECA00821825 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		C197AEB227F42D6D000E4975 /* NetworkServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProvider.swift; sourceTree = "<group>"; };
 		C197AEBC27F43AEC000E4975 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
@@ -717,7 +717,7 @@
 		C196576628201D0300821825 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C196576428201CFA00821825 /* Review.swift */,
+				C196576428201CFA00821825 /* ReviewEntity.swift */,
 				C1BAFE242820BB9E00CC4549 /* SignUpGroupForm.swift */,
 				C1E257B52820E25D003F35DF /* EstimateEntity.swift */,
 			);
@@ -1380,7 +1380,7 @@
 				C112147228334459001E4384 /* NetworkServiceProvider.swift in Sources */,
 				C1121494283344A8001E4384 /* EstimateRequestDetailResponse.swift in Sources */,
 				C11214522833442A001E4384 /* AppService.swift in Sources */,
-				C196576528201CFA00821825 /* Review.swift in Sources */,
+				C196576528201CFA00821825 /* ReviewEntity.swift in Sources */,
 				C112146228334440001E4384 /* BaetaverseBusinessService.swift in Sources */,
 				C13C00EB28191A3600352096 /* SignUpChooseMembershipView.swift in Sources */,
 				C1E257B02820DD1A003F35DF /* RecievedEstimatesView.swift in Sources */,

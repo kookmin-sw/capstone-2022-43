@@ -1,5 +1,5 @@
 //
-//  Review.swift
+//  ReviewEntity.swift
 //  BaetaverseBusiness
 //
 //  Created by JeongTaek Han on 2022/05/02.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Review: Identifiable {
+struct ReviewEntity: Identifiable {
     
     var id: Int
     var title: String = ""

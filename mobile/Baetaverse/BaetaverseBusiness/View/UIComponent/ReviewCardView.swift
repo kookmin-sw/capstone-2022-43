@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ReviewCardView: View {
     
-    @Binding var review: Review
+    @Binding var review: ReviewEntity
     
     var body: some View {
         CardView {
@@ -67,7 +67,7 @@ private struct ReviewCardContentView: View {
 struct ReviewCardView_Previews: PreviewProvider {
     
     static var previews: some View {
-        let review = Review(
+        let review = ReviewEntity(
             id: 1,
             title: "안녕하세요",
             created: Date(),

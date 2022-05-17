@@ -28,9 +28,9 @@ final class MainViewModel: ObservableObject {
         self.estimateRequests = result.count > 5 ? Array(result[...5]): result
     }
     
-    var estimates: [Review] {
+    var estimates: [ReviewEntity] {
         [
-            Review(
+            ReviewEntity(
                 id: 1,
                 title: "견적서 1번",
                 created: Date(),
@@ -38,7 +38,7 @@ final class MainViewModel: ObservableObject {
                 editor: "한정택",
                 reviewText: "견적 내용 작성\n견적 내용 작성\n견적 내용 작성\n견적 내용 작성\n"
             ),
-            Review(
+            ReviewEntity(
                 id: 2,
                 title: "견적서 2번",
                 created: Date(),
@@ -49,9 +49,9 @@ final class MainViewModel: ObservableObject {
         ]
     }
     
-    var reviews: [Review] {
+    var reviews: [ReviewEntity] {
         [
-            Review(
+            ReviewEntity(
                 id: 1,
                 title: "Hello World1",
                 created: Date(),
@@ -59,7 +59,7 @@ final class MainViewModel: ObservableObject {
                 editor: "한정택",
                 reviewText: "그냥 리뷰 남김\n그냥 리뷰 남김\n그냥 리뷰 남김\n그냥 리뷰 남김\n"
             ),
-            Review(
+            ReviewEntity(
                 id: 2,
                 title: "Hello World2",
                 created: Date(),

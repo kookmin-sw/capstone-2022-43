@@ -73,7 +73,7 @@ private struct MainShortcutButtonsView: View {
 
 private struct MainRecievedReviewBoardView: View {
     
-    let reviews: [Review]
+    let reviews: [ReviewEntity]
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -161,7 +161,7 @@ private struct MainReviewStarRatingView: View {
 
 private struct MainReviewCarouselView: View {
     
-    let reviews: [Review]
+    let reviews: [ReviewEntity]
     
     var body: some View {
         Carousel {
