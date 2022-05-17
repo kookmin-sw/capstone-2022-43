@@ -86,7 +86,7 @@ private struct MainRecievedReviewBoardView: View {
             if !viewModel.reviews.isEmpty {
                 VStack(alignment: .leading) {
                     MainReviewCountingView(viewModel: viewModel)
-                    MainReviewStarRatingView()
+                    MainReviewStarRatingView(viewModel: viewModel)
                 }
                 .font(.title2)
                 MainReviewCarouselView(reviews: viewModel.reviews)
@@ -158,10 +158,12 @@ private struct MainReviewCountingView: View {
 
 private struct MainReviewStarRatingView: View {
     
+    @ObservedObject var viewModel: MainViewModel
+    
     var body: some View {
         HStack {
             Text("평점")
-            StarRatingView(rating: .constant(4))
+            StarRatingView(rating: .constant(viewModel.ratingAverage))
         }
     }
     

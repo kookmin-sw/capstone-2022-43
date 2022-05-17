@@ -10,7 +10,7 @@ import SwiftUI
 @MainActor
 struct ReviewsListView: View {
     
-    @StateObject var viewModel = MainViewModel()
+    @StateObject var viewModel = ReviewListViewModel()
     
     var body: some View {
         List {

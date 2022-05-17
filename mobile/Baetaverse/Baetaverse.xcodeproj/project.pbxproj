@@ -201,6 +201,7 @@
 		C16B45AD282A50CE00DDAAE8 /* AutoLazyHGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B45AC282A50CE00DDAAE8 /* AutoLazyHGrid.swift */; };
 		C16E03162834158C00B2CDCF /* ReviewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C196576428201CFA00821825 /* ReviewEntity.swift */; };
 		C16E031828341BFA00B2CDCF /* ReviewsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16E031728341BFA00B2CDCF /* ReviewsListView.swift */; };
+		C16E031A28341DF800B2CDCF /* ReviewListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16E031928341DF800B2CDCF /* ReviewListViewModel.swift */; };
 		C184F7B0282E620000336677 /* EstimateRequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C184F7AF282E620000336677 /* EstimateRequestTableViewCell.swift */; };
 		C19140E52823AC0000372CB3 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = C19140E42823AC0000372CB3 /* .swiftlint.yml */; };
 		C19140EA2823B6EF00372CB3 /* WriteEstimateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19140E92823B6EF00372CB3 /* WriteEstimateView.swift */; };
@@ -403,6 +404,7 @@
 		C16B45AA282A4E5000DDAAE8 /* AutoLazyVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLazyVGrid.swift; sourceTree = "<group>"; };
 		C16B45AC282A50CE00DDAAE8 /* AutoLazyHGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLazyHGrid.swift; sourceTree = "<group>"; };
 		C16E031728341BFA00B2CDCF /* ReviewsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsListView.swift; sourceTree = "<group>"; };
+		C16E031928341DF800B2CDCF /* ReviewListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListViewModel.swift; sourceTree = "<group>"; };
 		C184F7AF282E620000336677 /* EstimateRequestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateRequestTableViewCell.swift; sourceTree = "<group>"; };
 		C19140E42823AC0000372CB3 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		C19140E92823B6EF00372CB3 /* WriteEstimateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteEstimateView.swift; sourceTree = "<group>"; };
@@ -940,6 +942,7 @@
 				C11214C12833567E001E4384 /* MenuViewModel.swift */,
 				C11214BF28334795001E4384 /* LoginViewModel.swift */,
 				C1366CE8282AADC800A9CA93 /* MainViewModel.swift */,
+				C16E031928341DF800B2CDCF /* ReviewListViewModel.swift */,
 				C1E257B72820E5A4003F35DF /* RecievedEstimatesViewModel.swift */,
 				C11214CD28337864001E4384 /* EstimateRequestsViewModel.swift */,
 				C11214D128338AB2001E4384 /* EstimateViewModel.swift */,
@@ -1383,6 +1386,7 @@
 				C1E257B62820E25D003F35DF /* EstimateEntity.swift in Sources */,
 				C1C9EC652818FA1E0041F974 /* LoginView.swift in Sources */,
 				C11214542833442D001E4384 /* AuthService.swift in Sources */,
+				C16E031A28341DF800B2CDCF /* ReviewListViewModel.swift in Sources */,
 				C1C9EC8E2818FB080041F974 /* Extensions+Encodable.swift in Sources */,
 				C1121492283344A5001E4384 /* APIResponseModel.swift in Sources */,
 				C134B17C2833FD0D00F7DF4C /* ReviewsRequest.swift in Sources */,

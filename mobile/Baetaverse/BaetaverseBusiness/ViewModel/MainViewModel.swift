@@ -17,6 +17,14 @@ final class MainViewModel: ObservableObject {
     @Published private(set) var estimateRequests: [EstimateRequest] = []
     @Published private(set) var reviews: [ReviewEntity] = []
     
+    var ratingAverage: Int {
+        guard reviews.count > 0 else { return 0 }
+        let sum = reviews.reduce(0) { partialResult, review in
+            return partialResult + review.rating
+        }
+        return sum / reviews.count
+    }
+    
     func fetchEstimateRequests() async throws {
         let datas = try await appService.queryAllEstimatesRequest()
         let result = datas
@@ -26,7 +34,8 @@ final class MainViewModel: ObservableObject {
     }
     
     func fetchReviews() async throws {
-        self.reviews = try await appService.queryReviews()
+        let result = try await appService.queryReviews()
+        self.reviews = result.count > 5 ? Array(result[...5]): result
     }
     
 }
