@@ -10,11 +10,7 @@ import Foundation
 @MainActor
 final class EstimatesViewModel: ObservableObject {
     
-    @Published var estimatesRequests: [EstimateRequest] = [] {
-        didSet {
-            print(estimatesRequests)
-        }
-    }
+    @Published var estimatesRequests: [EstimateRequest] = []
     
     private var appService: AppService {
         BaetaverseBusinessApp.appService

@@ -27,11 +27,8 @@ private struct EstimatesContentView: View {
     
     var body: some View {
         List {
-            ForEach(viewModel.estimatesRequests) { data in
-                VStack {
-                    Text(data.tradeType)
-                    Text(data.closingDate.formatted())
-                }
+            ForEach(viewModel.estimatesRequests) { estimateRequest in
+                EstimatesListCellView(estimateRequest: estimateRequest)
             }
         }
         .task {
@@ -39,6 +36,24 @@ private struct EstimatesContentView: View {
         }
         .refreshable {
             try? await viewModel.queryAllEstimatesRequests()
+        }
+    }
+    
+}
+
+private struct EstimatesListCellView: View {
+    
+    let estimateRequest: EstimateRequest
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text("마감일 \(estimateRequest.closingDate.formatted())")
+            Text("무역 방식 \(estimateRequest.tradeType)")
+            HStack {
+                Text("출발지 \(estimateRequest.departureCountry)")
+                Image(systemName: "arrowtriangle.right.fill")
+                Text("도착지 \(estimateRequest.destinationCountry)")
+            }
         }
     }
     
