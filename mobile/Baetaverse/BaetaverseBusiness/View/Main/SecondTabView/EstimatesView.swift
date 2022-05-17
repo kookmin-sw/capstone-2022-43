@@ -28,7 +28,7 @@ private struct EstimatesContentView: View {
     var body: some View {
         List {
             ForEach(viewModel.estimates) { estimate in
-                Text("\(estimate.estimate.totalPrice)")
+                EstimatesListCellView(estimate: estimate)
             }
         }
         .task {
@@ -40,6 +40,26 @@ private struct EstimatesContentView: View {
         }
     }
 
+}
+
+private struct EstimatesListCellView: View {
+    
+    let estimate: QuotationEntity
+    
+    var body: some View {
+        VStack {
+            VStack(alignment: .leading) {
+                Text("제안견적금액 \(estimate.estimate.totalPrice)")
+                Text("무역 방식 \(estimate.estimateRequest.tradeType)")
+                HStack {
+                    Text("출발지 \(estimate.estimateRequest.departureCountry)")
+                    Image(systemName: "arrowtriangle.right.fill")
+                    Text("도착지 \(estimate.estimateRequest.destinationCountry)")
+                }
+            }
+        }
+    }
+    
 }
 
 struct EstimatesView_Previews: PreviewProvider {
