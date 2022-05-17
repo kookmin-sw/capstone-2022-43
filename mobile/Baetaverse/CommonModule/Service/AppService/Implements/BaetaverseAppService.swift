@@ -36,8 +36,13 @@ final class BaetaverseAppService: AppService {
         auth.logout()
     }
     
-    func signUp(permission: AuthPermission, email: String, password: String, name: String, phoneNumber: String, corporationName: String? = nil, corporationNumber: String? = nil) async throws {
-        try await auth.signUp(permission: permission, email: email, password: password, name: name, phoneNumber: phoneNumber, corporationName: corporationName, corporationNumber: corporationNumber)
+    func signUp(permission: AuthPermission, email: String, password: String, name: String,
+                phoneNumber: String, corporationName: String? = nil,
+                corporationNumber: String? = nil) async throws {
+        try await auth.signUp(permission: permission,
+                              email: email, password: password,
+                              name: name, phoneNumber: phoneNumber,
+                              corporationName: corporationName, corporationNumber: corporationNumber)
     }
     
     func registerEvaluateRequest(estimateRequest: EstimateRequest, products: [Product]) async throws {
@@ -67,6 +72,10 @@ final class BaetaverseAppService: AppService {
     func queryEstimates() async throws -> (estimate: Estimate, forwarder: UserProfile,
                                            estimateRequest: EstimateRequest, products: [Product]) {
         return try await businessService.queryEstimates(token: auth.token)
+    }
+    
+    func queryAllEstimatesRequest() async throws -> [EstimateRequest] {
+        return try await businessService.queryAllEstimatesRequest(token: auth.token)
     }
     
 }
