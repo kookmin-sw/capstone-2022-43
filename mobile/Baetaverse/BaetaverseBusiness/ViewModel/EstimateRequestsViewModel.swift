@@ -1,5 +1,5 @@
 //
-//  EstimatesViewModel.swift
+//  EstimateRequestsViewModel.swift
 //  BaetaverseBusiness
 //
 //  Created by JeongTaek Han on 2022/05/17.
@@ -8,7 +8,7 @@
 import Foundation
 
 @MainActor
-final class EstimatesViewModel: ObservableObject {
+final class EstimateRequestsViewModel: ObservableObject {
     
     @Published var estimatesRequests: [EstimateRequest] = []
     

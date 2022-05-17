@@ -130,7 +130,7 @@
 		C11214CA283376BF001E4384 /* QueryAllEstimateRequestsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11214C528337349001E4384 /* QueryAllEstimateRequestsResponse.swift */; };
 		C11214CB283376BF001E4384 /* QueryAllEstimateRequestsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11214C528337349001E4384 /* QueryAllEstimateRequestsResponse.swift */; };
 		C11214CC283376BF001E4384 /* QueryAllEstimateRequestsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11214C528337349001E4384 /* QueryAllEstimateRequestsResponse.swift */; };
-		C11214CE28337864001E4384 /* EstimatesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11214CD28337864001E4384 /* EstimatesViewModel.swift */; };
+		C11214CE28337864001E4384 /* EstimateRequestsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11214CD28337864001E4384 /* EstimateRequestsViewModel.swift */; };
 		C11214D02833881C001E4384 /* EstimatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11214CF2833881C001E4384 /* EstimatesView.swift */; };
 		C1300DB6281F707100E9C0CC /* SignUpFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1300DB5281F707100E9C0CC /* SignUpFormView.swift */; };
 		C1300DBB281FA3B900E9C0CC /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1300DBA281FA3B900E9C0CC /* MainTabView.swift */; };
@@ -333,7 +333,7 @@
 		C11214C12833567E001E4384 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuViewModel.swift; path = BaetaverseBusiness/View/Main/FourthTabView/MenuViewModel.swift; sourceTree = SOURCE_ROOT; };
 		C11214C3283372D0001E4384 /* QueryAllEstimateRequestsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryAllEstimateRequestsRequest.swift; sourceTree = "<group>"; };
 		C11214C528337349001E4384 /* QueryAllEstimateRequestsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryAllEstimateRequestsResponse.swift; sourceTree = "<group>"; };
-		C11214CD28337864001E4384 /* EstimatesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimatesViewModel.swift; sourceTree = "<group>"; };
+		C11214CD28337864001E4384 /* EstimateRequestsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateRequestsViewModel.swift; sourceTree = "<group>"; };
 		C11214CF2833881C001E4384 /* EstimatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimatesView.swift; sourceTree = "<group>"; };
 		C1300DB5281F707100E9C0CC /* SignUpFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFormView.swift; sourceTree = "<group>"; };
 		C1300DBA281FA3B900E9C0CC /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
@@ -887,7 +887,7 @@
 				C11214BF28334795001E4384 /* LoginViewModel.swift */,
 				C1366CE8282AADC800A9CA93 /* MainViewModel.swift */,
 				C1E257B72820E5A4003F35DF /* RecievedEstimatesViewModel.swift */,
-				C11214CD28337864001E4384 /* EstimatesViewModel.swift */,
+				C11214CD28337864001E4384 /* EstimateRequestsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1302,7 +1302,7 @@
 				C16B45A2282A132500DDAAE8 /* MoreProfileView.swift in Sources */,
 				C112147A28334474001E4384 /* EstimateRequest.swift in Sources */,
 				C112145E2833443A001E4384 /* BaetaverseAuth.swift in Sources */,
-				C11214CE28337864001E4384 /* EstimatesViewModel.swift in Sources */,
+				C11214CE28337864001E4384 /* EstimateRequestsViewModel.swift in Sources */,
 				C112148628334498001E4384 /* LoginRequest.swift in Sources */,
 				C19140ED2823BAE800372CB3 /* MenuView.swift in Sources */,
 				C19140EA2823B6EF00372CB3 /* WriteEstimateView.swift in Sources */,

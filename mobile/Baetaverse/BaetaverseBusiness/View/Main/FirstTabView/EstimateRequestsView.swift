@@ -10,7 +10,7 @@ import SwiftUI
 @MainActor
 struct EstimateRequestsView: View {
     
-    @StateObject var viewModel = EstimatesViewModel()
+    @StateObject var viewModel = EstimateRequestsViewModel()
     
     var body: some View {
         EstimatesContentView(viewModel: viewModel)
@@ -21,7 +21,7 @@ struct EstimateRequestsView: View {
 
 private struct EstimatesContentView: View {
     
-    @ObservedObject var viewModel: EstimatesViewModel
+    @ObservedObject var viewModel: EstimateRequestsViewModel
     
     var body: some View {
         List {
