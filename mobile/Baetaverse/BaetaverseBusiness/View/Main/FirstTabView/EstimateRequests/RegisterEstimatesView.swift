@@ -17,11 +17,17 @@ struct RegisterEstimatesView: View {
                 .navigationTitle("견적서 등록하기")
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
+                    ToolbarItem(placement: .navigationBarLeading) {
                         Button(role: .cancel, action: { dismiss() }) {
                             Text("닫기")
                         }
                     }
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button(role: .none, action: { dismiss() }) {
+                            Text("등록")
+                        }
+                    }
+                    
                 }
         }
     }
@@ -31,7 +37,14 @@ struct RegisterEstimatesView: View {
 private struct RegisterEstimatesContentView: View {
     
     var body: some View {
-        Text("Hello World")
+        Form {
+            List {
+                TextField("해상운송비용", text: .constant(""))
+                TextField("육상운송비용", text: .constant(""))
+                TextField("예상운송시간", text: .constant(""))
+                TextField("총 운송비용", text: .constant(""))
+            }
+        }
     }
     
 }
