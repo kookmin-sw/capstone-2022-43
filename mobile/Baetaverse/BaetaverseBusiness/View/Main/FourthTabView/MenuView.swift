@@ -11,7 +11,7 @@ struct MoreView: View {
     
     @StateObject private var viewModel = MenuViewModel()
     
-    @State var name: String = "DemoForwarder"
+    @State var name: String = "포워더 계정으로 로그인되었습니다!"
     @State var profileImage: Image = Image("demoProfileImage")
     @Binding var mainViewIsPresented: Bool
     

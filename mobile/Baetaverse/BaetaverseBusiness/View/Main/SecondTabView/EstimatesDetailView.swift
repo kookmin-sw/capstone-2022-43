@@ -23,13 +23,37 @@ private struct EstimatesDetailContentView: View {
     let estimates: QuotationEntity
     
     var body: some View {
-        VStack {
-            Text("견적서 번호: " + String(estimates.estimate.requestId))
-            Text("총 소요 비용: " + String(estimates.estimate.totalPrice))
-            Text("총 소요 시간: " + String(estimates.estimate.estimatedTime))
-            Text("내륙 운송 비용: " + String(estimates.estimate.inlandFreightPrice))
-            Text("해상 운송 비용: " + String(estimates.estimate.oceanFreightPrice))
+        VStack(alignment: .leading, spacing: 20) {
+            Group {
+                Text("견적서코드")
+                    .font(.title)
+                Text(String(estimates.estimate.requestId))
+                    .font(.title2)
+            }
+            Divider()
+            Group {
+                Text("내륙 운송 비용")
+                    .font(.title)
+                Text(String(estimates.estimate.inlandFreightPrice))
+                    .font(.title2)
+                Text("해상 운송 비용")
+                    .font(.title)
+                Text(String(estimates.estimate.oceanFreightPrice))
+                    .font(.title2)
+            }
+            Divider()
+            Group {
+                Text("총 소요 비용")
+                    .font(.title)
+                Text(String(estimates.estimate.totalPrice))
+                    .font(.title2)
+                Text("총 소요 시간")
+                    .font(.title)
+                Text(String(estimates.estimate.estimatedTime))
+                    .font(.title2)
+            }
         }
+        .padding()
     }
     
 }

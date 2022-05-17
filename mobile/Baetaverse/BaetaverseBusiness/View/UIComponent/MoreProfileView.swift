@@ -24,12 +24,13 @@ struct MoreProfileView: View {
                             Circle().stroke(.gray, lineWidth: 4)
                         }
                     Text(name)
-                }
-                NavigationLink(destination: Text("Hello World")) {
-                    Spacer()
-                    Text("자세히보기")
                     Spacer()
                 }
+//                NavigationLink(destination: Text("Hello World")) {
+//                    Spacer()
+//                    Text("자세히보기")
+//                    Spacer()
+//                }
             }
             .buttonStyle(.borderedProminent)
             .padding()
