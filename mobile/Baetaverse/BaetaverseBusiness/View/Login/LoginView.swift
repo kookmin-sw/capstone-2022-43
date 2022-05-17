@@ -42,7 +42,7 @@ struct LoginView: View {
             Text("입력한 계정을 확인해주세요")
         }
         .fullScreenCover(isPresented: $mainIsPresented) {
-            MainTabView()
+            MainTabView(mainSheetIsPresented: $mainIsPresented)
         }
     }
     

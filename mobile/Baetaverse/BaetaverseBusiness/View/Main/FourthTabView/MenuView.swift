@@ -13,6 +13,7 @@ struct MoreView: View {
     
     @State var name: String = "DemoForwarder"
     @State var profileImage: Image = Image("demoProfileImage")
+    @Binding var mainViewIsPresented: Bool
     
     var body: some View {
         NavigationView {
@@ -20,6 +21,7 @@ struct MoreView: View {
                 MoreContentView(
                     name: $name,
                     profileImage: $profileImage,
+                    mainViewIsPresented: $mainViewIsPresented,
                     viewModel: viewModel
                 )
             }
@@ -33,6 +35,8 @@ private struct MoreContentView: View {
     
     @Binding var name: String
     @Binding var profileImage: Image
+    @Binding var mainViewIsPresented: Bool
+    
     let viewModel: MenuViewModel
     
     var body: some View {
@@ -68,6 +72,7 @@ private struct MoreContentView: View {
                 }
                 Button(action: {
                     viewModel.logout()
+                    mainViewIsPresented.toggle()
                 }) {
                     MoreShortcutContentView(
                         label: "로그아웃",
@@ -101,7 +106,7 @@ private struct MoreShortcutContentView: View {
 struct MoreView_Previews: PreviewProvider {
     
     static var previews: some View {
-        MoreView()
+        MoreView(mainViewIsPresented: .constant(true))
             .previewInterfaceOrientation(.portrait)
     }
     
