@@ -58,7 +58,7 @@ private struct MoreContentView: View {
 //                        systemImage: "message"
 //                    )
 //                }
-                NavigationLink(destination: Text("Hello World")) {
+                Link(destination: URL(string: "https://kookmin-sw.github.io/capstone-2022-43/")!) {
                     MoreShortcutContentView(
                         label: "고객센터",
                         systemImage: "face.smiling"

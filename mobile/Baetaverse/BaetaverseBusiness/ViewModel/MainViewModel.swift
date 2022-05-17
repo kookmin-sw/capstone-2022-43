@@ -7,6 +7,7 @@
 
 import Foundation
 
+@MainActor
 final class MainViewModel: ObservableObject {
     
     private var appService: AppService {
