@@ -144,6 +144,10 @@
 		C1300DBB281FA3B900E9C0CC /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1300DBA281FA3B900E9C0CC /* MainTabView.swift */; };
 		C1300DBE281FBE4E00E9C0CC /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1300DBD281FBE4E00E9C0CC /* StarRatingView.swift */; };
 		C134B1782833DAEC00F7DF4C /* EstimateRequestCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C134B1772833DAEC00F7DF4C /* EstimateRequestCardView.swift */; };
+		C134B17A2833FD0D00F7DF4C /* ReviewsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C134B1792833FD0D00F7DF4C /* ReviewsRequest.swift */; };
+		C134B17B2833FD0D00F7DF4C /* ReviewsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C134B1792833FD0D00F7DF4C /* ReviewsRequest.swift */; };
+		C134B17C2833FD0D00F7DF4C /* ReviewsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C134B1792833FD0D00F7DF4C /* ReviewsRequest.swift */; };
+		C134B17D2833FD0D00F7DF4C /* ReviewsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C134B1792833FD0D00F7DF4C /* ReviewsRequest.swift */; };
 		C1366CE7282A9EFD00A9CA93 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1366CE6282A9EFD00A9CA93 /* HeaderView.swift */; };
 		C1366CE9282AADC800A9CA93 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1366CE8282AADC800A9CA93 /* MainViewModel.swift */; };
 		C13778C127F497CF00DAF494 /* BUSignUpFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13778C027F497CF00DAF494 /* BUSignUpFormViewController.swift */; };
@@ -353,6 +357,7 @@
 		C1300DBA281FA3B900E9C0CC /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		C1300DBD281FBE4E00E9C0CC /* StarRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingView.swift; sourceTree = "<group>"; };
 		C134B1772833DAEC00F7DF4C /* EstimateRequestCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateRequestCardView.swift; sourceTree = "<group>"; };
+		C134B1792833FD0D00F7DF4C /* ReviewsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsRequest.swift; sourceTree = "<group>"; };
 		C1366CE6282A9EFD00A9CA93 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		C1366CE8282AADC800A9CA93 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		C13778C027F497CF00DAF494 /* BUSignUpFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BUSignUpFormViewController.swift; path = Baetaverse/ViewController/BUSignUpFormViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -583,6 +588,7 @@
 				C149D22428326A500044404D /* RegisterEstimateRequest.swift */,
 				C1D83A802828EB260086D0E7 /* EstimateRequestsRequest.swift */,
 				C149D23428327B3F0044404D /* QuotationsRequst.swift */,
+				C134B1792833FD0D00F7DF4C /* ReviewsRequest.swift */,
 			);
 			path = RequestModel;
 			sourceTree = "<group>";
@@ -1356,6 +1362,7 @@
 				C11214542833442D001E4384 /* AuthService.swift in Sources */,
 				C1C9EC8E2818FB080041F974 /* Extensions+Encodable.swift in Sources */,
 				C1121492283344A5001E4384 /* APIResponseModel.swift in Sources */,
+				C134B17C2833FD0D00F7DF4C /* ReviewsRequest.swift in Sources */,
 				C11214C4283372D0001E4384 /* QueryAllEstimateRequestsRequest.swift in Sources */,
 				C11214E42833BDC7001E4384 /* RegisterEstimatesViewModel.swift in Sources */,
 				C11214B2283344D0001E4384 /* GoodsRegister.swift in Sources */,
@@ -1435,6 +1442,7 @@
 				C11214D928339282001E4384 /* QuotationEntity.swift in Sources */,
 				C112148328334494001E4384 /* EstimateRequestDetailRequest.swift in Sources */,
 				C112148528334496001E4384 /* SignUpRequest.swift in Sources */,
+				C134B17D2833FD0D00F7DF4C /* ReviewsRequest.swift in Sources */,
 				C1121493283344A5001E4384 /* APIResponseModel.swift in Sources */,
 				C11214B1283344CE001E4384 /* EstimateRequestRegisterForm.swift in Sources */,
 				C112147928334472001E4384 /* Product.swift in Sources */,
@@ -1534,6 +1542,7 @@
 				C149D22B28326F870044404D /* Quotation.swift in Sources */,
 				C1E8628D282E0DF700D9971A /* RegisterEstimateRequestsResponse.swift in Sources */,
 				C1E5CC0B27F3296A0087882E /* APIRequestHostInfo.swift in Sources */,
+				C134B17A2833FD0D00F7DF4C /* ReviewsRequest.swift in Sources */,
 				C1E86265282D211700D9971A /* HSCodeRequest.swift in Sources */,
 				C1E5CC0E27F32B4C0087882E /* BaetaverseAPIRequestHostInfo.swift in Sources */,
 				C11213742833387A001E4384 /* BUMoreViewController.swift in Sources */,
@@ -1585,6 +1594,7 @@
 				C1E86289282E0A6C00D9971A /* EstimateRequestRegisterForm.swift in Sources */,
 				C1B7652528294CA90029B5FC /* BusinessService.swift in Sources */,
 				C1E86279282DE6CC00D9971A /* APIEnity.swift in Sources */,
+				C134B17B2833FD0D00F7DF4C /* ReviewsRequest.swift in Sources */,
 				C1CF675E27F737740057A6C3 /* APIRequestHostInfo.swift in Sources */,
 				C1E86287282E0A6700D9971A /* EstimateRequestsRegister.swift in Sources */,
 				C1E86268282D269600D9971A /* HSCodeRequest.swift in Sources */,
