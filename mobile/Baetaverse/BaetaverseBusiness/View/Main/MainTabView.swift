@@ -19,9 +19,9 @@ struct MainTabView: View {
             EstimatesView().tabItem {
                 Label("견적서", systemImage: "doc.text")
             }
-            ConsultationView().tabItem {
-                Label("상담", systemImage: "message.fill")
-            }
+//            ConsultationView().tabItem {
+//                Label("상담", systemImage: "message.fill")
+//            }
             MoreView(mainViewIsPresented: $mainSheetIsPresented).tabItem {
                 Label("더보기", systemImage: "ellipsis")
             }

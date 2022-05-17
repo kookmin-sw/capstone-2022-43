@@ -46,30 +46,30 @@ private struct MoreContentView: View {
                 profileImage: $profileImage
             )
             AutoLazyVGrid(column: 3, spacing: 20) {
-                NavigationLink(destination: Text("Hello World")) {
-                    MoreShortcutContentView(
-                        label: "견적요청서",
-                        systemImage: "doc.text"
-                    )
-                }
-                NavigationLink(destination: Text("Hello World")) {
-                    MoreShortcutContentView(
-                        label: "상담내역",
-                        systemImage: "message"
-                    )
-                }
+//                NavigationLink(destination: Text("Hello World")) {
+//                    MoreShortcutContentView(
+//                        label: "견적요청서",
+//                        systemImage: "doc.text"
+//                    )
+//                }
+//                NavigationLink(destination: Text("Hello World")) {
+//                    MoreShortcutContentView(
+//                        label: "상담내역",
+//                        systemImage: "message"
+//                    )
+//                }
                 NavigationLink(destination: Text("Hello World")) {
                     MoreShortcutContentView(
                         label: "고객센터",
                         systemImage: "face.smiling"
                     )
                 }
-                NavigationLink(destination: Text("Hello World")) {
-                    MoreShortcutContentView(
-                        label: "알림설정",
-                        systemImage: "bell"
-                    )
-                }
+//                NavigationLink(destination: Text("Hello World")) {
+//                    MoreShortcutContentView(
+//                        label: "알림설정",
+//                        systemImage: "bell"
+//                    )
+//                }
                 Button(action: {
                     viewModel.logout()
                     mainViewIsPresented.toggle()

@@ -58,6 +58,7 @@ private struct EstimatesListCellView: View {
                     Image(systemName: "arrowtriangle.right.fill")
                     Text("도착지 \(estimate.estimateRequest.destinationCountry)")
                 }
+                .lineLimit(1)
             }
         }
     }
