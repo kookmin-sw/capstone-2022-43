@@ -81,7 +81,7 @@ private struct MainRecievedReviewBoardView: View {
             HeaderView(
                 headline: "User's Reviews",
                 subheadline: "이용자의 피드백을 확인해보세요!") {
-                    Text("Hello World")
+                    ReviewsListView()
                 }
             if !viewModel.reviews.isEmpty {
                 VStack(alignment: .leading) {
