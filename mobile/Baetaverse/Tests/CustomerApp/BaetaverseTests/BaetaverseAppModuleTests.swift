@@ -251,5 +251,26 @@ final class BaetaverseAppModuleTests: XCTestCase {
             XCTFail("\(error)")
         }
     }
+    
+    func test_로그인한_사용자의_견적서_명단을_모두_반환해야한다() async throws {
+        // given
+        let email = "test8@test8.com"
+        let password = "12341234"
+        
+        try await sutBaetaverse.login(
+            permission: .forwarder,
+            email: email,
+            password: password
+        )
+        
+        // when then
+        do {
+            let result = try await sutBaetaverse.queryEstimates()
+            print(result)
+            XCTAssert(true)
+        } catch {
+            XCTFail("\(error)")
+        }
+    }
 
 }

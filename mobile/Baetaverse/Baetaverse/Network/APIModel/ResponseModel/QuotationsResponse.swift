@@ -13,7 +13,7 @@ extension APIResponseModel {
         
         let status: Int
         let message: String
-        let quotation: APIEntity.Quotation
+        let quotation: [APIEntity.Quotation]
         let selectedGoods: [APIEntity.GoodsDetail]
         
         enum CodingKeys: String, CodingKey {

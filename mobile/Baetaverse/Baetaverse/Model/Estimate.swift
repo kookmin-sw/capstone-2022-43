@@ -16,3 +16,15 @@ struct Estimate {
     var estimatedTime: Int
     
 }
+
+extension Estimate {
+    
+    init(quotation: APIEntity.Quotation) {
+        self.requestId = quotation.requests.id ?? 0
+        self.oceanFreightPrice = quotation.oceanFreightPrice
+        self.inlandFreightPrice = quotation.inlandFreightPrice
+        self.totalPrice = quotation.totalPrice
+        self.estimatedTime = quotation.estimatedTime
+    }
+    
+}

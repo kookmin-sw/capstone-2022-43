@@ -11,14 +11,14 @@ extension APIEntity {
     
     struct Quotation: Decodable {
         
-        var id: String
+        var id: Int
         var oceanFreightPrice: Int
         var inlandFreightPrice: Int
         var totalPrice: Int
         var estimatedTime: Int
         var createdAt: Date
         var forwarder: APIEntity.Forwarder
-        var requests: [APIEntity.EstimateRequestDetail]
+        var requests: APIEntity.EstimateRequestDetail
         
         enum CodingKeys: String, CodingKey {
             

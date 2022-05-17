@@ -9,13 +9,17 @@ import Foundation
 
 enum BaetaverseAPIService {
     
-    case signUp(permission: AuthPermission, email: String, password: String, name: String, phoneNumber: String, corporationName: String?, corporationNumber: String?)
-    case login(permission: AuthPermission,email: String, password: String)
-    case registerEstimateRequest(token: String, estimateRequest: EstimateRequest, products: [Product])
+    case signUp(permission: AuthPermission, email: String, password: String,
+                name: String, phoneNumber: String, corporationName: String?,
+                corporationNumber: String?)
+    case login(permission: AuthPermission, email: String, password: String)
+    case registerEstimateRequest(token: String, estimateRequest: EstimateRequest,
+                                 products: [Product])
     case registerEstimate(token: String, estimate: Estimate)
     case queryEstimateRequests(token: String)
     case queryHSCode(token: String, code: String)
     case queryEstimateRequestDetail(token: String, id: String)
+    case queryEstimates(token: String)
     
 }
 
@@ -23,7 +27,8 @@ extension BaetaverseAPIService: APIService {
     
     var urlRequest: URLRequest? {
         switch self {
-        case .signUp(let permission, let email, let password, let name, let phoneNumber, let corporationName, let corporationNumber):
+        case .signUp(let permission, let email, let password, let name,
+                     let phoneNumber, let corporationName, let corporationNumber):
             let requestModel = APIRequestModel.SignUpRequest(
                 permission: permission.rawValue,
                 email: email,
@@ -68,6 +73,9 @@ extension BaetaverseAPIService: APIService {
                 token: token,
                 id: id
             )
+            return requestModel.urlRequest
+        case .queryEstimates(let token):
+            let requestModel = APIRequestModel.QuotationsRequst(token: token)
             return requestModel.urlRequest
         }
     }
