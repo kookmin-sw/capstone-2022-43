@@ -14,8 +14,7 @@ protocol AppBusinessService {
     func queryHSCode(token: String, code: String) async throws -> [String]
     func queryEstimateRequests(token: String) async throws -> [EstimateRequest]
     func queryEstimateRequestDetail(token: String, id: String) async throws -> (EstimateRequest, [Product])
-    func queryEstimates(token: String) async throws -> (estimate: Estimate, forwarder: UserProfile,
-                                                        estimateRequest: EstimateRequest, products: [Product])
+    func queryEstimates(token: String) async throws -> [QuotationEntity]
     func queryAllEstimatesRequest(token: String) async throws -> [EstimateRequest]
     
 }

@@ -6,7 +6,6 @@
 //
 
 import XCTest
-@testable import BaetaverseBusiness
 
 class BaetaverseBusinessTests: XCTestCase {
 

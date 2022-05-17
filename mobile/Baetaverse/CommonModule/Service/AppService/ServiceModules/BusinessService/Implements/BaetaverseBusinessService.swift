@@ -66,24 +66,14 @@ final class BaetaverseBusinessService: AppBusinessService {
         return (estimateRequest, products)
     }
     
-    func queryEstimates(token: String) async throws -> (estimate: Estimate, forwarder: UserProfile,
-                                                        estimateRequest: EstimateRequest, products: [Product]) {
+    func queryEstimates(token: String) async throws -> [QuotationEntity] {
         let apiService = BaetaverseAPIService.queryEstimates(token: token)
         let data = try await networkService.fetchData(for: apiService)
         let object = try data.decodeJSONData(to: APIResponseModel.QuotationsResponse.self)
-        
-        let products = object.selectedGoods.map { goods in
-            Product(goods: goods)
+        let quotation = object.quotation.map { data in
+            QuotationEntity(quotation: data)
         }
-        
-        guard let quotation = object.quotation.first else {
-            throw BusinessServiceError.estimatesQueryFailure
-        }
-        
-        let estimate = Estimate(quotation: quotation)
-        let forwarder = UserProfile(quotation: quotation)
-        let estimateRequest = EstimateRequest(estimateRequestDetail: quotation.requests)
-        return (estimate, forwarder, estimateRequest, products)
+        return quotation
     }
     
     func queryAllEstimatesRequest(token: String) async throws -> [EstimateRequest] {

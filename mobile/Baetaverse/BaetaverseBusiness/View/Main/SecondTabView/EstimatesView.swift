@@ -7,11 +7,14 @@
 
 import SwiftUI
 
+@MainActor
 struct EstimatesView: View {
+    
+    @StateObject private var viewModel = EstimateViewModel()
     
     var body: some View {
         NavigationView {
-            EstimatesContentView()
+            EstimatesContentView(viewModel: viewModel)
                 .navigationTitle("견적서")
         }
     }
@@ -19,12 +22,21 @@ struct EstimatesView: View {
 }
 
 private struct EstimatesContentView: View {
+    
+    @ObservedObject var viewModel: EstimateViewModel
 
     var body: some View {
         List {
-            ForEach(0..<5) { data in
-                Text(String(data))
+            ForEach(viewModel.estimates) { estimate in
+                Text("\(estimate.estimate.totalPrice)")
             }
+        }
+        .task {
+            try? await viewModel.fetchEstimates()
+        }
+        .refreshable {
+            try? await viewModel.fetchEstimates()
+
         }
     }
 

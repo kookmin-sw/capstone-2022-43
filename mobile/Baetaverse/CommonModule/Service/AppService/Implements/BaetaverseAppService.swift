@@ -69,8 +69,7 @@ final class BaetaverseAppService: AppService {
         return try await businessService.queryEstimateRequestDetail(token: auth.token, id: id)
     }
     
-    func queryEstimates() async throws -> (estimate: Estimate, forwarder: UserProfile,
-                                           estimateRequest: EstimateRequest, products: [Product]) {
+    func queryEstimates() async throws -> [QuotationEntity] {
         return try await businessService.queryEstimates(token: auth.token)
     }
     
