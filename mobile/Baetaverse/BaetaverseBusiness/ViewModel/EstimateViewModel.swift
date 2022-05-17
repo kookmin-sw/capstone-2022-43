@@ -17,7 +17,8 @@ final class EstimateViewModel: ObservableObject {
     }
     
     func fetchEstimates() async throws {
-        self.estimates = try await appService.queryEstimates()
+        let datas = try await appService.queryEstimates()
+        self.estimates = datas.sorted(by: { $0.id > $1.id })
     }
     
 }
