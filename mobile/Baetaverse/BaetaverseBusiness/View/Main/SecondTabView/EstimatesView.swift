@@ -11,8 +11,20 @@ struct EstimatesView: View {
     
     var body: some View {
         NavigationView {
-            Text("Hello World!")
+            EstimatesContentView()
                 .navigationTitle("견적서요청서")
+        }
+    }
+    
+}
+
+private struct EstimatesContentView: View {
+    
+    var body: some View {
+        List {
+            ForEach(0..<5) { data in
+                Text(String(data))
+            }
         }
     }
     
