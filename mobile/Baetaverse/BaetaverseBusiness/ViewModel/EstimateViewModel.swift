@@ -7,6 +7,7 @@
 
 import Foundation
 
+@MainActor
 final class EstimateViewModel: ObservableObject {
     
     @Published private(set) var estimates: [QuotationEntity] = []
