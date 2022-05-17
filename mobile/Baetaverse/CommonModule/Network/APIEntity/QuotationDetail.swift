@@ -1,15 +1,15 @@
 //
-//  Quotation.swift
+//  QuotationDetail.swift
 //  Baetaverse
 //
-//  Created by JeongTaek Han on 2022/05/18.
+//  Created by JeongTaek Han on 2022/05/16.
 //
 
 import Foundation
 
 extension APIEntity {
     
-    struct Quotation: Decodable {
+    struct QuotationDetail: Decodable {
         
         var id: Int
         var oceanFreightPrice: Int
@@ -17,6 +17,8 @@ extension APIEntity {
         var totalPrice: Int
         var estimatedTime: Int
         var createdAt: Date
+        var forwarder: APIEntity.Forwarder
+        var requests: APIEntity.EstimateRequestDetail
         
         enum CodingKeys: String, CodingKey {
             
@@ -26,6 +28,8 @@ extension APIEntity {
             case totalPrice = "total_price"
             case estimatedTime = "estimated_time"
             case createdAt = "created_at"
+            case forwarder
+            case requests
             
         }
         

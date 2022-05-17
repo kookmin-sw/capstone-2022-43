@@ -18,7 +18,7 @@ struct QuotationEntity: Identifiable {
 
 extension QuotationEntity {
     
-    init(quotation: APIEntity.Quotation) {
+    init(quotation: APIEntity.QuotationDetail) {
         self.id = quotation.id
         self.estimate = Estimate(quotation: quotation)
         self.forwarder = UserProfile(quotation: quotation)

@@ -19,7 +19,7 @@ struct Estimate {
 
 extension Estimate {
     
-    init(quotation: APIEntity.Quotation) {
+    init(quotation: APIEntity.QuotationDetail) {
         self.requestId = quotation.requests.id ?? 0
         self.oceanFreightPrice = quotation.oceanFreightPrice
         self.inlandFreightPrice = quotation.inlandFreightPrice
