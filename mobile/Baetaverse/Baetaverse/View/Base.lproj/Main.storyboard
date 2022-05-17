@@ -1400,7 +1400,7 @@
         <!--더보기-->
         <scene sceneID="FOz-tp-uwN">
             <objects>
-                <viewController id="v0l-x5-bIF" sceneMemberID="viewController">
+                <viewController id="v0l-x5-bIF" customClass="BUMoreViewController" customModule="Baetaverse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OOG-56-HcJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1427,6 +1427,9 @@
                                                         <buttonConfiguration key="configuration" style="plain" title="로그아웃" buttonSize="large">
                                                             <fontDescription key="titleFontDescription" style="UICTFontTextStyleBody"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="logoutButtonClicked:" destination="v0l-x5-bIF" eventType="touchUpInside" id="Z6I-hU-YkI"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -1455,8 +1458,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="더보기" id="0Xq-Mr-hIK"/>
+                    <connections>
+                        <segue destination="KXe-21-FfT" kind="unwind" identifier="logoutSegue" unwindAction="unwindToLoginBULoginView:" id="xJN-il-S2b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b9d-wm-F4c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="KXe-21-FfT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="7428.985507246377" y="270.53571428571428"/>
         </scene>

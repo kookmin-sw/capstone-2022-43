@@ -10,6 +10,10 @@
 		C1121370283329C9001E4384 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C112136F283329C9001E4384 /* UserProfile.swift */; };
 		C1121371283329C9001E4384 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C112136F283329C9001E4384 /* UserProfile.swift */; };
 		C112137228332FCB001E4384 /* QuotationsRequst.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D23428327B3F0044404D /* QuotationsRequst.swift */; };
+		C11213742833387A001E4384 /* BUMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11213732833387A001E4384 /* BUMoreViewController.swift */; };
+		C11213752833387A001E4384 /* BUMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11213732833387A001E4384 /* BUMoreViewController.swift */; };
+		C1121377283338D3001E4384 /* MoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1121376283338D3001E4384 /* MoreViewModel.swift */; };
+		C1121378283338D3001E4384 /* MoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1121376283338D3001E4384 /* MoreViewModel.swift */; };
 		C1300DB6281F707100E9C0CC /* SignUpFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1300DB5281F707100E9C0CC /* SignUpFormView.swift */; };
 		C1300DBB281FA3B900E9C0CC /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1300DBA281FA3B900E9C0CC /* MainTabView.swift */; };
 		C1300DBE281FBE4E00E9C0CC /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1300DBD281FBE4E00E9C0CC /* StarRatingView.swift */; };
@@ -204,6 +208,8 @@
 
 /* Begin PBXFileReference section */
 		C112136F283329C9001E4384 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		C11213732833387A001E4384 /* BUMoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BUMoreViewController.swift; sourceTree = SOURCE_ROOT; };
+		C1121376283338D3001E4384 /* MoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewModel.swift; sourceTree = "<group>"; };
 		C1300DB5281F707100E9C0CC /* SignUpFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFormView.swift; sourceTree = "<group>"; };
 		C1300DBA281FA3B900E9C0CC /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		C1300DBD281FBE4E00E9C0CC /* StarRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingView.swift; sourceTree = "<group>"; };
@@ -810,6 +816,7 @@
 		C1E5CC0327F2C36B0087882E /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				C11213732833387A001E4384 /* BUMoreViewController.swift */,
 				C1F53A84282F6334006203E2 /* RegisterEstimateRequestVC */,
 				C19E6788282FA58500B88413 /* SelectRegion */,
 				C149D2162831E25D0044404D /* SelectHScode */,
@@ -908,6 +915,7 @@
 		C1E8629B282E232B00D9971A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C1121376283338D3001E4384 /* MoreViewModel.swift */,
 				C149D21F283210090044404D /* BUEstimateListViewModel.swift */,
 				C1E8629C282E235000D9971A /* LoginViewModel.swift */,
 				C1E862A2282E356C00D9971A /* EstimateRequestsTableViewModel.swift */,
@@ -1212,6 +1220,7 @@
 				C198204C2831141100A79AD6 /* BURegisterProductViewController.swift in Sources */,
 				C149D22328321CE50044404D /* EstimateRegister.swift in Sources */,
 				C149D22528326A500044404D /* RegisterEstimateRequest.swift in Sources */,
+				C1121377283338D3001E4384 /* MoreViewModel.swift in Sources */,
 				C1E5CC1227F32DC10087882E /* APIRequestModel.swift in Sources */,
 				C1121370283329C9001E4384 /* UserProfile.swift in Sources */,
 				C1E5CBF327F2BFBD0087882E /* BUEstimateListViewController.swift in Sources */,
@@ -1245,6 +1254,7 @@
 				C1E5CC0B27F3296A0087882E /* APIRequestHostInfo.swift in Sources */,
 				C1E86265282D211700D9971A /* HSCodeRequest.swift in Sources */,
 				C1E5CC0E27F32B4C0087882E /* BaetaverseAPIRequestHostInfo.swift in Sources */,
+				C11213742833387A001E4384 /* BUMoreViewController.swift in Sources */,
 				C1E5CC1C27F336070087882E /* RegisterEstimateRequestsRequest.swift in Sources */,
 				C149D21C2831E79A0044404D /* SelectHSCodeViewModel.swift in Sources */,
 				C13778C127F497CF00DAF494 /* BUSignUpFormViewController.swift in Sources */,
@@ -1275,6 +1285,7 @@
 				C1CF675A27F7375E0057A6C3 /* BaetaverseBusinessService.swift in Sources */,
 				C149737327F5A11C00679118 /* LoginResponse.swift in Sources */,
 				C197AEB827F43862000E4975 /* NetworkServiceProvider.swift in Sources */,
+				C11213752833387A001E4384 /* BUMoreViewController.swift in Sources */,
 				C112137228332FCB001E4384 /* QuotationsRequst.swift in Sources */,
 				C197AEB727F4385E000E4975 /* BaetaverseAPIRequestHostInfo.swift in Sources */,
 				C1E86299282E1D0400D9971A /* EstimateRequestDetailRequest.swift in Sources */,
@@ -1321,6 +1332,7 @@
 				C1E86297282E1CB700D9971A /* EstimateRequestDetail.swift in Sources */,
 				C149D233283275A60044404D /* RegisterEstimateRequest.swift in Sources */,
 				C1CF675D27F737710057A6C3 /* APIService.swift in Sources */,
+				C1121378283338D3001E4384 /* MoreViewModel.swift in Sources */,
 				C197AEC327F43EF6000E4975 /* LoginRequest.swift in Sources */,
 				C1E8627A282DE6DF00D9971A /* EstimateRequest.swift in Sources */,
 			);
