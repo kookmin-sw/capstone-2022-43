@@ -18,6 +18,9 @@ final class EstimatesViewModel: ObservableObject {
     
     func queryAllEstimatesRequests() async throws {
         self.estimatesRequests = try await appService.queryAllEstimatesRequest()
+        self.estimatesRequests.sort { first, second in
+            first.closingDate < second.closingDate
+        }
     }
     
 }

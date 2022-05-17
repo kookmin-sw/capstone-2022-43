@@ -104,7 +104,7 @@ private struct MainEstimateBoardView: View {
             HeaderView(
                 headline: "Estimate Requests",
                 subheadline: "마감이 임박한 견적요청서를 확인해보세요!") {
-                    Text("Hello World")
+                    EstimateRequestsView()
                 }
             Carousel {
                 ForEach(estimates) { estimate in
