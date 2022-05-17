@@ -34,7 +34,7 @@ private struct SignUpChooseMembershipButton: View {
     
     var body: some View {
         VStack(spacing: 25) {
-            NavigationLink(destination: SignUpFormView()) {
+            NavigationLink(destination: Text("Hello World")) {
                 Spacer()
                 Text("그룹(업체) 가입")
                 Spacer()

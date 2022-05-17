@@ -10,10 +10,18 @@ import SwiftUI
 struct SignUpFormView: View {
     
     @State private var signUpForm = SignUpGroupForm()
+    @StateObject private var viewModel = SignUpFormViewModel()
+    @Binding var isPresented: Bool
     
     var body: some View {
-        SignUpInformationFormView(signUpForm: $signUpForm)
-            .navigationTitle("그룹(업체) 가입")
+        NavigationView {
+            SignUpInformationFormView(
+                signUpForm: $signUpForm,
+                viewModel: viewModel,
+                isPresented: $isPresented
+            )
+            .navigationTitle("회원가입")
+        }
     }
     
 }
@@ -21,6 +29,8 @@ struct SignUpFormView: View {
 private struct SignUpInformationFormView: View {
     
     @Binding var signUpForm: SignUpGroupForm
+    @ObservedObject var viewModel: SignUpFormViewModel
+    @Binding var isPresented: Bool
     
     var body: some View {
         ScrollView {
@@ -28,7 +38,11 @@ private struct SignUpInformationFormView: View {
                 IdPasswordFormView(signUpForm: $signUpForm)
                 ProfileFormView(signUpForm: $signUpForm)
                 ProfileDetailFormView(signUpForm: $signUpForm)
-                SignUpButton()
+                SignUpButton(
+                    isPresented: $isPresented,
+                    viewModel: viewModel,
+                    form: signUpForm
+                )
             }
             .textFieldStyle(.roundedBorder)
             .padding()
@@ -110,17 +124,24 @@ private struct ProfileDetailFormView: View {
 
 private struct SignUpButton: View {
     
-    @Environment(\.dismiss) var dismiss
+    @Binding var isPresented: Bool
+    @ObservedObject var viewModel: SignUpFormViewModel
+    let form: SignUpGroupForm
     
     var body: some View {
         HStack {
-            Button(action: { }) {
+            Button(action: { isPresented.toggle() }) {
                 Spacer()
                 Text("취소")
                 Spacer()
             }
             .buttonStyle(.bordered)
-            Button(action: { dismiss() }) {
+            Button(action: {
+                Task {
+                    try? await viewModel.signUp(with: form)
+                    isPresented.toggle()
+                }
+            }) {
                 Spacer()
                 Text("확인")
                 Spacer()
@@ -135,7 +156,7 @@ private struct SignUpButton: View {
 struct SignUpFormView_Previews: PreviewProvider {
     
     static var previews: some View {
-        SignUpFormView()
+        SignUpFormView(isPresented: .constant(true))
     }
     
 }

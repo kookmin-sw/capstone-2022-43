@@ -111,20 +111,17 @@ private struct LoginUserInfoButton: View {
     @State private var isPresentingSignUpView = false
     
     var body: some View {
-        HStack {
-            Spacer()
-            Button(signUpLabel) {
-                isPresentingSignUpView.toggle()
+        Button(action: { isPresentingSignUpView.toggle() }) {
+            HStack {
+                Spacer()
+                Text(signUpLabel)
+                Spacer()
             }
-            Spacer()
-            Button(action: { }) {
-                Text(findUserInfoLabel)
-            }
-            Spacer()
         }
+        .buttonStyle(.bordered)
+        .controlSize(.large)
         .fullScreenCover(isPresented: $isPresentingSignUpView) {
-            SignUpChooseMembershipView()
-            
+            SignUpFormView(isPresented: $isPresentingSignUpView)
         }
     }
     
