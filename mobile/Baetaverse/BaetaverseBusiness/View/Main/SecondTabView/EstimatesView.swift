@@ -12,7 +12,7 @@ struct EstimatesView: View {
     var body: some View {
         NavigationView {
             Text("Hello World!")
-                .navigationTitle("견적서")
+                .navigationTitle("견적서요청서")
         }
     }
     

@@ -27,9 +27,9 @@ private struct MainContentView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             MainWelcomeMessageView(username: viewModel.username)
-            MainShortcutButtonsView()
-            MainRecievedReviewBoardView(reviews: viewModel.reviews)
+//            MainShortcutButtonsView()
             MainEstimateBoardView(estimates: viewModel.estimates)
+            MainRecievedReviewBoardView(reviews: viewModel.reviews)
         }
         .padding()
     }
