@@ -29,7 +29,7 @@ private struct EstimatesDetailContentView: View {
                     EstimateRequestsDetailView(id: estimates.estimateRequest.id ?? 0)
                 }) {
                     HStack {
-                        Text("견적서 정보 조회하기").font(.body)
+                        Text("견적 요청서 정보 조회하기").font(.body)
                     }
                 }
             }
