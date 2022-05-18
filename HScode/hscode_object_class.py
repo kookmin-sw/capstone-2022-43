@@ -1,6 +1,7 @@
 from jamo import h2j, j2hcj
 import pickle
 import re
+import hscode_extension
 
 class hscode_node:
     def __init__(self, code, data):
@@ -124,6 +125,9 @@ class hscode_linkedlist:
             for word in content[6:].split(','):
                 jamo_word = ''
 
+                if 'X' in word:
+                    continue
+
                 for bigram in word:
                     jamo_word += j2hcj(h2j(bigram))
 
@@ -138,10 +142,12 @@ class hscode_linkedlist:
         self.jamo_keys = list(self.hscode_data_dict.keys())
         self.jamo_keys.sort()
 
+        self.extension_dict = hscode_extension.extension()
+
     def code_to_data(self, hscode):
         hscode_length = len(hscode)
         start_node = self.coderoot.get_sub()
-        output = []
+        output = {}
 
         if hscode_length == 0:
             return output
@@ -151,7 +157,7 @@ class hscode_linkedlist:
                 start_node = start_node.get_next()
 
             while start_node != None and start_node.get_code()[:1] == hscode:
-                output.append(start_node.get_code() + ' : ' + start_node.get_data())
+                output[start_node.get_code()] = start_node.get_data()
                 start_node = start_node.get_next()
 
             return output
@@ -161,7 +167,7 @@ class hscode_linkedlist:
                 start_node = start_node.get_next()
 
             if start_node is not None:
-                output.append(start_node.get_code() + ' : ' + start_node.get_data())
+                output[start_node.get_code()] = start_node.get_data()
 
             return output
 
@@ -174,7 +180,7 @@ class hscode_linkedlist:
                 start_node = start_node.get_next()
 
             while start_node != None and start_node.get_code()[2] == hscode[2]:
-                output.append(start_node.get_code() + ' : ' + start_node.get_data())
+                output[start_node.get_code()] = start_node.get_data()
                 start_node = start_node.get_next()
 
             return output
@@ -188,7 +194,7 @@ class hscode_linkedlist:
                 start_node = start_node.get_next()
 
             if start_node is not None:
-                output.append(start_node.get_code() + ' : ' + start_node.get_data())
+                output[start_node.get_code()] = start_node.get_data()
 
             return output
 
@@ -205,7 +211,7 @@ class hscode_linkedlist:
                 start_node = start_node.get_next()
 
             while start_node != None and start_node.get_code()[4] == hscode[4]:
-                output.append(start_node.get_code() + ' : ' + start_node.get_data())
+                output[start_node.get_code()] = start_node.get_data()
                 start_node = start_node.get_next()
 
             return output
@@ -223,19 +229,47 @@ class hscode_linkedlist:
                 start_node = start_node.get_next()
 
             if start_node is not None:
-                output.append(start_node.get_code() + ' : ' + start_node.get_data())
+                output[start_node.get_code()] = start_node.get_data()
 
             return output
 
     def data_to_code(self, data):
         tmp = []
-        output = []
+        primary_output = {}
+        secondary_output = {}
 
         for value in self.jamo_keys:
             if data in value:
                 tmp.extend(self.hscode_data_dict[value])
 
-        for code in list(set(tmp)):
-            output.extend(self.code_to_data(code))
+        output_value = list(set(tmp))
+        output_value.sort()
 
-        return output
+        # priority
+        for code in output_value:
+            cond = 0
+            tmp_output = ''
+            content = self.code_to_data(code)
+
+            for unigram in list(content.values()):
+                if unigram  == '(':
+                    cond = 1
+                elif unigram  == ')':
+                    cond = 0
+                    tmp_output += '$'
+                elif cond == 0:
+                    tmp_output += unigram
+                else:
+                    continue
+
+            if data in j2hcj(h2j(tmp_output)):
+                primary_output.update(content)
+            else:
+                secondary_output.update(content)
+
+        primary_output.update(secondary_output)
+
+        return primary_output
+
+    def get_extension_dict(self):
+        return self.extension_dict
