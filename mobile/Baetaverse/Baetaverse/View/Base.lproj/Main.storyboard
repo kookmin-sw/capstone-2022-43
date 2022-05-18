@@ -1589,10 +1589,10 @@
             </objects>
             <point key="canvasLocation" x="9391" y="-1590"/>
         </scene>
-        <!--View Controller-->
+        <!--Forwarder Detail View Controller-->
         <scene sceneID="aIK-O2-4RQ">
             <objects>
-                <viewController id="OUj-WO-LmF" sceneMemberID="viewController">
+                <viewController id="OUj-WO-LmF" customClass="BUForwarderDetailViewController" customModule="Baetaverse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V6X-hN-EsR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1624,13 +1624,13 @@
                                         <rect key="frame" x="0.0" y="31" width="374" height="23"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="경력" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hx-rr-jfp">
-                                                <rect key="frame" x="0.0" y="0.0" width="326" height="23"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="329" height="23"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 년" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUh-0j-0f9">
-                                                <rect key="frame" x="334" y="0.0" width="40" height="23"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 년" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUh-0j-0f9">
+                                                <rect key="frame" x="337" y="0.0" width="37" height="23"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1640,14 +1640,14 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" spacing="63" translatesAutoresizingMaskIntoConstraints="NO" id="cpR-Wb-vUO">
                                         <rect key="frame" x="0.0" y="62" width="374" height="23"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="주소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xks-vt-ME6">
-                                                <rect key="frame" x="0.0" y="0.0" width="170.5" height="23"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="회사전화번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xks-vt-ME6">
+                                                <rect key="frame" x="0.0" y="0.0" width="182.5" height="23"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서울특별시 강남구 ..." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Gb-3Q-2iG">
-                                                <rect key="frame" x="233.5" y="0.0" width="140.5" height="23"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00-000000-000" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Gb-3Q-2iG">
+                                                <rect key="frame" x="245.5" y="0.0" width="128.5" height="23"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1657,7 +1657,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="obr-SP-lwu">
                                         <rect key="frame" x="0.0" y="93" width="374" height="23"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="사업자등록번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYN-Yi-Olo">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="전화번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYN-Yi-Olo">
                                                 <rect key="frame" x="0.0" y="0.0" width="218.5" height="23"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                 <nil key="textColor"/>
@@ -1713,6 +1713,12 @@
                             <constraint firstItem="8JM-f1-p7G" firstAttribute="top" secondItem="Lxp-HY-ZQf" secondAttribute="bottom" constant="20" id="tsa-2a-C3t"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ceoNameLabel" destination="0H6-YL-PLX" id="kzt-Pq-RuC"/>
+                        <outlet property="forwarderNameLabel" destination="ANy-KA-fVO" id="og5-Bz-rPl"/>
+                        <outlet property="officialPhoneNumber" destination="6Gb-3Q-2iG" id="jqU-0H-6LH"/>
+                        <outlet property="phoneNumberLabel" destination="5cf-tG-feq" id="cGc-8A-CBc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ky8-vE-hVQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
