@@ -7,7 +7,6 @@ import logger from './utils/logger';
 import pageNotFoundRouter from './routes/pageNotFoundRouter';
 import errorMiddleware from './middlewares/errorMiddleware';
 import loggerMiddleware from './middlewares/loggerMiddleware';
-import { Owner, Forwarder } from './domain';
 import dataSource from "./data-source";
 
 

@@ -1,5 +1,5 @@
-import ownerRepository from "../repository/ownerRepository";
-import { Owner } from "../domain";
+import ownerRepository from "../repository/OwnerRepository";
+import Owner from "../domain/Owner";
 import HttpException from "../exceptions/HttpException";
 
 
@@ -14,7 +14,7 @@ class OwnerService {
     }
 
     public async join(owner: Owner): Promise<Owner> {
-        await this.checkDuplicated(owner.email);
+        await this.checkDuplicated(owner.email!);
         return await ownerRepository.save(owner);
     }
 }

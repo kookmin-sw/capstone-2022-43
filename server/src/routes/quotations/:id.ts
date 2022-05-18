@@ -1,58 +1,41 @@
 import express, { Request, Response, NextFunction } from 'express';
-import { supabase } from '../../utils/supabase';
-import PageNotFoundRouter from "../pageNotFoundRouter";
-import { isoToUnix } from "../../middlewares/timeConvert";
-import {verifyAnyToken} from "../../middlewares/verifyToken";
+import { dateToUnix } from "../../middlewares/timeConvert";
+import { verifyAnyToken } from "../../middlewares/verifyToken";
+import quotationRepository from "../../repository/QuotationRepository";
+import goodsRepository from "../../repository/GoodsRepository";
 
 
 const router = express.Router();
 
 router.get('/:id', verifyAnyToken ,async (req: Request, res: Response, next: NextFunction) =>{
     try {
-        const { uuid } = req.decoded;
-        const quotation_id = req.params.id;
+        const quotation_id = Number(req.params.id);
 
-        const {data: quotation, error: FailToFind } = await supabase
-            .from('QUOTATION')
-            .select(`id, ocean_freight_price, inland_freight_price, total_price, estimated_time, created_at,
-            forwarder:forwarder_uuid(name, phone_number, corporation_name, corporation_number),
-            requests:request_id(id, trade_type, trade_detail, forwarding_date, departure_country, departure_detail,
-                destination_country, destination_detail, incoterms, closing_date, created_at)`
-            )
-            .eq('id', quotation_id);
+        const quotation = await quotationRepository.createQueryBuilder('Q')
+        .leftJoinAndSelect('Q.forwarder', 'F')
+        .leftJoinAndSelect('Q.request', 'R')
+        .select(['Q.ocean_freight_price', 'Q.inland_freight_price', 'Q.total_price', 'Q.estimated_time', 'Q.created_at',
+            'F.name', 'F.phone_number', 'F.corporation_name', 'F.corporation_number',
+            'R.id', 'R.trade_type', 'R.trade_detail', 'R.forwarding_date', 'R.departure_country', 'R.departure_detail',
+            'R.destination_country', 'R.destination_detail', 'R.incoterms', 'R.closing_date', 'R.created_at'])
+        .where('Q.id = :id', { id: quotation_id })
+        .getOne();
 
-
-        if (FailToFind) {
-            return next(FailToFind);
-        }
-        let quoteId;
-        quotation.forEach(selected_request => {
-            quoteId = selected_request['requests']['id'] ;
-            isoToUnix(selected_request, ["estimated_time", "created_at"]);
-            isoToUnix(selected_request['requests'], ["forwarding_date", "closing_date", "created_at"]);
+        const selected_goods_array = await goodsRepository.find({
+            select: ['id', 'name', 'price', 'weight', 'standard_unit', 'hscode', 'created_at'],
+            where: { request_id: quotation!.request!.id }
         });
-
-        const { data: selected_goods_array, error: FailToFindGoods } = await supabase
-            .from('GOODS')
-            .select('id, name, price, weight, standard_unit, hscode, created_at')
-            .eq('request_id', quoteId);
-
-        if (FailToFindGoods) {
-            return next(FailToFindGoods);
-        }
-
-        if (quotation === null && selected_goods_array.length === 0) {
-            return PageNotFoundRouter(req, res, next);
-        }
 
         selected_goods_array.forEach((goods) => {
-            isoToUnix(goods, ["created_at"]);
+            dateToUnix(goods, ['created_at']);
         });
+        dateToUnix(quotation!.request, ['forwarding_date', 'closing_date', 'created_at']);
+        dateToUnix(quotation, ['estimated_time', 'created_at']);
 
         return res.status(200).json({
             status: 200,
             message: 'Success to find quotation',
-            selectedRequest: quotation,
+            Quotation: [quotation],
             selectedGoods: selected_goods_array
         });
     }
