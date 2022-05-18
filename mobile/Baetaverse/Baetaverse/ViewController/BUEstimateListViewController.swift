@@ -26,10 +26,16 @@ final class BUEstimateListViewController: UIViewController {
     
     private lazy var dataSource: UITableViewDiffableDataSource<String, QuotationEntity> = {
         UITableViewDiffableDataSource(tableView: self.tableView) { tableView, indexPath, item in
-            let cell = tableView.dequeueReusableCell(withIdentifier: "estimatesummarycell")!
-            var content = cell.defaultContentConfiguration()
-            content.text = String(item.estimate.totalPrice)
-            cell.contentConfiguration = content
+            let cell = tableView.dequeueReusableCell(withIdentifier: "estimatesummarycell")
+            
+            if let cell = cell as? EstimatesOverviewTableViewCell {
+                cell.configureContent(
+                    name: item.forwarder.corporationName,
+                    time: item.estimate.estimatedTime,
+                    cost: item.estimate.totalPrice
+                )
+            }
+            
             return cell
         }
     }()

@@ -27,7 +27,9 @@ final class BUEstimateListViewModel {
     
     func queryEstimates(with estimateRequestId: Int?) async throws -> [QuotationEntity] {
         guard let estimateRequestId = estimateRequestId else { return [] }
-        let result = try await appService?.queryEstimatesWithEstimateRequest(estimateRequestId: String(estimateRequestId))
+        let result = try await appService?.queryEstimatesWithEstimateRequest(
+            estimateRequestId: String(estimateRequestId)
+        )
         return result ?? []
     }
     
