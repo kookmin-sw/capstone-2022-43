@@ -345,6 +345,12 @@
 		C1E8C7D2283548710031095C /* RegisterReviewRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8C7D1283548710031095C /* RegisterReviewRequest.swift */; };
 		C1E8C7D428354B1C0031095C /* ReviewRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8C7D328354B1C0031095C /* ReviewRequest.swift */; };
 		C1E8C7D628354BED0031095C /* RegisterReviewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8C7D528354BED0031095C /* RegisterReviewResponse.swift */; };
+		C1E8C7D728354FA60031095C /* RegisterReviewRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8C7D1283548710031095C /* RegisterReviewRequest.swift */; };
+		C1E8C7D828354FA70031095C /* RegisterReviewRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8C7D1283548710031095C /* RegisterReviewRequest.swift */; };
+		C1E8C7D928354FA70031095C /* RegisterReviewRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8C7D1283548710031095C /* RegisterReviewRequest.swift */; };
+		C1E8C7DA28354FB60031095C /* ReviewRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8C7D328354B1C0031095C /* ReviewRequest.swift */; };
+		C1E8C7DB28354FB70031095C /* ReviewRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8C7D328354B1C0031095C /* ReviewRequest.swift */; };
+		C1E8C7DC28354FB70031095C /* ReviewRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8C7D328354B1C0031095C /* ReviewRequest.swift */; };
 		C1F53A88282F63D0006203E2 /* BURegisterTradeTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F53A87282F63D0006203E2 /* BURegisterTradeTypeViewController.swift */; };
 		C1F53A8A282F6B39006203E2 /* BURegisterDeliveryDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F53A89282F6B39006203E2 /* BURegisterDeliveryDateViewController.swift */; };
 /* End PBXBuildFile section */
@@ -1421,6 +1427,7 @@
 				C112146628334446001E4384 /* BaetaverseAPIService.swift in Sources */,
 				C1300DBB281FA3B900E9C0CC /* MainTabView.swift in Sources */,
 				C1E257B62820E25D003F35DF /* EstimateEntity.swift in Sources */,
+				C1E8C7DB28354FB70031095C /* ReviewRequest.swift in Sources */,
 				C1C9EC652818FA1E0041F974 /* LoginView.swift in Sources */,
 				C11214542833442D001E4384 /* AuthService.swift in Sources */,
 				C16E031A28341DF800B2CDCF /* ReviewListViewModel.swift in Sources */,
@@ -1454,6 +1461,7 @@
 				C1366CE7282A9EFD00A9CA93 /* HeaderView.swift in Sources */,
 				C196576128200A6B00821825 /* Carousel.swift in Sources */,
 				C19140F82823C5BD00372CB3 /* ConsultationProceedingView.swift in Sources */,
+				C1E8C7D828354FA70031095C /* RegisterReviewRequest.swift in Sources */,
 				C1C9EC632818FA1E0041F974 /* BaetaverseBusinessApp.swift in Sources */,
 				C11214AA283344C6001E4384 /* Forwarder.swift in Sources */,
 				C112148E283344A0001E4384 /* EstimateRequestsRequest.swift in Sources */,
@@ -1480,6 +1488,7 @@
 				C112146D28334453001E4384 /* APIService.swift in Sources */,
 				C11214A3283344B7001E4384 /* RegisterEstimateResponse.swift in Sources */,
 				C112145928334433001E4384 /* BaetaverseAppService.swift in Sources */,
+				C1E8C7D928354FA70031095C /* RegisterReviewRequest.swift in Sources */,
 				C11214752833445C001E4384 /* HTTPMethod.swift in Sources */,
 				C112148728334498001E4384 /* LoginRequest.swift in Sources */,
 				C1C9EC742818FA210041F974 /* BaetaverseBusinessTests.swift in Sources */,
@@ -1523,6 +1532,7 @@
 				C112146F28334456001E4384 /* APIRequestHostInfo.swift in Sources */,
 				C112146928334449001E4384 /* BaetaverseAPIRequestHostInfo.swift in Sources */,
 				C11214892833449A001E4384 /* RegisterEstimateRequestsRequest.swift in Sources */,
+				C1E8C7DC28354FB70031095C /* ReviewRequest.swift in Sources */,
 				C11214552833442D001E4384 /* AuthService.swift in Sources */,
 				C112146728334446001E4384 /* BaetaverseAPIService.swift in Sources */,
 				C112146B28334451001E4384 /* NetworkService.swift in Sources */,
@@ -1670,6 +1680,7 @@
 				C149D2312832759A0044404D /* RegisterEstimateResponse.swift in Sources */,
 				C134B185283400E600F7DF4C /* Quotation.swift in Sources */,
 				C1CF675C27F737660057A6C3 /* BaetaverseAuth.swift in Sources */,
+				C1E8C7D728354FA60031095C /* RegisterReviewRequest.swift in Sources */,
 				C197AEC527F43EFC000E4975 /* APIRequestModel.swift in Sources */,
 				C197AEB927F43866000E4975 /* HTTPMethod.swift in Sources */,
 				C149737727F5A39800679118 /* SignUpResponse.swift in Sources */,
@@ -1683,6 +1694,7 @@
 				C1E86287282E0A6700D9971A /* EstimateRequestsRegister.swift in Sources */,
 				C1E86268282D269600D9971A /* HSCodeRequest.swift in Sources */,
 				C1CF675927F7375A0057A6C3 /* AppBusinessService.swift in Sources */,
+				C1E8C7DA28354FB60031095C /* ReviewRequest.swift in Sources */,
 				C11214C9283376BC001E4384 /* QueryAllEstimateRequestsRequest.swift in Sources */,
 				C1D83A8F2828F5E10086D0E7 /* EstimateRequestsRequest.swift in Sources */,
 				C1B7652A28294F860029B5FC /* AuthService.swift in Sources */,

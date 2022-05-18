@@ -57,6 +57,16 @@ final class BaetaverseAppService: AppService {
         try await businessService.registerEstimate(token: auth.token, estimate: estimate)
     }
     
+    func registerReview(quotationId: Int, requestId: Int, score: Int, message: String) async throws {
+        try await businessService.registerReview(
+            token: auth.token,
+            quotationId: quotationId,
+            requestId: requestId,
+            score: score,
+            message: message
+        )
+    }
+    
     func queryHSCode(code: String) async throws -> [String] {
         return try await businessService.queryHSCode(token: auth.token, code: code)
     }

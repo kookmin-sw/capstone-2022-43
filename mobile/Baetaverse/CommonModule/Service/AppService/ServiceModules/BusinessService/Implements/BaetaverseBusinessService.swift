@@ -32,6 +32,17 @@ final class BaetaverseBusinessService: AppBusinessService {
         _ = try await networkService.fetchData(for: apiService)
     }
     
+    func registerReview(token: String, quotationId: Int, requestId: Int, score: Int, message: String) async throws {
+        let apiService = BaetaverseAPIService.registerReview(
+            token: token,
+            quotationId: quotationId,
+            requestId: requestId,
+            score: score,
+            message: message
+        )
+        _ = try await networkService.fetchData(for: apiService)
+    }
+    
     func queryEstimateRequests(token: String) async throws -> [EstimateRequest] {
         let apiService = BaetaverseAPIService.queryEstimateRequests(token: token)
         let data = try await networkService.fetchData(for: apiService)
