@@ -10,7 +10,7 @@ import UIKit
 final class BUSelectRegionTableViewController: UITableViewController {
     
     weak var selectRegionDelegate: SelectRegionDelegate?
-    private var selectedRegion: IndexPath?
+    private var selectedRegion: String?
     
     private lazy var dataSource: UITableViewDiffableDataSource<String, String> = {
         UITableViewDiffableDataSource(tableView: tableView) { tableView, indexPath, item in
@@ -21,7 +21,7 @@ final class BUSelectRegionTableViewController: UITableViewController {
             content.text = countryName
             cell.contentConfiguration = content
             
-            if let selectedRegion = self.selectedRegion, indexPath == selectedRegion {
+            if let selectedRegion = self.selectedRegion, item == selectedRegion {
                 cell.accessoryType = .checkmark
             }
             
@@ -63,10 +63,8 @@ final class BUSelectRegionTableViewController: UITableViewController {
     }
     
     private func sendRegionData() {
-        let currentSnapshot = dataSource.snapshot()
-        if let index = selectedRegion?.row {
-            let region = currentSnapshot.itemIdentifiers[index]
-            selectRegionDelegate?.send(region: region)
+        if let code = selectedRegion {
+            selectRegionDelegate?.send(region: code)
         }
     }
     
@@ -112,16 +110,15 @@ extension BUSelectRegionTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
         
-        if let selectedRegion = selectedRegion, let cell = tableView.cellForRow(at: selectedRegion) {
+        let code = dataSource.snapshot().itemIdentifiers[indexPath.row]
+        guard let cell = tableView.cellForRow(at: indexPath) else { return }
+        
+        if let selectedRegion = selectedRegion, selectedRegion != code {
             cell.accessoryType = .none
         }
         
-        selectedRegion = indexPath
-        
-        // Mark the newly selected filter item with a checkmark.
-        if let cell = tableView.cellForRow(at: indexPath) {
-            cell.accessoryType = .checkmark
-        }
+        selectedRegion = code
+        cell.accessoryType = .checkmark
     }
 
 }

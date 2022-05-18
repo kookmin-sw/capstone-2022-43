@@ -869,7 +869,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b9d-wm-F4c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="KXe-21-FfT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="7471" y="-621"/>
+            <point key="canvasLocation" x="7390" y="-621"/>
         </scene>
         <!--업체 견적 리스트-->
         <scene sceneID="mOU-GW-eVC">
