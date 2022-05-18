@@ -16,6 +16,11 @@ final class BUEstimateDetailViewController: UIViewController {
     @IBOutlet private weak var inlandFreightPriceLabel: UILabel!
     @IBOutlet private weak var totalPriceLabel: UILabel!
     @IBOutlet private weak var totalTimeLabel: UILabel!
+    
+    private var phoneNumber: URL? {
+        let string = "tel://" + (estimate?.forwarder.phoneNumber ?? "")
+        return URL(string: string)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,11 +34,10 @@ final class BUEstimateDetailViewController: UIViewController {
             preferredStyle: .alert
         )
         alertVC.addAction(UIAlertAction(title: "확인", style: .default) { _ in
-            
+            guard let phoneNumber = self.phoneNumber else { return }
+            UIApplication.shared.open(phoneNumber)
             self.navigationController?.popViewController(animated: true)
-            
         })
-        
         present(alertVC, animated: true)
     }
     
