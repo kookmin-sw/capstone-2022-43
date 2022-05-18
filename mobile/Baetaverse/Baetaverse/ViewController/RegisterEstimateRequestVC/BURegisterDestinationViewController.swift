@@ -48,6 +48,7 @@ final class BURegisterDestinationViewController: UIViewController {
         }
         
         if let incotermsVC = segue.destination as? BURegisterIncotermsViewController {
+            estimateRequest.destinationDetail = destinationDetailTextField.text ?? ""
             incotermsVC.passData(estimateRequest: estimateRequest)
         }
     }

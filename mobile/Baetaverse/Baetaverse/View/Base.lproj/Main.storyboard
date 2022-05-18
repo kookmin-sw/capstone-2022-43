@@ -1913,7 +1913,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="인도 조건" id="pDL-Wk-1h9"/>
                     <connections>
-                        <outlet property="incotermsTextField" destination="fK1-tM-4Nf" id="4xv-FD-vWQ"/>
+                        <outlet property="incotermsTextField" destination="fK1-tM-4Nf" id="jBi-St-Am7"/>
                         <outlet property="nextButton" destination="yoZ-7y-RGF" id="2bb-Xl-LXd"/>
                     </connections>
                 </viewController>
@@ -2217,7 +2217,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hth-34-XXh"/>
+        <segue reference="leT-P6-9ZZ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="BoxContainer" width="800" height="439"/>

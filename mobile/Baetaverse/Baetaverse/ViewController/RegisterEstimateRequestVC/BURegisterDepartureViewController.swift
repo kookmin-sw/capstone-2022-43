@@ -47,6 +47,7 @@ final class BURegisterDepartureViewController: UIViewController {
         }
         
         if let registerDestVC = segue.destination as? BURegisterDestinationViewController {
+            estimateRequest.departureDetail = departureDetailAddressTextField.text ?? ""
             registerDestVC.passData(estimateRequest: estimateRequest)
         }
     }
