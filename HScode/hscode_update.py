@@ -19,6 +19,9 @@ elif sys.argv[1] == '-1':
     with open('HScode06.txt', 'r', encoding='utf-8') as f06:
         file06 = f06.readlines()
 
+    with open('hs_extension.txt', 'r', encoding='utf-8') as ex:
+        ex_file = ex.readlines()
+
     with open('HScode02.pkl', 'wb') as f2:
         pickle.dump(file02, f2)
 
@@ -27,6 +30,9 @@ elif sys.argv[1] == '-1':
 
     with open('HScode06.pkl', 'wb') as f6:
         pickle.dump(file06, f6)
+
+    with open('hs_extension.pkl', 'wb') as ex:
+        pickle.dump(ex_file,ex)
 
 elif sys.argv[1] == '-2':
     # hscode object
@@ -46,6 +52,9 @@ elif sys.argv[1] == '-3':
     with open('HScode06.txt', 'r', encoding='utf-8') as f06:
         file06 = f06.readlines()
 
+    with open('hs_extension.txt', 'r', encoding='utf-8') as ex:
+        ex_file = ex.readlines()
+
     with open('HScode02.pkl', 'wb') as f2:
         pickle.dump(file02, f2)
 
@@ -54,6 +63,9 @@ elif sys.argv[1] == '-3':
 
     with open('HScode06.pkl', 'wb') as f6:
         pickle.dump(file06, f6)
+
+    with open('hs_extension.pkl', 'wb') as ex:
+        pickle.dump(ex_file,ex)
 
     # hscode object
     hscode = hscode_object_class.hscode_linkedlist()

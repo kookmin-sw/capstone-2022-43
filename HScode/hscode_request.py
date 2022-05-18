@@ -1,36 +1,82 @@
-import time
-import sys
 import re
 import pickle
 from jamo import h2j, j2hcj
 
-starttime = time.time()
+def change_word(word):
+    new_input_value = ''
 
-input_value = sys.argv
-number_cond = re.compile('\d+')
+    for unigram in word:
+        new_input_value += unigram
 
-with open('hscode_object.pkl', 'rb') as f:
-    hscode = pickle.load(f)
+        if word[-1] != unigram:
+            new_input_value += '.'
 
-# Blank
-if len(input_value) == 1:
-    print([])
-# Input Number
-elif number_cond.search(input_value[1]) != None:
-    print(hscode.code_to_data(input_value[1]))
-# Input Data
-else:
-    if len(input_value[1]) > 1:
-        new_input_value = ''
+    return new_input_value
 
-        for unigram in input_value[1]:
-            new_input_value += unigram
+def get_hscode(argv):
+    number_cond = re.compile('[^\d]+')
 
-            if input_value[1][-1] != unigram:
-                new_input_value += '.'   
+    with open('hscode_object.pkl', 'rb') as f:
+        hscode = pickle.load(f)
 
-        input_value = j2hcj(h2j(new_input_value))
+    # Blank
+    if len(argv) == 0:
+        return []
+    # Input Number
+    elif number_cond.search(argv) == None:
+        return hscode.code_to_data(argv)
+    # Input Data
+    else:
+        ext = hscode.get_extension_dict()
+        ex = {}
+        argv = argv.replace(' ', ',').replace(',,', ',').split(',')
+        tmp = []
 
-    print(hscode.data_to_code(input_value))
+        for data in argv:
+            input_value = change_word(data)
+            input_value = j2hcj(h2j(input_value))
 
-print("Running Time : ", time.time() - starttime)
+            if data in list(ext.keys()):
+                ex.update(hscode.data_to_code(j2hcj(h2j(change_word(ext[data])))))
+
+            tmp.append(hscode.data_to_code(input_value))
+
+        tmp_output = []
+        tmp_output_dic = {}
+        output = {}
+
+        for out in tmp:
+            tmp_output.extend(list(out.keys()))
+
+        for out in tmp_output:
+            if out in tmp_output_dic:
+                tmp_output_dic[out] += 1
+            else:
+                tmp_output_dic[out] = 1
+        
+        tmp_output_dic = dict(filter(lambda elem : elem[1] == len(argv), tmp_output_dic.items()))
+
+        for t in tmp_output_dic:
+            output.update(hscode.code_to_data(t))
+
+        output.update(ex)
+
+        return output
+
+# test code
+"""
+import sys
+
+tmp = ''
+
+if len(sys.argv) == 2:
+    tmp += sys.argv[1]
+elif len(sys.argv) > 2:
+    for i in sys.argv[1:]:
+        if i != sys.argv[-1]:
+            tmp += i + ' '
+        else:
+            tmp += i
+
+print(get_hscode(tmp))
+"""
