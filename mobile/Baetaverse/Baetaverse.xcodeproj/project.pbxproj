@@ -235,6 +235,8 @@
 		C19E67922830CDBC00B88413 /* BURegisterDestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E67912830CDBC00B88413 /* BURegisterDestinationViewController.swift */; };
 		C19E67942830D20200B88413 /* BURegisterIncotermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E67932830D20200B88413 /* BURegisterIncotermsViewController.swift */; };
 		C1A8DD792834A2DF00EA6CA3 /* BUMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11213732833387A001E4384 /* BUMoreViewController.swift */; };
+		C1A8DD7A2834A48400EA6CA3 /* ReviewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C196576428201CFA00821825 /* ReviewEntity.swift */; };
+		C1A8DD7B2834A48400EA6CA3 /* ReviewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C196576428201CFA00821825 /* ReviewEntity.swift */; };
 		C1B7652528294CA90029B5FC /* BusinessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C7714F28294A2D009E3CB6 /* BusinessService.swift */; };
 		C1B7652628294F810029B5FC /* AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF674827F735820057A6C3 /* AppService.swift */; };
 		C1B7652728294F820029B5FC /* AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF674827F735820057A6C3 /* AppService.swift */; };
@@ -1558,6 +1560,7 @@
 				C1CF674627F735620057A6C3 /* AppBusinessService.swift in Sources */,
 				C1E86292282E0FFC00D9971A /* GoodsDetail.swift in Sources */,
 				C1E8628B282E0CBD00D9971A /* EstimateRequestDetailRequest.swift in Sources */,
+				C1A8DD7A2834A48400EA6CA3 /* ReviewEntity.swift in Sources */,
 				C184F7B0282E620000336677 /* EstimateRequestTableViewCell.swift in Sources */,
 				C19E67922830CDBC00B88413 /* BURegisterDestinationViewController.swift in Sources */,
 				C1E5CBBA27F2BF330087882E /* AppDelegate.swift in Sources */,
@@ -1659,6 +1662,7 @@
 				C197AEBA27F43869000E4975 /* APIRequestImplement.swift in Sources */,
 				C1CF675B27F737620057A6C3 /* AppAuthService.swift in Sources */,
 				C197AEC227F43EF3000E4975 /* RegisterEstimateRequestsRequest.swift in Sources */,
+				C1A8DD7B2834A48400EA6CA3 /* ReviewEntity.swift in Sources */,
 				C149D22E283274DF0044404D /* Estimate.swift in Sources */,
 				C1CF675627F737120057A6C3 /* BaetaverseAPIRequest.swift in Sources */,
 				C1E86271282D545D00D9971A /* EstimateRequestsResponse.swift in Sources */,

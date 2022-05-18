@@ -25,6 +25,12 @@ final class BUMoreViewController: UIViewController {
         )
     }
     
+    @IBAction func serviceInfoButtonClicked(_ sender: UIButton) {
+        if let url = URL(string: "https://kookmin-sw.github.io/capstone-2022-43/") {
+            UIApplication.shared.open(url)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
