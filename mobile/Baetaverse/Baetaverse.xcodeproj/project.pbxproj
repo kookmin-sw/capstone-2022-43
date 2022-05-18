@@ -341,6 +341,10 @@
 		C1E862A1282E34BC00D9971A /* BUEstimateRequestsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E862A0282E34BC00D9971A /* BUEstimateRequestsTableViewController.swift */; };
 		C1E862A3282E356C00D9971A /* EstimateRequestsTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E862A2282E356C00D9971A /* EstimateRequestsTableViewModel.swift */; };
 		C1E8C7CE28352B310031095C /* BUForwarderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8C7CD28352B310031095C /* BUForwarderDetailViewController.swift */; };
+		C1E8C7D0283537D40031095C /* BUReviewTargetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8C7CF283537D40031095C /* BUReviewTargetTableViewController.swift */; };
+		C1E8C7D2283548710031095C /* RegisterReviewRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8C7D1283548710031095C /* RegisterReviewRequest.swift */; };
+		C1E8C7D428354B1C0031095C /* ReviewRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8C7D328354B1C0031095C /* ReviewRequest.swift */; };
+		C1E8C7D628354BED0031095C /* RegisterReviewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8C7D528354BED0031095C /* RegisterReviewResponse.swift */; };
 		C1F53A88282F63D0006203E2 /* BURegisterTradeTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F53A87282F63D0006203E2 /* BURegisterTradeTypeViewController.swift */; };
 		C1F53A8A282F6B39006203E2 /* BURegisterDeliveryDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F53A89282F6B39006203E2 /* BURegisterDeliveryDateViewController.swift */; };
 /* End PBXBuildFile section */
@@ -512,6 +516,10 @@
 		C1E862A0282E34BC00D9971A /* BUEstimateRequestsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BUEstimateRequestsTableViewController.swift; path = Baetaverse/ViewController/BUEstimateRequestsTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		C1E862A2282E356C00D9971A /* EstimateRequestsTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EstimateRequestsTableViewModel.swift; path = Baetaverse/ViewModel/EstimateRequestsTableViewModel.swift; sourceTree = SOURCE_ROOT; };
 		C1E8C7CD28352B310031095C /* BUForwarderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BUForwarderDetailViewController.swift; sourceTree = "<group>"; };
+		C1E8C7CF283537D40031095C /* BUReviewTargetTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BUReviewTargetTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		C1E8C7D1283548710031095C /* RegisterReviewRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterReviewRequest.swift; sourceTree = "<group>"; };
+		C1E8C7D328354B1C0031095C /* ReviewRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRequest.swift; sourceTree = "<group>"; };
+		C1E8C7D528354BED0031095C /* RegisterReviewResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterReviewResponse.swift; sourceTree = "<group>"; };
 		C1F53A87282F63D0006203E2 /* BURegisterTradeTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BURegisterTradeTypeViewController.swift; sourceTree = "<group>"; };
 		C1F53A89282F6B39006203E2 /* BURegisterDeliveryDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BURegisterDeliveryDateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -626,6 +634,7 @@
 				C149D23428327B3F0044404D /* QuotationsRequst.swift */,
 				C134B1792833FD0D00F7DF4C /* ReviewsRequest.swift */,
 				C19314892834C99800CDA686 /* EstimateRequestsQuotationRequest.swift */,
+				C1E8C7D1283548710031095C /* RegisterReviewRequest.swift */,
 			);
 			path = RequestModel;
 			sourceTree = "<group>";
@@ -634,6 +643,7 @@
 			isa = PBXGroup;
 			children = (
 				C149737027F5A06D00679118 /* APIResponseModel.swift */,
+				C1E8C7D528354BED0031095C /* RegisterReviewResponse.swift */,
 				C11214C528337349001E4384 /* QueryAllEstimateRequestsResponse.swift */,
 				C1E86295282E15AD00D9971A /* EstimateRequestDetailResponse.swift */,
 				C149736C27F59D4500679118 /* LoginResponse.swift */,
@@ -1027,6 +1037,7 @@
 		C1E5CC0327F2C36B0087882E /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				C1E8C7CF283537D40031095C /* BUReviewTargetTableViewController.swift */,
 				C1F53A84282F6334006203E2 /* RegisterEstimateRequestVC */,
 				C19E6788282FA58500B88413 /* SelectRegion */,
 				C149D2162831E25D0044404D /* SelectHScode */,
@@ -1099,6 +1110,7 @@
 				C134B18D28340AE200F7DF4C /* Review.swift */,
 				C134B183283400E600F7DF4C /* Quotation.swift */,
 				C149D22C283271DF0044404D /* Forwarder.swift */,
+				C1E8C7D328354B1C0031095C /* ReviewRequest.swift */,
 				C1E86276282D5D4E00D9971A /* EstimateRequestsQuery.swift */,
 				C1E8627F282DECED00D9971A /* EstimateRequestRegister */,
 				C1E8628E282E0E9E00D9971A /* EstimateRequestDetail */,
@@ -1541,6 +1553,7 @@
 				C149736B27F59B7500679118 /* Extensions+Data.swift in Sources */,
 				C149D23528327B3F0044404D /* QuotationsRequst.swift in Sources */,
 				C198204E28311E7400A79AD6 /* RegisterEstimateRequestViewModel.swift in Sources */,
+				C1E8C7D628354BED0031095C /* RegisterReviewResponse.swift in Sources */,
 				C19E6785282F80FE00B88413 /* BUSelectRegionTableViewController.swift in Sources */,
 				C19820532831447B00A79AD6 /* SelectRegionDelegate.swift in Sources */,
 				C197AEBD27F43AEC000E4975 /* APIService.swift in Sources */,
@@ -1550,6 +1563,7 @@
 				C19E678A282FA5CC00B88413 /* BUSelectRegionDataSource.swift in Sources */,
 				C1E5CBF227F2BFBD0087882E /* BUMainViewController.swift in Sources */,
 				C1E8626C282D50DE00D9971A /* Product.swift in Sources */,
+				C1E8C7D428354B1C0031095C /* ReviewRequest.swift in Sources */,
 				C134B184283400E600F7DF4C /* Quotation.swift in Sources */,
 				C1E8627E282DEBB900D9971A /* GoodsRegister.swift in Sources */,
 				C13778C327F498EE00DAF494 /* BaetaverseAuth.swift in Sources */,
@@ -1582,6 +1596,7 @@
 				C149D22928326EB10044404D /* RegisterEstimateResponse.swift in Sources */,
 				C1CF674627F735620057A6C3 /* AppBusinessService.swift in Sources */,
 				C1E86292282E0FFC00D9971A /* GoodsDetail.swift in Sources */,
+				C1E8C7D2283548710031095C /* RegisterReviewRequest.swift in Sources */,
 				C1E8628B282E0CBD00D9971A /* EstimateRequestDetailRequest.swift in Sources */,
 				C193148A2834C99800CDA686 /* EstimateRequestsQuotationRequest.swift in Sources */,
 				C1A8DD7A2834A48400EA6CA3 /* ReviewEntity.swift in Sources */,
@@ -1604,6 +1619,7 @@
 				C1E5CC0727F307C80087882E /* HTTPMethod.swift in Sources */,
 				C1F53A8A282F6B39006203E2 /* BURegisterDeliveryDateViewController.swift in Sources */,
 				C149D220283210090044404D /* BUEstimateListViewModel.swift in Sources */,
+				C1E8C7D0283537D40031095C /* BUReviewTargetTableViewController.swift in Sources */,
 				C1E8627C282DE9F800D9971A /* EstimateRequestsRegister.swift in Sources */,
 				C1C9EC5B2818F7A40041F974 /* Extensions+Encodable.swift in Sources */,
 				C1E8629F282E2F2800D9971A /* SignUpFormViewModel.swift in Sources */,
