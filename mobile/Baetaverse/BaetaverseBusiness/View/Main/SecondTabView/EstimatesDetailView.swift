@@ -23,37 +23,39 @@ private struct EstimatesDetailContentView: View {
     let estimates: QuotationEntity
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
-            Group {
-                Text("견적서코드")
-                    .font(.title)
-                Text(String(estimates.estimate.requestId))
-                    .font(.title2)
+        List {
+            Section("견적 요청서의 세부정보를 조회합니다") {
+                HStack {
+                    Text("견적서코드").font(.body)
+                    Spacer()
+                    Text(String(estimates.estimate.requestId)).font(.caption)
+                }
             }
-            Divider()
-            Group {
-                Text("내륙 운송 비용")
-                    .font(.title)
-                Text(String(estimates.estimate.inlandFreightPrice))
-                    .font(.title2)
-                Text("해상 운송 비용")
-                    .font(.title)
-                Text(String(estimates.estimate.oceanFreightPrice))
-                    .font(.title2)
+            Section("운송 비용 세부 항목을 확인합니다.") {
+                HStack {
+                    Text("내륙 운송 비용").font(.body)
+                    Spacer()
+                    Text(String(estimates.estimate.inlandFreightPrice)).font(.caption)
+                }
+                HStack {
+                    Text("해상 운송 비용").font(.body)
+                    Spacer()
+                    Text(String(estimates.estimate.oceanFreightPrice)).font(.caption)
+                }
             }
-            Divider()
-            Group {
-                Text("총 소요 비용")
-                    .font(.title)
-                Text(String(estimates.estimate.totalPrice))
-                    .font(.title2)
-                Text("총 소요 시간")
-                    .font(.title)
-                Text(String(estimates.estimate.estimatedTime))
-                    .font(.title2)
+            Section("예상되는 총 운송 비용을 확인합니다.") {
+                HStack {
+                    Text("총 소요 비용").font(.body)
+                    Spacer()
+                    Text(String(estimates.estimate.totalPrice)).font(.caption)
+                }
+                HStack {
+                    Text("총 소요 시간").font(.body)
+                    Spacer()
+                    Text(String(estimates.estimate.estimatedTime)).font(.caption)
+                }
             }
         }
-        .padding()
     }
     
 }
