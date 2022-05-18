@@ -25,10 +25,12 @@ private struct EstimatesDetailContentView: View {
     var body: some View {
         List {
             Section("견적 요청서의 세부정보를 조회합니다") {
-                HStack {
-                    Text("견적서코드").font(.body)
-                    Spacer()
-                    Text(String(estimates.estimate.requestId)).font(.caption)
+                NavigationLink(destination: List {
+                    EstimateRequestsDetailView(id: estimates.estimateRequest.id ?? 0)
+                }) {
+                    HStack {
+                        Text("견적서 정보 조회하기").font(.body)
+                    }
                 }
             }
             Section("운송 비용 세부 항목을 확인합니다.") {

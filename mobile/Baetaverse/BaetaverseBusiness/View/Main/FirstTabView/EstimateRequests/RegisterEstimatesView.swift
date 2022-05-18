@@ -29,28 +29,21 @@ struct RegisterEstimatesView: View {
     }
     
     var body: some View {
-        NavigationView {
-            RegisterEstimatesContentView(
-                oceanFreightPrice: $oceanFreightPrice,
-                inlandFreightPrice: $inlandFreightPrice,
-                totalPrice: $totalPrice,
-                estimatedTime: $estimatedTime
-            )
-            .navigationTitle("견적서 등록하기")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button(role: .cancel, action: { dismiss() }) {
-                        Text("닫기")
-                    }
+        RegisterEstimatesContentView(
+            oceanFreightPrice: $oceanFreightPrice,
+            inlandFreightPrice: $inlandFreightPrice,
+            totalPrice: $totalPrice,
+            estimatedTime: $estimatedTime
+        )
+        .navigationTitle("견적서 등록하기")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(role: .none, action: registerButtonClicked) {
+                    Text("등록")
                 }
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(role: .none, action: registerButtonClicked) {
-                        Text("등록")
-                    }
-                }
-                
             }
+            
         }
     }
     

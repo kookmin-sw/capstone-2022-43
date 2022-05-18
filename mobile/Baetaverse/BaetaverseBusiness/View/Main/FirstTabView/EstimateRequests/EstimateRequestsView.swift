@@ -31,7 +31,25 @@ private struct EstimatesContentView: View {
                     EstimatesListCellView(estimateRequest: estimateRequest)
                 }
                 .sheet(isPresented: $registerSheetIsPresented) {
-                    RegisterEstimatesView(id: estimateRequest.id ?? 0)
+                    NavigationView {
+                        List {
+                            EstimateRequestsDetailView(id: estimateRequest.id ?? 0)
+                            Section("견적 요청서에 대한 견적서를 등록합니다.") {
+                                NavigationLink {
+                                    RegisterEstimatesView(id: estimateRequest.id ?? 0)
+                                } label: {
+                                    Text("견적 정보 등록하기")
+                                }
+                            }
+                        }
+                        .toolbar {
+                            ToolbarItem(placement: .navigationBarTrailing) {
+                                Button(role: .cancel, action: { registerSheetIsPresented.toggle() }) {
+                                    Text("닫기")
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

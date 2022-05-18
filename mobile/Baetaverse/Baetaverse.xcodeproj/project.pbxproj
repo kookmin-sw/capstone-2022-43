@@ -237,6 +237,8 @@
 		C1A8DD792834A2DF00EA6CA3 /* BUMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11213732833387A001E4384 /* BUMoreViewController.swift */; };
 		C1A8DD7A2834A48400EA6CA3 /* ReviewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C196576428201CFA00821825 /* ReviewEntity.swift */; };
 		C1A8DD7B2834A48400EA6CA3 /* ReviewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C196576428201CFA00821825 /* ReviewEntity.swift */; };
+		C1A8DD7F2834AE6900EA6CA3 /* EstimateRequestsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A8DD7E2834AE6900EA6CA3 /* EstimateRequestsDetailView.swift */; };
+		C1A8DD812834AFB500EA6CA3 /* EstimateRequestsDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A8DD802834AFB500EA6CA3 /* EstimateRequestsDetailViewModel.swift */; };
 		C1B7652528294CA90029B5FC /* BusinessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C7714F28294A2D009E3CB6 /* BusinessService.swift */; };
 		C1B7652628294F810029B5FC /* AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF674827F735820057A6C3 /* AppService.swift */; };
 		C1B7652728294F820029B5FC /* AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF674827F735820057A6C3 /* AppService.swift */; };
@@ -432,6 +434,8 @@
 		C19E678F2830B1E100B88413 /* SelectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTableViewCell.swift; sourceTree = "<group>"; };
 		C19E67912830CDBC00B88413 /* BURegisterDestinationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BURegisterDestinationViewController.swift; sourceTree = "<group>"; };
 		C19E67932830D20200B88413 /* BURegisterIncotermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BURegisterIncotermsViewController.swift; sourceTree = "<group>"; };
+		C1A8DD7E2834AE6900EA6CA3 /* EstimateRequestsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateRequestsDetailView.swift; sourceTree = "<group>"; };
+		C1A8DD802834AFB500EA6CA3 /* EstimateRequestsDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateRequestsDetailViewModel.swift; sourceTree = "<group>"; };
 		C1BAFE222820BAC800CC4549 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C1BAFE242820BB9E00CC4549 /* SignUpGroupForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpGroupForm.swift; sourceTree = "<group>"; };
 		C1C65CFB28210E5200951A25 /* RecievedEstimateDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecievedEstimateDetailView.swift; sourceTree = "<group>"; };
@@ -665,6 +669,7 @@
 			children = (
 				C11214CF2833881C001E4384 /* EstimatesView.swift */,
 				C11214DC2833B391001E4384 /* EstimatesDetailView.swift */,
+				C1A8DD7E2834AE6900EA6CA3 /* EstimateRequestsDetailView.swift */,
 			);
 			path = SecondTabView;
 			sourceTree = "<group>";
@@ -944,6 +949,7 @@
 				C11214E32833BDC7001E4384 /* RegisterEstimatesViewModel.swift */,
 				C11214C12833567E001E4384 /* MenuViewModel.swift */,
 				C11214BF28334795001E4384 /* LoginViewModel.swift */,
+				C1A8DD802834AFB500EA6CA3 /* EstimateRequestsDetailViewModel.swift */,
 				C1366CE8282AADC800A9CA93 /* MainViewModel.swift */,
 				C16E031B2834268500B2CDCF /* SignUpFormViewModel.swift */,
 				C16E031928341DF800B2CDCF /* ReviewListViewModel.swift */,
@@ -1352,6 +1358,7 @@
 				C112145828334432001E4384 /* BaetaverseAppService.swift in Sources */,
 				C134B186283400E600F7DF4C /* Quotation.swift in Sources */,
 				C11214D828339281001E4384 /* QuotationEntity.swift in Sources */,
+				C1A8DD7F2834AE6900EA6CA3 /* EstimateRequestsDetailView.swift in Sources */,
 				C1300DBE281FBE4E00E9C0CC /* StarRatingView.swift in Sources */,
 				C11214C22833567E001E4384 /* MenuViewModel.swift in Sources */,
 				C112149C283344B0001E4384 /* HSCodeResponse.swift in Sources */,
@@ -1374,6 +1381,7 @@
 				C112148628334498001E4384 /* LoginRequest.swift in Sources */,
 				C19140ED2823BAE800372CB3 /* MenuView.swift in Sources */,
 				C11214D228338AB2001E4384 /* EstimateViewModel.swift in Sources */,
+				C1A8DD812834AFB500EA6CA3 /* EstimateRequestsDetailViewModel.swift in Sources */,
 				C19140EA2823B6EF00372CB3 /* WriteEstimateView.swift in Sources */,
 				C11214B4283344D2001E4384 /* EstimateRequestDetail.swift in Sources */,
 				C11214B9283344D8001E4384 /* EstimateRegister.swift in Sources */,
