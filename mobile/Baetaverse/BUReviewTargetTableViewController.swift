@@ -45,22 +45,40 @@ final class BUReviewTargetTableViewController: UITableViewController {
         snapshot.appendItems(quotation)
         dataSource.apply(snapshot)
     }
+
+}
+
+extension BUReviewTargetTableViewController {
     
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
         
+        let quotation = dataSource.snapshot().itemIdentifiers[indexPath.row]
+        
+        let alert = UIAlertController(
+            title: "리뷰 등록하기",
+            message: "리뷰 내용을 작성해주세요!",
+            preferredStyle: .alert
+        )
+        alert.addTextField { textField in
+            textField.placeholder = "점수를 입력해주세요 (최대 5점)"
+        }
+        alert.addTextField { textField in
+            textField.placeholder = "리뷰 내용을 입력해주세요!"
+        }
+        
+        alert.addAction(UIAlertAction(title: "취소", style: .cancel))
+        alert.addAction(UIAlertAction(title: "확인", style: .default, handler: { _ in
+            Task {
+                try? await self.viewModel.registerReview(
+                    with: quotation,
+                    score: (alert.textFields?[0].text) ?? "",
+                    message: (alert.textFields?[1].text) ?? ""
+                )
+            }
+        }))
+        
+        present(alert, animated: true)
     }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }

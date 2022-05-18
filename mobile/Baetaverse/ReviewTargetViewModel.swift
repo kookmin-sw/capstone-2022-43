@@ -8,6 +8,7 @@
 import Foundation
 import UIKit.UIApplication
 
+@MainActor
 final class ReviewTargetViewModel {
     
     private var appService: AppService? {
@@ -34,6 +35,18 @@ final class ReviewTargetViewModel {
         }
         
         return quotations
+    }
+    
+    func registerReview(with quotation: QuotationEntity, score: String, message: String) async throws {
+        let quotationId = quotation.id
+        let requestId = quotation.estimateRequest.id ?? 0
+        let score = Int(score) ?? 0
+        try await appService?.registerReview(
+            quotationId: quotationId,
+            requestId: requestId,
+            score: score,
+            message: message
+        )
     }
     
 }
