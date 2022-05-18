@@ -22,6 +22,7 @@ enum BaetaverseAPIService {
     case queryEstimates(token: String)
     case queryAllEstimatesRequest(token: String)
     case queryReviews(token: String)
+    case queryEstimatesWithEstimateRequest(token: String, estimateRequestId: String)
     
 }
 
@@ -85,7 +86,9 @@ extension BaetaverseAPIService: APIService {
         case .queryReviews(let token):
             let requestModel = APIRequestModel.ReviewsRequest(token: token)
             return requestModel.urlRequest
-            
+        case .queryEstimatesWithEstimateRequest(let token, let estimateRequestId):
+            let requestModel = APIRequestModel.EstimateRequestsQuotationRequest(token: token, id: estimateRequestId)
+            return requestModel.urlRequest
         }
     }
     

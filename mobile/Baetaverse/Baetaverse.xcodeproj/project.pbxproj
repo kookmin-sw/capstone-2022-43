@@ -209,6 +209,10 @@
 		C19140F42823C21000372CB3 /* ConsultationRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19140F32823C21000372CB3 /* ConsultationRequestView.swift */; };
 		C19140F62823C55900372CB3 /* ConsultationCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19140F52823C55900372CB3 /* ConsultationCellView.swift */; };
 		C19140F82823C5BD00372CB3 /* ConsultationProceedingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19140F72823C5BD00372CB3 /* ConsultationProceedingView.swift */; };
+		C193148A2834C99800CDA686 /* EstimateRequestsQuotationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19314892834C99800CDA686 /* EstimateRequestsQuotationRequest.swift */; };
+		C193148B2834C99800CDA686 /* EstimateRequestsQuotationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19314892834C99800CDA686 /* EstimateRequestsQuotationRequest.swift */; };
+		C193148C2834C99800CDA686 /* EstimateRequestsQuotationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19314892834C99800CDA686 /* EstimateRequestsQuotationRequest.swift */; };
+		C193148D2834C99800CDA686 /* EstimateRequestsQuotationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19314892834C99800CDA686 /* EstimateRequestsQuotationRequest.swift */; };
 		C196576128200A6B00821825 /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C196576028200A6B00821825 /* Carousel.swift */; };
 		C1965763282013EC00821825 /* ReviewCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1965762282013EC00821825 /* ReviewCardView.swift */; };
 		C196576528201CFA00821825 /* ReviewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C196576428201CFA00821825 /* ReviewEntity.swift */; };
@@ -418,6 +422,7 @@
 		C19140F32823C21000372CB3 /* ConsultationRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationRequestView.swift; sourceTree = "<group>"; };
 		C19140F52823C55900372CB3 /* ConsultationCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationCellView.swift; sourceTree = "<group>"; };
 		C19140F72823C5BD00372CB3 /* ConsultationProceedingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationProceedingView.swift; sourceTree = "<group>"; };
+		C19314892834C99800CDA686 /* EstimateRequestsQuotationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateRequestsQuotationRequest.swift; sourceTree = "<group>"; };
 		C196576028200A6B00821825 /* Carousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
 		C1965762282013EC00821825 /* ReviewCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCardView.swift; sourceTree = "<group>"; };
 		C196576428201CFA00821825 /* ReviewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewEntity.swift; sourceTree = "<group>"; };
@@ -616,6 +621,7 @@
 				C1D83A802828EB260086D0E7 /* EstimateRequestsRequest.swift */,
 				C149D23428327B3F0044404D /* QuotationsRequst.swift */,
 				C134B1792833FD0D00F7DF4C /* ReviewsRequest.swift */,
+				C19314892834C99800CDA686 /* EstimateRequestsQuotationRequest.swift */,
 			);
 			path = RequestModel;
 			sourceTree = "<group>";
@@ -1356,6 +1362,7 @@
 				C11214B6283344D5001E4384 /* GoodsDetail.swift in Sources */,
 				C112147828334471001E4384 /* Product.swift in Sources */,
 				C112145828334432001E4384 /* BaetaverseAppService.swift in Sources */,
+				C193148C2834C99800CDA686 /* EstimateRequestsQuotationRequest.swift in Sources */,
 				C134B186283400E600F7DF4C /* Quotation.swift in Sources */,
 				C11214D828339281001E4384 /* QuotationEntity.swift in Sources */,
 				C1A8DD7F2834AE6900EA6CA3 /* EstimateRequestsDetailView.swift in Sources */,
@@ -1458,6 +1465,7 @@
 				C11214752833445C001E4384 /* HTTPMethod.swift in Sources */,
 				C112148728334498001E4384 /* LoginRequest.swift in Sources */,
 				C1C9EC742818FA210041F974 /* BaetaverseBusinessTests.swift in Sources */,
+				C193148D2834C99800CDA686 /* EstimateRequestsQuotationRequest.swift in Sources */,
 				C11214CC283376BF001E4384 /* QueryAllEstimateRequestsResponse.swift in Sources */,
 				C112145728334430001E4384 /* BusinessService.swift in Sources */,
 				C1121497283344AA001E4384 /* LoginResponse.swift in Sources */,
@@ -1568,6 +1576,7 @@
 				C1CF674627F735620057A6C3 /* AppBusinessService.swift in Sources */,
 				C1E86292282E0FFC00D9971A /* GoodsDetail.swift in Sources */,
 				C1E8628B282E0CBD00D9971A /* EstimateRequestDetailRequest.swift in Sources */,
+				C193148A2834C99800CDA686 /* EstimateRequestsQuotationRequest.swift in Sources */,
 				C1A8DD7A2834A48400EA6CA3 /* ReviewEntity.swift in Sources */,
 				C184F7B0282E620000336677 /* EstimateRequestTableViewCell.swift in Sources */,
 				C19E67922830CDBC00B88413 /* BURegisterDestinationViewController.swift in Sources */,
@@ -1672,6 +1681,7 @@
 				C197AEC227F43EF3000E4975 /* RegisterEstimateRequestsRequest.swift in Sources */,
 				C1A8DD7B2834A48400EA6CA3 /* ReviewEntity.swift in Sources */,
 				C149D22E283274DF0044404D /* Estimate.swift in Sources */,
+				C193148B2834C99800CDA686 /* EstimateRequestsQuotationRequest.swift in Sources */,
 				C1CF675627F737120057A6C3 /* BaetaverseAPIRequest.swift in Sources */,
 				C1E86271282D545D00D9971A /* EstimateRequestsResponse.swift in Sources */,
 				C1E86269282D269F00D9971A /* HSCodeResponse.swift in Sources */,

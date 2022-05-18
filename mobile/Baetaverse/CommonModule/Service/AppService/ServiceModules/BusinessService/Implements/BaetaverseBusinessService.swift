@@ -93,6 +93,19 @@ final class BaetaverseBusinessService: AppBusinessService {
         return results
     }
     
+    func queryEstimatesWithEstimateRequest(token: String, estimateRequestId: String) async throws -> [QuotationEntity] {
+        let apiService = BaetaverseAPIService.queryEstimatesWithEstimateRequest(
+            token: token,
+            estimateRequestId: estimateRequestId
+        )
+        let data = try await networkService.fetchData(for: apiService)
+        let object = try data.decodeJSONData(to: APIResponseModel.QuotationsResponse.self)
+        let quotation = object.quotation.map { data in
+            QuotationEntity(quotation: data)
+        }
+        return quotation
+    }
+    
     enum BusinessServiceError: Error {
         
         case hscodeQueryFailure

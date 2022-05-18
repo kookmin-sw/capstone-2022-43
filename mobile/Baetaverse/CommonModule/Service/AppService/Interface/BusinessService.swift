@@ -17,5 +17,6 @@ protocol BusinessService {
     func queryEstimates() async throws -> [QuotationEntity]
     func queryAllEstimatesRequest() async throws -> [EstimateRequest]
     func queryReviews() async throws -> [ReviewEntity]
+    func queryEstimatesWithEstimateRequest(estimateRequestId: String) async throws -> [QuotationEntity]
     
 }
