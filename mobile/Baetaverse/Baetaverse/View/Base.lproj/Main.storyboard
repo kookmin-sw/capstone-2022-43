@@ -761,7 +761,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qYt-1M-LQC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6480" y="-1477"/>
+            <point key="canvasLocation" x="6458" y="-1717"/>
         </scene>
         <!--견적서-->
         <scene sceneID="Y60-ca-ogv">
@@ -881,7 +881,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n0a-8C-mSP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7390" y="-1477"/>
+            <point key="canvasLocation" x="7368" y="-1717"/>
         </scene>
         <!--더보기-->
         <scene sceneID="gnB-La-d2N">
@@ -982,7 +982,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xEV-Q8-nWK">
-                                <rect key="frame" x="20" y="108" width="374" height="398"/>
+                                <rect key="frame" x="20" y="108" width="374" height="453"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="TdS-eI-u3X">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
@@ -1103,10 +1103,18 @@
                                             </label>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I06-Ud-QqX">
+                                        <rect key="frame" x="0.0" y="406" width="374" height="47"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="화물세부정보조회" buttonSize="large"/>
+                                        <connections>
+                                            <segue destination="KDE-VC-n8T" kind="presentation" id="okU-eh-BI3"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5U7-BX-dEq">
-                                <rect key="frame" x="0.0" y="526" width="414" height="370"/>
+                                <rect key="frame" x="0.0" y="581" width="414" height="315"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="estimatesummarycell" rowHeight="109" id="M5i-Vw-agB" customClass="EstimatesOverviewTableViewCell" customModule="Baetaverse" customModuleProvider="target">
@@ -1223,7 +1231,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gy9-PU-nAC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8367" y="-1477"/>
+            <point key="canvasLocation" x="8345" y="-1717"/>
         </scene>
         <!--업체 견적 세부정보-->
         <scene sceneID="Rl4-mk-sGI">
@@ -1416,7 +1424,152 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aya-5c-bpp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="iki-Ue-f5k" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="9390" y="-1477"/>
+            <point key="canvasLocation" x="10277" y="-1717"/>
+        </scene>
+        <!--화물정보-->
+        <scene sceneID="Kfs-gr-Eyu">
+            <objects>
+                <viewController id="KDE-VC-n8T" customClass="ProductDetailViewController" customModule="Baetaverse" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pE9-fb-p6a">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="GtF-2R-kf8">
+                                <rect key="frame" x="20" y="294" width="374" height="178"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="paE-mR-mUq">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="23"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="물품명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdB-gj-0tk">
+                                                <rect key="frame" x="0.0" y="0.0" width="336.5" height="23"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="필드" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cy8-lA-geM">
+                                                <rect key="frame" x="344.5" y="0.0" width="29.5" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="yEJ-Zh-C9w">
+                                        <rect key="frame" x="0.0" y="31" width="374" height="23"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="HSCode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDt-Kp-wmE">
+                                                <rect key="frame" x="0.0" y="0.0" width="336.5" height="23"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="필드" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxE-az-5Lv">
+                                                <rect key="frame" x="344.5" y="0.0" width="29.5" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pYI-4e-cZ1">
+                                        <rect key="frame" x="0.0" y="62" width="374" height="23"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="가격" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UgM-hK-RZp">
+                                                <rect key="frame" x="0.0" y="0.0" width="336.5" height="23"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="필드" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3N-Kp-11I">
+                                                <rect key="frame" x="344.5" y="0.0" width="29.5" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hoG-fO-GPg">
+                                        <rect key="frame" x="0.0" y="93" width="374" height="23"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="무게" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldh-I9-gjR">
+                                                <rect key="frame" x="0.0" y="0.0" width="336.5" height="23"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="필드" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbv-lr-p1s">
+                                                <rect key="frame" x="344.5" y="0.0" width="29.5" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jnN-QC-WlR">
+                                        <rect key="frame" x="0.0" y="124" width="374" height="23"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="단위" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dj8-Tq-OOm">
+                                                <rect key="frame" x="0.0" y="0.0" width="336.5" height="23"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="필드" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vso-Ul-DaT">
+                                                <rect key="frame" x="344.5" y="0.0" width="29.5" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="MMr-Za-RAy">
+                                        <rect key="frame" x="0.0" y="155" width="374" height="23"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="생성일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uB4-G0-I7U">
+                                                <rect key="frame" x="0.0" y="0.0" width="336.5" height="23"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="필드" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pm-bF-dH4">
+                                                <rect key="frame" x="344.5" y="0.0" width="29.5" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CorporationImage" translatesAutoresizingMaskIntoConstraints="NO" id="qvf-5C-lUK">
+                                <rect key="frame" x="0.0" y="44" width="414" height="230"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pwq-l1-FtO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pwq-l1-FtO" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="GtF-2R-kf8" secondAttribute="bottom" constant="20" id="0Qw-ai-OQo"/>
+                            <constraint firstItem="pwq-l1-FtO" firstAttribute="trailing" secondItem="qvf-5C-lUK" secondAttribute="trailing" id="6Dx-IE-geD"/>
+                            <constraint firstItem="qvf-5C-lUK" firstAttribute="leading" secondItem="pwq-l1-FtO" secondAttribute="leading" id="FDg-cj-DYE"/>
+                            <constraint firstItem="qvf-5C-lUK" firstAttribute="top" secondItem="pwq-l1-FtO" secondAttribute="top" id="OXd-Um-FH5"/>
+                            <constraint firstItem="pwq-l1-FtO" firstAttribute="trailing" secondItem="GtF-2R-kf8" secondAttribute="trailing" constant="20" id="csn-jI-uqm"/>
+                            <constraint firstItem="GtF-2R-kf8" firstAttribute="leading" secondItem="pwq-l1-FtO" secondAttribute="leading" constant="20" id="gQa-Jb-3Ea"/>
+                            <constraint firstItem="GtF-2R-kf8" firstAttribute="top" secondItem="qvf-5C-lUK" secondAttribute="bottom" constant="20" id="gnb-ie-xbI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="화물정보" id="0Bi-XG-E77"/>
+                    <connections>
+                        <outlet property="createdDateLabel" destination="9pm-bF-dH4" id="Zu2-Yd-XYa"/>
+                        <outlet property="hscodeLabel" destination="sxE-az-5Lv" id="Tcs-De-hrF"/>
+                        <outlet property="nameLabel" destination="Cy8-lA-geM" id="KmP-qe-wHa"/>
+                        <outlet property="priceLabel" destination="T3N-Kp-11I" id="Zae-yr-nTC"/>
+                        <outlet property="unitLabel" destination="Vso-Ul-DaT" id="azO-jX-dQc"/>
+                        <outlet property="weightLabel" destination="hbv-lr-p1s" id="54D-gG-8Yb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BRP-eG-tp6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8345" y="-958"/>
         </scene>
         <!--Forwarder Detail View Controller-->
         <scene sceneID="aIK-O2-4RQ">
@@ -1551,7 +1704,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ky8-vE-hVQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9390" y="-799"/>
+            <point key="canvasLocation" x="10277" y="-958"/>
         </scene>
         <!--도착지-->
         <scene sceneID="dPY-e1-0Th">

@@ -56,7 +56,7 @@ final class BUEstimateListViewController: UIViewController {
     private func fetchData() {
         Task {
             do {
-                let estimatesRequestInfo = try await viewModel.queryEstimateRequestDetail(id: id)
+                let (estimatesRequestInfo, _) = try await viewModel.queryEstimateRequestDetail(id: id)
                 let estimates = try await viewModel.queryEstimates(with: id)
                 updateUI(with: estimatesRequestInfo)
                 updateUI(with: estimates)
@@ -91,6 +91,9 @@ final class BUEstimateListViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let estimateDetailVC = segue.destination as? BUEstimateDetailViewController {
             estimateDetailVC.passData(estimate: selectedData)
+        }
+        if let productVC = segue.destination as? ProductDetailViewController {
+            productVC.passData(id: id)
         }
     }
 

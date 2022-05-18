@@ -195,6 +195,7 @@
 		C149D23B283280510044404D /* AuthPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D239283280510044404D /* AuthPermission.swift */; };
 		C15368712835526700C42120 /* ReviewTargetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15368702835526700C42120 /* ReviewTargetViewModel.swift */; };
 		C15368732835648E00C42120 /* WaitingReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15368722835648E00C42120 /* WaitingReviewTableViewCell.swift */; };
+		C15368752835729700C42120 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15368742835729700C42120 /* ProductDetailViewController.swift */; };
 		C16B45A2282A132500DDAAE8 /* MoreProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B45A1282A132500DDAAE8 /* MoreProfileView.swift */; };
 		C16B45A8282A4C9B00DDAAE8 /* EstimateRequestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B45A7282A4C9B00DDAAE8 /* EstimateRequestsView.swift */; };
 		C16B45AB282A4E5000DDAAE8 /* AutoLazyVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B45AA282A4E5000DDAAE8 /* AutoLazyVGrid.swift */; };
@@ -423,6 +424,7 @@
 		C149D239283280510044404D /* AuthPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPermission.swift; sourceTree = "<group>"; };
 		C15368702835526700C42120 /* ReviewTargetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTargetViewModel.swift; sourceTree = SOURCE_ROOT; };
 		C15368722835648E00C42120 /* WaitingReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingReviewTableViewCell.swift; sourceTree = "<group>"; };
+		C15368742835729700C42120 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = SOURCE_ROOT; };
 		C16B45A1282A132500DDAAE8 /* MoreProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreProfileView.swift; sourceTree = "<group>"; };
 		C16B45A7282A4C9B00DDAAE8 /* EstimateRequestsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateRequestsView.swift; sourceTree = "<group>"; };
 		C16B45AA282A4E5000DDAAE8 /* AutoLazyVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLazyVGrid.swift; sourceTree = "<group>"; };
@@ -1048,6 +1050,7 @@
 		C1E5CC0327F2C36B0087882E /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				C15368742835729700C42120 /* ProductDetailViewController.swift */,
 				C1E8C7CF283537D40031095C /* BUReviewTargetTableViewController.swift */,
 				C1F53A84282F6334006203E2 /* RegisterEstimateRequestVC */,
 				C19E6788282FA58500B88413 /* SelectRegion */,
@@ -1602,6 +1605,7 @@
 				C1D83A832828ECF50086D0E7 /* EstimatesResponse.swift in Sources */,
 				C149D22D283271DF0044404D /* Forwarder.swift in Sources */,
 				C198204C2831141100A79AD6 /* BURegisterProductViewController.swift in Sources */,
+				C15368752835729700C42120 /* ProductDetailViewController.swift in Sources */,
 				C149D22328321CE50044404D /* EstimateRegister.swift in Sources */,
 				C149D22528326A500044404D /* RegisterEstimateRequest.swift in Sources */,
 				C1121377283338D3001E4384 /* MoreViewModel.swift in Sources */,

@@ -17,12 +17,13 @@ final class BUEstimateListViewModel {
         return appDelegate.appService
     }
     
-    func queryEstimateRequestDetail(id: Int?) async throws -> EstimateRequest {
-        guard let id = id else { return EstimateRequest() }
-        guard let result = try await appService?.queryEstimateRequestDetail(id: String(id)) else {
-            return EstimateRequest()
+    func queryEstimateRequestDetail(id: Int?) async throws -> (EstimateRequest, Product) {
+        guard let id = id else { return (EstimateRequest(), Product()) }
+        guard let (estimatesRequst, products) = try await appService?.queryEstimateRequestDetail(id: String(id)) else {
+            return (EstimateRequest(), Product())
         }
-        return result.0
+        guard let product = products.first else { return (EstimateRequest(), Product()) }
+        return (estimatesRequst, product)
     }
     
     func queryEstimates(with estimateRequestId: Int?) async throws -> [QuotationEntity] {
