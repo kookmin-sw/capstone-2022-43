@@ -9,9 +9,12 @@ import Foundation
 
 enum BaetaverseAPIService {
     
-    case signUp(email: String, password: String, name: String)
+    case signUp(email: String, password: String, name: String, phoneNumber: String)
     case login(email: String, password: String)
-    case quoteRequest(token: String, id: String, HSCode: String, country: String)
+    case registerEstimateRequest(token: String, estimateRequest: EstimateRequest, products: [Product])
+    case queryEstimateRequests(token: String)
+    case queryHSCode(token: String, code: String)
+    case queryEstimateRequestDetail(token: String, id: String)
     
 }
 
@@ -19,11 +22,12 @@ extension BaetaverseAPIService: APIService {
     
     var urlRequest: URLRequest? {
         switch self {
-        case .signUp(let email, let password, let name):
+        case .signUp(let email, let password, let name, let phoneNumber):
             let requestModel = APIRequestModel.SignUpRequest(
                 email: email,
                 password: password,
-                name: name
+                name: name,
+                phoneNumber: phoneNumber
             )
             return requestModel.urlRequest
         case .login(let email, let password):
@@ -32,12 +36,26 @@ extension BaetaverseAPIService: APIService {
                 password: password
             )
             return requestModel.urlRequest
-        case .quoteRequest(let token, let id, let HSCode, let country):
-            let requestModel = APIRequestModel.QuoteRequest(
+        case .registerEstimateRequest(let token, let estimateRequest, let products):
+            let requestModel = APIRequestModel.RegisterEstimateRequestsRequest(
                 token: token,
-                id: id,
-                HSCode: HSCode,
-                country: country
+                estimateRequest: estimateRequest,
+                products: products
+            )
+            return requestModel.urlRequest
+        case .queryEstimateRequests(let token):
+            let requestModel = APIRequestModel.EstimateRequestsRequest(token: token)
+            return requestModel.urlRequest
+        case .queryHSCode(let token, let code):
+            let requestModel = APIRequestModel.HSCodeRequest(
+                token: token,
+                code: code
+            )
+            return requestModel.urlRequest
+        case .queryEstimateRequestDetail(let token, let id):
+            let requestModel = APIRequestModel.EstimateRequestDetailRequest(
+                token: token,
+                id: id
             )
             return requestModel.urlRequest
         }

@@ -7,22 +7,18 @@
 
 import Foundation
 
-class BaetaverseAppService: AppService {
-   
-    private let auth: Auth
-    private let businessService: BusinessService
+final class BaetaverseAppService: AppService {
     
-    init(auth: Auth, businessService: BusinessService) {
-        self.auth = auth
-        self.businessService = businessService
-    }
+    private let auth: AppAuthService
+    private let businessService: AppBusinessService
     
     var isLogin: Bool {
         auth.isLogin
     }
     
-    var token: String {
-        auth.token
+    init(auth: AppAuthService, businessService: AppBusinessService) {
+        self.auth = auth
+        self.businessService = businessService
     }
     
     static func configure() -> BaetaverseAppService {
@@ -40,17 +36,28 @@ class BaetaverseAppService: AppService {
         auth.logout()
     }
     
-    func signUp(email: String, password: String, name: String) async throws {
-        try await auth.signUp(email: email, password: password, name: name)
+    func signUp(email: String, password: String, name: String, phoneNumber: String) async throws {
+        try await auth.signUp(email: email, password: password, name: name, phoneNumber: phoneNumber)
     }
     
-    func registerEvaluate(id: String, HSCode: String, country: String) async throws {
+    func registerEvaluate(estimateRequest: EstimateRequest, products: [Product]) async throws {
         try await businessService.registerEvaluate(
-            token: token,
-            id: id,
-            HSCode: HSCode,
-            country: country
+            token: auth.token,
+            estimateRequest: estimateRequest,
+            products: products
         )
+    }
+    
+    func queryHSCode(code: String) async throws -> [String] {
+        return try await businessService.queryHSCode(token: auth.token, code: code)
+    }
+    
+    func queryEstimateRequests() async throws -> [EstimateRequest] {
+        return try await businessService.queryEstimateRequests(token: auth.token)
+    }
+    
+    func queryEstimateRequestDetail(id: String) async throws -> (EstimateRequest, [Product]) {
+        return try await businessService.queryEstimateRequestDetail(token: auth.token, id: id)
     }
     
 }
