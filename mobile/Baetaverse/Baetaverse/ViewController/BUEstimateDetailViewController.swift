@@ -7,16 +7,15 @@
 
 import UIKit
 
-class BUEstimateDetailViewController: UIViewController {
+final class BUEstimateDetailViewController: UIViewController {
+    
+    var id: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    }
-    
-    @IBAction func declinedButtonClicked(_ sender: UIButton) {
-        BUEstimateListViewController.estimateRecordCount -= 1
+        print(id)
     }
     
     @IBAction func acceptButtonClicked(_ sender: UIButton) {
@@ -32,6 +31,10 @@ class BUEstimateDetailViewController: UIViewController {
         })
         
         present(alertVC, animated: true)
+    }
+    
+    func passData(id: Int?) {
+        self.id = id
     }
     
     /*

@@ -1416,8 +1416,7 @@
                                             <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="declinedButtonClicked:" destination="Roq-L8-A13" eventType="touchUpInside" id="UwM-H9-olC"/>
-                                            <segue destination="iki-Ue-f5k" kind="unwind" unwindAction="unwindToBUEstimateListView:" id="nPe-JJ-MkU"/>
+                                            <segue destination="iki-Ue-f5k" kind="unwind" unwindAction="unwindToBUMainView:" id="mcv-0r-y4y"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2r-N3-VZM">
@@ -2093,7 +2092,6 @@
                                             <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="declinedButtonClicked:" destination="Roq-L8-A13" eventType="touchUpInside" id="rFs-7a-3Pr"/>
                                             <segue destination="hQN-Z1-ZQE" kind="unwind" unwindAction="unwindToBUMainView:" id="fVY-9d-voe"/>
                                         </connections>
                                     </button>

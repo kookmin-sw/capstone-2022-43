@@ -16,14 +16,13 @@ final class BUEstimateListViewController: UIViewController {
     @IBOutlet private weak var destinationCountryLabel: UILabel!
     @IBOutlet private weak var incotermsLabel: UILabel!
     @IBOutlet private weak var dueDateLabel: UILabel!
+    @IBOutlet private weak var tableView: UITableView!
     
     private let viewModel = BUEstimateListViewModel()
+    
     private var id: Int?
-    
-    static var estimateRecordCount = 10
-    
-    @IBOutlet weak var tableView: UITableView!
-    
+    private var selectedId: Int?
+        
     private lazy var dataSource: UITableViewDiffableDataSource<String, QuotationEntity> = {
         UITableViewDiffableDataSource(tableView: self.tableView) { tableView, indexPath, item in
             let cell = tableView.dequeueReusableCell(withIdentifier: "estimatesummarycell")
@@ -88,6 +87,12 @@ final class BUEstimateListViewController: UIViewController {
     }
     
     @IBAction func unwindToBUEstimateListView(_ segue: UIStoryboardSegue) { }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let estimateDetailVC = segue.destination as? BUEstimateDetailViewController {
+            estimateDetailVC.passData(id: selectedId)
+        }
+    }
 
 }
 
@@ -104,6 +109,8 @@ extension BUEstimateListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
+        let estimate = dataSource.snapshot().itemIdentifiers[indexPath.row]
+        self.selectedId = estimate.id
         performSegue(withIdentifier: "showEstimateDetail", sender: nil)
     }
     
