@@ -103,7 +103,7 @@ extension BUEstimateListViewController {
 extension BUEstimateListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Hello World")
+        tableView.deselectRow(at: indexPath, animated: false)
         performSegue(withIdentifier: "showEstimateDetail", sender: nil)
     }
     
