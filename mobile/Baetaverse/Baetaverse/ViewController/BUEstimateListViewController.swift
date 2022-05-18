@@ -21,7 +21,7 @@ final class BUEstimateListViewController: UIViewController {
     private let viewModel = BUEstimateListViewModel()
     
     private var id: Int?
-    private var selectedId: Int?
+    private var selectedData: QuotationEntity?
         
     private lazy var dataSource: UITableViewDiffableDataSource<String, QuotationEntity> = {
         UITableViewDiffableDataSource(tableView: self.tableView) { tableView, indexPath, item in
@@ -90,7 +90,7 @@ final class BUEstimateListViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let estimateDetailVC = segue.destination as? BUEstimateDetailViewController {
-            estimateDetailVC.passData(id: selectedId)
+            estimateDetailVC.passData(estimate: selectedData)
         }
     }
 
@@ -110,7 +110,7 @@ extension BUEstimateListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
         let estimate = dataSource.snapshot().itemIdentifiers[indexPath.row]
-        self.selectedId = estimate.id
+        self.selectedData = estimate
         performSegue(withIdentifier: "showEstimateDetail", sender: nil)
     }
     

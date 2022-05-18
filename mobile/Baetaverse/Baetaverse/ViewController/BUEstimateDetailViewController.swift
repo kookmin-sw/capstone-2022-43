@@ -9,13 +9,17 @@ import UIKit
 
 final class BUEstimateDetailViewController: UIViewController {
     
-    var id: Int?
+    private var estimate: QuotationEntity?
+    
+    @IBOutlet private weak var forwarderNameLabel: UILabel!
+    @IBOutlet private weak var oceanFreightPriceLabel: UILabel!
+    @IBOutlet private weak var inlandFreightPriceLabel: UILabel!
+    @IBOutlet private weak var totalPriceLabel: UILabel!
+    @IBOutlet private weak var totalTimeLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        print(id)
+        updateUI()
     }
     
     @IBAction func acceptButtonClicked(_ sender: UIButton) {
@@ -33,8 +37,16 @@ final class BUEstimateDetailViewController: UIViewController {
         present(alertVC, animated: true)
     }
     
-    func passData(id: Int?) {
-        self.id = id
+    func passData(estimate: QuotationEntity?) {
+        self.estimate = estimate
+    }
+    
+    private func updateUI() {
+        forwarderNameLabel.text = estimate?.forwarder.corporationName
+        oceanFreightPriceLabel.text = String(estimate?.estimate.oceanFreightPrice ?? 0)
+        inlandFreightPriceLabel.text = String(estimate?.estimate.inlandFreightPrice ?? 0)
+        totalPriceLabel.text = String(estimate?.estimate.totalPrice ?? 0)
+        totalTimeLabel.text = String(estimate?.estimate.estimatedTime ?? 0)
     }
     
     /*

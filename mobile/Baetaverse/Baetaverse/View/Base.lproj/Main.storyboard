@@ -1423,9 +1423,6 @@
                                         <rect key="frame" x="191" y="0.0" width="183" height="48"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="견적 상담 신청" buttonSize="large"/>
-                                        <connections>
-                                            <action selector="acceptButtonClicked:" destination="Roq-L8-A13" eventType="touchUpInside" id="0zy-AG-50r"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -1576,6 +1573,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="업체 견적 세부정보" id="ygA-7F-pyj"/>
+                    <connections>
+                        <outlet property="forwarderNameLabel" destination="IRW-oM-qz5" id="07f-r4-o36"/>
+                        <outlet property="inlandFreightPriceLabel" destination="6Kg-oc-OeG" id="Whd-7G-45x"/>
+                        <outlet property="oceanFreightPriceLabel" destination="wWP-br-EcA" id="LiH-zI-TLJ"/>
+                        <outlet property="totalPriceLabel" destination="lGE-t2-awd" id="AMb-P5-C8g"/>
+                        <outlet property="totalTimeLabel" destination="fMe-Xq-vOa" id="UM0-Rx-n7V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aya-5c-bpp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="iki-Ue-f5k" userLabel="Exit" sceneMemberID="exit"/>
@@ -1920,7 +1924,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="u0q-yn-v2N">
-                                        <rect key="frame" x="20" y="0.0" width="374" height="855.5"/>
+                                        <rect key="frame" x="20" y="0.0" width="374" height="636"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="물품명" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pPd-q7-5f1">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
@@ -2002,10 +2006,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BoxContainer" translatesAutoresizingMaskIntoConstraints="NO" id="31o-xm-2PZ">
-                                                <rect key="frame" x="0.0" y="361.5" width="374" height="439"/>
+                                                <rect key="frame" x="0.0" y="361.5" width="374" height="219.5"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="91D-QL-wUw">
-                                                <rect key="frame" x="0.0" y="808.5" width="374" height="47"/>
+                                                <rect key="frame" x="0.0" y="589" width="374" height="47"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="tinted" title="다음" buttonSize="large"/>
                                                 <connections>
@@ -2206,9 +2210,9 @@
         <segue reference="leT-P6-9ZZ"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="BoxContainer" width="800" height="439"/>
-        <image name="CorporationImage" width="690" height="460"/>
-        <image name="MainViewImage" width="1000" height="668"/>
+        <image name="BoxContainer" width="400" height="219.5"/>
+        <image name="CorporationImage" width="345" height="230"/>
+        <image name="MainViewImage" width="500" height="334"/>
         <image name="doc.text.fill" catalog="system" width="115" height="128"/>
         <image name="ellipsis.circle.fill" catalog="system" width="128" height="121"/>
         <image name="ferry.fill" catalog="system" width="128" height="128"/>
