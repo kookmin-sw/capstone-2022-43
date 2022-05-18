@@ -7,7 +7,11 @@
 
 import Foundation
 
-struct Estimate {
+struct Estimate: Identifiable, Hashable {
+    
+    var id: Int {
+        requestId
+    }
     
     var requestId: Int
     var oceanFreightPrice: Int

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct EstimateRequest: Identifiable {
+struct EstimateRequest: Identifiable, Hashable {
     
     var id: Int?
     var tradeType: String

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct UserProfile {
+struct UserProfile: Hashable {
     
     var name: String
     var phoneNumber: String

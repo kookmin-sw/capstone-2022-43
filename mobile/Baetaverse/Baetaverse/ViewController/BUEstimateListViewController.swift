@@ -24,6 +24,16 @@ final class BUEstimateListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    private lazy var dataSource: UITableViewDiffableDataSource<String, QuotationEntity> = {
+        UITableViewDiffableDataSource(tableView: self.tableView) { tableView, indexPath, item in
+            let cell = tableView.dequeueReusableCell(withIdentifier: "estimatesummarycell")!
+            var content = cell.defaultContentConfiguration()
+            content.text = String(item.estimate.totalPrice)
+            cell.contentConfiguration = content
+            return cell
+        }
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureDelegate()
@@ -31,7 +41,7 @@ final class BUEstimateListViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        tableView.reloadData()
+        fetchData()
     }
     
     func passData(id: Int?) {
@@ -41,8 +51,10 @@ final class BUEstimateListViewController: UIViewController {
     private func fetchData() {
         Task {
             do {
-                let result = try await viewModel.queryEstimateRequestDetail(id: id)
-                updateUI(with: result)
+                let estimatesRequestInfo = try await viewModel.queryEstimateRequestDetail(id: id)
+                let estimates = try await viewModel.queryEstimates(with: id)
+                updateUI(with: estimatesRequestInfo)
+                updateUI(with: estimates)
             } catch {
                 displayError(
                     error,
@@ -62,6 +74,13 @@ final class BUEstimateListViewController: UIViewController {
         dueDateLabel.text = estimateReqeust.closingDate.formatted()
     }
     
+    private func updateUI(with estimates: [QuotationEntity]) {
+        var snapshot = NSDiffableDataSourceSnapshot<String, QuotationEntity>()
+        snapshot.appendSections(["main"])
+        snapshot.appendItems(estimates)
+        dataSource.apply(snapshot)
+    }
+    
     @IBAction func unwindToBUEstimateListView(_ segue: UIStoryboardSegue) { }
 
 }
@@ -69,21 +88,8 @@ final class BUEstimateListViewController: UIViewController {
 extension BUEstimateListViewController {
     
     private func configureDelegate() {
-        tableView.dataSource = self
+        tableView.dataSource = self.dataSource
         tableView.delegate = self
-    }
-    
-}
-
-extension BUEstimateListViewController: UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Self.estimateRecordCount
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "estimatesummarycell")!
-        return cell
     }
     
 }

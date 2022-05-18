@@ -7,7 +7,11 @@
 
 import Foundation
 
-struct QuotationEntity: Identifiable {
+struct QuotationEntity: Identifiable, Hashable {
+    
+    static func == (lhs: QuotationEntity, rhs: QuotationEntity) -> Bool {
+        return lhs.id == rhs.id
+    }
     
     var id: Int
     var estimate: Estimate
