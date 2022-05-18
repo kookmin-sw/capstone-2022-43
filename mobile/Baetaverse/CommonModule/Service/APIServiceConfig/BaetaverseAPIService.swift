@@ -16,6 +16,7 @@ enum BaetaverseAPIService {
     case registerEstimateRequest(token: String, estimateRequest: EstimateRequest,
                                  products: [Product])
     case registerEstimate(token: String, estimate: Estimate)
+    case registerReview(token: String, quotationId: Int, requestId: Int, score: Int, message: String)
     case queryEstimateRequests(token: String)
     case queryHSCode(token: String, code: String)
     case queryEstimateRequestDetail(token: String, id: String)
@@ -60,6 +61,15 @@ extension BaetaverseAPIService: APIService {
             let requestModel = APIRequestModel.RegisterEstimateRequest(
                 token: token,
                 estimate: estimate
+            )
+            return requestModel.urlRequest
+        case .registerReview(let token, let quotationId, let requestId, let score, let message):
+            let requestModel = APIRequestModel.RegisterReviewRequest(
+                token: token,
+                quotationId: quotationId,
+                requestId: requestId,
+                score: score,
+                message: message
             )
             return requestModel.urlRequest
         case .queryEstimateRequests(let token):
