@@ -1,5 +1,5 @@
 import forwarderRepository from "../repository/ForwarderRepository";
-import { Forwarder } from "../domain";
+import Forwarder from "../domain/Forwarder";
 import HttpException from "../exceptions/HttpException";
 
 
@@ -14,7 +14,7 @@ class OwnerService {
     }
 
     public async join(forwarder: Forwarder): Promise<Forwarder> {
-        await this.checkDuplicated(forwarder.email);
+        await this.checkDuplicated(forwarder.email!);
         return await forwarderRepository.save(forwarder);
     }
 }

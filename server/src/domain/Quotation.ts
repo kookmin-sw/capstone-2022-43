@@ -1,43 +1,52 @@
-import {Column, CreateDateColumn, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn} from "typeorm";
+import {
+    Entity,
+    PrimaryGeneratedColumn,
+    Column,
+    BaseEntity,
+    ManyToOne,
+    OneToMany,
+    JoinColumn,
+    OneToOne
+} from 'typeorm';
+import Request from "./Request";
 import Forwarder from "./Forwarder";
-import {type} from "os";
+import Review from "./Review";
 
-@Entity("QUOTATION")
-export class Quotation {
+
+@Entity('QUOTATION')
+export default class Quotation extends BaseEntity {
     @PrimaryGeneratedColumn('increment')
-    id: number;
+    public id?: number;
 
-    @Column()
-    ocean_freight_price: number;
+    @Column('int')
+    public ocean_freight_price?: number;
 
-    @Column({nullable: true})
-    inland_freight_price: number;
+    @Column('int')
+    public inland_freight_price?: number;
 
-    @Column()
-    total_price: number;
+    @Column('int')
+    public total_price?: number;
 
-    @Column()
-    estimated_time: number;
+    @Column('datetime')
+    public estimated_time?: Date;
 
-    @ManyToOne((type) => Forwarder, (forwarder) => forwarder.uuid)
-    forwarder_uuid: string;
+    @Column('datetime', { default: () => "CURRENT_TIMESTAMP" })
+    public created_at?: Date;
 
-    @Column()
-    request_id: number;
+    @Column('int')
+    public request_id?: number;
 
-    @CreateDateColumn()
-    created_at?: Date;
+    @Column('uuid')
+    public forwarder_uuid?: string;
 
-    constructor(id: number, ocean_freight_price: number, inland_freight_price: number, total_price: number, estimated_time: number ,forwarder_uuid: string, request_id: number) {
-        this.id = id;
-        this.ocean_freight_price = ocean_freight_price;
-        this.inland_freight_price = inland_freight_price;
-        this.total_price = total_price;
-        this.estimated_time = estimated_time;
-        this.forwarder_uuid = forwarder_uuid;
-        this.request_id = request_id;
-    }
+    @ManyToOne((type) => Forwarder, (forwarder) => forwarder.quotations)
+    @JoinColumn({ name: 'forwarder_uuid', referencedColumnName: 'uuid' })
+    public forwarder?: Forwarder;
 
+    @ManyToOne((type) => Request, (request) => request.quotations)
+    @JoinColumn({ name: 'request_id', referencedColumnName: 'id' })
+    public request?: Request;
 
-
-}
+    @OneToOne((type) => Review, review => review.quotation)
+    public review?: Review;
+};

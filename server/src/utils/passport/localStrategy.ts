@@ -1,9 +1,10 @@
 import { Strategy, VerifyFunction} from 'passport-local';
 import bcrypt from 'bcrypt';
 import { Repository } from "typeorm";
-import ownerRepository from "../../repository/ownerRepository";
+import ownerRepository from "../../repository/OwnerRepository";
 import forwarderRepository from "../../repository/ForwarderRepository";
-import { Owner, Forwarder } from "../../domain";
+import Owner from "../../domain/Owner";
+import Forwarder from "../../domain/Forwarder";
 
 
 const verifyLogin = (repository: Repository<Owner | Forwarder>): VerifyFunction => {
@@ -14,7 +15,7 @@ const verifyLogin = (repository: Repository<Owner | Forwarder>): VerifyFunction 
             });
 
             if (existUser) {
-                const result = await bcrypt.compare(password, existUser.password);
+                const result = await bcrypt.compare(password, existUser.password!);
                 if (result) {
                     done(null, existUser, { status: 200, message: 'Success to login' });
                 } else {

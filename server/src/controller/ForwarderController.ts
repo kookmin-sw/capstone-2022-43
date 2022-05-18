@@ -1,5 +1,4 @@
-import {NextFunction, Request, Response} from "express";
-import {supabase} from "../utils/supabase";
+import { Request, Response, NextFunction } from "express";
 import HttpException from "../exceptions/HttpException";
 import bcrypt from "bcrypt";
 import ForwarderService from "../service/ForwarderService";
@@ -13,14 +12,10 @@ class ForwarderController {
 
     public signup = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const { email, password, name, phone_number, corporation_name, corporation_number } = req.body;
+            const reqForwarder = req.body as Forwarder;
 
-            const hash = await bcrypt.hash(password, 12);
-            const forwarder = await this.forwarderService.join({
-                email,
-                password: hash,
-                name, phone_number, corporation_name, corporation_number
-            });
+            reqForwarder.password = await bcrypt.hash(reqForwarder.password!, 12);
+            const forwarder = await this.forwarderService.join(reqForwarder);
 
             return res.status(200).json({
                 status: 200,

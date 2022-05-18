@@ -12,14 +12,10 @@ class OwnerController {
 
     public signup = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const { email, password, name, phone_number } = req.body;
+            const reqOwner = req.body as Owner;
 
-            const hash = await bcrypt.hash(password, 12);
-            const owner: Owner = await this.ownerService.join({
-                email,
-                password: hash,
-                name, phone_number
-            });
+            reqOwner.password = await bcrypt.hash(reqOwner.password!, 12);
+            const owner: Owner = await this.ownerService.join(reqOwner);
 
             return res.status(200).json({
                 status: 200,
