@@ -83,13 +83,13 @@ private struct MainRecievedReviewBoardView: View {
                 subheadline: "이용자의 피드백을 확인해보세요!") {
                     ReviewsListView()
                 }
-            if !viewModel.reviews.isEmpty {
+            if !viewModel.estimateReviews.isEmpty {
                 VStack(alignment: .leading) {
                     MainReviewCountingView(viewModel: viewModel)
                     MainReviewStarRatingView(viewModel: viewModel)
                 }
                 .font(.title2)
-                MainReviewCarouselView(reviews: viewModel.reviews)
+                MainReviewCarouselView(reviews: viewModel.estimateReviews)
             }
         }
         .task {

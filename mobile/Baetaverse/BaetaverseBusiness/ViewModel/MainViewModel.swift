@@ -25,6 +25,10 @@ final class MainViewModel: ObservableObject {
         return sum / reviews.count
     }
     
+    var estimateReviews: [ReviewEntity] {
+        reviews.count > 5 ? Array(reviews[...5]): reviews
+    }
+    
     func fetchEstimateRequests() async throws {
         let datas = try await appService.queryAllEstimatesRequest()
         let result = datas
@@ -34,8 +38,7 @@ final class MainViewModel: ObservableObject {
     }
     
     func fetchReviews() async throws {
-        let result = try await appService.queryReviews()
-        self.reviews = result.count > 5 ? Array(result[...5]): result
+        self.reviews = try await appService.queryReviews()
     }
     
 }
