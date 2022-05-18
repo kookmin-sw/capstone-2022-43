@@ -536,7 +536,7 @@
             </objects>
             <point key="canvasLocation" x="11371" y="-3883"/>
         </scene>
-        <!--리뷰-->
+        <!--리뷰대기견적서-->
         <scene sceneID="Ean-kU-pnm">
             <objects>
                 <tableViewController id="2Ps-9i-8Ck" customClass="BUReviewTargetTableViewController" customModule="Baetaverse" customModuleProvider="target" sceneMemberID="viewController">
@@ -545,7 +545,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="110" id="75V-iY-1eF">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="estimatesCell" rowHeight="110" id="75V-iY-1eF" customClass="WaitingReviewTableViewCell" customModule="Baetaverse" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="110"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="75V-iY-1eF" id="5iQ-wV-BAD">
@@ -657,6 +657,13 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="dap-fK-6aX" secondAttribute="trailing" constant="5" id="qca-2H-QFv"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="departureCountryLabel" destination="buC-38-kna" id="kjs-We-Y7o"/>
+                                    <outlet property="destinationCountryLabel" destination="2UY-xo-EOT" id="Boa-cQ-gM7"/>
+                                    <outlet property="forwarderNameLabel" destination="6yH-Xo-7XJ" id="XQE-ay-db7"/>
+                                    <outlet property="totalCostLabel" destination="7nn-Lb-1G9" id="ctc-0v-eoy"/>
+                                    <outlet property="totalTimeLabel" destination="Oav-Zf-pqE" id="e37-E7-GTw"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -665,7 +672,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="리뷰" largeTitleDisplayMode="always" id="jd6-13-e8V">
+                    <navigationItem key="navigationItem" title="리뷰대기견적서" largeTitleDisplayMode="always" id="jd6-13-e8V">
                         <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="KVH-9x-O8C">
                             <connections>
                                 <segue destination="sPH-JD-8oX" kind="unwind" unwindAction="unwindToBUMainView:" id="7VA-Ff-rdb"/>
