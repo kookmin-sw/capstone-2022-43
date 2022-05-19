@@ -17,7 +17,7 @@ router.get('/', verifyForwarderToken , async (req: Request, res: Response, next:
 
         const quotations = await quotationRepository.createQueryBuilder('Q')
         .leftJoinAndSelect('Q.forwarder', 'F')
-        .leftJoinAndSelect('Q.request', 'R')
+        .leftJoinAndSelect('Q.requests', 'R')
         .select(['Q.id', 'Q.ocean_freight_price', 'Q.inland_freight_price', 'Q.total_price', 'Q.estimated_time', 'Q.created_at',
             'F.name', 'F.phone_number', 'F.corporation_name', 'F.corporation_number',
             'R.id', 'R.trade_type', 'R.trade_detail', 'R.forwarding_date', 'R.departure_country', 'R.departure_detail',

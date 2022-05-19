@@ -30,12 +30,13 @@ router.get('/', verifyAnyToken ,async (req: Request, res: Response, next: NextFu
         const reviews = await reviewRepository.createQueryBuilder('R')
         .leftJoinAndSelect('R.forwarder', 'F')
         .leftJoinAndSelect('R.owner', 'O')
-        .leftJoinAndSelect('R.request', 'E')
+        .leftJoinAndSelect('R.requests', 'E')
         .leftJoinAndSelect('R.quotation', 'Q')
         .select(['R.score', 'R.message',
-            'F.name',  'F.corporation_name', 'O.name',
-            'R.id', 'E.trade_type', 'E.trade_detail', 'E.forwarding_date', 'E.departure_country', 'E.departure_detail',
-            'E.destination_country', 'E.destination_detail', 'E.incoterms', 'E.closing_date', 'E.created_at'])
+            'O.name', 'F.name',  'F.corporation_name',
+            'E.id', 'E.trade_type', 'E.trade_detail', 'E.forwarding_date', 'E.departure_country', 'E.departure_detail',
+            'E.destination_country', 'E.destination_detail', 'E.incoterms', 'E.closing_date', 'E.created_at',
+            'Q.id', 'Q.ocean_freight_price', 'Q.inland_freight_price', 'Q.total_price', 'Q.estimated_time', 'Q.created_at'])
         .where(where, { uuid })
         .getMany();
 
@@ -72,6 +73,8 @@ router.post('/',verifyOwnerToken ,async (req: Request, res: Response, next: Next
         review.requests = new QuoteRequest();
         review.quotation = new Quotation();
 
+        dateToUnix(review, ['created_at'])
+
 
         // const [ forwarder, owner ,request, quotation ] = await Promise.all([
         //     forwarderRepository.findOne({
@@ -104,7 +107,7 @@ router.post('/',verifyOwnerToken ,async (req: Request, res: Response, next: Next
         res.status(200).json({
             status: 200,
             message: 'Success to insert review',
-            Review: review
+            Review: [review]
         });
         return printLog(req, res);
     } catch (error){
