@@ -5,7 +5,7 @@ import userAgent from "../@types/UserAgent";
 
 const printLog = (req: Request, res: Response): void => {
     const userInfo = new userAgent(req);
-    logger.info(`${ res.statusCode } ${ req.method } ${ decodeURI(req.path) } ${ userInfo }`);
+    logger.info(`${ res.statusCode } ${ req.method } ${ decodeURI(req.originalUrl) } ${ userInfo }`);
 }
 
 export default printLog;
