@@ -130,6 +130,9 @@
 		C11214DD2833B391001E4384 /* EstimatesDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11214DC2833B391001E4384 /* EstimatesDetailView.swift */; };
 		C11214E12833B77F001E4384 /* RegisterEstimatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11214E02833B77F001E4384 /* RegisterEstimatesView.swift */; };
 		C11214E42833BDC7001E4384 /* RegisterEstimatesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11214E32833BDC7001E4384 /* RegisterEstimatesViewModel.swift */; };
+		C114B72128360EAA0068D908 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15368742835729700C42120 /* ProductDetailViewController.swift */; };
+		C114B72328360EB80068D908 /* ReviewTargetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15368702835526700C42120 /* ReviewTargetViewModel.swift */; };
+		C114B72528360ECB0068D908 /* BUReviewTargetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8C7CF283537D40031095C /* BUReviewTargetTableViewController.swift */; };
 		C1300DB6281F707100E9C0CC /* SignUpFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1300DB5281F707100E9C0CC /* SignUpFormView.swift */; };
 		C1300DBB281FA3B900E9C0CC /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1300DBA281FA3B900E9C0CC /* MainTabView.swift */; };
 		C1300DBE281FBE4E00E9C0CC /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1300DBD281FBE4E00E9C0CC /* StarRatingView.swift */; };
@@ -168,9 +171,7 @@
 		C149D23528327B3F0044404D /* QuotationsRequst.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D23428327B3F0044404D /* QuotationsRequst.swift */; };
 		C149D23728327C790044404D /* QuotationsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D23628327C790044404D /* QuotationsResponse.swift */; };
 		C149D23A283280510044404D /* AuthPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D239283280510044404D /* AuthPermission.swift */; };
-		C15368712835526700C42120 /* ReviewTargetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15368702835526700C42120 /* ReviewTargetViewModel.swift */; };
 		C15368732835648E00C42120 /* WaitingReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15368722835648E00C42120 /* WaitingReviewTableViewCell.swift */; };
-		C15368752835729700C42120 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15368742835729700C42120 /* ProductDetailViewController.swift */; };
 		C16B45A2282A132500DDAAE8 /* MoreProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B45A1282A132500DDAAE8 /* MoreProfileView.swift */; };
 		C16B45A8282A4C9B00DDAAE8 /* EstimateRequestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B45A7282A4C9B00DDAAE8 /* EstimateRequestsView.swift */; };
 		C16B45AB282A4E5000DDAAE8 /* AutoLazyVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B45AA282A4E5000DDAAE8 /* AutoLazyVGrid.swift */; };
@@ -278,7 +279,6 @@
 		C1E862A1282E34BC00D9971A /* BUEstimateRequestsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E862A0282E34BC00D9971A /* BUEstimateRequestsTableViewController.swift */; };
 		C1E862A3282E356C00D9971A /* EstimateRequestsTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E862A2282E356C00D9971A /* EstimateRequestsTableViewModel.swift */; };
 		C1E8C7CE28352B310031095C /* BUForwarderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8C7CD28352B310031095C /* BUForwarderDetailViewController.swift */; };
-		C1E8C7D0283537D40031095C /* BUReviewTargetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8C7CF283537D40031095C /* BUReviewTargetTableViewController.swift */; };
 		C1E8C7D2283548710031095C /* RegisterReviewRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8C7D1283548710031095C /* RegisterReviewRequest.swift */; };
 		C1E8C7D428354B1C0031095C /* ReviewRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8C7D328354B1C0031095C /* ReviewRequest.swift */; };
 		C1E8C7D628354BED0031095C /* RegisterReviewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8C7D528354BED0031095C /* RegisterReviewResponse.swift */; };
@@ -346,9 +346,9 @@
 		C149D23428327B3F0044404D /* QuotationsRequst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotationsRequst.swift; sourceTree = "<group>"; };
 		C149D23628327C790044404D /* QuotationsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotationsResponse.swift; sourceTree = "<group>"; };
 		C149D239283280510044404D /* AuthPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPermission.swift; sourceTree = "<group>"; };
-		C15368702835526700C42120 /* ReviewTargetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTargetViewModel.swift; sourceTree = SOURCE_ROOT; };
+		C15368702835526700C42120 /* ReviewTargetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReviewTargetViewModel.swift; path = Baetaverse/ViewModel/ReviewTargetViewModel.swift; sourceTree = SOURCE_ROOT; };
 		C15368722835648E00C42120 /* WaitingReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingReviewTableViewCell.swift; sourceTree = "<group>"; };
-		C15368742835729700C42120 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = SOURCE_ROOT; };
+		C15368742835729700C42120 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductDetailViewController.swift; path = Baetaverse/ViewController/ProductDetailViewController.swift; sourceTree = SOURCE_ROOT; };
 		C16B45A1282A132500DDAAE8 /* MoreProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreProfileView.swift; sourceTree = "<group>"; };
 		C16B45A7282A4C9B00DDAAE8 /* EstimateRequestsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateRequestsView.swift; sourceTree = "<group>"; };
 		C16B45AA282A4E5000DDAAE8 /* AutoLazyVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLazyVGrid.swift; sourceTree = "<group>"; };
@@ -451,7 +451,7 @@
 		C1E862A0282E34BC00D9971A /* BUEstimateRequestsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BUEstimateRequestsTableViewController.swift; path = Baetaverse/ViewController/BUEstimateRequestsTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		C1E862A2282E356C00D9971A /* EstimateRequestsTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EstimateRequestsTableViewModel.swift; path = Baetaverse/ViewModel/EstimateRequestsTableViewModel.swift; sourceTree = SOURCE_ROOT; };
 		C1E8C7CD28352B310031095C /* BUForwarderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BUForwarderDetailViewController.swift; sourceTree = "<group>"; };
-		C1E8C7CF283537D40031095C /* BUReviewTargetTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BUReviewTargetTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		C1E8C7CF283537D40031095C /* BUReviewTargetTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BUReviewTargetTableViewController.swift; path = Baetaverse/ViewController/BUReviewTargetTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		C1E8C7D1283548710031095C /* RegisterReviewRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterReviewRequest.swift; sourceTree = "<group>"; };
 		C1E8C7D328354B1C0031095C /* ReviewRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRequest.swift; sourceTree = "<group>"; };
 		C1E8C7D528354BED0031095C /* RegisterReviewResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterReviewResponse.swift; sourceTree = "<group>"; };
@@ -948,13 +948,13 @@
 		C1E5CC0327F2C36B0087882E /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				C15368742835729700C42120 /* ProductDetailViewController.swift */,
-				C1E8C7CF283537D40031095C /* BUReviewTargetTableViewController.swift */,
 				C1F53A84282F6334006203E2 /* RegisterEstimateRequestVC */,
 				C19E6788282FA58500B88413 /* SelectRegion */,
 				C149D2162831E25D0044404D /* SelectHScode */,
 				C1E5CBEE27F2BFBD0087882E /* BUEstimateDetailViewController.swift */,
 				C1E5CBEF27F2BFBD0087882E /* BURegisterDueDateViewController.swift */,
+				C1E8C7CF283537D40031095C /* BUReviewTargetTableViewController.swift */,
+				C15368742835729700C42120 /* ProductDetailViewController.swift */,
 				C1E5CBED27F2BFBC0087882E /* BUEstimateListViewController.swift */,
 				C1E5CBEB27F2BFBC0087882E /* BULoginViewController.swift */,
 				C11213732833387A001E4384 /* BUMoreViewController.swift */,
@@ -1053,9 +1053,9 @@
 		C1E8629B282E232B00D9971A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				C15368702835526700C42120 /* ReviewTargetViewModel.swift */,
 				C1121376283338D3001E4384 /* MoreViewModel.swift */,
 				C149D21F283210090044404D /* BUEstimateListViewModel.swift */,
+				C15368702835526700C42120 /* ReviewTargetViewModel.swift */,
 				C1E8629C282E235000D9971A /* LoginViewModel.swift */,
 				C1E862A2282E356C00D9971A /* EstimateRequestsTableViewModel.swift */,
 				C198204D28311E7400A79AD6 /* RegisterEstimateRequestViewModel.swift */,
@@ -1439,6 +1439,7 @@
 				C1E86267282D222000D9971A /* HSCodeResponse.swift in Sources */,
 				C149736B27F59B7500679118 /* Extensions+Data.swift in Sources */,
 				C149D23528327B3F0044404D /* QuotationsRequst.swift in Sources */,
+				C114B72528360ECB0068D908 /* BUReviewTargetTableViewController.swift in Sources */,
 				C198204E28311E7400A79AD6 /* RegisterEstimateRequestViewModel.swift in Sources */,
 				C1E8C7D628354BED0031095C /* RegisterReviewResponse.swift in Sources */,
 				C19E6785282F80FE00B88413 /* BUSelectRegionTableViewController.swift in Sources */,
@@ -1473,7 +1474,7 @@
 				C1D83A832828ECF50086D0E7 /* EstimatesResponse.swift in Sources */,
 				C149D22D283271DF0044404D /* Forwarder.swift in Sources */,
 				C198204C2831141100A79AD6 /* BURegisterProductViewController.swift in Sources */,
-				C15368752835729700C42120 /* ProductDetailViewController.swift in Sources */,
+				C114B72128360EAA0068D908 /* ProductDetailViewController.swift in Sources */,
 				C149D22328321CE50044404D /* EstimateRegister.swift in Sources */,
 				C149D22528326A500044404D /* RegisterEstimateRequest.swift in Sources */,
 				C1121377283338D3001E4384 /* MoreViewModel.swift in Sources */,
@@ -1507,7 +1508,6 @@
 				C1E5CC0727F307C80087882E /* HTTPMethod.swift in Sources */,
 				C1F53A8A282F6B39006203E2 /* BURegisterDeliveryDateViewController.swift in Sources */,
 				C149D220283210090044404D /* BUEstimateListViewModel.swift in Sources */,
-				C1E8C7D0283537D40031095C /* BUReviewTargetTableViewController.swift in Sources */,
 				C1E8627C282DE9F800D9971A /* EstimateRequestsRegister.swift in Sources */,
 				C1C9EC5B2818F7A40041F974 /* Extensions+Encodable.swift in Sources */,
 				C1E8629F282E2F2800D9971A /* SignUpFormViewModel.swift in Sources */,
@@ -1523,6 +1523,7 @@
 				C11214CA283376BF001E4384 /* QueryAllEstimateRequestsResponse.swift in Sources */,
 				C1E86277282D5D4E00D9971A /* EstimateRequestsQuery.swift in Sources */,
 				C15368732835648E00C42120 /* WaitingReviewTableViewCell.swift in Sources */,
+				C114B72328360EB80068D908 /* ReviewTargetViewModel.swift in Sources */,
 				C1E86275282D5B6700D9971A /* APIEnity.swift in Sources */,
 				C1D83A812828EB260086D0E7 /* EstimateRequestsRequest.swift in Sources */,
 				C149D2182831E2950044404D /* BUSelectHSCodeTableViewController.swift in Sources */,
@@ -1531,7 +1532,6 @@
 				C1E5CC1527F32F040087882E /* SignUpRequest.swift in Sources */,
 				C1CF673E27F732720057A6C3 /* NetworkService.swift in Sources */,
 				C1B7652928294F850029B5FC /* AuthService.swift in Sources */,
-				C15368712835526700C42120 /* ReviewTargetViewModel.swift in Sources */,
 				C1E5CC1027F32BF80087882E /* BaetaverseAPIRequest.swift in Sources */,
 				C1E8626E282D526800D9971A /* EstimateRequest.swift in Sources */,
 				C1CF674327F735180057A6C3 /* AppAuthService.swift in Sources */,
