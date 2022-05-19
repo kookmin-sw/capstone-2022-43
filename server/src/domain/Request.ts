@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, BaseEntity, OneToMany, OneToOne, JoinColumn } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, BaseEntity, OneToMany, OneToOne } from 'typeorm';
 import Goods from "./Goods";
 import Quotation from "./Quotation";
 import Review from "./Review";
@@ -45,9 +45,9 @@ export default class Request extends BaseEntity {
     @OneToMany((type) => Goods, goods => goods.request)
     public goods_array?: Goods[];
 
-    @OneToMany((type) => Quotation, quotation => quotation.request)
+    @OneToMany((type) => Quotation, quotation => quotation.requests)
     public quotations?: Quotation[];
 
-    @OneToOne((type) => Review, review => review.request)
+    @OneToOne((type) => Review, review => review.requests)
     public review?: Review;
 };

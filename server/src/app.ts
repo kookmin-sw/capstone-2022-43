@@ -1,12 +1,11 @@
 import 'dotenv/config';
 import './utils/passport/config';
 import express from 'express';
-import { DataSource } from "typeorm";
 import Route from './@types/Route';
 import logger from './utils/logger';
 import pageNotFoundRouter from './routes/pageNotFoundRouter';
 import errorMiddleware from './middlewares/errorMiddleware';
-import loggerMiddleware from './middlewares/loggerMiddleware';
+import printLog from './middlewares/printLog';
 import dataSource from "./data-source";
 
 
@@ -19,7 +18,7 @@ class App {
         this.port = port;
 
         this.initializeApp();
-        this.initializeMiddlewares();
+        // this.initializeMiddlewares();
         this.initializeRouters(routes);
     };
 
@@ -30,7 +29,6 @@ class App {
     };
 
     private initializeMiddlewares(): void {
-        this.app.use(loggerMiddleware);
     };
 
     private initializeRouters(routes: Route[]): void {

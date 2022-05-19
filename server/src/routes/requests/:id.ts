@@ -4,6 +4,7 @@ import { dateToUnix } from "../../middlewares/timeConvert";
 import requestRepository from "../../repository/RequestRepository";
 import goodsRepository from "../../repository/GoodsRepository";
 import quotationRepository from "../../repository/QuotationRepository";
+import printLog from "../../middlewares/printLog";
 
 
 const router = express.Router();
@@ -28,12 +29,13 @@ router.get('/:id', verifyOwnerToken , async (req: Request, res: Response, next: 
             dateToUnix(goods, ["created_at"]);
         });
 
-        return res.status(200).json({
+        res.status(200).json({
             status: 200,
             message: 'Success to find request',
             selectedRequest: selected_request,
             selectedGoods: selected_goods_array
         });
+        return printLog(req, res);
     }
     catch (error) {
         return next(error);
@@ -55,12 +57,13 @@ router.get('/:id/quotations', verifyOwnerToken , async (req: Request, res: Respo
             dateToUnix(quotation, ['estimated_time', 'created_at'])
         });
 
-        return res.status(200).json({
+        res.status(200).json({
             status: 200,
             message: 'Success to find quotations',
             Quotation: quotations,
             selectedGoods: []
         });
+        return printLog(req, res);
     } catch (error) {
         return next(error)
     }

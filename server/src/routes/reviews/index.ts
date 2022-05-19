@@ -1,12 +1,17 @@
-import express, {Request, Response, NextFunction} from "express";
-import {verifyAnyToken, verifyOwnerToken} from "../../middlewares/verifyToken";
-import {dateToUnix} from "../../middlewares/timeConvert";
+import express, { Request, Response, NextFunction } from "express";
+import { verifyAnyToken, verifyOwnerToken } from "../../middlewares/verifyToken";
+import { dateToUnix } from "../../middlewares/timeConvert";
 import quotationRepository from "../../repository/QuotationRepository";
 import reviewRepository from "../../repository/ReviewRepository";
+import Owner from "../../domain/Owner";
+import Forwarder from "../../domain/Forwarder";
 import Quotation from "../../domain/Quotation";
+import QuoteRequest from '../../domain/Request';
 import forwarderRepository from "../../repository/ForwarderRepository";
 import requestRepository from "../../repository/RequestRepository";
 import ownerRepository from "../../repository/OwnerRepository";
+import reviews from "../reviews";
+import printLog from "../../middlewares/printLog";
 
 
 const router = express.Router();
@@ -15,6 +20,12 @@ router.get('/', verifyAnyToken ,async (req: Request, res: Response, next: NextFu
     try {
         const { role, uuid } = req.decoded;
         const where = `R.${role}_uuid = :uuid`;
+        // const column = `${role}_uuid`;
+
+        // const reviews = await reviewRepository.find({
+        //     select: ['score', 'message', 'owner_uuid', 'forwarder_uuid', 'request_id', 'quotation_id'],
+        //     where: { [column]: uuid }
+        // });
 
         const reviews = await reviewRepository.createQueryBuilder('R')
         .leftJoinAndSelect('R.forwarder', 'F')
@@ -25,21 +36,21 @@ router.get('/', verifyAnyToken ,async (req: Request, res: Response, next: NextFu
             'F.name',  'F.corporation_name', 'O.name',
             'R.id', 'E.trade_type', 'E.trade_detail', 'E.forwarding_date', 'E.departure_country', 'E.departure_detail',
             'E.destination_country', 'E.destination_detail', 'E.incoterms', 'E.closing_date', 'E.created_at'])
-        .where('R.owner_uuid = :uuid', { uuid })
+        .where(where, { uuid })
         .getMany();
 
         reviews.forEach((review) => {
-            dateToUnix(review!.request, ['forwarding_date', 'closing_date', 'created_at']);
+            dateToUnix(review!.requests, ['forwarding_date', 'closing_date', 'created_at']);
             dateToUnix(review!.quotation, ['estimated_time', 'created_at'])
         });
 
-        return res.status(200).json({
+        res.status(200).json({
             status: 200,
             message: 'Success to find quotation',
             Review: reviews,
             selectedGoods: []
         });
-
+        return printLog(req, res);
     } catch (error) {
         return next(error);
     }
@@ -56,6 +67,11 @@ router.post('/',verifyOwnerToken ,async (req: Request, res: Response, next: Next
         }) as Quotation;
 
         const review = await reviewRepository.save({ message, owner_uuid, forwarder_uuid, quotation_id, request_id })
+        review.owner = new Owner();
+        review.forwarder = new Forwarder();
+        review.requests = new QuoteRequest();
+        review.quotation = new Quotation();
+
 
         // const [ forwarder, owner ,request, quotation ] = await Promise.all([
         //     forwarderRepository.findOne({
@@ -85,12 +101,12 @@ router.post('/',verifyOwnerToken ,async (req: Request, res: Response, next: Next
         //     dateToUnix(r!.quotation, ['Q.estimated_time', 'Q.created_at'])
         // });
 
-        return res.status(200).json({
+        res.status(200).json({
             status: 200,
             message: 'Success to insert review',
             Review: review
         });
-
+        return printLog(req, res);
     } catch (error){
         return next(error);
     }

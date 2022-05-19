@@ -5,6 +5,7 @@ import ForwarderService from "../service/ForwarderService";
 import passport from "passport";
 import jwt from "jsonwebtoken";
 import Forwarder from "../domain/Forwarder";
+import printLog from "../middlewares/printLog";
 
 
 class ForwarderController {
@@ -17,12 +18,13 @@ class ForwarderController {
             reqForwarder.password = await bcrypt.hash(reqForwarder.password!, 12);
             const forwarder = await this.forwarderService.join(reqForwarder);
 
-            return res.status(200).json({
+            res.status(200).json({
                 status: 200,
                 message: 'Success to sign up',
                 email: forwarder.email,
                 name: forwarder.name
             });
+            return printLog(req, res);
         } catch (error) {
             return next(error);
         }
@@ -47,10 +49,11 @@ class ForwarderController {
                 issuer: 'BAETAVERSE-DEV'
             });
 
-            return res.status(200).json({
+            res.status(200).json({
                 message: info.message,
                 token,
             });
+            return printLog(req, res);
         })(req, res, next);
     };
 }
