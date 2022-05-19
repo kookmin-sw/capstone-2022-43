@@ -11,6 +11,7 @@ import forwarderRepository from "../../repository/ForwarderRepository";
 import requestRepository from "../../repository/RequestRepository";
 import ownerRepository from "../../repository/OwnerRepository";
 import reviews from "../reviews";
+import printLog from "../../middlewares/printLog";
 
 
 const router = express.Router();
@@ -43,13 +44,13 @@ router.get('/', verifyAnyToken ,async (req: Request, res: Response, next: NextFu
             dateToUnix(review!.quotation, ['estimated_time', 'created_at'])
         });
 
-        return res.status(200).json({
+        res.status(200).json({
             status: 200,
             message: 'Success to find quotation',
             Review: reviews,
             selectedGoods: []
         });
-
+        return printLog(req, res);
     } catch (error) {
         return next(error);
     }
@@ -100,12 +101,12 @@ router.post('/',verifyOwnerToken ,async (req: Request, res: Response, next: Next
         //     dateToUnix(r!.quotation, ['Q.estimated_time', 'Q.created_at'])
         // });
 
-        return res.status(200).json({
+        res.status(200).json({
             status: 200,
             message: 'Success to insert review',
             Review: review
         });
-
+        return printLog(req, res);
     } catch (error){
         return next(error);
     }

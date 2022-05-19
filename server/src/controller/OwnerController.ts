@@ -5,6 +5,7 @@ import passport from "passport";
 import jwt from "jsonwebtoken";
 import Owner from "../domain/Owner";
 import OwnerService from "../service/OwnerService";
+import printLog from "../middlewares/printLog";
 
 
 class OwnerController {
@@ -17,12 +18,13 @@ class OwnerController {
             reqOwner.password = await bcrypt.hash(reqOwner.password!, 12);
             const owner: Owner = await this.ownerService.join(reqOwner);
 
-            return res.status(200).json({
+            res.status(200).json({
                 status: 200,
                 message: 'Success to sign up',
                 email: owner.email,
                 name: owner.name
             });
+            return printLog(req, res);
         } catch (error) {
             return next(error);
         }
@@ -47,10 +49,11 @@ class OwnerController {
                 issuer: 'BAETAVERSE-DEV'
             });
 
-            return res.status(200).json({
+            res.status(200).json({
                 message: info.message,
                 token,
             });
+            return printLog(req, res);
         })(req, res, next);
     };
 }

@@ -3,6 +3,7 @@ import { dateToUnix } from "../../middlewares/timeConvert";
 import { verifyAnyToken } from "../../middlewares/verifyToken";
 import quotationRepository from "../../repository/QuotationRepository";
 import goodsRepository from "../../repository/GoodsRepository";
+import printLog from "../../middlewares/printLog";
 
 
 const router = express.Router();
@@ -32,12 +33,13 @@ router.get('/:id', verifyAnyToken ,async (req: Request, res: Response, next: Nex
         dateToUnix(quotation!.requests, ['forwarding_date', 'closing_date', 'created_at']);
         dateToUnix(quotation, ['estimated_time', 'created_at']);
 
-        return res.status(200).json({
+        res.status(200).json({
             status: 200,
             message: 'Success to find quotation',
             Quotation: [quotation],
             selectedGoods: selected_goods_array
         });
+        return printLog(req, res);
     }
     catch (error){
         return next(error);

@@ -5,6 +5,7 @@ import QuoteRequest from '../../domain/Request';
 import Goods from "../../domain/Goods";
 import requestRepository from "../../repository/RequestRepository";
 import goodsRepository from "../../repository/GoodsRepository";
+import printLog from "../../middlewares/printLog";
 
 
 const router = express.Router();
@@ -23,11 +24,12 @@ router.get('/', verifyOwnerToken , async (req: Request, res: Response, next: Nex
             dateToUnix(request, ['forwarding_date', 'closing_date', 'created_at']);
         });
 
-        return res.status(200).json({
+        res.status(200).json({
             status: 200,
             message: 'Success to find requests',
             selectedRequests: selected_requests
         });
+        return printLog(req, res);
     }
     catch (error){
         return next(error);
@@ -59,12 +61,13 @@ router.post('/', verifyOwnerToken, async (req: Request, res: Response, next: Nex
             })
         );
 
-        return res.status(200).json({
+        res.status(200).json({
             status: 200,
             message: 'Success to quote_request',
             createdRequest: created_request,
             createdGoods: created_goods_array
         });
+        return printLog(req, res);
     }
     catch (error){
         return next(error);

@@ -2,6 +2,7 @@ import express, {Request, Response, NextFunction,} from 'express';
 import { dateToUnix } from "../../middlewares/timeConvert";
 import { verifyForwarderToken } from "../../middlewares/verifyToken";
 import requestRepository from "../../repository/RequestRepository";
+import printLog from "../../middlewares/printLog";
 
 
 const router = express.Router();
@@ -17,11 +18,12 @@ router.get('/list', verifyForwarderToken, async (req : Request, res : Response, 
             dateToUnix(selected_request, ["forwarding_date", "closing_date", "created_at"]);
         });
 
-        return res.status(200).json({
+        res.status(200).json({
             status: 200,
             message: 'Success to find requests',
             selectedRequests: list
         });
+        return printLog(req, res);
     }
     catch (error) {
         return next(error);

@@ -6,6 +6,7 @@ import goodsRepository from "../../repository/GoodsRepository";
 import Quotation from "../../domain/Quotation";
 import forwarderRepository from "../../repository/ForwarderRepository";
 import requestRepository from "../../repository/RequestRepository";
+import printLog from "../../middlewares/printLog";
 
 
 const router = express.Router();
@@ -29,12 +30,13 @@ router.get('/', verifyForwarderToken , async (req: Request, res: Response, next:
             dateToUnix(quotation!.requests, ['forwarding_date', 'closing_date', 'created_at']);
         });
 
-        return res.status(200).json({
+        res.status(200).json({
             status: 200,
             message: 'Success to find quotation',
             Quotation: quotations,
             selectedGoods: []
         });
+        return printLog(req, res);
     }
     catch (error){
         return next(error);
@@ -80,12 +82,13 @@ router.post('/', verifyForwarderToken, async (req: Request, res: Response, next:
         quotation.forwarder = forwarder!;
         quotation.requests = request!;
 
-        return res.status(200).json({
+        res.status(200).json({
             status: 200,
             message: 'Success to insert quotation',
             Quotation: [quotation],
             selectedGoods: selected_goods_array
         });
+        return printLog(req, res);
     } catch (error) {
         return next(error);
     }
