@@ -73,9 +73,10 @@ class BaetaverseBusinessTests: XCTestCase {
     
     func test_회원가입_정상적으로_동작해야한다() async throws {
         // given
-        let email = "test8@test8.com"
+        let code = Int.random(in: 10...999999)
+        let email = "test\(code)@test\(code).com"
         let password = "12341234"
-        let name = "testUserName8"
+        let name = "testUser\(code)"
         let phoneNumber = "010-1234-5678"
         
         // when then
@@ -86,7 +87,7 @@ class BaetaverseBusinessTests: XCTestCase {
                 password: password,
                 name: name,
                 phoneNumber: phoneNumber,
-                corporationName: "훌륭한 회사",
+                corporationName: "훌륭한회사\(code)",
                 corporationNumber: "070-1234-5678"
             )
         } catch {
