@@ -228,6 +228,74 @@
 		C1C9EC8C2818FB000041F974 /* Extensions+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149736A27F59B7500679118 /* Extensions+Data.swift */; };
 		C1C9EC8E2818FB080041F974 /* Extensions+Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C9EC5A2818F7A40041F974 /* Extensions+Encodable.swift */; };
 		C1C9EC8F2818FB090041F974 /* Extensions+Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C9EC5A2818F7A40041F974 /* Extensions+Encodable.swift */; };
+		C1CEFF772836135000E083F2 /* BaetaverseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CEFF762836135000E083F2 /* BaetaverseTests.swift */; };
+		C1CEFF7D2836138700E083F2 /* APIRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1127F32DC10087882E /* APIRequestModel.swift */; };
+		C1CEFF7E2836138A00E083F2 /* QueryAllEstimateRequestsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11214C3283372D0001E4384 /* QueryAllEstimateRequestsRequest.swift */; };
+		C1CEFF7F2836138C00E083F2 /* EstimateRequestDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8628A282E0CBD00D9971A /* EstimateRequestDetailRequest.swift */; };
+		C1CEFF802836138E00E083F2 /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1427F32F040087882E /* SignUpRequest.swift */; };
+		C1CEFF812836139000E083F2 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1927F334E10087882E /* LoginRequest.swift */; };
+		C1CEFF822836139200E083F2 /* RegisterEstimateRequestsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC1B27F336070087882E /* RegisterEstimateRequestsRequest.swift */; };
+		C1CEFF832836139400E083F2 /* HSCodeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E86264282D211700D9971A /* HSCodeRequest.swift */; };
+		C1CEFF842836139700E083F2 /* RegisterEstimateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D22428326A500044404D /* RegisterEstimateRequest.swift */; };
+		C1CEFF852836139900E083F2 /* EstimateRequestsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D83A802828EB260086D0E7 /* EstimateRequestsRequest.swift */; };
+		C1CEFF862836139B00E083F2 /* QuotationsRequst.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D23428327B3F0044404D /* QuotationsRequst.swift */; };
+		C1CEFF872836139D00E083F2 /* ReviewsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C134B1792833FD0D00F7DF4C /* ReviewsRequest.swift */; };
+		C1CEFF882836139F00E083F2 /* EstimateRequestsQuotationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19314892834C99800CDA686 /* EstimateRequestsQuotationRequest.swift */; };
+		C1CEFF89283613A100E083F2 /* RegisterReviewRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8C7D1283548710031095C /* RegisterReviewRequest.swift */; };
+		C1CEFF8A283613A400E083F2 /* APIResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149737027F5A06D00679118 /* APIResponseModel.swift */; };
+		C1CEFF8B283613A900E083F2 /* RegisterReviewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8C7D528354BED0031095C /* RegisterReviewResponse.swift */; };
+		C1CEFF8C283613AA00E083F2 /* RegisterReviewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8C7D528354BED0031095C /* RegisterReviewResponse.swift */; };
+		C1CEFF8D283613AA00E083F2 /* RegisterReviewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8C7D528354BED0031095C /* RegisterReviewResponse.swift */; };
+		C1CEFF8E283613AD00E083F2 /* QueryAllEstimateRequestsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11214C528337349001E4384 /* QueryAllEstimateRequestsResponse.swift */; };
+		C1CEFF8F283613AF00E083F2 /* EstimateRequestDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E86295282E15AD00D9971A /* EstimateRequestDetailResponse.swift */; };
+		C1CEFF90283613B100E083F2 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149736C27F59D4500679118 /* LoginResponse.swift */; };
+		C1CEFF91283613B300E083F2 /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149737527F5A39800679118 /* SignUpResponse.swift */; };
+		C1CEFF92283613B500E083F2 /* EstimatesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D83A822828ECF50086D0E7 /* EstimatesResponse.swift */; };
+		C1CEFF93283613B700E083F2 /* HSCodeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E86266282D222000D9971A /* HSCodeResponse.swift */; };
+		C1CEFF94283613B900E083F2 /* EstimateRequestsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8626F282D545900D9971A /* EstimateRequestsResponse.swift */; };
+		C1CEFF95283613BA00E083F2 /* RegisterEstimateRequestsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8628C282E0DF700D9971A /* RegisterEstimateRequestsResponse.swift */; };
+		C1CEFF96283613BD00E083F2 /* RegisterEstimateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D22828326EB10044404D /* RegisterEstimateResponse.swift */; };
+		C1CEFF97283613BF00E083F2 /* QuotationsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D23628327C790044404D /* QuotationsResponse.swift */; };
+		C1CEFF98283613C000E083F2 /* ReviewsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C134B188283409D200F7DF4C /* ReviewsResponse.swift */; };
+		C1CEFF99283613C300E083F2 /* APIEnity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E86274282D5B6700D9971A /* APIEnity.swift */; };
+		C1CEFF9A283613C500E083F2 /* QuotationDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D22A28326F870044404D /* QuotationDetail.swift */; };
+		C1CEFF9B283613C700E083F2 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = C134B18D28340AE200F7DF4C /* Review.swift */; };
+		C1CEFF9C283613C900E083F2 /* Quotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C134B183283400E600F7DF4C /* Quotation.swift */; };
+		C1CEFF9D283613CB00E083F2 /* Forwarder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D22C283271DF0044404D /* Forwarder.swift */; };
+		C1CEFF9E283613CD00E083F2 /* ReviewRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8C7D328354B1C0031095C /* ReviewRequest.swift */; };
+		C1CEFF9F283613CF00E083F2 /* EstimateRequestsQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E86276282D5D4E00D9971A /* EstimateRequestsQuery.swift */; };
+		C1CEFFA0283613D200E083F2 /* EstimateRequestsRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8627B282DE9F800D9971A /* EstimateRequestsRegister.swift */; };
+		C1CEFFA1283613D400E083F2 /* GoodsRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8627D282DEBB900D9971A /* GoodsRegister.swift */; };
+		C1CEFFA2283613D600E083F2 /* EstimateRequestRegisterForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E86284282DF43E00D9971A /* EstimateRequestRegisterForm.swift */; };
+		C1CEFFA3283613D900E083F2 /* EstimateRequestDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8628F282E0ED500D9971A /* EstimateRequestDetail.swift */; };
+		C1CEFFA4283613DB00E083F2 /* GoodsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E86291282E0FFC00D9971A /* GoodsDetail.swift */; };
+		C1CEFFA5283613DE00E083F2 /* EstimateRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D22228321CE50044404D /* EstimateRegister.swift */; };
+		C1CEFFA6283613E100E083F2 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8626B282D50DE00D9971A /* Product.swift */; };
+		C1CEFFA7283613E300E083F2 /* EstimateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8626D282D526800D9971A /* EstimateRequest.swift */; };
+		C1CEFFA8283613E500E083F2 /* Estimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D22628326B370044404D /* Estimate.swift */; };
+		C1CEFFA9283613E700E083F2 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C112136F283329C9001E4384 /* UserProfile.swift */; };
+		C1CEFFAA283613E900E083F2 /* QuotationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11214D328338D02001E4384 /* QuotationEntity.swift */; };
+		C1CEFFAB283613EB00E083F2 /* AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF674827F735820057A6C3 /* AppService.swift */; };
+		C1CEFFAC283613ED00E083F2 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C7714D28294A17009E3CB6 /* AuthService.swift */; };
+		C1CEFFAD283613F000E083F2 /* BusinessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C7714F28294A2D009E3CB6 /* BusinessService.swift */; };
+		C1CEFFAE283613F300E083F2 /* BaetaverseAppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF674C27F735E10057A6C3 /* BaetaverseAppService.swift */; };
+		C1CEFFAF2836140300E083F2 /* AppAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF674227F735180057A6C3 /* AppAuthService.swift */; };
+		C1CEFFB02836140500E083F2 /* AuthPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149D239283280510044404D /* AuthPermission.swift */; };
+		C1CEFFB12836140700E083F2 /* BaetaverseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13778C227F498EE00DAF494 /* BaetaverseAuth.swift */; };
+		C1CEFFB22836140900E083F2 /* AppBusinessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF674527F735620057A6C3 /* AppBusinessService.swift */; };
+		C1CEFFB32836140B00E083F2 /* BaetaverseBusinessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF675027F736330057A6C3 /* BaetaverseBusinessService.swift */; };
+		C1CEFFB42836140E00E083F2 /* BaetaverseAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC0F27F32BF80087882E /* BaetaverseAPIRequest.swift */; };
+		C1CEFFB52836141000E083F2 /* BaetaverseAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197AEBF27F43BEF000E4975 /* BaetaverseAPIService.swift */; };
+		C1CEFFB62836141100E083F2 /* BaetaverseAPIRequestHostInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC0D27F32B4C0087882E /* BaetaverseAPIRequestHostInfo.swift */; };
+		C1CEFFB72836141500E083F2 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF673D27F732720057A6C3 /* NetworkService.swift */; };
+		C1CEFFB82836141600E083F2 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197AEBC27F43AEC000E4975 /* APIService.swift */; };
+		C1CEFFB92836141800E083F2 /* APIRequestHostInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC0A27F3296A0087882E /* APIRequestHostInfo.swift */; };
+		C1CEFFBA2836141A00E083F2 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF673F27F733780057A6C3 /* APIRequest.swift */; };
+		C1CEFFBB2836141C00E083F2 /* NetworkServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197AEB227F42D6D000E4975 /* NetworkServiceProvider.swift */; };
+		C1CEFFBC2836141E00E083F2 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC0627F307C70087882E /* HTTPMethod.swift */; };
+		C1CEFFBD2836142000E083F2 /* APIRequestImplement.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5CC0827F30A580087882E /* APIRequestImplement.swift */; };
+		C1CEFFC32836145100E083F2 /* Extensions+Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C9EC5A2818F7A40041F974 /* Extensions+Encodable.swift */; };
+		C1CEFFC42836145300E083F2 /* Extensions+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149736A27F59B7500679118 /* Extensions+Data.swift */; };
 		C1CF673E27F732720057A6C3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF673D27F732720057A6C3 /* NetworkService.swift */; };
 		C1CF674027F733780057A6C3 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF673F27F733780057A6C3 /* APIRequest.swift */; };
 		C1CF674327F735180057A6C3 /* AppAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF674227F735180057A6C3 /* AppAuthService.swift */; };
@@ -288,6 +356,7 @@
 		C1E8C7DC28354FB70031095C /* ReviewRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8C7D328354B1C0031095C /* ReviewRequest.swift */; };
 		C1F53A88282F63D0006203E2 /* BURegisterTradeTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F53A87282F63D0006203E2 /* BURegisterTradeTypeViewController.swift */; };
 		C1F53A8A282F6B39006203E2 /* BURegisterDeliveryDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F53A89282F6B39006203E2 /* BURegisterDeliveryDateViewController.swift */; };
+		C1F948682836158400986A83 /* ReviewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C196576428201CFA00821825 /* ReviewEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -297,6 +366,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = C1C9EC5F2818FA1E0041F974;
 			remoteInfo = BaetaverseBusiness;
+		};
+		C1CEFF782836135000E083F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1E5CBAE27F2BF330087882E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1E5CBB527F2BF330087882E;
+			remoteInfo = Baetaverse;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -397,6 +473,8 @@
 		C1C9EC692818FA200041F974 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C1C9EC6F2818FA210041F974 /* BaetaverseBusinessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaetaverseBusinessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1C9EC732818FA210041F974 /* BaetaverseBusinessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseBusinessTests.swift; sourceTree = "<group>"; };
+		C1CEFF742836135000E083F2 /* BaetaverseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaetaverseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1CEFF762836135000E083F2 /* BaetaverseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaetaverseTests.swift; sourceTree = "<group>"; };
 		C1CF673D27F732720057A6C3 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		C1CF673F27F733780057A6C3 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		C1CF674227F735180057A6C3 /* AppAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAuthService.swift; sourceTree = "<group>"; };
@@ -468,6 +546,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C1C9EC6C2818FA210041F974 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1CEFF712836135000E083F2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -763,6 +848,22 @@
 			path = Networks;
 			sourceTree = "<group>";
 		};
+		C1CEFF752836135000E083F2 /* BaetaverseTests */ = {
+			isa = PBXGroup;
+			children = (
+				C1CEFFBF2836143500E083F2 /* CustomerApp */,
+			);
+			path = BaetaverseTests;
+			sourceTree = "<group>";
+		};
+		C1CEFFBF2836143500E083F2 /* CustomerApp */ = {
+			isa = PBXGroup;
+			children = (
+				C1CEFF762836135000E083F2 /* BaetaverseTests.swift */,
+			);
+			path = CustomerApp;
+			sourceTree = "<group>";
+		};
 		C1CF673B27F731F60057A6C3 /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -909,6 +1010,7 @@
 				C1C9EC612818FA1E0041F974 /* BaetaverseBusiness */,
 				C1C9EC8A2818FAE90041F974 /* CommonModule */,
 				C182FDF7281900E800F66567 /* Tests */,
+				C1CEFF752836135000E083F2 /* BaetaverseTests */,
 				C1E5CBB727F2BF330087882E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -919,6 +1021,7 @@
 				C1E5CBB627F2BF330087882E /* Baetaverse.app */,
 				C1C9EC602818FA1E0041F974 /* BaetaverseBusiness.app */,
 				C1C9EC6F2818FA210041F974 /* BaetaverseBusinessTests.xctest */,
+				C1CEFF742836135000E083F2 /* BaetaverseTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1117,6 +1220,24 @@
 			productReference = C1C9EC6F2818FA210041F974 /* BaetaverseBusinessTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		C1CEFF732836135000E083F2 /* BaetaverseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1CEFF7C2836135000E083F2 /* Build configuration list for PBXNativeTarget "BaetaverseTests" */;
+			buildPhases = (
+				C1CEFF702836135000E083F2 /* Sources */,
+				C1CEFF712836135000E083F2 /* Frameworks */,
+				C1CEFF722836135000E083F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C1CEFF792836135000E083F2 /* PBXTargetDependency */,
+			);
+			name = BaetaverseTests;
+			productName = BaetaverseTests;
+			productReference = C1CEFF742836135000E083F2 /* BaetaverseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C1E5CBB527F2BF330087882E /* Baetaverse */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C1E5CBE027F2BF360087882E /* Build configuration list for PBXNativeTarget "Baetaverse" */;
@@ -1142,7 +1263,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1330;
+				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					C1C9EC5F2818FA1E0041F974 = {
@@ -1151,6 +1272,10 @@
 					C1C9EC6E2818FA210041F974 = {
 						CreatedOnToolsVersion = 13.3.1;
 						TestTargetID = C1C9EC5F2818FA1E0041F974;
+					};
+					C1CEFF732836135000E083F2 = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = C1E5CBB527F2BF330087882E;
 					};
 					C1E5CBB527F2BF330087882E = {
 						CreatedOnToolsVersion = 13.3;
@@ -1173,6 +1298,7 @@
 				C1E5CBB527F2BF330087882E /* Baetaverse */,
 				C1C9EC5F2818FA1E0041F974 /* BaetaverseBusiness */,
 				C1C9EC6E2818FA210041F974 /* BaetaverseBusinessTests */,
+				C1CEFF732836135000E083F2 /* BaetaverseTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1189,6 +1315,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C1C9EC6D2818FA210041F974 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1CEFF722836135000E083F2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1256,6 +1389,7 @@
 				C112146A28334451001E4384 /* NetworkService.swift in Sources */,
 				C1BAFE232820BAC800CC4549 /* MainView.swift in Sources */,
 				C112148228334494001E4384 /* EstimateRequestDetailRequest.swift in Sources */,
+				C1CEFF8B283613A900E083F2 /* RegisterReviewResponse.swift in Sources */,
 				C11214562833442F001E4384 /* BusinessService.swift in Sources */,
 				C11214882833449A001E4384 /* RegisterEstimateRequestsRequest.swift in Sources */,
 				C11214AE283344CB001E4384 /* EstimateRequestsRegister.swift in Sources */,
@@ -1380,6 +1514,7 @@
 				C112145B28334435001E4384 /* AppAuthService.swift in Sources */,
 				C134B187283400E600F7DF4C /* Quotation.swift in Sources */,
 				C11214732833445A001E4384 /* NetworkServiceProvider.swift in Sources */,
+				C1CEFF8C283613AA00E083F2 /* RegisterReviewResponse.swift in Sources */,
 				C11214A9283344C4001E4384 /* QuotationDetail.swift in Sources */,
 				C11214612833443D001E4384 /* AppBusinessService.swift in Sources */,
 				C11214C7283376BA001E4384 /* QueryAllEstimateRequestsRequest.swift in Sources */,
@@ -1428,6 +1563,80 @@
 				C1C9EC8C2818FB000041F974 /* Extensions+Data.swift in Sources */,
 				C112145D28334437001E4384 /* AuthPermission.swift in Sources */,
 				C112148D2833449F001E4384 /* RegisterEstimateRequest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1CEFF702836135000E083F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1F948682836158400986A83 /* ReviewEntity.swift in Sources */,
+				C1CEFF99283613C300E083F2 /* APIEnity.swift in Sources */,
+				C1CEFF94283613B900E083F2 /* EstimateRequestsResponse.swift in Sources */,
+				C1CEFFB02836140500E083F2 /* AuthPermission.swift in Sources */,
+				C1CEFFA5283613DE00E083F2 /* EstimateRegister.swift in Sources */,
+				C1CEFFA3283613D900E083F2 /* EstimateRequestDetail.swift in Sources */,
+				C1CEFFC42836145300E083F2 /* Extensions+Data.swift in Sources */,
+				C1CEFF7D2836138700E083F2 /* APIRequestModel.swift in Sources */,
+				C1CEFF882836139F00E083F2 /* EstimateRequestsQuotationRequest.swift in Sources */,
+				C1CEFF97283613BF00E083F2 /* QuotationsResponse.swift in Sources */,
+				C1CEFFAE283613F300E083F2 /* BaetaverseAppService.swift in Sources */,
+				C1CEFF9B283613C700E083F2 /* Review.swift in Sources */,
+				C1CEFF822836139200E083F2 /* RegisterEstimateRequestsRequest.swift in Sources */,
+				C1CEFFA8283613E500E083F2 /* Estimate.swift in Sources */,
+				C1CEFF842836139700E083F2 /* RegisterEstimateRequest.swift in Sources */,
+				C1CEFF9F283613CF00E083F2 /* EstimateRequestsQuery.swift in Sources */,
+				C1CEFF93283613B700E083F2 /* HSCodeResponse.swift in Sources */,
+				C1CEFFAD283613F000E083F2 /* BusinessService.swift in Sources */,
+				C1CEFFB22836140900E083F2 /* AppBusinessService.swift in Sources */,
+				C1CEFF89283613A100E083F2 /* RegisterReviewRequest.swift in Sources */,
+				C1CEFF772836135000E083F2 /* BaetaverseTests.swift in Sources */,
+				C1CEFF98283613C000E083F2 /* ReviewsResponse.swift in Sources */,
+				C1CEFFA9283613E700E083F2 /* UserProfile.swift in Sources */,
+				C1CEFFA4283613DB00E083F2 /* GoodsDetail.swift in Sources */,
+				C1CEFFAC283613ED00E083F2 /* AuthService.swift in Sources */,
+				C1CEFFBC2836141E00E083F2 /* HTTPMethod.swift in Sources */,
+				C1CEFF9A283613C500E083F2 /* QuotationDetail.swift in Sources */,
+				C1CEFF90283613B100E083F2 /* LoginResponse.swift in Sources */,
+				C1CEFF9E283613CD00E083F2 /* ReviewRequest.swift in Sources */,
+				C1CEFFB72836141500E083F2 /* NetworkService.swift in Sources */,
+				C1CEFFBB2836141C00E083F2 /* NetworkServiceProvider.swift in Sources */,
+				C1CEFF802836138E00E083F2 /* SignUpRequest.swift in Sources */,
+				C1CEFFA6283613E100E083F2 /* Product.swift in Sources */,
+				C1CEFFB12836140700E083F2 /* BaetaverseAuth.swift in Sources */,
+				C1CEFF91283613B300E083F2 /* SignUpResponse.swift in Sources */,
+				C1CEFF872836139D00E083F2 /* ReviewsRequest.swift in Sources */,
+				C1CEFFBD2836142000E083F2 /* APIRequestImplement.swift in Sources */,
+				C1CEFFA7283613E300E083F2 /* EstimateRequest.swift in Sources */,
+				C1CEFF92283613B500E083F2 /* EstimatesResponse.swift in Sources */,
+				C1CEFF812836139000E083F2 /* LoginRequest.swift in Sources */,
+				C1CEFFB62836141100E083F2 /* BaetaverseAPIRequestHostInfo.swift in Sources */,
+				C1CEFF832836139400E083F2 /* HSCodeRequest.swift in Sources */,
+				C1CEFFAB283613EB00E083F2 /* AppService.swift in Sources */,
+				C1CEFF9C283613C900E083F2 /* Quotation.swift in Sources */,
+				C1CEFFA1283613D400E083F2 /* GoodsRegister.swift in Sources */,
+				C1CEFFAA283613E900E083F2 /* QuotationEntity.swift in Sources */,
+				C1CEFF852836139900E083F2 /* EstimateRequestsRequest.swift in Sources */,
+				C1CEFFA2283613D600E083F2 /* EstimateRequestRegisterForm.swift in Sources */,
+				C1CEFF9D283613CB00E083F2 /* Forwarder.swift in Sources */,
+				C1CEFFB82836141600E083F2 /* APIService.swift in Sources */,
+				C1CEFF862836139B00E083F2 /* QuotationsRequst.swift in Sources */,
+				C1CEFF7F2836138C00E083F2 /* EstimateRequestDetailRequest.swift in Sources */,
+				C1CEFF96283613BD00E083F2 /* RegisterEstimateResponse.swift in Sources */,
+				C1CEFFBA2836141A00E083F2 /* APIRequest.swift in Sources */,
+				C1CEFFB42836140E00E083F2 /* BaetaverseAPIRequest.swift in Sources */,
+				C1CEFF8D283613AA00E083F2 /* RegisterReviewResponse.swift in Sources */,
+				C1CEFF8A283613A400E083F2 /* APIResponseModel.swift in Sources */,
+				C1CEFFA0283613D200E083F2 /* EstimateRequestsRegister.swift in Sources */,
+				C1CEFF8F283613AF00E083F2 /* EstimateRequestDetailResponse.swift in Sources */,
+				C1CEFFB52836141000E083F2 /* BaetaverseAPIService.swift in Sources */,
+				C1CEFF95283613BA00E083F2 /* RegisterEstimateRequestsResponse.swift in Sources */,
+				C1CEFF7E2836138A00E083F2 /* QueryAllEstimateRequestsRequest.swift in Sources */,
+				C1CEFFB92836141800E083F2 /* APIRequestHostInfo.swift in Sources */,
+				C1CEFF8E283613AD00E083F2 /* QueryAllEstimateRequestsResponse.swift in Sources */,
+				C1CEFFC32836145100E083F2 /* Extensions+Encodable.swift in Sources */,
+				C1CEFFAF2836140300E083F2 /* AppAuthService.swift in Sources */,
+				C1CEFFB32836140B00E083F2 /* BaetaverseBusinessService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1549,6 +1758,11 @@
 			target = C1C9EC5F2818FA1E0041F974 /* BaetaverseBusiness */;
 			targetProxy = C1C9EC702818FA210041F974 /* PBXContainerItemProxy */;
 		};
+		C1CEFF792836135000E083F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C1E5CBB527F2BF330087882E /* Baetaverse */;
+			targetProxy = C1CEFF782836135000E083F2 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -1642,7 +1856,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MLY2NY4CXP;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.github.capstone-2022-43.BaetaverseBusinessTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1662,7 +1876,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MLY2NY4CXP;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.github.capstone-2022-43.BaetaverseBusinessTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1670,6 +1884,44 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BaetaverseBusiness.app/BaetaverseBusiness";
+			};
+			name = Release;
+		};
+		C1CEFF7A2836135000E083F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MLY2NY4CXP;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tistory.singularis7.BaetaverseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Baetaverse.app/Baetaverse";
+			};
+			name = Debug;
+		};
+		C1CEFF7B2836135000E083F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MLY2NY4CXP;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tistory.singularis7.BaetaverseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Baetaverse.app/Baetaverse";
 			};
 			name = Release;
 		};
@@ -1862,6 +2114,15 @@
 			buildConfigurations = (
 				C1C9EC852818FA210041F974 /* Debug */,
 				C1C9EC862818FA210041F974 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1CEFF7C2836135000E083F2 /* Build configuration list for PBXNativeTarget "BaetaverseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1CEFF7A2836135000E083F2 /* Debug */,
+				C1CEFF7B2836135000E083F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
