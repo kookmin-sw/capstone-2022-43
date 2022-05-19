@@ -7,7 +7,7 @@
 
 import XCTest
 
-class BaetaverseAppModuleTests: XCTestCase {
+final class BaetaverseAppModuleTests: XCTestCase {
     
     private var sutBaetaverse: AppService!
 
@@ -21,11 +21,12 @@ class BaetaverseAppModuleTests: XCTestCase {
 
     func test_알맞은_계정이_입력되면_정상적으로_로그인되어야한다() async throws {
         // given
-        let email = "test1@test1.com"
+        let email = "test8@test8.com"
         let password = "12341234"
         
         // when
         try await sutBaetaverse.login(
+            permission: .owner,
             email: email,
             password: password
         )
@@ -42,6 +43,7 @@ class BaetaverseAppModuleTests: XCTestCase {
         // when then
         do {
             try await sutBaetaverse.login(
+                permission: .owner,
                 email: email,
                 password: password
             )
@@ -59,6 +61,7 @@ class BaetaverseAppModuleTests: XCTestCase {
         // when then
         do {
             try await sutBaetaverse.login(
+                permission: .forwarder,
                 email: email,
                 password: password
             )
@@ -70,21 +73,24 @@ class BaetaverseAppModuleTests: XCTestCase {
     
     func test_회원가입_정상적으로_동작해야한다() async throws {
         // given
-        let email = "test2@test2.com"
+        let email = "test8@test8.com"
         let password = "12341234"
-        let name = "testUserName"
+        let name = "testUserName8"
         let phoneNumber = "010-1234-5678"
         
         // when then
         do {
             try await sutBaetaverse.signUp(
+                permission: .forwarder,
                 email: email,
                 password: password,
                 name: name,
-                phoneNumber: phoneNumber
+                phoneNumber: phoneNumber,
+                corporationName: "훌륭한 회사",
+                corporationNumber: "070-1234-5678"
             )
         } catch {
-            XCTFail("\(error)")
+            XCTFail("\(error.localizedDescription)")
         }
     }
     
@@ -98,10 +104,13 @@ class BaetaverseAppModuleTests: XCTestCase {
         // when then
         do {
             try await sutBaetaverse.signUp(
+                permission: .forwarder,
                 email: email,
                 password: password,
                 name: name,
-                phoneNumber: phoneNumber
+                phoneNumber: phoneNumber,
+                corporationName: "훌륭한 회사",
+                corporationNumber: "070-1234-5678"
             )
             XCTFail("사용자가 중복 가입되었습니다")
         } catch {
@@ -117,6 +126,7 @@ class BaetaverseAppModuleTests: XCTestCase {
         
         // when
         try await sutBaetaverse.login(
+            permission: .owner,
             email: email,
             password: password
         )
@@ -133,6 +143,7 @@ class BaetaverseAppModuleTests: XCTestCase {
         let password = "12341234"
         
         try await sutBaetaverse.login(
+            permission: .owner,
             email: email,
             password: password
         )
@@ -179,12 +190,13 @@ class BaetaverseAppModuleTests: XCTestCase {
         ]
         
         try await sutBaetaverse.login(
+            permission: .owner,
             email: email,
             password: password
         )
         
         // when
-        try await sutBaetaverse.registerEvaluate(
+        try await sutBaetaverse.registerEvaluateRequest(
             estimateRequest: estimateRequest,
             products: products
         )
@@ -199,14 +211,63 @@ class BaetaverseAppModuleTests: XCTestCase {
         let password = "12341234"
         
         try await sutBaetaverse.login(
+            permission: .owner,
             email: email,
             password: password
         )
         
         // when then
         do {
-            let result = try await sutBaetaverse.queryEstimateRequestDetail(id: "2")
-            XCTAssertNotNil(result)
+            _ = try await sutBaetaverse.queryEstimateRequestDetail(id: "2")
+            XCTAssert(true)
+        } catch {
+            XCTFail("\(error)")
+        }
+    }
+    
+    func test_2번_견적요청서에_견적이_정상적으로_작성되어야한다() async throws {
+        // given
+        let email = "test8@test8.com"
+        let password = "12341234"
+        let estimate = Estimate(
+            requestId: 2,
+            oceanFreightPrice: 100,
+            inlandFreightPrice: 123,
+            totalPrice: 223,
+            estimatedTime: 5
+        )
+        
+        try await sutBaetaverse.login(
+            permission: .forwarder,
+            email: email,
+            password: password
+        )
+        
+        // when then
+        do {
+            try await sutBaetaverse.registerEstimate(estimate: estimate)
+            XCTAssert(true)
+        } catch {
+            XCTFail("\(error)")
+        }
+    }
+    
+    func test_로그인한_사용자의_견적서_명단을_모두_반환해야한다() async throws {
+        // given
+        let email = "test8@test8.com"
+        let password = "12341234"
+        
+        try await sutBaetaverse.login(
+            permission: .forwarder,
+            email: email,
+            password: password
+        )
+        
+        // when then
+        do {
+            let result = try await sutBaetaverse.queryEstimates()
+            print(result)
+            XCTAssert(true)
         } catch {
             XCTFail("\(error)")
         }

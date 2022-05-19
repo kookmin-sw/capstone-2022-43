@@ -18,7 +18,7 @@ final class LoginViewModel {
     }
     
     func login(email: String, password: String) async throws {
-        try await appService?.login(email: email, password: password)
+        try await appService?.login(permission: .owner, email: email, password: password)
     }
     
 }

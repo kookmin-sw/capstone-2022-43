@@ -9,15 +9,16 @@ import SwiftUI
 
 struct ReviewCardView: View {
     
-    @Binding var review: Review
+    @Binding var review: ReviewEntity
     
     var body: some View {
         CardView {
             VStack {
-                ReviewCardTitleView(title: $review.title, created: $review.created)
-                ReviewCardHeaderView(rating: $review.rating, editor: $review.editor)
+                ReviewCardTitleView(title: $review.reviewText, created: $review.created)
+                ReviewCardHeaderView(rating: $review.rating, editor: $review.owner)
             }
             ReviewCardContentView(reviewText: $review.reviewText)
+            Spacer()
         }
     }
     
@@ -31,6 +32,7 @@ private struct ReviewCardTitleView: View {
     var body: some View {
         HStack {
             Text(title)
+                .lineLimit(1)
             Spacer()
             Text(created.formatted())
         }
@@ -60,22 +62,6 @@ private struct ReviewCardContentView: View {
     var body: some View {
         Text(reviewText)
             .lineLimit(3)
-    }
-    
-}
-
-struct ReviewCardView_Previews: PreviewProvider {
-    
-    static var previews: some View {
-        let review = Review(
-            id: 1,
-            title: "안녕하세요",
-            created: Date(),
-            rating: 4,
-            editor: "한정택",
-            reviewText: "리뷰 남깁니다! 리뷰 카드가 잘 동작하고 있나요?"
-        )
-        ReviewCardView(review: .constant(review))
     }
     
 }

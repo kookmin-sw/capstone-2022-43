@@ -18,7 +18,7 @@ final class RegisterEstimateRequestViewModel {
     }
     
     func register(estimateRequest: EstimateRequest, with product: Product) async throws {
-        try await appService?.registerEvaluate(estimateRequest: estimateRequest, products: [product])
+        try await appService?.registerEvaluateRequest(estimateRequest: estimateRequest, products: [product])
     }
     
 }

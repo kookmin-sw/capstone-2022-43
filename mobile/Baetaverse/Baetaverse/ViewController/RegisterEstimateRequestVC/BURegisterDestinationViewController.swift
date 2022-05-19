@@ -10,6 +10,8 @@ import UIKit
 final class BURegisterDestinationViewController: UIViewController {
     
     @IBOutlet private weak var destinationDetailTextField: UITextField!
+    @IBOutlet private weak var countrySelectButton: UIButton!
+    @IBOutlet private weak var nextButton: UIButton!
     
     private var estimateRequest = EstimateRequest()
 
@@ -18,10 +20,25 @@ final class BURegisterDestinationViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         destinationDetailTextField.delegate = self
+        configureUILayout()
     }
     
     func passData(estimateRequest: EstimateRequest) {
         self.estimateRequest = estimateRequest
+    }
+    
+    private func configureUILayout() {
+        NSLayoutConstraint.activate([
+            NSLayoutConstraint(
+                item: view.keyboardLayoutGuide,
+                attribute: .top,
+                relatedBy: .equal,
+                toItem: nextButton,
+                attribute: .bottom,
+                multiplier: 1,
+                constant: 20
+            )
+        ])
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -31,6 +48,7 @@ final class BURegisterDestinationViewController: UIViewController {
         }
         
         if let incotermsVC = segue.destination as? BURegisterIncotermsViewController {
+            estimateRequest.destinationDetail = destinationDetailTextField.text ?? ""
             incotermsVC.passData(estimateRequest: estimateRequest)
         }
     }
@@ -49,6 +67,10 @@ extension BURegisterDestinationViewController: SelectRegionDelegate {
     
     func send(region: String) {
         self.estimateRequest.destinationCountry = region
+        self.countrySelectButton.setTitle(
+            Locale.current.localizedString(forRegionCode: region),
+            for: .normal
+        )
     }
     
 }

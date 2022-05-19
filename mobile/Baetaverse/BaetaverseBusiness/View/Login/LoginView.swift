@@ -7,10 +7,16 @@
 
 import SwiftUI
 
+@MainActor
 struct LoginView: View {
+    
+    @StateObject var viewModel = LoginViewModel()
     
     @State private var username = ""
     @State private var password = ""
+    
+    @State private var alertIsPresented = false
+    @State private var mainIsPresented = false
     
     var body: some View {
         VStack(spacing: 25) {
@@ -19,10 +25,25 @@ struct LoginView: View {
                 username: $username,
                 password: $password
             )
-            LoginSubmitButton()
+            LoginSubmitButton {
+                Task {
+                    do {
+                        try await viewModel.login(email: username, password: password)
+                        mainIsPresented.toggle()
+                    } catch {
+                        alertIsPresented.toggle()
+                    }
+                }
+            }
             LoginUserInfoButton()
         }
         .padding()
+        .alert("로그인에 실패하였습니다", isPresented: $alertIsPresented) {
+            Text("입력한 계정을 확인해주세요")
+        }
+        .fullScreenCover(isPresented: $mainIsPresented) {
+            MainTabView(mainSheetIsPresented: $mainIsPresented)
+        }
     }
     
 }
@@ -66,8 +87,10 @@ private struct LoginSubmitButton: View {
     
     private let loginLabel = "로그인"
     
+    let action: () -> Void
+    
     var body: some View {
-        Button(action: { }) {
+        Button(action: action) {
             HStack {
                 Spacer()
                 Text(loginLabel)
@@ -88,20 +111,17 @@ private struct LoginUserInfoButton: View {
     @State private var isPresentingSignUpView = false
     
     var body: some View {
-        HStack {
-            Spacer()
-            Button(signUpLabel) {
-                isPresentingSignUpView.toggle()
+        Button(action: { isPresentingSignUpView.toggle() }) {
+            HStack {
+                Spacer()
+                Text(signUpLabel)
+                Spacer()
             }
-            Spacer()
-            Button(action: { }) {
-                Text(findUserInfoLabel)
-            }
-            Spacer()
         }
+        .buttonStyle(.bordered)
+        .controlSize(.large)
         .fullScreenCover(isPresented: $isPresentingSignUpView) {
-            SignUpChooseMembershipView()
-            
+            SignUpFormView(isPresented: $isPresentingSignUpView)
         }
     }
     

@@ -16,6 +16,8 @@ struct NetworkServiceProvider: NetworkService {
     func fetchData(for request: URLRequest) async throws -> Data {
         let (data, response) = try await session.data(for: request)
         
+        print(String(data: data, encoding: .utf8))
+        
         guard let httpResponse = response as? HTTPURLResponse else {
             throw NetworkServiceError.invalidHTTPResponse
         }

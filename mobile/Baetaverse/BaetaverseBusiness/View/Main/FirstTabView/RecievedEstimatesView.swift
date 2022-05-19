@@ -21,7 +21,7 @@ struct RecievedEstimatesView: View {
 
 private struct EstimatesListView: View {
     
-    var estimates: [Estimate]
+    var estimates: [EstimateEntity]
     
     var body: some View {
         List {
@@ -37,7 +37,7 @@ private struct EstimatesListView: View {
 
 private struct EstimateCellView: View {
     
-    var estimate: Estimate
+    var estimate: EstimateEntity
     
     var body: some View {
         VStack(alignment: .leading) {

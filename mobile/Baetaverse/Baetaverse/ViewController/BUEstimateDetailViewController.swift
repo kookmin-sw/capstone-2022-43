@@ -7,16 +7,24 @@
 
 import UIKit
 
-class BUEstimateDetailViewController: UIViewController {
+final class BUEstimateDetailViewController: UIViewController {
+    
+    private var estimate: QuotationEntity?
+    
+    @IBOutlet private weak var forwarderNameLabel: UILabel!
+    @IBOutlet private weak var oceanFreightPriceLabel: UILabel!
+    @IBOutlet private weak var inlandFreightPriceLabel: UILabel!
+    @IBOutlet private weak var totalPriceLabel: UILabel!
+    @IBOutlet private weak var totalTimeLabel: UILabel!
+    
+    private var phoneNumber: URL? {
+        let string = "tel://" + (estimate?.forwarder.phoneNumber ?? "")
+        return URL(string: string)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-    @IBAction func declinedButtonClicked(_ sender: UIButton) {
-        BUEstimateListViewController.estimateRecordCount -= 1
+        updateUI()
     }
     
     @IBAction func acceptButtonClicked(_ sender: UIButton) {
@@ -26,22 +34,29 @@ class BUEstimateDetailViewController: UIViewController {
             preferredStyle: .alert
         )
         alertVC.addAction(UIAlertAction(title: "확인", style: .default) { _ in
-            
+            guard let phoneNumber = self.phoneNumber else { return }
+            UIApplication.shared.open(phoneNumber)
             self.navigationController?.popViewController(animated: true)
-            
         })
-        
         present(alertVC, animated: true)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func passData(estimate: QuotationEntity?) {
+        self.estimate = estimate
     }
-    */
+    
+    private func updateUI() {
+        forwarderNameLabel.text = estimate?.forwarder.corporationName
+        oceanFreightPriceLabel.text = String(estimate?.estimate.oceanFreightPrice ?? 0)
+        inlandFreightPriceLabel.text = String(estimate?.estimate.inlandFreightPrice ?? 0)
+        totalPriceLabel.text = String(estimate?.estimate.totalPrice ?? 0)
+        totalTimeLabel.text = String(estimate?.estimate.estimatedTime ?? 0)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let detailVC = segue.destination as? BUForwarderDetailViewController {
+            detailVC.passData(forwarder: self.estimate?.forwarder)
+        }
+    }
 
 }
