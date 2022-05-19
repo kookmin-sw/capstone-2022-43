@@ -5,6 +5,7 @@ import passport from "passport";
 import jwt from "jsonwebtoken";
 import Owner from "../domain/Owner";
 import OwnerService from "../service/OwnerService";
+import printLog from "../middlewares/printLog";
 
 
 class OwnerController {
@@ -12,18 +13,18 @@ class OwnerController {
 
     public signup = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const { email, password, name, phone_number } = req.body;
+            const reqOwner = req.body as Owner;
 
-            const hash = await bcrypt.hash(password, 14);
-            const owner: Owner = new Owner(name, phone_number, email, hash);
-            await this.ownerService.join(owner);
+            reqOwner.password = await bcrypt.hash(reqOwner.password!, 12);
+            const owner: Owner = await this.ownerService.join(reqOwner);
 
-            return res.status(200).json({
+            res.status(200).json({
                 status: 200,
                 message: 'Success to sign up',
                 email: owner.email,
                 name: owner.name
             });
+            return printLog(req, res);
         } catch (error) {
             return next(error);
         }
@@ -36,22 +37,23 @@ class OwnerController {
                 return next(authError);
             }
             if (!user) {
-                return next(new HttpException(400, info.message));
+                return next(new HttpException(info.status, info.message));
             }
 
             const token = jwt.sign({
                 uuid: user.uuid,
                 email: user.email,
                 name: user.name
-            }, process.env.JWT_OWNER_SECRET || '', {
+            }, process.env.JWT_OWNER_SECRET!, {
                 expiresIn: '7d',
                 issuer: 'BAETAVERSE-DEV'
             });
 
-            return res.status(200).json({
+            res.status(200).json({
                 message: info.message,
                 token,
             });
+            return printLog(req, res);
         })(req, res, next);
     };
 }

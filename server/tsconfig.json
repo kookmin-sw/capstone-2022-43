@@ -10,6 +10,8 @@
     "typeRoots": [
       "src/@types",
       "node_modules/@types"
-    ]
+    ],
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
   }
 }

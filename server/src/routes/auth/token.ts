@@ -1,14 +1,16 @@
 import express, { Request, Response, NextFunction } from 'express';
 import { verifyAnyToken, verifyOwnerToken, verifyForwarderToken } from "../../middlewares/verifyToken";
+import printLog from "../../middlewares/printLog";
 
 
 const resToken = (req: Request, res: Response, next: NextFunction) => {
     try {
-        return res.status(200).json({
+        res.status(200).json({
             status: 200,
             message: 'Token is valid',
             name: req.decoded.name,
         });
+        return printLog(req, res);
     }
     catch (error){
         return next(error);

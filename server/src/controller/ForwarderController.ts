@@ -1,11 +1,11 @@
-import {NextFunction, Request, Response} from "express";
-import {supabase} from "../utils/supabase";
+import { Request, Response, NextFunction } from "express";
 import HttpException from "../exceptions/HttpException";
 import bcrypt from "bcrypt";
 import ForwarderService from "../service/ForwarderService";
 import passport from "passport";
 import jwt from "jsonwebtoken";
 import Forwarder from "../domain/Forwarder";
+import printLog from "../middlewares/printLog";
 
 
 class ForwarderController {
@@ -13,18 +13,18 @@ class ForwarderController {
 
     public signup = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const { email, password, name, phone_number, corporation_name, corporation_number } = req.body;
+            const reqForwarder = req.body as Forwarder;
 
-            const hash = await bcrypt.hash(password, 14);
-            const forwarder: Forwarder = new Forwarder(name, phone_number, email, hash, corporation_name, corporation_number);
-            await this.forwarderService.join(forwarder);
+            reqForwarder.password = await bcrypt.hash(reqForwarder.password!, 12);
+            const forwarder = await this.forwarderService.join(reqForwarder);
 
-            return res.status(200).json({
+            res.status(200).json({
                 status: 200,
                 message: 'Success to sign up',
                 email: forwarder.email,
                 name: forwarder.name
             });
+            return printLog(req, res);
         } catch (error) {
             return next(error);
         }
@@ -44,15 +44,16 @@ class ForwarderController {
                 uuid: user.uuid,
                 email: user.email,
                 name: user.name
-            }, process.env.JWT_FORWARDER_SECRET || '', {
+            }, process.env.JWT_FORWARDER_SECRET!, {
                 expiresIn: '7d',
                 issuer: 'BAETAVERSE-DEV'
             });
 
-            return res.status(200).json({
+            res.status(200).json({
                 message: info.message,
                 token,
             });
+            return printLog(req, res);
         })(req, res, next);
     };
 }

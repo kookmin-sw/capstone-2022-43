@@ -1,21 +1,21 @@
-const isoToUnix = (obj: any, params: string[]) => {
+const dateToUnix = (obj: any, params: string[]) => {
     try {
         params.forEach((param) => {
             obj[param] = ~~(new Date(obj[param]).getTime() / 1000);
         });
     } catch (err) {
-        console.log("Fail to convert iso to unix", err);
+        console.log("Fail to convert timestamp to unix", err);
     }
 }
 
-const unixToIso = (obj: any, params: string[]) => {
+const unixToDate = (obj: any, params: string[]) => {
     try {
         params.forEach((param) => {
-            obj[param] = new Date(obj[param] * 1000).toISOString();
+            obj[param] = new Date(obj[param] * 1000);
         });
     } catch (err) {
-        console.log("Fail to convert unix to iso", err);
+        console.log("Fail to convert unix to timestamp", err);
     }
 }
 
-export { isoToUnix, unixToIso };
+export { dateToUnix, unixToDate };
