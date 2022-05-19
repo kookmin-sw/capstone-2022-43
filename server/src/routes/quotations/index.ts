@@ -26,7 +26,7 @@ router.get('/', verifyForwarderToken , async (req: Request, res: Response, next:
 
         quotations.forEach((quotation) => {
             dateToUnix(quotation, ['estimated_time', 'created_at']);
-            dateToUnix(quotation!.request, ['forwarding_date', 'closing_date', 'created_at']);
+            dateToUnix(quotation!.requests, ['forwarding_date', 'closing_date', 'created_at']);
         });
 
         return res.status(200).json({
@@ -78,7 +78,7 @@ router.post('/', verifyForwarderToken, async (req: Request, res: Response, next:
         delete quotation.forwarder_uuid;
 
         quotation.forwarder = forwarder!;
-        quotation.request = request!;
+        quotation.requests = request!;
 
         return res.status(200).json({
             status: 200,

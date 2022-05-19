@@ -25,7 +25,7 @@ export default class Review extends BaseEntity {
     @Column('text')
     public message?: string;
 
-    @Column('datetime', {default: () => "CURRENT_TIMESTAMP"})
+    @Column('datetime', { default: () => 'CURRENT_TIMESTAMP' })
     public created_at?: Date;
 
     @Column('int')
@@ -51,10 +51,9 @@ export default class Review extends BaseEntity {
 
     @OneToOne((type) => Request, (request) => request.review)
     @JoinColumn({ name: 'request_id', referencedColumnName: 'id' })
-    public request?: Request;
+    public requests?: Request;
 
     @OneToOne((type) => Quotation, (quotation) => quotation.review)
     @JoinColumn({ name: 'quotation_id', referencedColumnName: 'id' })
     public quotation?: Quotation;
-
 };

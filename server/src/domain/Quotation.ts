@@ -4,7 +4,6 @@ import {
     Column,
     BaseEntity,
     ManyToOne,
-    OneToMany,
     JoinColumn,
     OneToOne
 } from 'typeorm';
@@ -45,7 +44,7 @@ export default class Quotation extends BaseEntity {
 
     @ManyToOne((type) => Request, (request) => request.quotations)
     @JoinColumn({ name: 'request_id', referencedColumnName: 'id' })
-    public request?: Request;
+    public requests?: Request;
 
     @OneToOne((type) => Review, review => review.quotation)
     public review?: Review;

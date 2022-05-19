@@ -23,13 +23,13 @@ router.get('/:id', verifyAnyToken ,async (req: Request, res: Response, next: Nex
 
         const selected_goods_array = await goodsRepository.find({
             select: ['id', 'name', 'price', 'weight', 'standard_unit', 'hscode', 'created_at'],
-            where: { request_id: quotation!.request!.id }
+            where: { request_id: quotation!.requests!.id }
         });
 
         selected_goods_array.forEach((goods) => {
             dateToUnix(goods, ['created_at']);
         });
-        dateToUnix(quotation!.request, ['forwarding_date', 'closing_date', 'created_at']);
+        dateToUnix(quotation!.requests, ['forwarding_date', 'closing_date', 'created_at']);
         dateToUnix(quotation, ['estimated_time', 'created_at']);
 
         return res.status(200).json({
