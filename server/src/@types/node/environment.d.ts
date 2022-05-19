@@ -12,7 +12,7 @@ declare global {
             MYSQL_SERVER_HOST: string,
             MYSQL_SERVER_USER: string,
             MYSQL_SERVER_PASSWORD: string,
-            MYSQL_SERVER_PORT: number,
+            MYSQL_SERVER_PORT: string,
             MYSQL_SERVER_DATABASE: string,
         }
     }
