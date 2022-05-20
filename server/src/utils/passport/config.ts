@@ -1,7 +1,8 @@
 import passport from 'passport';
-import localStrategy from "./localStrategy";
+import { ownerStrategy, forwarderStrategy } from './localStrategy';
 
 
-passport.use(localStrategy);
+passport.use('owner', ownerStrategy);
+passport.use('forwarder', forwarderStrategy);
 
 passport.initialize();

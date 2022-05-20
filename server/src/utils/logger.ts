@@ -5,6 +5,7 @@ const { combine, timestamp, label, printf, colorize } = winston.format;
 const logFormat = printf(({ timestamp, message, level, label }): string => {
     return `${ timestamp } - ${ level }: [${ label }] ${ message }`;
 });
+
 const options = {
     console: {
         level: 'info',
@@ -21,11 +22,16 @@ const logger = winston.createLogger({
     format: combine(
         timestamp({
             format: 'YYYY-MM-DD HH:mm:ss',
+
         }),
+        colorize(),
         format.label({ label: 'baetaverse' }),
         logFormat,
     ),
     transports: [
+        // new winston.transports.Console({
+        //     format: logFormat,
+        // }),
         new winstonDaily({ //error, warn, info 모두 남김
             level:'info',
             datePattern: 'YYYY-MM-DD',
@@ -35,14 +41,14 @@ const logger = winston.createLogger({
             zippedArchive: true,
         }),
 
-        new winstonDaily({//error 로그만 남김
-            level:'error',
-            datePattern: 'YYYY-MM-DD',
-            dirname: 'logs/error',
-            filename: '%DATE%_ERROR.log',
-            maxFiles: '30d',
-            zippedArchive: true,
-        }),
+        // new winstonDaily({//error 로그만 남김
+        //     level:'error',
+        //     datePattern: 'YYYY-MM-DD',
+        //     dirname: 'logs/error',
+        //     filename: '%DATE%_ERROR.log',
+        //     maxFiles: '30d',
+        //     zippedArchive: true,
+        // }),
     ],
 });
 
