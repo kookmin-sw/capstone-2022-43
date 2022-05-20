@@ -15,7 +15,7 @@ router.get('/', verifyOwnerToken , async (req: Request, res: Response, next: Nex
         const { uuid } = req.decoded;
 
         const selected_requests = await requestRepository.find({
-            select: ['trade_type', 'trade_detail', 'forwarding_date', 'departure_country', 'departure_detail',
+            select: ['id', 'trade_type', 'trade_detail', 'forwarding_date', 'departure_country', 'departure_detail',
                 'destination_country', 'destination_detail', 'incoterms', 'closing_date', 'created_at'],
             where: { owner_uuid: uuid }
         });
