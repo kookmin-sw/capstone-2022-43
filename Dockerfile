@@ -29,5 +29,5 @@ RUN npm i && \
     echo "MYSQL_SERVER_DATABASE=" >> .env && \
     echo "1. Execute the \"vi .env\" command and Write your server environment variable\n" > README.txt && \
     echo "2. For typescript build, use the \"npm run build\" command\n" >> README.txt && \
-    echo "3. For start server, use the \"npm run build\" command\n" >> README.txt && \
+    echo "3. For start server, use the \"npm run deploy\" command\n" >> README.txt && \
     echo "4. If you want to watch server logs, Use \"pm2 log\" or \"pm2 monit\"" >> README.txt
