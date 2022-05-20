@@ -25,6 +25,7 @@ class App {
     private initializeApp(): void {
         this.app.use(express.json());
         this.app.use(express.urlencoded({ extended: false }));
+        this.app.set("etag", false);
         process.env.TZ = 'Asia/Seoul';
     };
 
