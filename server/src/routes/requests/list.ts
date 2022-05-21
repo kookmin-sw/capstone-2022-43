@@ -7,6 +7,34 @@ import printLog from "../../middlewares/printLog";
 
 const router = express.Router();
 
+
+/**
+ * @swagger
+ * /api/requests/list:
+ *   get:
+ *     tags: [/api/requests]
+ *     summary: Respond all quote request
+ *     security:
+ *     - ForwarderToken: []
+ *     responses:
+ *       200:
+ *         description: Success to find requests
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: number
+ *                   example: 200
+ *                 message:
+ *                   type: string
+ *                   example: Success to find requests
+ *                 selectedRequests:
+ *                   type: array
+ *                   items:
+ *                     $ref: '#/components/schemas/Request'
+ */
 router.get('/list', verifyForwarderToken, async (req : Request, res : Response, next : NextFunction) => {
     try {
         const list = await requestRepository.find({
