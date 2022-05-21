@@ -95,6 +95,8 @@
 
 * [Server API Documentation - Github Wiki](https://github.com/kookmin-sw/capstone-2022-43/wiki/%5BServer%5D-REST-API-Documents)
 
+* [Server API Documentation - BAETAVERSE-Swagger](http://baetaverse.kro.kr/api-docs)
+
 #### NLP
 
 * [NLP 구동 가이드 - Github Wiki](https://github.com/kookmin-sw/capstone-2022-43/wiki/%5BNLP%5D-HScode-Guide)
