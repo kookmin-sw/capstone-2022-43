@@ -7,6 +7,68 @@ import printLog from "../../middlewares/printLog";
 
 const router = express.Router();
 
+/**
+ * @swagger
+ * /api/hscode/{code}:
+ *   get:
+ *     tags: [/api/hscode]
+ *     summary: HSCode recommendation API for any user
+ *     parameters:
+ *     - name: code
+ *       in: path
+ *       description: Code to find hscode
+ *       required: true
+ *       type: string
+ *     security:
+ *     - OwnerToken: []
+ *     - ForwarderToken: []
+ *     responses:
+ *       200:
+ *         description: Success to get hscode
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: number
+ *                   example: 200
+ *                 message:
+ *                   type: string
+ *                   example: Success to get hscode
+ *                 hscode:
+ *                   type: array
+ *                   example: ["11 : 맥아전분"]
+ *       202:
+ *         description: Success but no matching data
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: number
+ *                   example: 202
+ *                 message:
+ *                   type: string
+ *                   example: Success but no matching data
+ *                 hscode:
+ *                   type: array
+ *                   example: []
+ *       400:
+ *         description: Bad request
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: number
+ *                   example: 400
+ *                 message:
+ *                   type: string
+ *                   example: Bad request
+ */
 router.get('/:code', verifyAnyToken, async (req: Request, res: Response, next: NextFunction) => {
     try {
         const { data: proxy_response } = await axios.get(encodeURIComponent(req.params.code), {

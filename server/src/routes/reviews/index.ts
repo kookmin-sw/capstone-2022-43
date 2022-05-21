@@ -16,6 +16,48 @@ import printLog from "../../middlewares/printLog";
 
 const router = express.Router();
 
+/**
+ * @swagger
+ * /api/reviews:
+ *   get:
+ *     tags: [/api/reviews]
+ *     summary: Respond matched review data with user token
+ *     security:
+ *     - OwnerToken: []
+ *     - ForwarderToken: []
+ *     responses:
+ *       200:
+ *         description: Success to find reviews
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: number
+ *                   example: 200
+ *                 message:
+ *                   type: string
+ *                   example: Success to find reviews
+ *                 Review:
+ *                   type: array
+ *                   items:
+ *                     allOf:
+ *                     - $ref: '#/components/schemas/Review'
+ *                     - type: object
+ *                       properties:
+ *                         forwarder:
+ *                           $ref: '#/components/schemas/Forwarder'
+ *                         owner:
+ *                           $ref: '#/components/schemas/Owner'
+ *                         requests:
+ *                           $ref: '#/components/schemas/Request'
+ *                         quotations:
+ *                           $ref: '#/components/schemas/Quotation'
+ *                 selectedGoods:
+ *                   type: array
+ *                   example: []
+ */
 router.get('/', verifyAnyToken ,async (req: Request, res: Response, next: NextFunction) => {
     try {
         const { role, uuid } = req.decoded;
@@ -47,7 +89,7 @@ router.get('/', verifyAnyToken ,async (req: Request, res: Response, next: NextFu
 
         res.status(200).json({
             status: 200,
-            message: 'Success to find quotation',
+            message: 'Success to find reviews',
             Review: reviews,
             selectedGoods: []
         });
@@ -57,6 +99,74 @@ router.get('/', verifyAnyToken ,async (req: Request, res: Response, next: NextFu
     }
 
 });
+
+/**
+ * @swagger
+ * /api/reviews:
+ *   post:
+ *     tags: [/api/reviews]
+ *     summary: Create instances to REVIEW table, After then respond forwarder info, owner info, request info and quotation info
+ *     security:
+ *     - OwnerToken: []
+ *     requestBody:
+ *       description: Request body data
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *             - score
+ *             - message
+ *             - quotation_id
+ *             - request_id
+ *             properties:
+ *               score:
+ *                 type: number
+ *                 example: 4
+ *               message:
+ *                 type: string
+ *                 example: good!
+ *               quotation_id:
+ *                 type: number
+ *                 example: 1
+ *               request_id:
+ *                 type: number
+ *                 example: 1
+ *     responses:
+ *       200:
+ *         description: Success to insert review
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: number
+ *                   example: 200
+ *                 message:
+ *                   type: string
+ *                   example: Success to insert review
+ *                 Review:
+ *                   type: array
+ *                   items:
+ *                     allOf:
+ *                     - $ref: '#/components/schemas/Review'
+ *                     - type: object
+ *                       properties:
+ *                         forwarder:
+ *                           $ref: '#/components/schemas/Forwarder'
+ *                         owner:
+ *                           $ref: '#/components/schemas/Owner'
+ *                         requests:
+ *                           $ref: '#/components/schemas/Request'
+ *                         quotations:
+ *                           $ref: '#/components/schemas/Quotation'
+ *                 selectedGoods:
+ *                   type: array
+ *                   items:
+ *                     $ref: '#/components/schemas/Goods'
+ */
 router.post('/',verifyOwnerToken ,async (req: Request, res: Response, next: NextFunction) => {
     try {
         const owner_uuid = req.decoded.uuid;

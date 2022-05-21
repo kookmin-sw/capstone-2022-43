@@ -50,6 +50,7 @@ class ForwarderController {
             });
 
             res.status(200).json({
+                status: 200,
                 message: info.message,
                 token,
             });
