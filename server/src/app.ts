@@ -5,7 +5,8 @@ import Route from './@types/Route';
 import logger from './utils/logger';
 import pageNotFoundRouter from './routes/pageNotFoundRouter';
 import errorMiddleware from './middlewares/errorMiddleware';
-import printLog from './middlewares/printLog';
+import swaggerUi from 'swagger-ui-express';
+import swaggerJsdoc from "./swagger.jsdoc";
 import dataSource from "./data-source";
 
 
@@ -18,7 +19,7 @@ class App {
         this.port = port;
 
         this.initializeApp();
-        // this.initializeMiddlewares();
+        this.initializeApiDocs();
         this.initializeRouters(routes);
     };
 
@@ -29,7 +30,8 @@ class App {
         process.env.TZ = 'Asia/Seoul';
     };
 
-    private initializeMiddlewares(): void {
+    private initializeApiDocs(): void {
+        this.app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerJsdoc));
     };
 
     private initializeRouters(routes: Route[]): void {
