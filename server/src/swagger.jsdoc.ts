@@ -289,12 +289,12 @@ const swaggerDefinition = {
     },
     servers: [
         {
-            url: 'http://localhost:' + process.env.PORT,
-            description: 'Development',
-        },
-        {
             url: 'http://baetaverse.kro.kr',
             description: 'Deployment'
+        },
+        {
+            url: 'http://localhost:' + process.env.PORT,
+            description: 'Development',
         },
     ],
     components: {
