@@ -219,19 +219,19 @@ final class BaetaverseTests: XCTestCase {
         
         // when then
         do {
-            _ = try await sutBaetaverse.queryEstimateRequestDetail(id: "2")
+            _ = try await sutBaetaverse.queryEstimateRequestDetail(id: "1")
             XCTAssert(true)
         } catch {
             XCTFail("\(error)")
         }
     }
     
-    func test_2번_견적요청서에_견적이_정상적으로_작성되어야한다() async throws {
+    func test_1번_견적요청서에_견적이_정상적으로_작성되어야한다() async throws {
         // given
         let email = "test8@test8.com"
         let password = "12341234"
         let estimate = Estimate(
-            requestId: 2,
+            requestId: 1,
             oceanFreightPrice: 100,
             inlandFreightPrice: 123,
             totalPrice: 223,
@@ -337,28 +337,28 @@ final class BaetaverseTests: XCTestCase {
         }
     }
     
-    func test_로그인한_사용자의_특정_견적요청서와_견적서에_대한_리뷰가_정상적으로_등록되어야한다() async throws {
-        // given
-        let email = "test1@test1.com"
-        let password = "12341234"
-        
-        try await sutBaetaverse.login(
-            permission: .owner,
-            email: email,
-            password: password
-        )
-        
-        // when then
-        do {
-            try await sutBaetaverse.registerReview(
-                quotationId: 36,
-                requestId: 2,
-                score: 5,
-                message: "서비스가 너무나도 훌륭했어용! 다음에도 이용할께요!"
-            )
-            XCTAssert(true)
-        } catch {
-            XCTFail("\(error)")
-        }
-    }
+//    func test_로그인한_사용자의_특정_견적요청서와_견적서에_대한_리뷰가_정상적으로_등록되어야한다() async throws {
+//        // given
+//        let email = "test1@test1.com"
+//        let password = "12341234"
+//        
+//        try await sutBaetaverse.login(
+//            permission: .owner,
+//            email: email,
+//            password: password
+//        )
+//        
+//        // when then
+//        do {
+//            try await sutBaetaverse.registerReview(
+//                quotationId: 4,
+//                requestId: 2,
+//                score: 5,
+//                message: "서비스가 너무나도 훌륭했어용! 다음에도 이용할께요!"
+//            )
+//            XCTAssert(true)
+//        } catch {
+//            XCTFail("\(error)")
+//        }
+//    }
 }
