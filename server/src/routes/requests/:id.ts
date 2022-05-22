@@ -128,7 +128,8 @@ router.get('/:id/quotations', verifyOwnerToken , async (req: Request, res: Respo
         .getMany();
 
         quotations.forEach((quotation) => {
-            dateToUnix(quotation, ['estimated_time', 'created_at'])
+            dateToUnix(quotation, ['estimated_time', 'created_at']);
+            dateToUnix(quotation.requests, ['forwarding_date', 'closing_date', 'created_at']);
         });
 
         res.status(200).json({
