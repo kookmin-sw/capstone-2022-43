@@ -147,7 +147,7 @@ class hscode_linkedlist:
     def code_to_data(self, hscode):
         hscode_length = len(hscode)
         start_node = self.coderoot.get_sub()
-        output = {}
+        output = []
 
         if hscode_length == 0:
             return output
@@ -157,7 +157,7 @@ class hscode_linkedlist:
                 start_node = start_node.get_next()
 
             while start_node != None and start_node.get_code()[:1] == hscode:
-                output[start_node.get_code()] = start_node.get_data()
+                output.append(start_node.get_code() + ' : ' + start_node.get_data()) 
                 start_node = start_node.get_next()
 
             return output
@@ -167,7 +167,7 @@ class hscode_linkedlist:
                 start_node = start_node.get_next()
 
             if start_node is not None:
-                output[start_node.get_code()] = start_node.get_data()
+                output.append(start_node.get_code() + ' : ' + start_node.get_data()) 
 
             return output
 
@@ -180,7 +180,7 @@ class hscode_linkedlist:
                 start_node = start_node.get_next()
 
             while start_node != None and start_node.get_code()[2] == hscode[2]:
-                output[start_node.get_code()] = start_node.get_data()
+                output.append(start_node.get_code() + ' : ' + start_node.get_data()) 
                 start_node = start_node.get_next()
 
             return output
@@ -194,7 +194,7 @@ class hscode_linkedlist:
                 start_node = start_node.get_next()
 
             if start_node is not None:
-                output[start_node.get_code()] = start_node.get_data()
+                output.append(start_node.get_code() + ' : ' + start_node.get_data()) 
 
             return output
 
@@ -211,7 +211,7 @@ class hscode_linkedlist:
                 start_node = start_node.get_next()
 
             while start_node != None and start_node.get_code()[4] == hscode[4]:
-                output[start_node.get_code()] = start_node.get_data()
+                output.append(start_node.get_code() + ' : ' + start_node.get_data()) 
                 start_node = start_node.get_next()
 
             return output
@@ -229,14 +229,14 @@ class hscode_linkedlist:
                 start_node = start_node.get_next()
 
             if start_node is not None:
-                output[start_node.get_code()] = start_node.get_data()
+                output.append(start_node.get_code() + ' : ' + start_node.get_data()) 
 
             return output
 
     def data_to_code(self, data):
         tmp = []
-        primary_output = {}
-        secondary_output = {}
+        primary_output = []
+        secondary_output = []
 
         for value in self.jamo_keys:
             if data in value:
@@ -251,7 +251,7 @@ class hscode_linkedlist:
             tmp_output = ''
             content = self.code_to_data(code)
 
-            for unigram in list(content.values()):
+            for unigram in content[9:]:
                 if unigram  == '(':
                     cond = 1
                 elif unigram  == ')':
@@ -263,11 +263,11 @@ class hscode_linkedlist:
                     continue
 
             if data in j2hcj(h2j(tmp_output)):
-                primary_output.update(content)
+                primary_output.extend(content)
             else:
-                secondary_output.update(content)
+                secondary_output.extend(content)
 
-        primary_output.update(secondary_output)
+        primary_output.extend(secondary_output)
 
         return primary_output
 

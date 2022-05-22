@@ -28,7 +28,7 @@ def get_hscode(argv):
     # Input Data
     else:
         ext = hscode.get_extension_dict()
-        ex = {}
+        ex = []
         argv = argv.replace(' ', ',').replace(',,', ',').split(',')
         tmp = []
 
@@ -36,19 +36,16 @@ def get_hscode(argv):
             input_value = change_word(data)
             input_value = j2hcj(h2j(input_value))
 
+            tmp.extend(hscode.data_to_code(input_value))
+
             if data in list(ext.keys()):
-                ex.update(hscode.data_to_code(j2hcj(h2j(change_word(ext[data])))))
+                ex.extend(hscode.data_to_code(j2hcj(h2j(change_word(ext[data])))))
 
-            tmp.append(hscode.data_to_code(input_value))
-
-        tmp_output = []
+            
         tmp_output_dic = {}
-        output = {}
+        output = []
 
         for out in tmp:
-            tmp_output.extend(list(out.keys()))
-
-        for out in tmp_output:
             if out in tmp_output_dic:
                 tmp_output_dic[out] += 1
             else:
@@ -57,14 +54,14 @@ def get_hscode(argv):
         tmp_output_dic = dict(filter(lambda elem : elem[1] == len(argv), tmp_output_dic.items()))
 
         for t in tmp_output_dic:
-            output.update(hscode.code_to_data(t))
+            output.append(t)
 
-        output.update(ex)
+        output.extend(ex)
 
         return output
 
 # test code
-"""
+
 import sys
 
 tmp = ''
@@ -79,4 +76,3 @@ elif len(sys.argv) > 2:
             tmp += i
 
 print(get_hscode(tmp))
-"""
