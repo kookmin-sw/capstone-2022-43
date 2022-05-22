@@ -1913,7 +1913,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="u0q-yn-v2N">
-                                        <rect key="frame" x="20" y="0.0" width="374" height="636"/>
+                                        <rect key="frame" x="20" y="0.0" width="374" height="863.5"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="물품명" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pPd-q7-5f1">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
@@ -1994,11 +1994,14 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BoxContainer" translatesAutoresizingMaskIntoConstraints="NO" id="31o-xm-2PZ">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BoxContainer" translatesAutoresizingMaskIntoConstraints="NO" id="eyE-fz-pCc">
                                                 <rect key="frame" x="0.0" y="361.5" width="374" height="219.5"/>
                                             </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BoxContainer" translatesAutoresizingMaskIntoConstraints="NO" id="pt7-hC-sck">
+                                                <rect key="frame" x="0.0" y="589" width="374" height="219.5"/>
+                                            </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="91D-QL-wUw">
-                                                <rect key="frame" x="0.0" y="589" width="374" height="47"/>
+                                                <rect key="frame" x="0.0" y="816.5" width="374" height="47"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="tinted" title="다음" buttonSize="large"/>
                                                 <connections>
