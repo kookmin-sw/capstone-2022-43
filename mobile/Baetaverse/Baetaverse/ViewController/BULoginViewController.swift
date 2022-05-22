@@ -7,36 +7,28 @@
 
 import UIKit
 
-class BULoginViewController: UIViewController {
+final class BULoginViewController: UIViewController {
+    
+    private let viewModel = LoginViewModel()
     
     @IBOutlet private weak var idTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
     @IBOutlet private weak var loadActivityIndicatorView: UIActivityIndicatorView!
     
-    private var appService: AppService? {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return nil
-        }
-        return appDelegate.appService
-    }
+    @IBAction func unwindToLoginBULoginView(_ segue: UIStoryboardSegue) { }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-    }
     @IBAction func loginButtonClicked(_ sender: UIButton) {
         Task {
             do {
-                self.loadActivityIndicatorView.startAnimating()
-                try await appService?.login(
-                    email: idTextField.text ?? "",
-                    password: passwordTextField.text ?? ""
+                loadActivityIndicatorView.startAnimating()
+                try await login()
+                loadActivityIndicatorView.stopAnimating()
+                performSegue(
+                    withIdentifier: "presentLoginMainSegue",
+                    sender: nil
                 )
-                self.loadActivityIndicatorView.stopAnimating()
-                self.performSegue(withIdentifier: "presentLoginMainSegue", sender: nil)
             } catch {
-                self.loadActivityIndicatorView.stopAnimating()
+                loadActivityIndicatorView.stopAnimating()
                 let alert = UIAlertController(
                     title: "로그인에 실패하였습니다!",
                     message: "계정을 다시 한번 확인해주세요!",
@@ -48,8 +40,16 @@ class BULoginViewController: UIViewController {
         }
     }
     
-    @IBAction func unwindToLoginBULoginView(_ segue: UIStoryboardSegue) { }
+    private func login() async throws {
+        try await viewModel.login(
+            email: idTextField.text ?? "",
+            password: passwordTextField.text ?? ""
+        )
+    }
     
+}
+
+extension BULoginViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
