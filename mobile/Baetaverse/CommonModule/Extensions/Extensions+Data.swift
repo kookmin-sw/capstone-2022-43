@@ -12,8 +12,7 @@ extension Data {
     func decodeJSONData<T: Decodable>(to model: T.Type) throws -> T {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .secondsSince1970
-        let decodedInstance = try decoder.decode(model.self, from: self)
-        return decodedInstance
+        return try decoder.decode(model.self, from: self)
     }
     
 }

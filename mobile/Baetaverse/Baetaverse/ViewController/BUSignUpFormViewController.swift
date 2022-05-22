@@ -11,12 +11,14 @@ final class BUSignUpFormViewController: UIViewController {
     
     private let viewModel = SignUpFormViewModel()
     
-    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
-    
-    @IBOutlet weak var idTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var phoneNumberTextField: UITextField!
+    @IBOutlet private weak var activityIndicatorView: UIActivityIndicatorView!
+    @IBOutlet private weak var permissionSegmentedControl: UISegmentedControl!
+    @IBOutlet private weak var idTextField: UITextField!
+    @IBOutlet private weak var passwordTextField: UITextField!
+    @IBOutlet private weak var nameTextField: UITextField!
+    @IBOutlet private weak var phoneNumberTextField: UITextField!
+    @IBOutlet private weak var corporationNameTextField: UITextField!
+    @IBOutlet private weak var corporationNumberTextField: UITextField!
     
     @IBAction func signUpButtonClicked(_ sender: UIButton) {
         activityIndicatorView.startAnimating()
@@ -56,12 +58,18 @@ final class BUSignUpFormViewController: UIViewController {
     }
     
     private func signUp() throws {
+        let permissionIndex = permissionSegmentedControl.selectedSegmentIndex
+        let permission = permissionIndex == 0 ? AuthPermission.forwarder : AuthPermission.owner
+        
         Task {
             try await viewModel.signUp(
+                permission: permission,
                 email: idTextField.text ?? "",
                 password: passwordTextField.text ?? "",
                 name: nameTextField.text ?? "",
-                phoneNumber: phoneNumberTextField.text ?? ""
+                phoneNumber: phoneNumberTextField.text ?? "",
+                corporationName: corporationNameTextField.text,
+                corporationNumber: corporationNumberTextField.text
             )
         }
     }

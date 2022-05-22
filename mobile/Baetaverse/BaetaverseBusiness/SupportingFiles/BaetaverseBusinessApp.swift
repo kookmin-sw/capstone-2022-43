@@ -9,10 +9,17 @@ import SwiftUI
 
 @main
 struct BaetaverseBusinessApp: App {
+    
+    static var appService: AppService = BaetaverseAppService.configure()
+    
     var body: some Scene {
         WindowGroup {
-//            LoginView()
-            MainTabView()
+            if Self.appService.isLogin {
+                MainView()
+            } else {
+                LoginView()
+            }
         }
     }
+    
 }

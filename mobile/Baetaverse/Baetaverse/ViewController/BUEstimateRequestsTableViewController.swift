@@ -11,9 +11,13 @@ final class BUEstimateRequestsTableViewController: UITableViewController {
 
     private let viewModel = EstimateRequestsTableViewModel()
     
+    private var selectedId: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
+        configureRefreshControl()
+        
     }
     
     private func loadData() {
@@ -27,11 +31,31 @@ final class BUEstimateRequestsTableViewController: UITableViewController {
                     title: "견적서 명단 조회에 실패하였습니다"
                 )
             }
+            refreshControl?.endRefreshing()
         }
     }
     
-    func updateUI() {
+    private func updateUI() {
         self.tableView.reloadData()
+    }
+    
+    private func configureRefreshControl() {
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(
+            self,
+            action: #selector(handleRefreshControl),
+            for: .valueChanged
+        )
+    }
+    
+    @objc private func handleRefreshControl() {
+        loadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? BUEstimateListViewController {
+            vc.passData(id: selectedId)
+        }
     }
 
 }
@@ -64,6 +88,15 @@ extension BUEstimateRequestsTableViewController {
         }
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        self.selectedId = viewModel.estimateRequests[indexPath.row].id
+        performSegue(
+            withIdentifier: "estimateDetailSegue",
+            sender: nil
+        )
     }
 
 }

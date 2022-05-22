@@ -7,12 +7,15 @@
 
 import SwiftUI
 
+@MainActor
 struct MainView: View {
+    
+    @StateObject private var viewModel = MainViewModel()
     
     var body: some View {
         NavigationView {
             ScrollView {
-                MainContentView()
+                MainContentView(viewModel: viewModel)
             }
             .navigationTitle("BAETAVERSE")
         }
@@ -22,14 +25,14 @@ struct MainView: View {
 
 private struct MainContentView: View {
     
-    @StateObject private var viewModel = MainViewModel()
+    @ObservedObject var viewModel: MainViewModel
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-            MainWelcomeMessageView(username: viewModel.username)
-            MainShortcutButtonsView()
-            MainRecievedReviewBoardView(reviews: viewModel.reviews)
-            MainEstimateBoardView(estimates: viewModel.estimates)
+            MainWelcomeMessageView()
+            //            MainShortcutButtonsView()
+            MainEstimateBoardView(viewModel: viewModel)
+            MainRecievedReviewBoardView(viewModel: viewModel)
         }
         .padding()
     }
@@ -38,11 +41,9 @@ private struct MainContentView: View {
 
 private struct MainWelcomeMessageView: View {
     
-    let username: String
-    
     var body: some View {
         VStack(alignment: .leading) {
-            Text("\(username) 고객님")
+            Text("고객님")
                 .font(.largeTitle)
             Text("배타버스에 오신 것을 환영합니다 ☺️")
                 .font(.title2)
@@ -73,21 +74,26 @@ private struct MainShortcutButtonsView: View {
 
 private struct MainRecievedReviewBoardView: View {
     
-    let reviews: [Review]
+    @ObservedObject var viewModel: MainViewModel
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             HeaderView(
                 headline: "User's Reviews",
                 subheadline: "이용자의 피드백을 확인해보세요!") {
-                    Text("Hello World")
+                    ReviewsListView()
                 }
-            VStack(alignment: .leading) {
-                MainReviewCountingView()
-                MainReviewStarRatingView()
+            if !viewModel.estimateReviews.isEmpty {
+                VStack(alignment: .leading) {
+                    MainReviewCountingView(viewModel: viewModel)
+                    MainReviewStarRatingView(viewModel: viewModel)
+                }
+                .font(.title2)
+                MainReviewCarouselView(reviews: viewModel.estimateReviews)
             }
-            .font(.title2)
-            MainReviewCarouselView(reviews: reviews)
+        }
+        .task {
+            try? await viewModel.fetchReviews()
         }
     }
     
@@ -95,21 +101,26 @@ private struct MainRecievedReviewBoardView: View {
 
 private struct MainEstimateBoardView: View {
     
-    let estimates: [Review]
+    @ObservedObject var viewModel: MainViewModel
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             HeaderView(
                 headline: "Estimate Requests",
                 subheadline: "마감이 임박한 견적요청서를 확인해보세요!") {
-                    Text("Hello World")
+                    EstimateRequestsView()
                 }
-            Carousel {
-                ForEach(estimates) { estimate in
-                    ReviewCardView(review: .constant(estimate))
+            if !viewModel.estimateRequests.isEmpty {
+                Carousel {
+                    ForEach(viewModel.estimateRequests) { estimate in
+                        EstimateRequestCardView(estimateRequest: .constant(estimate))
+                    }
                 }
+                .frame(height: 130)
             }
-            .frame(height: 150)
+        }
+        .task {
+            try? await viewModel.fetchEstimateRequests()
         }
     }
     
@@ -137,18 +148,22 @@ private struct ConsultationRequestButton: View {
 
 private struct MainReviewCountingView: View {
     
+    @ObservedObject var viewModel: MainViewModel
+    
     var body: some View {
-        Text("받은리뷰: 7건")
+        Text("받은리뷰: \(viewModel.reviews.count)건")
     }
     
 }
 
 private struct MainReviewStarRatingView: View {
     
+    @ObservedObject var viewModel: MainViewModel
+    
     var body: some View {
         HStack {
             Text("평점")
-            StarRatingView(rating: .constant(4))
+            StarRatingView(rating: .constant(viewModel.ratingAverage))
         }
     }
     
@@ -156,7 +171,7 @@ private struct MainReviewStarRatingView: View {
 
 private struct MainReviewCarouselView: View {
     
-    let reviews: [Review]
+    let reviews: [ReviewEntity]
     
     var body: some View {
         Carousel {

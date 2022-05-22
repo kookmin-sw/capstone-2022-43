@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MainTabView: View {
     
+    @Binding var mainSheetIsPresented: Bool
+    
     var body: some View {
         TabView {
             MainView().tabItem {
@@ -17,10 +19,10 @@ struct MainTabView: View {
             EstimatesView().tabItem {
                 Label("견적서", systemImage: "doc.text")
             }
-            ConsultationView().tabItem {
-                Label("상담", systemImage: "message.fill")
-            }
-            MoreView().tabItem {
+//            ConsultationView().tabItem {
+//                Label("상담", systemImage: "message.fill")
+//            }
+            MoreView(mainViewIsPresented: $mainSheetIsPresented).tabItem {
                 Label("더보기", systemImage: "ellipsis")
             }
         }
@@ -31,7 +33,7 @@ struct MainTabView: View {
 struct MainTabView_Previews: PreviewProvider {
     
     static var previews: some View {
-        MainTabView()
+        MainTabView(mainSheetIsPresented: .constant(true))
             .previewInterfaceOrientation(.portrait)
     }
     
