@@ -19,7 +19,7 @@ export default class Review extends BaseEntity {
     @PrimaryGeneratedColumn('increment')
     public id?: number;
 
-    @Column('int')
+    @Column('tinyint')
     public score?: number;
 
     @Column('text')

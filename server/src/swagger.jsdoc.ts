@@ -236,7 +236,7 @@ const schemas = {
             },
             score: {
                 type: 'number',
-                format: 'int',
+                format: 'tinyint',
             },
             message: {
                 type: 'string',
