@@ -1,33 +1,36 @@
-import { Strategy } from 'passport-local';
+import { Strategy, VerifyFunction} from 'passport-local';
 import bcrypt from 'bcrypt';
-import { supabase } from '../supabase';
+import { Repository } from "typeorm";
+import ownerRepository from "../../repository/OwnerRepository";
+import forwarderRepository from "../../repository/ForwarderRepository";
+import Owner from "../../domain/Owner";
+import Forwarder from "../../domain/Forwarder";
 
 
-const verifyLogin = async (email: string, password: string, done: any) => {
-    try {
-        const { data: existUser, error } = await supabase
-        .from('User')
-        .select('uuid, email, password, name')
-        .eq('email', email)
-        .limit(1)
-        .single();
+const verifyLogin = (repository: Repository<Owner | Forwarder>): VerifyFunction => {
+    return async (email: string, password: string, done: any) => {
+        try {
+            const existUser = await repository.findOneBy({
+                email: email
+            });
 
-        if (existUser) {
-            const result = await bcrypt.compare(password, existUser.password);
-            if (result) {
-                done(null, existUser, { message: 'Success to login' });
+            if (existUser) {
+                const result = await bcrypt.compare(password, existUser.password!);
+                if (result) {
+                    done(null, existUser, { status: 200, message: 'Success to login' });
+                } else {
+                    done(null, null, { status: 403, message: 'Wrong password' });
+                }
             } else {
-                done(null, null, { message: 'Wrong password' });
+                done(null, null, { status: 400, message: 'User does not exist' });
             }
-        } else {
-            done(null, null, { message: 'User does not exist' });
+        } catch (error) {
+            done(error);
         }
-    } catch (error) {
-        console.log(error);
-        done(error);
     }
-}
+};
 
-const localStrategy = new Strategy({ usernameField: 'email', passwordField: 'password' }, verifyLogin);
+const ownerStrategy = new Strategy({ usernameField: 'email', passwordField: 'password' }, verifyLogin(ownerRepository));
+const forwarderStrategy = new Strategy({ usernameField: 'email', passwordField: 'password' }, verifyLogin(forwarderRepository));
 
-export default localStrategy;
+export { ownerStrategy, forwarderStrategy };
