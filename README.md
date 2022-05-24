@@ -1,18 +1,10 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg)](https://classroom.github.com/online_ide?assignment_repo_id=7168720&assignment_repo_type=AssignmentRepo)
-
 # 🛳 Welcome to BAETAVERSE Github
 
-
-
 ### 1. 배타버스 소개
-
-
 
 #### 개요
 
 * 화물의 주인과 운송 주선업자 사이의 정보 비대칭성을 줄여서 화물의 주인에게 합리적인 소규모 화물 물류비 견적을 제공해주는 플랫폼
-
-
 
 #### 기술 스택
 
@@ -21,13 +13,15 @@
 | Front-End Application | build : macOS 12 monteray & Xcode 13      | Swift 5.6  | Network, UIKit, Concurrency | [mobile](mobile) |
 | Back-End Server       | Up to Ubunutu 16.04, macOS 12, Windows 10 | TypeScript | Express.js                  | [server](server) |
 | BackEnd NLP           | Up to Ubunutu 16.04, macOS 12, Windows 10 | Python 3   | NLP 자연어 처리             | [NLP](HScode)    |
-| Cloud Deployment      | Up to Ubunutu 16.04, macOS 12, Windows 10 | Shell      | AWS, Vercel, Supabase       |                  |
+| Cloud Deployment      | Up to Ubunutu 16.04, macOS 12, Windows 10 | Shell      | AWS (EC2, RDS), MySQL       |                  |
 
 
 
 #### 서비스 배치도
 
-![unknown](https://user-images.githubusercontent.com/25794814/161700460-ace593af-6d35-4ffa-881d-07a0e7948467.png)
+![system_distribution](https://user-images.githubusercontent.com/25794814/169978480-d050e280-d356-4841-af7a-52a2b37bba76.jpg)
+
+
 
 #### 그라운드 룰
 
@@ -67,9 +61,7 @@
 
 ### 2. 소개 영상
 
-| 배타버스 UI/UX 동작 예시                                          | 사용자 인증 네트워킹 동작 예시                                      |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ![160071234-0ce30b41-eedd-479d-8b85-2bbf85cc5113](https://user-images.githubusercontent.com/25794814/161703147-b15b6ef7-637d-40c0-a993-138e521f3814.gif) | ![ezgif com-gif-maker](https://user-images.githubusercontent.com/25794814/161704085-d5cab66d-6b47-4f0c-b99b-830d4adbde92.gif) |
+[![배타버스 소개영상](http://img.youtube.com/vi/vZvXX3HYhUc/3.jpg)](https://youtu.be/vZvXX3HYhUc) 
 
 
 
@@ -89,21 +81,29 @@
 
 
 
-#### Server
 
-* [Server 구동 가이드 - Github Wiki](https://github.com/kookmin-sw/capstone-2022-43/wiki/%5BServer%5D-Install-and-Running-Guide)
+#### REST-API & Database Server Technical Document
 
-* [Server API Documentation - Github Wiki](https://github.com/kookmin-sw/capstone-2022-43/wiki/%5BServer%5D-REST-API-Documents)
+* [REST-API Server - Install and Running Guide](https://github.com/kookmin-sw/capstone-2022-43/wiki/%5BServer%5D-Install-and-Running-Guide)
 
-* [Server API Documentation - BAETAVERSE-Swagger](http://baetaverse.kro.kr/api-docs)
+* [REST-API Server - API Documentation (GitHub Wiki)](https://github.com/kookmin-sw/capstone-2022-43/wiki/%5BServer%5D-REST-API-Documents)
 
-#### NLP
+* [REST-API Server - API Documentation (Swagger Docs)](http://baetaverse.kro.kr/api-docs/)
 
-* [NLP 구동 가이드 - Github Wiki](https://github.com/kookmin-sw/capstone-2022-43/wiki/%5BNLP%5D-HScode-Guide)
+* [Database Server - Setup Guide](https://github.com/kookmin-sw/capstone-2022-43/wiki/%5BServer%5D-Database-Setup-Guide)
 
-#### Mobile
 
-* [Mobile 구동 가이드 - Github Wiki](https://github.com/kookmin-sw/capstone-2022-43/wiki/%5BMobile%5D-iOS-Project-Build-Guide)
+
+#### NLP HS Code Processing Engine Technical Document
+
+* [HS Code Processing Engine - Install and Running Guide](https://github.com/kookmin-sw/capstone-2022-43/wiki/%5BNLP%5D-Install-and-Running-Guide)
+* [HS Code Processing Engine - API Documents](https://github.com/kookmin-sw/capstone-2022-43/wiki/%5BNLP%5D-HScode-API-Documents)
+
+
+
+#### Apple Mobile Application Technical Document
+
+* [Mobile Application - Install and Running Guide](https://github.com/kookmin-sw/capstone-2022-43/wiki/%5BMobile%5D-iOS-Project-Build-Guide)
 
 
 
@@ -113,8 +113,17 @@
 
 #### 중간발표자료
 
-* [팀43-중간발표자료.pdf](docs/팀43-중간발표자료.pdf)
-* [팀43-중간보고서.pdf](docs/팀43-중간보고서.pdf)
+* [팀43-중간발표자료.pdf](docs/중간평가/팀43-중간발표자료.pdf)
+* [팀43-중간보고서.pdf](docs/중간평가/팀43-중간보고서.pdf)
+
+
+
+#### 기말발표자료
+
+* [팀43-최종발표자료.pdf](docs/기말평가/팀43-최종발표자료.pdf)
+* [팀43-수행결과보고서.pdf](docs/기말평가/팀43-수행결과보고서.pdf)
+* [팀43-포스터.pdf](docs/기말평가/팀43-포스터.pdf)
+* [팀43-시연동영상.mp4](https://www.youtube.com/watch?v=vZvXX3HYhUc)
 
 
 
