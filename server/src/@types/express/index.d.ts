@@ -1,10 +1,10 @@
-import { JwtPayload } from "jsonwebtoken";
+import Decoded from "../../interfaces/DecodedToken";
 
 
 declare global {
     namespace Express {
         interface Request {
-            decoded?: string | JwtPayload
+            decoded: Decoded
         }
         interface Response {}
         interface Application {}

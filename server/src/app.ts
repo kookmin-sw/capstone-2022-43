@@ -1,41 +1,59 @@
-import express, { Request, Response, NextFunction } from 'express';
-import useragent from "useragent";
-import requestIp from "request-ip";
-import HttpException from './@types/HttpException';
-import logger from './middlewares/logger';
 import 'dotenv/config';
 import './utils/passport/config';
-import indexRouter from './routes/index';
-import apiRouter from './routes/api';
+import express from 'express';
+import Route from './@types/Route';
+import logger from './utils/logger';
+import pageNotFoundRouter from './routes/pageNotFoundRouter';
+import errorMiddleware from './middlewares/errorMiddleware';
+import swaggerUi from 'swagger-ui-express';
+import swaggerJsdoc from "./swagger.jsdoc";
+import dataSource from "./data-source";
 
 
-const app: express.Application = express();
+class App {
+    private app: express.Application;
+    public port: number;
 
-app.set('port', process.env.PORT || 8080);
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+    constructor(routes: Route[], port: number) {
+        this.app = express();
+        this.port = port;
 
-app.use('/', indexRouter);
-app.use('/api', apiRouter);
+        this.initializeApp();
+        this.initializeApiDocs();
+        this.initializeRouters(routes);
+    };
 
+    private initializeApp(): void {
+        this.app.use(express.json());
+        this.app.use(express.urlencoded({ extended: false }));
+        this.app.set("etag", false);
+        process.env.TZ = 'Asia/Seoul';
+    };
 
-app.use((req: Request, res: Response, next: NextFunction) => {
-    logger.info(`${req.method} ${req.url}`);
-    const error =  new HttpException(404, `Not exist ${ req.method } ${ req.url } router`);
-    next(error);
-});
+    private initializeApiDocs(): void {
+        this.app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerJsdoc));
+    };
 
-app.use((err: HttpException, req: Request, res: Response, next: NextFunction) => {
-    const user = req.headers['user-agent'];
-    const userOS = useragent.parse(user).os.toString();
-    const userBrowser = useragent.parse(user).toAgent();
-    const ip = requestIp.getClientIp(req);
-    const userInfo : string = ` IP: ${ ip } OS : ${ userOS } Browser : ${ userBrowser }`
+    private initializeRouters(routes: Route[]): void {
+        routes.forEach((route: Route) => {
+            this.app.use(route.path, route.router);
+        });
+        this.app.use(pageNotFoundRouter);
+        this.app.use(errorMiddleware);
+    };
 
-    logger.error(err.status + " " + err.message + userInfo);
-    res.status(err.status || 500).send();
-});
+    public listen(): void {
+        dataSource.initialize()
+            .then((dataSource) => {
+                console.log(`Success to connect ${ dataSource.options.type.toUpperCase() } Database`);
+                this.app.listen(this.port, '0.0.0.0', () => {
+                    logger.info(`Listening http://localhost:${ this.port }`);
+                });
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }
+}
 
-app.listen(app.get('port'), '0.0.0.0', () => {
-    logger.info(`Listening http://localhost:${ app.get('port') }`);
-});
+export default App;
