@@ -74,11 +74,7 @@
 
    
 
-   ![unknown](https://user-images.githubusercontent.com/25794814/161689373-10a78bef-3d16-46b1-babf-9bfb2e43f803.png)
-
-   
-
-   ![Picture1](https://user-images.githubusercontent.com/25794814/160412622-17cab6b6-0c74-46e5-9767-9bad7839a15d.png)
+   ![system_distribution](https://user-images.githubusercontent.com/25794814/169978480-d050e280-d356-4841-af7a-52a2b37bba76.jpg)
 
    
 
@@ -170,11 +166,7 @@
 
   
 
-  ![unknown](https://user-images.githubusercontent.com/25794814/161689373-10a78bef-3d16-46b1-babf-9bfb2e43f803.png)
-  
-  
-  
-  ![Picture1](https://user-images.githubusercontent.com/25794814/160412622-17cab6b6-0c74-46e5-9767-9bad7839a15d.png)
+  ![system_distribution](https://user-images.githubusercontent.com/25794814/169978480-d050e280-d356-4841-af7a-52a2b37bba76.jpg)
   
   
 
@@ -196,9 +188,9 @@
 
 ### 3. 소개 영상
 
-* **모바일 서비스 예시 동작 영상**
+* **모바일 서비스 동작 영상**
 
-  | 배타버스 UI/UX 동작 예시                                     | 사용자 인증 네트워킹 동작 예시                               |
+  | 배타버스 앱                                                  | HS Code 검색 기능                                            |
   | ------------------------------------------------------------ | ------------------------------------------------------------ |
   | ![160071234-0ce30b41-eedd-479d-8b85-2bbf85cc5113](https://user-images.githubusercontent.com/25794814/161703147-b15b6ef7-637d-40c0-a993-138e521f3814.gif) | ![ezgif com-gif-maker](https://user-images.githubusercontent.com/25794814/161704085-d5cab66d-6b47-4f0c-b99b-830d4adbde92.gif) |
   
@@ -222,19 +214,24 @@
 
 ### 5. 사용법
 
-#### Server
+#### REST-API & Database Server Technical Document
 
-* [Server 구동 가이드 - Github Wiki](https://github.com/kookmin-sw/capstone-2022-43/wiki/%5BServer%5D-Install-and-Running-Guide)
+* [REST-API Server - Install and Running Guide](https://github.com/kookmin-sw/capstone-2022-43/wiki/%5BServer%5D-Install-and-Running-Guide)
 
-* [Server API Documentation - Github Wiki](https://github.com/kookmin-sw/capstone-2022-43/wiki/%5BServer%5D-REST-API-Documents)
+* [REST-API Server - API Documentation (GitHub Wiki)](https://github.com/kookmin-sw/capstone-2022-43/wiki/%5BServer%5D-REST-API-Documents)
 
-#### NLP
+* [REST-API Server - API Documentation (Swagger Docs)](http://baetaverse.kro.kr/api-docs/)
 
-* [NLP 구동 가이드 - Github Wiki](https://github.com/kookmin-sw/capstone-2022-43/wiki/%5BNLP%5D-HScode-Guide)
+* [Database Server - Setup Guide](https://github.com/kookmin-sw/capstone-2022-43/wiki/%5BServer%5D-Database-Setup-Guide)
 
-#### Mobile
+#### NLP HS Code Processing Engine Technical Document
 
-* [Mobile 구동 가이드 - Github Wiki](https://github.com/kookmin-sw/capstone-2022-43/wiki/%5BMobile%5D-iOS-Project-Build-Guide)
+* [HS Code Processing Engine - Install and Running Guide](https://github.com/kookmin-sw/capstone-2022-43/wiki/%5BNLP%5D-Install-and-Running-Guide)
+* [HS Code Processing Engine - API Documents](https://github.com/kookmin-sw/capstone-2022-43/wiki/%5BNLP%5D-HScode-API-Documents)
+
+#### Apple Mobile Application Technical Document
+
+* [Mobile Application - Install and Running Guide](https://github.com/kookmin-sw/capstone-2022-43/wiki/%5BMobile%5D-iOS-Project-Build-Guide)
 
 
 
@@ -244,8 +241,17 @@
 
 #### 중간발표자료
 
-* [팀43-중간발표자료.pdf](docs/팀43-중간발표자료.pdf)
-* [팀43-중간보고서.pdf](docs/팀43-중간보고서.pdf)
+* [팀43-중간발표자료.pdf](docs/중간평가/팀43-중간발표자료.pdf)
+* [팀43-중간보고서.pdf](docs/중간평가/팀43-중간보고서.pdf)
+
+
+
+#### 기말발표자료
+
+* [팀43-최종발표자료.pdf](docs/기말평가/팀43-최종발표자료.pdf)
+* [팀43-수행결과보고서.pdf](docs/기말평가/팀43-수행결과보고서.pdf)
+* [팀43-포스터.pdf](docs/기말평가/팀43-포스터.pdf)
+* [팀43-시연동영상.mp4](https://www.youtube.com/watch?v=vZvXX3HYhUc)
 
 
 
