@@ -8,12 +8,12 @@
 
 #### 기술 스택
 
-| Technology            | OS                                        | Language   | Technology                  | Directory        |
-| --------------------- | ----------------------------------------- | ---------- | --------------------------- | ---------------- |
-| Front-End Application | build : macOS 12 monteray & Xcode 13      | Swift 5.6  | Network, UIKit, Concurrency | [mobile](mobile) |
-| Back-End Server       | Up to Ubunutu 16.04, macOS 12, Windows 10 | TypeScript | Express.js                  | [server](server) |
-| BackEnd NLP           | Up to Ubunutu 16.04, macOS 12, Windows 10 | Python 3   | NLP 자연어 처리             | [NLP](HScode)    |
-| Cloud Deployment      | Up to Ubunutu 16.04, macOS 12, Windows 10 | Shell      | AWS (EC2, RDS), MySQL       |                  |
+| Technology            | OS                                        | Language   | Technology            | Directory        |
+| --------------------- | ----------------------------------------- | ---------- | --------------------- | ---------------- |
+| Front-End Application | build : macOS 12 monteray & Xcode 13      | Swift 5.6  | UIKit, SwiftUI        | [mobile](mobile) |
+| Back-End Server       | Up to Ubunutu 16.04, macOS 12, Windows 10 | TypeScript | Express.js            | [server](server) |
+| BackEnd NLP           | Up to Ubunutu 16.04, macOS 12, Windows 10 | Python 3   | NLP 자연어 처리       | [NLP](HScode)    |
+| Cloud Deployment      | Up to Ubunutu 16.04, macOS 12, Windows 10 | Shell      | AWS (EC2, RDS), MySQL |                  |
 
 
 
