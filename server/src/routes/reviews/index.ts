@@ -177,7 +177,7 @@ router.post('/',verifyOwnerToken ,async (req: Request, res: Response, next: Next
             where: { id: quotation_id }
         }) as Quotation;
 
-        const review = await reviewRepository.save({ message, owner_uuid, forwarder_uuid, quotation_id, request_id })
+        const review = await reviewRepository.save({ score, message, owner_uuid, forwarder_uuid, quotation_id, request_id })
         review.owner = new Owner();
         review.forwarder = new Forwarder();
         review.requests = new QuoteRequest();
