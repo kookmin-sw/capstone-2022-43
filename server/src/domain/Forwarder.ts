@@ -26,7 +26,7 @@ export default class Forwarder extends BaseEntity {
     @Column('varchar', { length: 45 })
     public corporation_number?: string;
 
-    @Column('datetime', { default: () => "CURRENT_TIMESTAMP" })
+    @Column('timestamp', { default: () => "CURRENT_TIMESTAMP"})
     public created_at?: Date;
 
     @OneToMany((type) => Quotation, quotation => quotation.forwarder)

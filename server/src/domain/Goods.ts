@@ -22,7 +22,7 @@ export default class Goods extends BaseEntity {
     @Column('varchar', { length: 45 })
     public hscode?: string;
 
-    @Column('datetime', { default: () => "CURRENT_TIMESTAMP" })
+    @Column('timestamp', { default: () => "CURRENT_TIMESTAMP" })
     public created_at?: Date;
 
     @Column('int')

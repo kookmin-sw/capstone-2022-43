@@ -18,7 +18,7 @@ export default class Owner extends BaseEntity{
     @Column('varchar', { length: 80 })
     public password?: string;
 
-    @Column('datetime', { default: () => "CURRENT_TIMESTAMP" })
+    @Column('timestamp', { default: () => "CURRENT_TIMESTAMP" })
     public created_at?: Date;
 
     @OneToMany((type) => Review, review => review.owner)
