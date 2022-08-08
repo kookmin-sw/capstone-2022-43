@@ -3,10 +3,11 @@ import { dateToUnix } from "../../middlewares/timeConvert";
 import { verifyForwarderToken } from "../../middlewares/verifyToken";
 import requestRepository from "../../repository/RequestRepository";
 import printLog from "../../middlewares/printLog";
+import RequestController from "../../controller/RequestController";
 
 
 const router = express.Router();
-
+const requestController: RequestController = new RequestController();
 
 /**
  * @swagger
@@ -35,27 +36,6 @@ const router = express.Router();
  *                   items:
  *                     $ref: '#/components/schemas/Request'
  */
-router.get('/list', verifyForwarderToken, async (req : Request, res : Response, next : NextFunction) => {
-    try {
-        const list = await requestRepository.find({
-            select: ['id', 'trade_type', 'trade_detail', 'forwarding_date', 'departure_country', 'departure_detail',
-                'destination_country', 'destination_detail', 'incoterms', 'closing_date', 'created_at']
-        });
-
-        list.forEach((selected_request) => {
-            dateToUnix(selected_request, ["forwarding_date", "closing_date", "created_at"]);
-        });
-
-        res.status(200).json({
-            status: 200,
-            message: 'Success to find requests',
-            selectedRequests: list
-        });
-        return printLog(req, res);
-    }
-    catch (error) {
-        return next(error);
-    }
-});
+router.get('/list', verifyForwarderToken, requestController.getList);
 
 export default router;

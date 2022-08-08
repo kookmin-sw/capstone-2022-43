@@ -15,7 +15,7 @@ export default class Request extends BaseEntity {
     @Column('varchar', { length: 45 })
     public trade_detail?: string;
 
-    @Column('datetime')
+    @Column('timestamp')
     public forwarding_date?: Date;
 
     @Column('varchar', { length: 45 })
@@ -33,10 +33,10 @@ export default class Request extends BaseEntity {
     @Column('varchar', { length: 45 })
     public incoterms?: string;
 
-    @Column('datetime')
+    @Column('timestamp')
     public closing_date?: Date;
 
-    @Column('datetime', { default: () => "CURRENT_TIMESTAMP" })
+    @Column('timestamp', { default: () => "CURRENT_TIMESTAMP" })
     public created_at?: Date;
 
     @Column('uuid')
