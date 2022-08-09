@@ -31,9 +31,8 @@ class ReviewController {
 
 
             res.status(200).json({
-                status: 200,
                 message: 'Success to find reviews',
-                Review: reviews,
+                result: reviews,
             });
             return printLog(req, res);
         } catch (error) {

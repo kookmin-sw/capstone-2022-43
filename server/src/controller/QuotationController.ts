@@ -1,14 +1,8 @@
-import {verifyForwarderToken} from "../middlewares/verifyToken";
 import {NextFunction, Request, Response} from "express";
 import quotationRepository from "../repository/QuotationRepository";
-import {dateToUnix, unixToDate} from "../middlewares/timeConvert";
 import printLog from "../middlewares/printLog";
-import router from "../routes/quotations";
 import QuotationService from "../service/QuotationService";
 import Quotation from "../domain/Quotation";
-import forwarderRepository from "../repository/ForwarderRepository";
-import requestRepository from "../repository/RequestRepository";
-import goodsRepository from "../repository/GoodsRepository";
 
 class QuotationController {
 
@@ -23,10 +17,7 @@ class QuotationController {
 
             await quotationRepository.save(reqQuotation);
 
-
-
             res.status(200).json({
-                status: 200,
                 message: 'Success to insert quotation',
 
             });
@@ -46,9 +37,8 @@ class QuotationController {
             const quotations = await this.quotationService.getInfo(uuid);
 
             res.status(200).json({
-                status: 200,
                 message: 'Success to find quotation',
-                Quotation: quotations
+                result: quotations
             });
             return printLog(req, res);
             }
@@ -69,9 +59,8 @@ class QuotationController {
                 return printLog(req, res);
             }
             res.status(200).json({
-                status: 200,
                 message: 'Success to find quotations',
-                Quotation: quotations
+                result: quotations
             });
             return printLog(req, res);
         } catch (error) {
