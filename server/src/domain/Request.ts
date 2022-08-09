@@ -1,5 +1,4 @@
 import { Entity, PrimaryGeneratedColumn, Column, BaseEntity, OneToMany, OneToOne } from 'typeorm';
-import Goods from "./Goods";
 import Quotation from "./Quotation";
 import Review from "./Review";
 
@@ -8,6 +7,21 @@ import Review from "./Review";
 export default class Request extends BaseEntity {
     @PrimaryGeneratedColumn('increment')
     public id?: number;
+
+    @Column('varchar', { length: 45 })
+    public name?: string;
+
+    @Column('int')
+    public price?: number;
+
+    @Column('int')
+    public weight?: number;
+
+    @Column('varchar', { length: 45 })
+    public standard_unit?: string;
+
+    @Column('varchar', { length: 45 })
+    public hscode?: string;
 
     @Column('varchar', { length: 45 })
     public trade_type?: string;
@@ -42,8 +56,8 @@ export default class Request extends BaseEntity {
     @Column('uuid')
     public owner_uuid?: string;
 
-    @OneToMany((type) => Goods, goods => goods.request)
-    public goods_array?: Goods[];
+    // @OneToMany((type) => Goods, goods => goods.request)
+    // public goods_array?: Goods[];
 
     @OneToMany((type) => Quotation, quotation => quotation.requests)
     public quotations?: Quotation[];

@@ -19,10 +19,7 @@ class OwnerController {
             const owner: Owner = await this.ownerService.join(reqOwner);
 
             res.status(200).json({
-                status: 200,
                 message: 'Success to sign up',
-                email: owner.email,
-                name: owner.name
             });
             return printLog(req, res);
         } catch (error) {
@@ -50,7 +47,6 @@ class OwnerController {
             });
 
             res.status(200).json({
-                status: 200,
                 message: info.message,
                 token,
             });

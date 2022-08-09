@@ -1,7 +1,4 @@
 import quotationRepository from "../repository/QuotationRepository";
-import Owner from "../domain/Owner";
-import ownerRepository from "../repository/OwnerRepository";
-import List from "../routes/requests/list";
 import Quotation from "../domain/Quotation";
 
 class QuotationService {

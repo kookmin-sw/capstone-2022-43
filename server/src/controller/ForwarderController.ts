@@ -19,10 +19,7 @@ class ForwarderController {
             const forwarder = await this.forwarderService.join(reqForwarder);
 
             res.status(200).json({
-                status: 200,
                 message: 'Success to sign up',
-                email: forwarder.email,
-                name: forwarder.name
             });
             return printLog(req, res);
         } catch (error) {
@@ -50,7 +47,6 @@ class ForwarderController {
             });
 
             res.status(200).json({
-                status: 200,
                 message: info.message,
                 token,
             });
