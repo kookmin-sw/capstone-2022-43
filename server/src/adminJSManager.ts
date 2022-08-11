@@ -19,7 +19,7 @@ export default class AdminJSManager {
         AdminJS.registerAdapter({ Database, Resource });
         this.adminJs = new AdminJS({
             databases: [dataSource],
-            resources: [Owner, Forwarder, Request, Goods, Quotation, Review],
+            resources: [Owner, Forwarder, Request, Quotation, Review],
             rootPath: '/admin',
         }) ;
 
