@@ -9,13 +9,13 @@ export default class Request extends BaseEntity {
     public id?: number;
 
     @Column('varchar', { length: 45 })
-    public name?: string;
+    public product_name?: string;
 
     @Column('int')
-    public price?: number;
+    public product_price?: number;
 
     @Column('int')
-    public weight?: number;
+    public product_weight?: number;
 
     @Column('varchar', { length: 45 })
     public standard_unit?: string;

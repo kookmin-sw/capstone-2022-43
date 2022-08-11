@@ -4,7 +4,6 @@ import AdminJSExpress from '@adminjs/express'
 import { DataSource } from "typeorm";
 import { Router } from "express";
 import Forwarder from "./domain/Forwarder";
-import Goods from "./domain/Goods";
 import Owner from "./domain/Owner";
 import Quotation from "./domain/Quotation";
 import Request from "./domain/Request";
