@@ -8,19 +8,20 @@ import errorMiddleware from './middlewares/errorMiddleware';
 import swaggerUi from 'swagger-ui-express';
 import swaggerJsdoc from "./swagger.jsdoc";
 import dataSource from "./data-source";
+import AdminJSManager from "./adminJSManager";
 
 
 class App {
     private app: express.Application;
-    public port: number;
+    private port: number;
 
     constructor(routes: Route[], port: number) {
         this.app = express();
         this.port = port;
 
         this.initializeApp();
-        this.initializeApiDocs();
         this.initializeRouters(routes);
+        this.initializeApiDocs();
     };
 
     private initializeApp(): void {
@@ -34,10 +35,18 @@ class App {
         this.app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerJsdoc));
     };
 
+    private initializeAdminRouter(): void {
+        const admin = new AdminJSManager(dataSource);
+        this.app.use(admin.getPath(), admin.getRouter());
+    };
+
     private initializeRouters(routes: Route[]): void {
         routes.forEach((route: Route) => {
             this.app.use(route.path, route.router);
         });
+    };
+
+    private initializeHandlerRouter(): void {
         this.app.use(pageNotFoundRouter);
         this.app.use(errorMiddleware);
     };
@@ -46,6 +55,8 @@ class App {
         dataSource.initialize()
             .then((dataSource) => {
                 console.log(`Success to connect ${ dataSource.options.type.toUpperCase() } Database`);
+                this.initializeAdminRouter();
+                this.initializeHandlerRouter();
                 this.app.listen(this.port, '0.0.0.0', () => {
                     logger.info(`Listening http://localhost:${ this.port }`);
                 });
