@@ -11,7 +11,7 @@ const requestController: RequestController = new RequestController();
  * /api/requests:
  *   get:
  *     tags: [/api/requests]
- *     summary: Respond quote requests, that are matched with user token
+ *     summary: Respond quote requests, that are matched with users token
  *     security:
  *     - OwnerToken: []
  *     responses:
@@ -22,13 +22,10 @@ const requestController: RequestController = new RequestController();
  *             schema:
  *               type: object
  *               properties:
- *                 status:
- *                   type: number
- *                   example: 200
  *                 message:
  *                   type: string
  *                   example: Success to find requests
- *                 selectedRequests:
+ *                 result:
  *                   type: array
  *                   items:
  *                     $ref: '#/components/schemas/Request'
@@ -40,7 +37,7 @@ router.get('/', verifyOwnerToken, requestController.getRequests);
  * /api/requests:
  *   post:
  *     tags: [/api/requests]
- *     summary: Create instances to REQUESTS and GOODS table, After then respond created quote request and goods data
+ *     summary: Create instances to REQUESTS table, After then respond created quote request data
  *     security:
  *     - OwnerToken: []
  *     requestBody:
@@ -51,6 +48,11 @@ router.get('/', verifyOwnerToken, requestController.getRequests);
  *           schema:
  *             type: object
  *             required:
+ *             - product_name
+ *             - product_price
+ *             - product_weight
+ *             - standard_unit
+ *             - hscode
  *             - trade_type
  *             - trade_detail
  *             - forwarding_date
@@ -61,6 +63,21 @@ router.get('/', verifyOwnerToken, requestController.getRequests);
  *             - incoterms
  *             - closing_date
  *             properties:
+ *               product_name:
+ *                 type: string
+ *                 example: your_product_name
+ *               product_price:
+ *                 type: number
+ *                 example: 1234
+ *               product_weight:
+ *                 type: number
+ *                 example: 1234
+ *               standard_unit:
+ *                 type: string
+ *                 example: your_standard_unit
+ *               hscode:
+ *                 type: string
+ *                 example: your_hscode
  *               trade_type:
  *                 type: string
  *                 example: your_request
@@ -68,8 +85,8 @@ router.get('/', verifyOwnerToken, requestController.getRequests);
  *                 type: string
  *                 example: your_request
  *               forwarding_date:
- *                 type: number
- *                 example: your_request (unix time)
+ *                 type: timestamp
+ *                 example: 2000-01-01 00:00:00
  *               departure_country:
  *                 type: string
  *                 example: your_request
@@ -86,8 +103,8 @@ router.get('/', verifyOwnerToken, requestController.getRequests);
  *                 type: string
  *                 example: your_request
  *               closing_date:
- *                 type: number
- *                 example: your_request (unix time)
+ *                 type: timestamp
+ *                 example: 2000-01-01 00:00:00
  *     responses:
  *       200:
  *         description: Success to quote_request
@@ -96,18 +113,9 @@ router.get('/', verifyOwnerToken, requestController.getRequests);
  *             schema:
  *               type: object
  *               properties:
- *                 status:
- *                   type: number
- *                   example: 200
  *                 message:
  *                   type: string
  *                   example: Success to quote_request
- *                 createdRequest:
- *                   $ref: '#/components/schemas/Request'
- *                 createdGoods:
- *                   type: array
- *                   items:
- *                     $ref: '#/components/schemas/Goods'
  */
 router.post('/', verifyOwnerToken, requestController.registerRequest);
 

@@ -29,18 +29,22 @@ const quotationController: QuotationController = new QuotationController();
  *             schema:
  *               type: object
  *               properties:
- *                 status:
- *                   type: number
- *                   example: 200
  *                 message:
  *                   type: string
  *                   example: Success to find request
- *                 selectedRequest:
+ *                 result:
  *                   $ref: '#/components/schemas/Request'
- *                 selectedGoods:
- *                   type: array
- *                   items:
- *                     $ref: '#/components/schemas/Goods'
+ *       403:
+ *         description: Wrong request id
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: Wrong request id
+ *
  */
 router.get('/:id', verifyOwnerToken , requestController.getRequestsById);
 
@@ -66,19 +70,24 @@ router.get('/:id', verifyOwnerToken , requestController.getRequestsById);
  *             schema:
  *               type: object
  *               properties:
- *                 status:
- *                   type: number
- *                   example: 200
  *                 message:
  *                   type: string
  *                   example: Success to find quotations
- *                 Quotation:
+ *                 result:
  *                   type: array
  *                   items:
  *                     $ref: '#/components/schemas/Quotation'
- *                 selectedGoods:
- *                   type: array
- *                   example: []
+ *       403:
+ *         description: Wrong request id
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: Wrong request id
+ *
  */
 router.get('/:id/quotations', verifyOwnerToken , quotationController.getQuotationbyId);
 

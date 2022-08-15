@@ -2,7 +2,6 @@ import { DataSource } from "typeorm";
 import Owner from "./domain/Owner";
 import Forwarder from "./domain/Forwarder";
 import Request from "./domain/Request";
-// import Goods from "./domain/Goods";
 import Quotation from "./domain/Quotation";
 import Review from "./domain/Review";
 

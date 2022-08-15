@@ -22,13 +22,10 @@ const requestController: RequestController = new RequestController();
  *             schema:
  *               type: object
  *               properties:
- *                 status:
- *                   type: number
- *                   example: 200
  *                 message:
  *                   type: string
  *                   example: Success to find requests
- *                 selectedRequests:
+ *                 result:
  *                   type: array
  *                   items:
  *                     $ref: '#/components/schemas/Request'

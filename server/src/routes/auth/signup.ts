@@ -43,31 +43,19 @@ const forwarderController: ForwarderController = new ForwarderController();
  *             schema:
  *               type: object
  *               properties:
- *                 status:
- *                   type: number
- *                   example: 200
  *                 message:
  *                   type: string
  *                   example: Success to sign up
- *                 email:
- *                   type: string
- *                   example: owner@exam.com
- *                 name:
- *                   type: string
- *                   example: owner123
  *       400:
- *         description: Already exist user
+ *         description: Already exist users
  *         content:
  *           application/json:
  *             schema:
  *               type: object
  *               properties:
- *                 status:
- *                   type: number
- *                   example: 400
  *                 message:
  *                   type: string
- *                   example: Already exist user
+ *                   example: Already exist users
  */
 router.post('/signup/owner', ownerController.signup);
 
@@ -112,31 +100,19 @@ router.post('/signup/owner', ownerController.signup);
  *             schema:
  *               type: object
  *               properties:
- *                 status:
- *                   type: number
- *                   example: 200
  *                 message:
  *                   type: string
  *                   example: Success to sign up
- *                 email:
- *                   type: string
- *                   example: owner@exam.com
- *                 name:
- *                   type: string
- *                   example: owner123
  *       400:
- *         description: Already exist user
+ *         description: Already exist users
  *         content:
  *           application/json:
  *             schema:
  *               type: object
  *               properties:
- *                 status:
- *                   type: number
- *                   example: 400
  *                 message:
  *                   type: string
- *                   example: Already exist user
+ *                   example: Already exist users
  */
 router.post('/signup/forwarder', forwarderController.signup);
 

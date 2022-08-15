@@ -56,9 +56,6 @@ export default class Request extends BaseEntity {
     @Column('uuid')
     public owner_uuid?: string;
 
-    // @OneToMany((type) => Goods, goods => goods.request)
-    // public goods_array?: Goods[];
-
     @OneToMany((type) => Quotation, quotation => quotation.requests)
     public quotations?: Quotation[];
 

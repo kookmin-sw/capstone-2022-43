@@ -6,7 +6,6 @@ import printLog from "../../middlewares/printLog";
 const resToken = (req: Request, res: Response, next: NextFunction) => {
     try {
         res.status(200).json({
-            status: 200,
             message: 'Token is valid',
             name: req.decoded.name,
         });
@@ -24,7 +23,7 @@ const router = express.Router();
  * /api/auth/token:
  *   get:
  *     tags: [/api/auth]
- *     summary: Token api for any user
+ *     summary: Token api for any users
  *     security:
  *     - OwnerToken: []
  *     - ForwarderToken: []
@@ -36,13 +35,10 @@ const router = express.Router();
  *             schema:
  *               type: object
  *               properties:
- *                 status:
- *                   type: number
- *                   example: 200
  *                 message:
  *                   type: string
  *                   example: Token is valid
- *                 name:
+ *                 result:
  *                   type: string
  *                   example: user_name
  *       401:
@@ -52,9 +48,6 @@ const router = express.Router();
  *             schema:
  *               type: object
  *               properties:
- *                 status:
- *                   type: number
- *                   example: 401
  *                 message:
  *                   type: string
  *                   example: Invalid token
@@ -65,9 +58,6 @@ const router = express.Router();
  *             schema:
  *               type: object
  *               properties:
- *                 status:
- *                   type: number
- *                   example: 409
  *                 message:
  *                   type: string
  *                   example: The token has expired
@@ -90,9 +80,6 @@ router.get('/token', verifyAnyToken, resToken);
  *             schema:
  *               type: object
  *               properties:
- *                 status:
- *                   type: number
- *                   example: 200
  *                 message:
  *                   type: string
  *                   example: Token is valid
@@ -106,9 +93,6 @@ router.get('/token', verifyAnyToken, resToken);
  *             schema:
  *               type: object
  *               properties:
- *                 status:
- *                   type: number
- *                   example: 401
  *                 message:
  *                   type: string
  *                   example: Invalid token
@@ -119,9 +103,6 @@ router.get('/token', verifyAnyToken, resToken);
  *             schema:
  *               type: object
  *               properties:
- *                 status:
- *                   type: number
- *                   example: 409
  *                 message:
  *                   type: string
  *                   example: The token has expired
@@ -145,9 +126,6 @@ router.get('/token/owner', verifyOwnerToken, resToken);
  *             schema:
  *               type: object
  *               properties:
- *                 status:
- *                   type: number
- *                   example: 200
  *                 message:
  *                   type: string
  *                   example: Token is valid
@@ -161,9 +139,6 @@ router.get('/token/owner', verifyOwnerToken, resToken);
  *             schema:
  *               type: object
  *               properties:
- *                 status:
- *                   type: number
- *                   example: 401
  *                 message:
  *                   type: string
  *                   example: Invalid token
@@ -174,9 +149,6 @@ router.get('/token/owner', verifyOwnerToken, resToken);
  *             schema:
  *               type: object
  *               properties:
- *                 status:
- *                   type: number
- *                   example: 409
  *                 message:
  *                   type: string
  *                   example: The token has expired

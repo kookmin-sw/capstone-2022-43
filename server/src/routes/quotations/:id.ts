@@ -10,7 +10,7 @@ const quotationController: QuotationController = new QuotationController();
  * /api/quotations/{id}:
  *   get:
  *     tags: [/api/quotations]
- *     summary: Respond matched quotation info, forwarder info, request and goods data
+ *     summary: Respond matched quotation data
  *     security:
  *     - OwnerToken: []
  *     - ForwarderToken: []
@@ -28,27 +28,14 @@ const quotationController: QuotationController = new QuotationController();
  *             schema:
  *               type: object
  *               properties:
- *                 status:
- *                   type: number
- *                   example: 200
  *                 message:
  *                   type: string
  *                   example: Success to find quotation
- *                 Quotation:
+ *                 result:
  *                   type: array
  *                   items:
  *                     allOf:
  *                     - $ref: '#/components/schemas/Quotation'
- *                     - type: object
- *                       properties:
- *                         forwarder:
- *                           $ref: '#/components/schemas/Forwarder'
- *                         requests:
- *                           $ref: '#/components/schemas/Request'
- *                 selectedGoods:
- *                   type: array
- *                   items:
- *                     $ref: '#/components/schemas/Goods'
  *
  */
 router.get('/:id', verifyAnyToken ,quotationController.getQuotationbyId);

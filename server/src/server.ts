@@ -7,7 +7,7 @@ import hscodeRouter from './routes/hscode';
 import requestRouter from './routes/requests';
 import quotationRouter from './routes/quotations';
 import reviewRouter from './routes/reviews';
-
+import userRouter from './routes/users'
 
 validateEnv();
 
@@ -17,6 +17,7 @@ const hscodeRoute = new Route('/api', hscodeRouter);
 const requestRoute = new Route('/api', requestRouter);
 const quotationRoute = new Route('/api', quotationRouter);
 const reviewRoute = new Route('/api', reviewRouter);
+const userRoute = new Route('/api', userRouter);
 
 const app = new App([
         indexRoute,
@@ -24,7 +25,8 @@ const app = new App([
         hscodeRoute,
         requestRoute,
         quotationRoute,
-        reviewRoute
+        reviewRoute,
+        userRoute
     ],
     Number(process.env.PORT) || 8080,
 );

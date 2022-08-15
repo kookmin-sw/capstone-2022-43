@@ -10,7 +10,7 @@ const reviewController: ReviewController = new ReviewController();
  * /api/reviews:
  *   get:
  *     tags: [/api/reviews]
- *     summary: Respond matched review data with user token
+ *     summary: Respond matched review data with users token
  *     security:
  *     - OwnerToken: []
  *     - ForwarderToken: []
@@ -22,30 +22,14 @@ const reviewController: ReviewController = new ReviewController();
  *             schema:
  *               type: object
  *               properties:
- *                 status:
- *                   type: number
- *                   example: 200
  *                 message:
  *                   type: string
  *                   example: Success to find reviews
- *                 Review:
+ *                 result:
  *                   type: array
  *                   items:
  *                     allOf:
  *                     - $ref: '#/components/schemas/Review'
- *                     - type: object
- *                       properties:
- *                         forwarder:
- *                           $ref: '#/components/schemas/Forwarder'
- *                         owner:
- *                           $ref: '#/components/schemas/Owner'
- *                         requests:
- *                           $ref: '#/components/schemas/Request'
- *                         quotations:
- *                           $ref: '#/components/schemas/Quotation'
- *                 selectedGoods:
- *                   type: array
- *                   example: []
  */
 router.get('/', verifyAnyToken , reviewController.getReview);
 
@@ -90,31 +74,9 @@ router.get('/', verifyAnyToken , reviewController.getReview);
  *             schema:
  *               type: object
  *               properties:
- *                 status:
- *                   type: number
- *                   example: 200
  *                 message:
  *                   type: string
  *                   example: Success to insert review
- *                 Review:
- *                   type: array
- *                   items:
- *                     allOf:
- *                     - $ref: '#/components/schemas/Review'
- *                     - type: object
- *                       properties:
- *                         forwarder:
- *                           $ref: '#/components/schemas/Forwarder'
- *                         owner:
- *                           $ref: '#/components/schemas/Owner'
- *                         requests:
- *                           $ref: '#/components/schemas/Request'
- *                         quotations:
- *                           $ref: '#/components/schemas/Quotation'
- *                 selectedGoods:
- *                   type: array
- *                   items:
- *                     $ref: '#/components/schemas/Goods'
  */
 router.post('/',verifyOwnerToken ,reviewController.registerReview);
 

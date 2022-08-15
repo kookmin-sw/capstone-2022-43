@@ -36,9 +36,6 @@ const forwarderController: ForwarderController = new ForwarderController();
  *             schema:
  *               type: object
  *               properties:
- *                 status:
- *                   type: number
- *                   example: 200
  *                 message:
  *                   type: string
  *                   example: Success to login
@@ -52,9 +49,6 @@ const forwarderController: ForwarderController = new ForwarderController();
  *             schema:
  *               type: object
  *               properties:
- *                 status:
- *                   type: number
- *                   example: 400
  *                 message:
  *                   type: string
  *                   example: User does not exist
@@ -65,9 +59,6 @@ const forwarderController: ForwarderController = new ForwarderController();
  *             schema:
  *               type: object
  *               properties:
- *                 status:
- *                   type: number
- *                   example: 403
  *                 message:
  *                   type: string
  *                   example: Wrong password
@@ -103,9 +94,6 @@ router.post('/login/owner', ownerController.login);
  *             schema:
  *               type: object
  *               properties:
- *                 status:
- *                   type: number
- *                   example: 200
  *                 message:
  *                   type: string
  *                   example: Success to login
@@ -119,9 +107,6 @@ router.post('/login/owner', ownerController.login);
  *             schema:
  *               type: object
  *               properties:
- *                 status:
- *                   type: number
- *                   example: 400
  *                 message:
  *                   type: string
  *                   example: User does not exist
@@ -132,9 +117,6 @@ router.post('/login/owner', ownerController.login);
  *             schema:
  *               type: object
  *               properties:
- *                 status:
- *                   type: number
- *                   example: 403
  *                 message:
  *                   type: string
  *                   example: Wrong password

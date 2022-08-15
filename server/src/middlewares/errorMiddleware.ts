@@ -8,7 +8,7 @@ const errorMiddleware = (err: HttpException, req: Request, res: Response, next: 
     const userInfo = new userAgent(req);
     const status = err.status || 500;
     logger.error(`${ status } ${ err.message } ${ req.method } ${ decodeURI(req.originalUrl) } ${ userInfo }`);
-    return res.status(status).json({ status, message: err.message });
+    return res.status(status).json({ message: err.message });
 };
 
 export default errorMiddleware;
