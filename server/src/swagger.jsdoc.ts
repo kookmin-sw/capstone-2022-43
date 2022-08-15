@@ -1,5 +1,4 @@
 import SwaggerJsdoc from 'swagger-jsdoc';
-import Owner from "./domain/Owner";
 
 
 const schemas = {
@@ -270,7 +269,7 @@ const swaggerDefinition = {
     },
     servers: [
         {
-            url: 'http://baetaverse.kro.kr',
+            url: 'http://rest.baetaverse.com',
             description: 'Deployment'
         },
         {
