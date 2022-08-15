@@ -18,13 +18,14 @@ class App {
     constructor(routes: Route[], port: number) {
         this.app = express();
         this.port = port;
-
-        this.initializeApp();
         this.initializeRouters(routes);
-        this.initializeApiDocs();
     };
 
     private initializeApp(): void {
+        this.initializeApiDocs();
+        this.initializeAdminRouter();
+        this.initializeHandlerRouter()
+
         this.app.use(express.json());
         this.app.use(express.urlencoded({ extended: false }));
         this.app.set("etag", false);
@@ -53,18 +54,17 @@ class App {
 
     public listen(): void {
         dataSource.initialize()
-            .then((dataSource) => {
-                console.log(`Success to connect ${ dataSource.options.type.toUpperCase() } Database`);
-                this.initializeAdminRouter();
-                this.initializeHandlerRouter();
-                this.app.listen(this.port, '0.0.0.0', () => {
-                    logger.info(`Listening http://localhost:${ this.port }`);
-                });
-            })
-            .catch((error) => {
-                console.log(error);
+        .then((dataSource) => {
+            logger.info(`Success to connect ${ dataSource.options.type.toUpperCase() } Database`);
+            this.initializeApp();
+            this.app.listen(this.port, '0.0.0.0', () => {
+                logger.info(`Listening http://localhost:${ this.port }`);
             });
-    }
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+    };
 }
 
 export default App;

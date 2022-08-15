@@ -11,6 +11,7 @@ const validateForwarderEnv = () => {
         MYSQL_SERVER_USER: str(),
         MYSQL_SERVER_PASSWORD: str(),
         MYSQL_SERVER_DATABASE: str(),
+        ADMIN_PAGE_COOKIE: str(),
     });
 };
 

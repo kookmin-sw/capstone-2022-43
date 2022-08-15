@@ -1,14 +1,15 @@
 import { Database, Resource } from '@adminjs/typeorm';
-import AdminJS from 'adminjs';
+import AdminJS, { ResourceOptions } from 'adminjs';
 import AdminJSExpress from '@adminjs/express'
 import { DataSource } from "typeorm";
 import { Router } from "express";
+import dataSource from "./data-source";
 import Forwarder from "./domain/Forwarder";
-import Goods from "./domain/Goods";
 import Owner from "./domain/Owner";
 import Quotation from "./domain/Quotation";
 import Request from "./domain/Request";
 import Review from "./domain/Review";
+import Admin from "./domain/Admin";
 
 
 export default class AdminJSManager {
@@ -22,14 +23,24 @@ export default class AdminJSManager {
             resources: [Owner, Forwarder, Request, Quotation, Review],
             rootPath: '/admin',
         }) ;
-
-    };
-
-    public getRouter(): Router {
-        return AdminJSExpress.buildRouter(this.adminJs);
     };
 
     public getPath(): string {
         return this.adminJs.options.rootPath;
     };
-}
+
+    public getRouter(): Router {
+        return AdminJSExpress.buildAuthenticatedRouter(this.adminJs, {
+            cookiePassword: process.env.ADMIN_PAGE_COOKIE!,
+            authenticate: async (email: string, password: string) => {
+                try {
+                    const admin = await dataSource.getRepository(Admin).findOneBy({ email });
+                    return admin?.password === password;
+                } catch (e) {
+                    console.log(e)
+                }
+                return false;
+            },
+        });
+    };
+};

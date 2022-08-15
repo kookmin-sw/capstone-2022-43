@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "start": "node dist/server.js",
-    "build": "tsc",
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
     "dev": "set NODE_ENV=develop && npx nodemon src/server.ts",
     "deploy": "pm2 start dist/server.js --watch=dist/"
   },

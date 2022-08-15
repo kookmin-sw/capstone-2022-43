@@ -6,15 +6,10 @@ ENV TZ=Asia/Seoul
 RUN apt-get update && \
     apt-get install tzdata git vim npm -y
 
-WORKDIR /usr/local
-RUN git init && \
-    git remote add -f origin https://github.com/kookmin-sw/capstone-2022-43.git && \
-    git config core.sparseCheckout true && \
-    echo "server/" >> .git/info/sparse-checkout && \
-    git pull origin master && \
-    rm -rf .git
+WORKDIR /root
+RUN git clone -b server-candidate --single-branch https://lab.hanium.or.kr/22_HP017/22_hp017.git
 
-WORKDIR /usr/local/server
+WORKDIR /root/22_HP017
 RUN npm i && \
     npm i -g pm2 && \
     touch .env && \
@@ -27,6 +22,7 @@ RUN npm i && \
     echo "MYSQL_SERVER_USER=" >> .env && \
     echo "MYSQL_SERVER_PASSWORD=" >> .env && \
     echo "MYSQL_SERVER_DATABASE=" >> .env && \
+    echo "ADMIN_PAGE_COOKIE=" >> .env && \
     echo "1. Execute the \"vi .env\" command and Write your server environment variable\n" > README.txt && \
     echo "2. For typescript build, use the \"npm run build\" command\n" >> README.txt && \
     echo "3. For start server, use the \"npm run deploy\" command\n" >> README.txt && \
