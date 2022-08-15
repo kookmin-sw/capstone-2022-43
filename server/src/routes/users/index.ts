@@ -39,7 +39,7 @@ const forwarderController: ForwarderController = new ForwarderController();
  *                 result:
  *                   $ref: '#/components/schemas/Forwarder'
  */
-router.get('/forwarder',  forwarderController.getForwarder);
+router.get('/forwarder', verifyAnyToken, forwarderController.getForwarder);
 
 
 /**
@@ -75,5 +75,5 @@ router.get('/forwarder',  forwarderController.getForwarder);
  *                   $ref: '#/components/schemas/Owner'
  */
 
-router.get('/owner', ownerController.getOwner);
+router.get('/owner', verifyAnyToken, ownerController.getOwner);
 export default router;
