@@ -3,13 +3,13 @@ import Forwarder from "../domain/Forwarder";
 import HttpException from "../exceptions/HttpException";
 
 
-class OwnerService {
+class ForwarderService {
     public async checkDuplicated(email: string): Promise<void> {
         const forwarder = await forwarderRepository.findOneBy({
             email: email
         });
         if (forwarder) {
-            throw new HttpException(400, 'Already exist user');
+            throw new HttpException(400, 'Already exist users');
         }
     }
 
@@ -19,4 +19,4 @@ class OwnerService {
     }
 }
 
-export default OwnerService;
+export default ForwarderService;

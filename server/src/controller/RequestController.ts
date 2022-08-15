@@ -30,6 +30,13 @@ class RequestController {
                 where: { id: request_id }
             });
 
+            if (selected_request == null) {
+                res.status(403).json({
+                    message: 'Wrong request id',
+                });
+                return printLog(req, res);
+            }
+
             res.status(200).json({
                 message: 'Success to find request',
                 result: selected_request

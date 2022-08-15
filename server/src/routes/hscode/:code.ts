@@ -12,7 +12,7 @@ const router = express.Router();
  * /api/hscode/{code}:
  *   get:
  *     tags: [/api/hscode]
- *     summary: HSCode recommendation API for any user
+ *     summary: HSCode recommendation API for any users
  *     parameters:
  *     - name: code
  *       in: path
@@ -30,9 +30,6 @@ const router = express.Router();
  *             schema:
  *               type: object
  *               properties:
- *                 status:
- *                   type: number
- *                   example: 200
  *                 message:
  *                   type: string
  *                   example: Success to get hscode
@@ -46,9 +43,6 @@ const router = express.Router();
  *             schema:
  *               type: object
  *               properties:
- *                 status:
- *                   type: number
- *                   example: 202
  *                 message:
  *                   type: string
  *                   example: Success but no matching data
@@ -62,9 +56,6 @@ const router = express.Router();
  *             schema:
  *               type: object
  *               properties:
- *                 status:
- *                   type: number
- *                   example: 400
  *                 message:
  *                   type: string
  *                   example: Bad request

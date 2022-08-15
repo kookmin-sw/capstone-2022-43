@@ -97,6 +97,26 @@ const schemas = {
                 format: 'increment',
                 description: 'PrimaryGeneratedColumn'
             },
+            product_name: {
+                type: 'string',
+                format: 'varchar(45)',
+            },
+            product_price: {
+                type: 'number',
+                format: 'int',
+            },
+            product_weight: {
+                type: 'number',
+                format: 'int',
+            },
+            standard_unit: {
+                type: 'string',
+                format: 'varchar(45)',
+            },
+            hscode: {
+                type: 'string',
+                format: 'varchar(45)',
+            },
             trade_type: {
                 type: 'string',
                 format: 'varchar(45)',
@@ -145,46 +165,7 @@ const schemas = {
             },
         },
     },
-    Goods: {
-        type: 'object',
-        properties: {
-            id: {
-                type: 'number',
-                format: 'increment',
-                description: 'PrimaryGeneratedColumn'
-            },
-            name: {
-                type: 'string',
-                format: 'varchar(45)',
-            },
-            price: {
-                type: 'number',
-                format: 'int',
-            },
-            weight: {
-                type: 'number',
-                format: 'int',
-            },
-            standard_unit: {
-                type: 'string',
-                format: 'varchar(45)',
-            },
-            hscode: {
-                type: 'string',
-                format: 'varchar(45)',
-            },
-            created_at: {
-                type: 'number',
-                format: 'datetime',
-                default: 'CURRENT_TIMESTAMP'
-            },
-            request_id: {
-                type: 'number',
-                format: 'int',
-                description: 'FK from Request'
-            },
-        },
-    },
+
     Quotation: {
         type: 'object',
         properties: {

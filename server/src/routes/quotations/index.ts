@@ -11,7 +11,7 @@ const quotationController: QuotationController = new QuotationController();
  * /api/quotations:
  *   get:
  *     tags: [/api/quotations]
- *     summary: Respond quotation, that are matched with user token
+ *     summary: Respond quotation, that are matched with users token
  *     security:
  *     - ForwarderToken: []
  *     responses:
@@ -22,26 +22,14 @@ const quotationController: QuotationController = new QuotationController();
  *             schema:
  *               type: object
  *               properties:
- *                 status:
- *                   type: number
- *                   example: 200
  *                 message:
  *                   type: string
  *                   example: Success to find quotation
- *                 Quotation:
+ *                 result:
  *                   type: array
  *                   items:
  *                     allOf:
  *                     - $ref: '#/components/schemas/Quotation'
- *                     - type: object
- *                       properties:
- *                         forwarder:
- *                           $ref: '#/components/schemas/Forwarder'
- *                         requests:
- *                           $ref: '#/components/schemas/Request'
- *                 selectedGoods:
- *                   type: array
- *                   example: []
  */
 router.get('/', verifyForwarderToken , quotationController.getQuotation);
 
@@ -50,7 +38,7 @@ router.get('/', verifyForwarderToken , quotationController.getQuotation);
  * /api/quotations:
  *   post:
  *     tags: [/api/quotations]
- *     summary: Create instances to QUOTATION table, After then respond forwarder information, request and goods data
+ *     summary: Create instances to QUOTATION table
  *     security:
  *     - ForwarderToken: []
  *     requestBody:
@@ -77,8 +65,8 @@ router.get('/', verifyForwarderToken , quotationController.getQuotation);
  *                 type: number
  *                 example: 1234
  *               estimated_time:
- *                 type: number
- *                 example: your_data (unix time)
+ *                 type: datetime
+ *                 example: 2000-01-01 00:00:00
  *               request_id:
  *                 type: number
  *                 example: 1
@@ -90,27 +78,14 @@ router.get('/', verifyForwarderToken , quotationController.getQuotation);
  *             schema:
  *               type: object
  *               properties:
- *                 status:
- *                   type: number
- *                   example: 200
  *                 message:
  *                   type: string
  *                   example: Success to insert quotation
- *                 Quotation:
+ *                 result:
  *                   type: array
  *                   items:
  *                     allOf:
  *                     - $ref: '#/components/schemas/Quotation'
- *                     - type: object
- *                       properties:
- *                         forwarder:
- *                           $ref: '#/components/schemas/Forwarder'
- *                         requests:
- *                           $ref: '#/components/schemas/Request'
- *                 selectedGoods:
- *                   type: array
- *                   items:
- *                     $ref: '#/components/schemas/Goods'
  */
 router.post('/', verifyForwarderToken, quotationController.registerQuote);
 

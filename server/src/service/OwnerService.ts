@@ -9,7 +9,7 @@ class OwnerService {
             email: email
         });
         if (owner) {
-            throw new HttpException(400, 'Already exist user');
+            throw new HttpException(400, 'Already exist users');
         }
     }
 
