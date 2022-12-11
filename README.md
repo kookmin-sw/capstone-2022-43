@@ -88,7 +88,7 @@
 
 * [REST-API Server - API Documentation (GitHub Wiki)](https://github.com/kookmin-sw/capstone-2022-43/wiki/%5BServer%5D-REST-API-Documents)
 
-* [REST-API Server - API Documentation (Swagger Docs)](http://baetaverse.kro.kr/api-docs/)
+* [REST-API Server - API Documentation (Swagger Docs)](http://rest.baetaverse.com/api-docs/)
 
 * [Database Server - Setup Guide](https://github.com/kookmin-sw/capstone-2022-43/wiki/%5BServer%5D-Database-Setup-Guide)
 
