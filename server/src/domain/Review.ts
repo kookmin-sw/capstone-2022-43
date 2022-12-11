@@ -25,7 +25,7 @@ export default class Review extends BaseEntity {
     @Column('text')
     public message?: string;
 
-    @Column('datetime', { default: () => 'CURRENT_TIMESTAMP' })
+    @Column('timestamp', { default: () => 'CURRENT_TIMESTAMP' })
     public created_at?: Date;
 
     @Column('int')

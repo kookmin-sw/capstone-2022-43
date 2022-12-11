@@ -1,5 +1,4 @@
 import { Entity, PrimaryGeneratedColumn, Column, BaseEntity, OneToMany, OneToOne } from 'typeorm';
-import Goods from "./Goods";
 import Quotation from "./Quotation";
 import Review from "./Review";
 
@@ -10,12 +9,27 @@ export default class Request extends BaseEntity {
     public id?: number;
 
     @Column('varchar', { length: 45 })
+    public product_name?: string;
+
+    @Column('int')
+    public product_price?: number;
+
+    @Column('int')
+    public product_weight?: number;
+
+    @Column('varchar', { length: 45 })
+    public standard_unit?: string;
+
+    @Column('varchar', { length: 45 })
+    public hscode?: string;
+
+    @Column('varchar', { length: 45 })
     public trade_type?: string;
 
     @Column('varchar', { length: 45 })
     public trade_detail?: string;
 
-    @Column('datetime')
+    @Column('timestamp')
     public forwarding_date?: Date;
 
     @Column('varchar', { length: 45 })
@@ -33,17 +47,14 @@ export default class Request extends BaseEntity {
     @Column('varchar', { length: 45 })
     public incoterms?: string;
 
-    @Column('datetime')
+    @Column('timestamp')
     public closing_date?: Date;
 
-    @Column('datetime', { default: () => "CURRENT_TIMESTAMP" })
+    @Column('timestamp', { default: () => "CURRENT_TIMESTAMP" })
     public created_at?: Date;
 
     @Column('uuid')
     public owner_uuid?: string;
-
-    @OneToMany((type) => Goods, goods => goods.request)
-    public goods_array?: Goods[];
 
     @OneToMany((type) => Quotation, quotation => quotation.requests)
     public quotations?: Quotation[];

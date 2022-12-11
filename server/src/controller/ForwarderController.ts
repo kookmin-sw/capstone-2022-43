@@ -6,11 +6,34 @@ import passport from "passport";
 import jwt from "jsonwebtoken";
 import Forwarder from "../domain/Forwarder";
 import printLog from "../middlewares/printLog";
+import forwarderRepository from "../repository/ForwarderRepository";
 
 
 class ForwarderController {
     private forwarderService : ForwarderService = new ForwarderService();
 
+    public getForwarder = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            const {forwarder_uuid} = req.body;
+
+            const forwarder = await forwarderRepository.findOneOrFail({
+                where: {uuid: forwarder_uuid}
+            });
+
+            res.status(200).json({
+                message: 'Success to find forwarder',
+                result: forwarder,
+
+            });
+
+            return printLog(req, res);
+        } catch (error){
+            return next(error);
+        }
+
+
+
+    }
     public signup = async (req: Request, res: Response, next: NextFunction) => {
         try {
             const reqForwarder = req.body as Forwarder;
@@ -19,10 +42,7 @@ class ForwarderController {
             const forwarder = await this.forwarderService.join(reqForwarder);
 
             res.status(200).json({
-                status: 200,
                 message: 'Success to sign up',
-                email: forwarder.email,
-                name: forwarder.name
             });
             return printLog(req, res);
         } catch (error) {
@@ -50,7 +70,6 @@ class ForwarderController {
             });
 
             res.status(200).json({
-                status: 200,
                 message: info.message,
                 token,
             });

@@ -2,9 +2,9 @@ import { DataSource } from "typeorm";
 import Owner from "./domain/Owner";
 import Forwarder from "./domain/Forwarder";
 import Request from "./domain/Request";
-import Goods from "./domain/Goods";
 import Quotation from "./domain/Quotation";
 import Review from "./domain/Review";
+import Admin from "./domain/Admin";
 
 
 const dataSource = new DataSource({
@@ -14,7 +14,7 @@ const dataSource = new DataSource({
     username: process.env.MYSQL_SERVER_USER,
     password: process.env.MYSQL_SERVER_PASSWORD,
     database: 'BAETAVERSE',
-    entities: [Owner, Forwarder, Request, Goods, Quotation, Review],
+    entities: [Owner, Forwarder, Request, Quotation, Review, Admin],
     synchronize: true,
     logging: false,
 });

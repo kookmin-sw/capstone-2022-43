@@ -6,10 +6,31 @@ import jwt from "jsonwebtoken";
 import Owner from "../domain/Owner";
 import OwnerService from "../service/OwnerService";
 import printLog from "../middlewares/printLog";
+import ownerRepository from "../repository/OwnerRepository";
 
 
 class OwnerController {
     private ownerService : OwnerService = new OwnerService();
+
+    public getOwner = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            const { owner_uuid } = req.body;
+
+            const owner= await ownerRepository.findOneOrFail({
+                where: {uuid: owner_uuid}
+            });
+
+            res.status(200).json({
+                message: 'Success to find owner',
+                result: owner,
+
+            });
+
+            return printLog(req, res);
+        } catch (error) {
+            return next(error);
+        }
+    }
 
     public signup = async (req: Request, res: Response, next: NextFunction) => {
         try {
@@ -19,10 +40,7 @@ class OwnerController {
             const owner: Owner = await this.ownerService.join(reqOwner);
 
             res.status(200).json({
-                status: 200,
                 message: 'Success to sign up',
-                email: owner.email,
-                name: owner.name
             });
             return printLog(req, res);
         } catch (error) {
@@ -50,7 +68,6 @@ class OwnerController {
             });
 
             res.status(200).json({
-                status: 200,
                 message: info.message,
                 token,
             });
